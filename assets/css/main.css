@@ -12,9 +12,9 @@ body{
     -webkit-font-smoothing: antialiased !important;
     scroll-behavior: smooth;
     background-color: #1f2029;
-    /* Create the parallax scrolling effect */
-    background: url(https://raw.githubusercontent.com/SickleEdge/ubg100/main/assets/img/bg.svg);
+    background: url("../img/bg.svg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: repeat;
+
 }
