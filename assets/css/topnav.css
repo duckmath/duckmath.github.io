@@ -1,6 +1,6 @@
 .topnav {
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     top: 1%;
     width: 98%;
 }
@@ -22,4 +22,13 @@
 .topnav a.active {
     background-color: #D30000;
     color: white;
+}
+
+.icon {
+    position: fixed;
+
+}
+
+.icon a {
+    float: left;
 }
