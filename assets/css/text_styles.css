@@ -4,7 +4,7 @@
 }
 .title_text{
     position: absolute;
-    top: 20%;
+    top: 10%;
     width: 100%;
     text-align: center;
     font-size: 80px;
@@ -15,4 +15,14 @@
     width: 100%;
     text-align: center;
     font-size: 25px;
+}
+.about_text{
+    font-size: 20px;
+    text-align: center;
+}
+.iframe{
+    position: absolute;
+    top: 10%;
+    width: 90%;
+    text-align: center;
 }
