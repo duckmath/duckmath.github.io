@@ -10,10 +10,7 @@
     font-size: 80px;
 }
 .title_text_description{
-    position: static;
-    top: 30%;
-    width: 100%;
-    text-align: center;
+    position: relative;
     font-size: 25px;
 }
 .about_text{
@@ -21,9 +18,8 @@
     text-align: center;
 }
 .iframe{
-    position: absolute;
-    width: 100%;
-    top: 15%;
+    position: relative;
+
 }
 .icon_image{
     position: static;

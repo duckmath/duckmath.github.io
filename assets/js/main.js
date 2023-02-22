@@ -22,5 +22,4 @@ function spin(image){
 
 function unspin(image){
     image.style.transform = "rotate(0deg)";
-
 }
