@@ -8,18 +8,23 @@
     width: 100%;
     text-align: center;
     font-size: 80px;
+    font-weight: bold;
+    color: #ce0a0a;
+    font-family: cursive;
 }
 .title_text_description{
+    color: #dddddd;
     position: relative;
     font-size: 25px;
 }
 .about_text{
     font-size: 20px;
     text-align: center;
+    color: #dddddd;
 }
 .iframe{
     position: relative;
-
+    color: #dddddd;
 }
 .icon_image{
     position: static;
