@@ -29,9 +29,29 @@
     color: #dddddd;
 }
 .icon_image{
-    position: static;
+    position: relative;
     display: flex;
-    text-align: center;
     gap: 0 15px;
+}
+.icon_image figcaption{
+    pointer-events: none;
+    z-index: 1;
+    visibility: hidden;
+    position: relative;
+    color: #D30000;
+    font-size: 30px;
+    bottom: 30%;
+    font-weight: bold;
+    font-family: "Impact", sans-serif;
+    background-color: white;
+    letter-spacing: 2px;
+
+}
+
+.bottom_text{
+    position: absolute;
+    text-align: center;
+    bottom: 1%;
+    left: 39%;
 }
 
