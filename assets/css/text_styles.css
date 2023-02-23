@@ -10,12 +10,14 @@
     font-size: 80px;
     font-weight: bold;
     color: #ce0a0a;
-    font-family: cursive;
+    font-family: "Farisi", sans-serif;
 }
 .title_text_description{
     color: #dddddd;
     position: relative;
     font-size: 25px;
+    font-family: "Arial", sans-serif;
+
 }
 .about_text{
     font-size: 20px;
