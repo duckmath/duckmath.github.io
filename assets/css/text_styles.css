@@ -65,7 +65,7 @@ a img {
     border-radius: 10px;
     /*line-height: 1px;*/
     margin-top: -30px;
-    left: 50%; /* Centers the figcaption */
+    left: 50%; /* Centers the figcaption  hi*/
     transform: translateX(-50%); /* Centers the figcaption horizontally */
 }
 
