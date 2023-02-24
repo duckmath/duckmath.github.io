@@ -2,14 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="DuckMath">
+    <meta name="description" content="Play your favorite online games free now!">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <title>DuckMath</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/text_styles.css">
+    <link rel="stylesheet" href="../assets/css/topnav.css">
+    <link rel="stylesheet" href="../assets/css/games.css">
     <script src="../assets/js/main.js"></script>
-    <title>Title</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/duck.png">
+    <link rel="mask-icon" type="" href="../assets/img/duck.png" color="#111">
+    <noscript>Your browser doesn't have JavaScript enabled. Please enable JavaScript or switch to a browser that
+        supports it.</noscript>
 </head>
-<body>
+<body class ="notbody">
+    <div class ="topnav">
+        <a href ="../about.html">About</a>
+        <a href ="../changelog.html">Changelog</a>
+        <a href ="../leaderboard.html">Leaderboard</a>
+        <a class="active" href ="../games.html">Games</a>
+        <a href="../index.html">Home</a>
+    </div>
 
-    <div id='ruffle'></div>
-    <script src='../index.js'></script>
-    <script>swfobject.embedSWF("../assets/games/raftwars.swf", 'ruffle', 800, 600);</script>
+    <div class ="icon">
+        <a href ="../index.html"><img onmouseover="spin(this)" onmouseout="unspin(this)" src="../assets/img/goose.png" alt="Icon" width="60" height="60"></a>
+    </div>
+
+    <div id='ruffle' class="gameloc"></div>
+        <script src='../index.js'></script>
+            <script>swfobject.embedSWF("../assets/games/raftwars2.swf", 'ruffle', 800, 600);</script>
 
 </body>
 </html>
