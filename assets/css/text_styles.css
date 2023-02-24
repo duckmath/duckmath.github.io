@@ -31,21 +31,42 @@
 .icon_image{
     position: relative;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 0 15px;
+
 }
-.icon_image figcaption{
+a {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.icon_image a figcaption{
     pointer-events: none;
     z-index: 1;
     visibility: hidden;
     position: relative;
     color: #D30000;
-    font-size: 30px;
-    bottom: 30%;
+    font-size: 25px;
     font-weight: bold;
     font-family: "Impact", sans-serif;
     background-color: white;
-    letter-spacing: 2px;
-
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    /*line-height: 1px;*/
+    margin-top: -30px;
+    left: 50%; /* Centers the figcaption */
+    transform: translateX(-50%); /* Centers the figcaption horizontally */
 }
 
 .bottom_text{
