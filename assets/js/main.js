@@ -22,6 +22,10 @@ function openFullscreen() {
         elem.msRequestFullscreen();
     }
 }
+function sorter(category) {
+    var elem = document.getElementsByClassName(category);
+    console.log(elem)
+}
 function enlargeimage(image) {
     image.style.transform = "scale(1.15)";
     image.style.transition = "transform 0.25s ease";

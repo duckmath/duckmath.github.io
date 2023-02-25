@@ -5,12 +5,14 @@
 .title_text{
     position: absolute;
     top: 10%;
-    width: 100%;
+    left: 50%;
     text-align: center;
     font-size: 80px;
     font-weight: bold;
     color: #ce0a0a;
     font-family: "Farisi", sans-serif;
+    transform: translateX(-50%);
+
 }
 .title_text_description{
     color: #dddddd;
@@ -21,58 +23,15 @@
 }
 .about_text{
     font-size: 20px;
-    text-align: center;
-    color: #dddddd;
-}
-.iframe{
-    position: relative;
-    color: #dddddd;
-}
-.icon_image{
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 0 15px;
-
-}
-a {
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-a img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-.icon_image a figcaption{
-    pointer-events: none;
-    z-index: 1;
-    visibility: hidden;
-    position: relative;
-    color: #D30000;
-    font-size: 25px;
-    font-weight: bold;
-    font-family: "Impact", sans-serif;
-    background-color: white;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    /*line-height: 1px;*/
-    margin-top: -30px;
-    left: 50%; /* Centers the figcaption  hi*/
-    transform: translateX(-50%); /* Centers the figcaption horizontally */
+    color: #dddddd;
 }
 
 .bottom_text{
-    position: absolute;
-    text-align: center;
-    bottom: 1%;
-    left: 39%;
+    position: absolute; /* make the child element positioned */
+    bottom: 0; /* position the element at the bottom of the parent element */
+    left: 50%; /* position the element in the middle of the parent element */
+    transform: translateX(-50%); /* move the element back by half of its width to center it */
+
 }
 

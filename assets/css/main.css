@@ -38,3 +38,71 @@ body{
     background-repeat: repeat;
 }
 
+.iframe{
+    position: relative;
+    color: #dddddd;
+}
+.icon_image{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0 15px;
+
+}
+a {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.icon_image a figcaption{
+    pointer-events: none;
+    z-index: 1;
+    visibility: hidden;
+    position: relative;
+    color: #D30000;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Impact", sans-serif;
+    background-color: white;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    /*line-height: 1px;*/
+    margin-top: -30px;
+    left: 50%; /* Centers the figcaption  hi*/
+    transform: translateX(-50%); /* Centers the figcaption horizontally */
+}
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #D30000;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #D30000}
+
+.button:active {
+    background-color: #D30000;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
