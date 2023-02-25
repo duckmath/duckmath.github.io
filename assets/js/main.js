@@ -11,8 +11,6 @@ swfobject.embedSWF = function(url, cont, width, height){
     player.load({ url: url });
 }
 
-
-
 function enlargeimage(image) {
     image.style.transform = "scale(1.15)";
     image.style.transition = "transform 0.25s ease";

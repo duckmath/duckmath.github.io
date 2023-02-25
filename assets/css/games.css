@@ -1,7 +1,11 @@
 .gameloc {
-    position: absolute;
-    top: 10%;
+    position: relative;
+    margin: auto;
+    display: grid;
+    overflow: hidden;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
     width: 900px;
-    height: 500px;
-    text-align: center;
+    height: 600px;
+
 }
