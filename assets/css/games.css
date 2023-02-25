@@ -1,6 +1,7 @@
 .gameloc {
     position: absolute;
     top: 10%;
-    width: 100%;
+    width: 900px;
+    height: 500px;
     text-align: center;
 }

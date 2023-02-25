@@ -1,10 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="DuckMath">
+    <meta name="description" content="Play your favorite online games free now!">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <title>DuckMath</title>
+    <link rel="stylesheet" href="../assets/css/text_styles.css">
+    <link rel="stylesheet" href="../assets/css/topnav.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/games.css">
+    <script src="../assets/js/main.js"></script>
+    <link rel="icon" type="image/x-icon" href="../assets/img/duck.png">
+    <link rel="mask-icon" type="" href="../assets/img/duck.png" color="#111">
+    <noscript>Your browser doesn't have JavaScript enabled. Please enable JavaScript or switch to a browser that
+        supports it.</noscript>
 </head>
 <body>
-<iframe width="900" height="500" src="https://ubg100.github.io/games/retrobowl/index.html" scrolling="no" frameborder="0" allowtransparency="true" id="gameFrame" name="gameFrame"></iframe>
+
+
+    <div class ="topnav">
+        <a href ="../about.html">About</a>
+        <a href ="../changelog.html">Changelog</a>
+        <a href ="../leaderboard.html">Leaderboard</a>
+        <a href ="../games.html">Games</a>
+        <a href="../index.html">Home</a>
+    </div>
+
+    <div class ="icon">
+        <a href ="../index.html"><img onmouseover="spin(this)" onmouseout="unspin(this)"
+                                      src="../assets/img/goose.png" alt="Icon" width="60" height="60"></a>
+    </div>
+    <iframe class ="gameloc" id="game-element" allowfullscreen="" allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad; keyboard-map *; xr-spatial-tracking; clipboard-write" name="gameFrame" scrolling="no" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin allow-downloads" src="https://ubg100.github.io/games/retrobowl/index.html" title="Game"></iframe>
 </body>
+
 </html>
+
 
