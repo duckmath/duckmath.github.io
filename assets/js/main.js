@@ -11,6 +11,17 @@ swfobject.embedSWF = function(url, cont, width, height){
     player.load({ url: url });
 }
 
+function openFullscreen() {
+    var elem = document.getElementById("gameFrame");
+    console.log(elem)
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+    }
+}
 function enlargeimage(image) {
     image.style.transform = "scale(1.15)";
     image.style.transition = "transform 0.25s ease";
