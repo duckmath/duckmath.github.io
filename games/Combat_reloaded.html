@@ -9,35 +9,42 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="language" content="English">
   <title>DuckMath</title>
-  <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/text_styles.css">
   <link rel="stylesheet" href="../assets/css/topnav.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/games.css">
   <script src="../assets/js/main.js"></script>
   <link rel="icon" type="image/x-icon" href="../assets/img/duck.png">
   <link rel="mask-icon" type="" href="../assets/img/duck.png" color="#111">
   <noscript>Your browser doesn't have JavaScript enabled. Please enable JavaScript or switch to a browser that
     supports it.</noscript>
-
 </head>
-<body class ="notbody">
+<body>
+
+
 <div class ="topnav">
   <a href ="../about.html">About</a>
   <a href ="../changelog.html">Changelog</a>
   <a href ="../leaderboard.html">Leaderboard</a>
-  <a class="active" href ="../games.html">Games</a>
+  <a href ="../games.html">Games</a>
   <a href="../index.html">Home</a>
 </div>
 
 <div class ="icon">
-  <a href ="../index.html"><img onmouseover="spin(this)" onmouseout="unspin(this)" src="../assets/img/goose.png" alt="Icon" width="60" height="60"></a>
-</div>
-<div class = "title_text"> Raft Wars
+  <a href ="../index.html"><img onmouseover="spin(this)" onmouseout="unspin(this)"
+                                src="../assets/img/goose.png" alt="Icon" width="60" height="60"></a>
 
-  <div id='ruffle' class="gameloc"></div>
-  <script class="game" src='../ruffle/index.js'></script>
-  <script>swfobject.embedSWF("../assets/flashfiles/raftwars.swf", 'ruffle', 800, 600);</script>
+</div>
+<div class = "title_text"> Combat Arms Reloaded
+
+  <iframe class ="gameloc" id="gameFrame" allowfullscreen="" allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad;
+         keyboard-map *; xr-spatial-tracking; clipboard-write" name="gameFrame"
+          scrolling="no" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock
+                allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin
+                allow-downloads" src="//games.poki.com/458768/combatreloaded?tag=pg-v3.71.0&amp;site_id=3&amp;iso_lang=en&amp;country=US&amp;poki_url=https://poki.com/en/g/combat-reloaded&amp;categories=65,77,93,242,385,1164&amp;special_condition=landing" title="Game"></iframe>
+  <button class="button" onclick="openFullscreen();">Fullscreen</button>
 </div>
 
 </body>
+
 </html>

@@ -12,8 +12,9 @@
     color: #ce0a0a;
     font-family: "Farisi", sans-serif;
     transform: translateX(-50%);
-
+    line-height: 120%;
 }
+
 .title_text_description{
     color: #dddddd;
     position: relative;

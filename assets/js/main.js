@@ -23,9 +23,34 @@ function openFullscreen() {
     }
 }
 function sorter(category) {
-    var elem = document.getElementsByClassName(category);
+    console.log(category)
+    var icon = document.getElementById("icon_image");
+    var elem = icon.getElementsByTagName("a")
     console.log(elem)
+    for (var i = 0; i < elem.length; i++) {
+        if (elem[i].className !== category) {
+            elem[i].style.visibility = "collapse";
+            elem[i].style.display = "none";
+
+
+        }
+        else{
+            elem[i].style.visibility = "visible";
+            elem[i].style.display = "inline-block";
+        }
+
+    }
+
 }
+function showall(category) {
+    var icon = document.getElementById("icon_image");
+    var elem = icon.getElementsByTagName("a")
+    for (var i = 0; i < elem.length; i++) {
+        elem[i].style.visibility = "visible";
+        elem[i].style.display = "inline-block";
+        }
+
+    }
 function enlargeimage(image) {
     image.style.transform = "scale(1.15)";
     image.style.transition = "transform 0.25s ease";

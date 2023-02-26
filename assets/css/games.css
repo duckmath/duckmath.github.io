@@ -26,6 +26,8 @@
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
+    white-space: nowrap;
+    letter-spacing: -1px;
 }
 .button1:hover {
     background-color: #ff0000;
