@@ -34,18 +34,18 @@
   <a href ="index.html"><img onmouseover="spin(this)" onmouseout="unspin(this)" src="assets/img/goose.png" alt="Icon" width="60" height="60"></a>
 </div>
 
-<div class = "title_text"> Games
+<div class = "title_text" id = "title"> Games
   <br>
-  <button id = "All" class="button1" onclick="showall();">All</button>
-  <button id = "Multiplayer" class="button1" onclick="sorter('Multiplayer');">Multiplayer</button>
-  <button id = "Flash" class="button1" onclick="sorter('Flash');">Flash</button>
-  <button id = "Emulator" class="button1" onclick="sorter('Emulator');">Emulator</button>
-  <button id = "Platformer" class="button1" onclick="sorter('Platformer');">Platformer</button>
-  <button id = "Puzzle" class="button1" onclick="sorter('Puzzle');">Puzzle</button>
-  <button id = "Sports" class="button1" onclick="sorter('Sports');">Sports</button>
-  <button id = "Driving" class="button1" onclick="sorter('Driving');">Driving</button>
-  <button id = "Fighting" class="button1" onclick="sorter('Fighting');">Fighting</button>
-  <button id = "Shooters" class="button1" onclick="sorter('Shooters');">Shooters</button>
+  <button id = "All" class="button2"  onclick="showall();sorterbuttons(this);">All</button>
+  <button id = "Multiplayer" class="button1" onclick="sorter('Multiplayer');sorterbuttons(this);">Multiplayer</button>
+  <button id = "Flash" class="button1" onclick="sorter('Flash');sorterbuttons(this);">Flash</button>
+  <button id = "Emulator" class="button1" onclick="sorter('Emulator');sorterbuttons(this);">Emulator</button>
+  <button id = "Platformer" class="button1" onclick="sorter('Platformer');sorterbuttons(this);">Platformer</button>
+  <button id = "Puzzle" class="button1" onclick="sorter('Puzzle');sorterbuttons(this);">Puzzle</button>
+  <button id = "Sports" class="button1" onclick="sorter('Sports');sorterbuttons(this);">Sports</button>
+  <button id = "Driving" class="button1" onclick="sorter('Driving');sorterbuttons(this);">Driving</button>
+  <button id = "Fighting" class="button1" onclick="sorter('Fighting');sorterbuttons(this);">Fighting</button>
+  <button id = "Shooters" class="button1" onclick="sorter('Shooters');sorterbuttons(this);">Shooters</button>
 
   <div class = "icon_image" id ="icon_image">
     <a class = "Sports" href = "games/retro_bowl.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/retro_bowl_icon.png" alt="Icon" width="200" height="200"><figcaption>Retro Bowl</figcaption></a>

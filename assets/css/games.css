@@ -13,7 +13,7 @@
 
 }
 .button1{
-    background-color: #ffffff; /* Green */
+    background-color: #ffffff;
     border: none;
     color: black;
     padding: 14px 10px;
@@ -29,7 +29,21 @@
     white-space: nowrap;
     letter-spacing: -1px;
 }
-.button1:hover {
+.button2{
     background-color: #ff0000;
+    border: none;
     color: white;
+    padding: 14px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    border-radius: 10px;
+    font-family: "Impact", sans-serif;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    white-space: nowrap;
+    letter-spacing: -1px;
 }
+

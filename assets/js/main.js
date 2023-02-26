@@ -10,10 +10,8 @@ swfobject.embedSWF = function(url, cont, width, height){
 
     player.load({ url: url });
 }
-
 function openFullscreen() {
     var elem = document.getElementById("gameFrame");
-    console.log(elem)
     if (elem.requestFullscreen) {
         elem.requestFullscreen();
     } else if (elem.webkitRequestFullscreen) { /* Safari */
@@ -22,25 +20,34 @@ function openFullscreen() {
         elem.msRequestFullscreen();
     }
 }
+function sorterbuttons(button) {
+    var title = document.getElementById("title");
+    var elem = title.getElementsByTagName("button")
+    for (var i = 0; i < elem.length; i++) {
+        if (elem[i] !== button) {
+            elem[i].style.backgroundColor = "#ffffff";
+            elem[i].style.color = "black";
+        }
+        else{
+            elem[i].style.backgroundColor = "#ff0000";
+            elem[i].style.color = "white";
+        }
+    }
+}
+
 function sorter(category) {
-    console.log(category)
     var icon = document.getElementById("icon_image");
     var elem = icon.getElementsByTagName("a")
-    console.log(elem)
     for (var i = 0; i < elem.length; i++) {
         if (elem[i].className !== category) {
             elem[i].style.visibility = "collapse";
             elem[i].style.display = "none";
-
-
         }
         else{
             elem[i].style.visibility = "visible";
             elem[i].style.display = "inline-block";
         }
-
     }
-
 }
 function showall(category) {
     var icon = document.getElementById("icon_image");
