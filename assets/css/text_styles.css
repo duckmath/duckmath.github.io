@@ -19,6 +19,7 @@
     color: #dddddd;
     position: relative;
     font-size: 25px;
+    line-height: 120%;
     font-family: "Arial", sans-serif;
 
 }
@@ -26,6 +27,8 @@
     font-size: 20px;
     justify-content: center;
     color: #dddddd;
+    line-height: 120%;
+
 }
 
 .bottom_text{
