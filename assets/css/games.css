@@ -10,7 +10,8 @@
     grid-template-columns: 1fr 1fr;
     width: 900px;
     height: 600px;
-
+    line-height: 50%;
+    margin-bottom: -3%;
 }
 .button1{
     background-color: #ffffff;
@@ -28,6 +29,8 @@
     cursor: pointer;
     white-space: nowrap;
     letter-spacing: -1px;
+    margin-top: -10px;
+
 }
 .button2{
     background-color: #ff0000;
