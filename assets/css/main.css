@@ -46,33 +46,40 @@ body{
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    gap: 0 15px;
+    gap: 15px 15px;
+    justify-content: center;
+    -webkit-overflow-scrolling: touch
 
 }
-a {
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-
-a img {
+.icon_image a {
     display: block;
-    max-width: 100%;
-    height: auto;
+    position: relative;
+    width: 200px;
+    height: 200px;
 }
 
-.icon_image a figcaption{
-    pointer-events: none;
-    z-index: 1;
-    visibility: hidden;
+.icon_image a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.icon_image a figcaption {
     position: relative;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
     color: #D30000;
     font-size: 25px;
     font-weight: bold;
     font-family: "Impact", sans-serif;
+    text-align: center;
+    pointer-events: none;
+    z-index: 1;
+    visibility: hidden;
     background-color: white;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -82,8 +89,30 @@ a img {
     left: 50%; /* Centers the figcaption  hi*/
     transform: translateX(-50%); /* Centers the figcaption horizontally */
     line-height: 150%;
+    /*height: 40px;  Fixed height for the figcaption */
+    max-width: 100%;
+}
+a {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.icon_image img {
+    width: 200px;
+    height: 200px;
+}
+
+.icon_image a img {
+    display: block;
+    max-width: 100%;
+    width: 300px;
+    height: 200px;
 
 }
+
+
+
 .button {
     position: relative;
     padding: 15px 25px;
