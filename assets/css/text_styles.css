@@ -32,10 +32,12 @@
 }
 
 .bottom_text{
-    position: absolute; /* make the child element positioned */
+    position: fixed;; /* make the child element positioned */
     bottom: 0; /* position the element at the bottom of the parent element */
     left: 50%; /* position the element in the middle of the parent element */
     transform: translateX(-50%); /* move the element back by half of its width to center it */
+    vertical-align: bottom;
+
 
 }
 
