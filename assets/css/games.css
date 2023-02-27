@@ -11,7 +11,7 @@
     width: 900px;
     height: 600px;
     line-height: 50%;
-    margin-bottom: -3%;
+    margin-bottom: -1%;
 }
 .button1{
     background-color: #ffffff;
@@ -28,7 +28,7 @@
     transition-duration: 0.4s;
     cursor: pointer;
     white-space: nowrap;
-    margin-top: -10px;
+    margin-top: -5px;
 
 }
 .button2{
