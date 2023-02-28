@@ -1,5 +1,5 @@
 .topnav {
-    overflow: hidden;
+    overflow: auto;
     position: fixed;
     top: 1%;
     width: 98%;
@@ -26,9 +26,45 @@
 
 .icon {
     position: fixed;
-
 }
 
 .icon a {
     float: left;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+    float: right;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    overflow: visible;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+    color: black;
+    background-color: red;
+    width: 80px;
+
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content a {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    float: right;
+    background-color: red;
+
+    padding: 0px 20px;
+    width : 140%
+
+}
+.dropdown-content a:hover {
+    color: #FFFFFF;
+    background-color: #ce0a0a;
 }
