@@ -1,2 +1,4 @@
-# What is this?
-This is a test site for my website duckmath.org. I will rework that site from the ground up and when finished, ill change this to my resume or something of the sorts.
+# Duck Math
+This is a fun g4mes website that I hope everyone can enjoy. Thanks everyone for using it, your support means everything.
+# Credits
+Code written by [Maddox](https://github.com/maddox05)
