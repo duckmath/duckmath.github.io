@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@800&display=swap');
 .white_text{
     background: black;
     color: white;
@@ -10,7 +11,7 @@
     font-size: 80px;
     font-weight: bold;
     color: #ce0a0a;
-    font-family: "Farisi", sans-serif;
+    font-family: 'League Spartan', sans-serif;
     transform: translateX(-50%);
     line-height: 120%;
 }
@@ -28,14 +29,15 @@
     justify-content: center;
     color: #dddddd;
     line-height: 120%;
+    font-family: "Arial", sans-serif;
 
 }
 
 .bottom_text{
-    position: fixed;; /* make the child element positioned */
-    bottom: 0; /* position the element at the bottom of the parent element */
-    left: 50%; /* position the element in the middle of the parent element */
-    transform: translateX(-50%); /* move the element back by half of its width to center it */
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     vertical-align: bottom;
 
 

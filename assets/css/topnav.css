@@ -38,6 +38,7 @@
     float: right;
     text-align: center;
     text-decoration: none;
+    width: 80px;
 }
 
 .dropdown-content {
