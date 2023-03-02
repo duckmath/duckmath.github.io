@@ -3,11 +3,10 @@ const template = document.createElement('template');
 template.innerHTML = `
   <div class ="topnav">
     <div class="dropdown">
-        <a class = "topnavbutton">MORE</a>
+        <a class = "topnavbutton">MORE↓</a>
         <div class="dropdown-content">
-            <a href="#">List 1</a>
-            <a href="#">List 2</a>
-            <a href="#">List 3</a>
+            <a href="/more/Pr0x!es.html">Pr0x!es</a>
+            <a href="/more/Virtual_Machines.html">Virtual Machines</a>
         </div>
     </div>
     <a href ="/about.html">ABOUT</a>
