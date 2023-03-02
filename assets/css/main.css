@@ -1,4 +1,4 @@
-body{
+body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 15px;
@@ -12,11 +12,10 @@ body{
     -webkit-font-smoothing: antialiased !important;
     scroll-behavior: smooth;
     background-color: #1f2029;
-    background: url("../img/bg.svg");
+    background: url("../img/Animated-Shape.svg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: repeat;
-
 }
 .notbody{
     font-family: 'Montserrat', sans-serif;
@@ -32,7 +31,7 @@ body{
     -webkit-font-smoothing: antialiased !important;
     scroll-behavior: smooth;
     background-color: #1f2029;
-    background: url("../img/bg.svg");
+    background: url("../img/Animated-Shape.svg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: repeat;
