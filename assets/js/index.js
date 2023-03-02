@@ -6,7 +6,7 @@ template.innerHTML = `
         <a class = "topnavbutton">MORE↓</a>
         <div class="dropdown-content">
             <a href="/more/Pr0x!es.html">Pr0x!es</a>
-            <a href="#">Coming Soon</a>
+            <a href="/more/Virtual_Machines.html">Coming Soon</a>
             <a href="#">Coming Soon</a>
         </div>
     </div>
