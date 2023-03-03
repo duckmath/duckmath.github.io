@@ -12,7 +12,7 @@ body {
     -webkit-font-smoothing: antialiased !important;
     scroll-behavior: smooth;
     background-color: #1f2029;
-    background: url("../img/Animated-Shape.svg");
+    background: url("../img/bg.svg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: repeat;
@@ -32,7 +32,7 @@ body {
     -webkit-font-smoothing: antialiased !important;
     scroll-behavior: smooth;
     background-color: #1f2029;
-    background: url("../img/Animated-Shape.svg");
+    background: url("../img/bg.svg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: repeat;
