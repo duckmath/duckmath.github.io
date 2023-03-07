@@ -1,6 +1,6 @@
 const templatetopnav = document.createElement('template');
 
-template.innerHTML = `
+templatetopnav.innerHTML = `
   <div class ="topnav">
     <div class="dropdown">
         <a class = "topnavbutton">MORE↓</a>
