@@ -1,4 +1,4 @@
-const template = document.createElement('template');
+const templatetopnav = document.createElement('template');
 
 template.innerHTML = `
   <div class ="topnav">
@@ -21,4 +21,4 @@ template.innerHTML = `
 </div>
 `;
 
-document.body.appendChild(template.content);
+document.body.appendChild(templatetopnav.content);
