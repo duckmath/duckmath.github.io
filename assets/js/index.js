@@ -1,6 +1,5 @@
 const templatetopnav = document.createElement('template');
 
-
 template.innerHTML = `
   <div class ="topnav">
     <div class="dropdown">
