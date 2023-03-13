@@ -31,11 +31,9 @@
     color: white;
 }
 
-.icon {
+.icon a img {
     position: fixed;
-}
-
-.icon a {
+    top: 1%;
     float: left;
 }
 

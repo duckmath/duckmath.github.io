@@ -42,17 +42,22 @@ body {
     position: relative;
     color: #dddddd;
 }
+
 .icon_image{
     position: relative;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    flex-grow: 0;
     gap: 15px 15px;
     justify-content: center;
-    -webkit-overflow-scrolling: touch
-
+    -webkit-overflow-scrolling: touch;
+    order: 0;
+    align-items: center;
 }
+
 .icon_image a {
+    flex-wrap: wrap;
     display: block;
     position: relative;
     width: 200px;
@@ -92,26 +97,6 @@ body {
     /*height: 40px;  Fixed height for the figcaption */
     max-width: 100%;
 }
-a {
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-.icon_image img {
-    width: 200px;
-    height: 200px;
-}
-
-.icon_image a img {
-    display: block;
-    max-width: 100%;
-    width: 300px;
-    height: 200px;
-
-}
-
-
 
 .button {
     position: relative;

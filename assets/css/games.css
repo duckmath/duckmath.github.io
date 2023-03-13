@@ -3,7 +3,6 @@
 }
 .gameloc {
     position: relative;
-    margin: auto;
     display: grid;
     overflow: hidden;
     justify-content: center;
@@ -11,7 +10,7 @@
     width: 900px;
     height: 600px;
     line-height: 50%;
-    margin-bottom: -1%;
+    margin: auto auto -1%;
 }
 .button1{
     background-color: #ffffff;
