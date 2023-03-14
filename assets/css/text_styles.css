@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@800&display=swap');
 
+.main_title_text{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    text-align: center;
+    font-size: 80px;
+    font-weight: bold;
+    color: #ff0000;
+    font-family: 'League Spartan', sans-serif;
+    transform: translateX(-50%);
+    line-height: 120%;
+
+}
+
 .title_text{
     position: relative;
     top: 10%;
@@ -32,7 +46,7 @@
     font-weight: bolder;
     transform: translateX(-50%);
     left: 50%;
-    top: 400%;
+    top: 380%;
     border-radius: 10px;
     background: rgba(255,255,255,.2);
     padding: 20px;
