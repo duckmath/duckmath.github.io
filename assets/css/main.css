@@ -91,10 +91,9 @@ body {
     border-radius: 10px;
     /*line-height: 1px;*/
     margin-top: -30px;
-    left: 50%; /* Centers the figcaption  hi*/
+    left: 50%;
     transform: translateX(-50%); /* Centers the figcaption horizontally */
     line-height: 150%;
-    /*height: 40px;  Fixed height for the figcaption */
     max-width: 100%;
 }
 
