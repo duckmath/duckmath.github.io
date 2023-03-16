@@ -20,6 +20,7 @@ function openFullscreen() {
         elem.msRequestFullscreen();
     }
 }
+
 function sorterbuttons(button) {
     var title = document.getElementById("title");
     var elem = title.getElementsByTagName("button")
@@ -56,8 +57,8 @@ function showall(category) {
         elem[i].style.visibility = "visible";
         elem[i].style.display = "inline-block";
         }
-
     }
+
 function enlargeimage(image) {
     image.style.transform = "scale(1.15)";
     image.style.transition = "transform 0.25s ease";
@@ -68,6 +69,7 @@ function enlargeimage(image) {
 
 }
 
+
 function notlarge(image) {
     image.style.transform = "scale(1)";
     image.style.transition = "transform 0.25s ease";
@@ -76,6 +78,22 @@ function notlarge(image) {
 
 
 }
+
+function showimage(element) {
+    var child = element.parentElement.getElementsByTagName("a")[0];
+    child.style.visibility = "visible";
+}
+function unimage(element) {
+    var child = element.parentElement.getElementsByTagName("a")[0];
+    child.style.visibility = "hidden";
+}
+function showimagea(element) {
+    element.style.visibility = "visible";
+}
+function unimagea(element) {
+    element.style.visibility = "hidden";
+}
+
 
 function spin(image){
     image.style.transform = "rotate(359deg)";
