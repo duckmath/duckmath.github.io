@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 .main_title_text{
     position: absolute;
@@ -14,7 +15,21 @@
 
 }
 
+
 .title_text{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    text-align: center;
+    font-size: 80px;
+    font-weight: bold;
+    color: #ff0000;
+    font-family: 'League Spartan', sans-serif;
+    transform: translateX(-50%);
+    line-height: 120%;
+
+}
+.title_text_main{
     position: relative;
     top: 10%;
     left: 50%;
@@ -37,6 +52,7 @@
     font-family: "Arial", sans-serif;
 
 }
+
 .recommended{
     color: #dddddd;
     position: absolute;
@@ -47,9 +63,19 @@
     transform: translateX(-50%);
     left: 50%;
     top: 380%;
+}
+
+.image_description1stgame{
+    text-decoration: none;
+    position: absolute;
+    display: block;
+    color: #ff0000;
+    font-family: 'Anton', sans-serif;
     border-radius: 10px;
-    background: rgba(255,255,255,.2);
-    padding: 20px;
+    background: rgba(255,255,255);
+    top: 17%;
+    left: 27%;
+
 }
 
 
@@ -68,6 +94,7 @@
     background: rgba(255,255,255,.2);
     padding: 20px;
 }
+
 
 .about_text {
     font-size: 20px;
