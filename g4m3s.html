@@ -24,6 +24,10 @@
 
 <div class = "title_text_main" id = "title"><br> G4M3S
   <br>
+  <input type="text" id="query" name="searchbar" placeholder="Search...">
+  <button onclick="showall();searchbar1();">Search</button>
+  <br>
+
   <button id = "All" class="button2"  onclick="showall();sorterbuttons(this);">All</button>
   <button id = "Multiplayer" class="button1" onclick="sorter('Multiplayer');sorterbuttons(this);">Multiplayer</button>
   <button id = "Flash" class="button1" onclick="sorter('Flash');sorterbuttons(this);">Flash</button>
@@ -36,20 +40,20 @@
   <button id = "Horror" class="button1" onclick="sorter('Horror');sorterbuttons(this);">Horror</button>
 
   <div class = "icon_image" id ="icon_image">
-    <a class = "Sports" href = "g4m3s/retro_bowl.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/retro_bowl_icon.png" alt="Icon" width="200" height="200"><figcaption>Retro Bowl</figcaption></a>
-    <a class = "Platformer" href = "g4m3s/geometry_dash.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/geometrydash.jpg" alt="Icon" width="200" height="200"><figcaption>Geometry Dash</figcaption></a>
-    <a class = "Puzzle" href = "g4m3s/fireboy.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/fireboy.png" alt="Icon" width="200" height="200"><figcaption>Fireboy & Watergirl</figcaption></a>
-    <a class = "Multiplayer" href = "g4m3s/Combat_reloaded.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/combatreloaded.avif" alt="Icon" width="200" height="200"><figcaption>Combat Arms</figcaption></a>
-    <a class = "Platformer" href = "g4m3s/crossyroads.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/crossyroad.png" alt="Icon" width="200" height="200"><figcaption>Crossy Roads</figcaption></a>
-    <a class = "Flash" href = "g4m3s/flash-games/raftwars1.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/rw1.png" alt="Icon" width="200" height="200"><figcaption>Raft Wars</figcaption></a>
-    <a class = "Flash" href = "g4m3s/flash-games/raftwars2.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/rw2.webp" alt="Icon" width="200" height="200"><figcaption>Raft Wars 2</figcaption></a>
-    <a class = "Platformer" href = "g4m3s/subway_surfers.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/subway.png" alt="Icon" width="200" height="200"><figcaption>Subway Surfers</figcaption></a>
-    <a class = "Multiplayer" href = "g4m3s/1v1.lol.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/1v1.png" alt="Icon" width="200" height="200"><figcaption>1v1.LOL</figcaption></a>
-    <a class = "Multiplayer" href = "g4m3s/Minecraft.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/minecraft.png" alt="Icon" width="200" height="200"><figcaption>Minecraft</figcaption></a>
-    <a class = "Multiplayer" href = "g4m3s/Paper.io.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/paper.jpg" alt="Icon" width="200" height="200"><figcaption>Paper.io</figcaption></a>
-    <a class = "Driving" href = "g4m3s/driftboss.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/driftboss.jpg" alt="Icon" width="200" height="200"><figcaption>Drift Boss</figcaption></a>
-    <a class = "Horror" href = "g4m3s/Five-Nights-At-Freddys.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/fnaf.png" alt="Icon" width="200" height="200"><figcaption>FNAF</figcaption></a>
-    <a class = "Driving" href = "g4m3s/Super-Star-Car.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/superstarcar.avif" alt="Icon" width="200" height="200"><figcaption>Super Star Car</figcaption></a>
+    <a id = "Retro Bowl" class = "Sports" href = "g4m3s/retro_bowl.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/retro_bowl_icon.png" alt="Icon" width="200" height="200"><figcaption>Retro Bowl</figcaption></a>
+    <a id = "Geometry Dash" class = "Platformer" href = "g4m3s/geometry_dash.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/geometrydash.jpg" alt="Icon" width="200" height="200"><figcaption>Geometry Dash</figcaption></a>
+    <a id = "Fireboy and Watergirl" class = "Puzzle" href = "g4m3s/fireboy.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/fireboy.png" alt="Icon" width="200" height="200"><figcaption>Fireboy & Watergirl</figcaption></a>
+    <a id = "Combat Reloaded" class = "Multiplayer" href = "g4m3s/Combat_reloaded.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/combatreloaded.avif" alt="Icon" width="200" height="200"><figcaption>Combat Arms</figcaption></a>
+    <a id = "Crossy Roads" class = "Platformer" href = "g4m3s/crossyroads.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/crossyroad.png" alt="Icon" width="200" height="200"><figcaption>Crossy Roads</figcaption></a>
+    <a id = "Raft Wars 1" class = "Flash" href = "g4m3s/flash-games/raftwars1.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/rw1.png" alt="Icon" width="200" height="200"><figcaption>Raft Wars</figcaption></a>
+    <a id = "Raft Wars 2" class = "Flash" href = "g4m3s/flash-games/raftwars2.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/rw2.webp" alt="Icon" width="200" height="200"><figcaption>Raft Wars 2</figcaption></a>
+    <a id = "Subway Surfers" class = "Platformer" href = "g4m3s/subway_surfers.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/subway.png" alt="Icon" width="200" height="200"><figcaption>Subway Surfers</figcaption></a>
+    <a id = "1v1.lol" class = "Multiplayer" href = "g4m3s/1v1.lol.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/1v1.png" alt="Icon" width="200" height="200"><figcaption>1v1.LOL</figcaption></a>
+    <a id = "Minecraft" class = "Multiplayer" href = "g4m3s/Minecraft.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/minecraft.png" alt="Icon" width="200" height="200"><figcaption>Minecraft</figcaption></a>
+    <a id = "Paper.io" class = "Multiplayer" href = "g4m3s/Paper.io.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/paper.jpg" alt="Icon" width="200" height="200"><figcaption>Paper.io</figcaption></a>
+    <a id = "Driftboss" class = "Driving" href = "g4m3s/driftboss.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/driftboss.jpg" alt="Icon" width="200" height="200"><figcaption>Drift Boss</figcaption></a>
+    <a id = "Five Nights at Freddys FNAF" class = "Horror" href = "g4m3s/Five-Nights-At-Freddys.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/fnaf.png" alt="Icon" width="200" height="200"><figcaption>FNAF</figcaption></a>
+    <a id = "Super Star Car" class = "Driving" href = "g4m3s/Super-Star-Car.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/superstarcar.avif" alt="Icon" width="200" height="200"><figcaption>Super Star Car</figcaption></a>
 
   </div>
 </div>

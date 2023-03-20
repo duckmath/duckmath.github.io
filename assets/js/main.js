@@ -21,6 +21,27 @@ function openFullscreen() {
     }
 }
 
+function searchbar1() {
+    const searchvalue = document.getElementById('query');
+    var icon_divs = document.getElementById("icon_image");
+    var elem = icon_divs.getElementsByTagName("a")
+    if (searchvalue.value === ''){
+        console.log("Nothing Searched")
+    }
+    else {
+        for (var i = 0; i < elem.length; i++) {
+            if (elem[i].id.toLowerCase().includes(searchvalue.value.toLowerCase())) {
+                elem[i].style.visibility = "visible";
+                elem[i].style.display = "inline-block";
+            } else {
+                elem[i].style.visibility = "collapse";
+                elem[i].style.display = "none";
+            }
+        }
+    }
+
+}
+
 function sorterbuttons(button) {
     var title = document.getElementById("title");
     var elem = title.getElementsByTagName("button")
@@ -50,9 +71,12 @@ function sorter(category) {
         }
     }
 }
-function showall(category) {
+function showall() {
     var icon = document.getElementById("icon_image");
     var elem = icon.getElementsByTagName("a")
+    var all = document.getElementById("All")
+
+    sorterbuttons(all)
     for (var i = 0; i < elem.length; i++) {
         elem[i].style.visibility = "visible";
         elem[i].style.display = "inline-block";
