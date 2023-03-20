@@ -25,8 +25,7 @@
 
 <div class = "title_text_main" id = "title"><br> G4M3S
   <br>
-  <input type="text" id="query" name="searchbar" placeholder="Search...">
-  <button onclick="showall();searchbar1();">Search</button>
+  <input oninput="showall();searchbar1();" type="text" id="query" name="searchbar" placeholder="Search...">
   <br>
 
   <button id = "All" class="button2"  onclick="showall();sorterbuttons(this);">All</button>
