@@ -21,4 +21,12 @@ templatetopnav.innerHTML = `
 </div>
 `;
 
+const templateforhead = document.createElement('template');
+
+templateforhead.innerHTML = `
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+`;
+
+document.head.appendChild(templateforhead.content);
+
 document.body.appendChild(templatetopnav.content);
