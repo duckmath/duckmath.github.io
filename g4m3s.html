@@ -28,7 +28,7 @@
   <input oninput="showall();searchbar1();" onclick="showall();searchbar1();" type="text" id="query" name="searchbar" placeholder="Search...">
   <br>
 
-  <button id = "All" class="button2"  onclick="showall();sorterbuttons(this);">All</button>
+  <button id = "All" class="button2" onclick="showall();sorterbuttons(this);">All</button>
   <button id = "Multiplayer" class="button1" onclick="sorter('Multiplayer');sorterbuttons(this);">Multiplayer</button>
   <button id = "Flash" class="button1" onclick="sorter('Flash');sorterbuttons(this);">Flash</button>
   <button id = "Emulator" class="button1" onclick="sorter('Emulator');sorterbuttons(this);">Emulator</button>
@@ -38,9 +38,12 @@
   <button id = "Driving" class="button1" onclick="sorter('Driving');sorterbuttons(this);">Driving</button>
   <button id = "Fighting" class="button1" onclick="sorter('Fighting');sorterbuttons(this);">Fighting</button>
   <button id = "Horror" class="button1" onclick="sorter('Horror');sorterbuttons(this);">Horror</button>
+  <button id = "Other" class="button1" onclick="sorter('Other');sorterbuttons(this);">Other</button>
+
 
   <div class = "icon_image" id ="icon_image">
     <a id = "Retro Bowl" class = "Sports" href = "g4m3s/retro_bowl.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/retro_bowl_icon.png" alt="Icon" width="200" height="200"><figcaption>Retro Bowl</figcaption></a>
+    <a id = "Cookie Clicker" class = "Other" href = "g4m3s/CookieClicker.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/cookieclicker.png" alt="Icon" width="200" height="200"><figcaption>Cookie Clicker</figcaption></a>
     <a id = "Geometry Dash" class = "Platformer" href = "g4m3s/geometry_dash.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/geometrydash.jpg" alt="Icon" width="200" height="200"><figcaption>Geometry Dash</figcaption></a>
     <a id = "Fireboy and Watergirl" class = "Puzzle" href = "g4m3s/fireboy.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/fireboy.png" alt="Icon" width="200" height="200"><figcaption>Fireboy & Watergirl</figcaption></a>
     <a id = "Combat Reloaded" class = "Multiplayer" href = "g4m3s/Combat_reloaded.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/combatreloaded.avif" alt="Icon" width="200" height="200"><figcaption>Combat Arms</figcaption></a>
@@ -49,7 +52,7 @@
     <a id = "Raft Wars 2" class = "Flash" href = "g4m3s/flash-g4m3s/raftwars2.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/rw2.webp" alt="Icon" width="200" height="200"><figcaption>Raft Wars 2</figcaption></a>
     <a id = "Subway Surfers" class = "Platformer" href = "g4m3s/subway_surfers.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/subway.png" alt="Icon" width="200" height="200"><figcaption>Subway Surfers</figcaption></a>
     <a id = "1v1.lol" class = "Multiplayer" href = "g4m3s/1v1.lol.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/1v1.png" alt="Icon" width="200" height="200"><figcaption>1v1.LOL</figcaption></a>
-    <a id = "Minecraft" class = "Multiplayer" href = "g4m3s/Minecraft.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/minecraft.png" alt="Icon" width="200" height="200"><figcaption>Minecraft</figcaption></a>
+    <a id = "Minecraft MC" class = "Multiplayer" href = "g4m3s/Minecraft.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/minecraft.png" alt="Icon" width="200" height="200"><figcaption>Minecraft</figcaption></a>
     <a id = "Paper.io" class = "Multiplayer" href = "g4m3s/Paper.io.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/paper.jpg" alt="Icon" width="200" height="200"><figcaption>Paper.io</figcaption></a>
     <a id = "Driftboss" class = "Driving" href = "g4m3s/driftboss.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/driftboss.jpg" alt="Icon" width="200" height="200"><figcaption>Drift Boss</figcaption></a>
     <a id = "Five Nights at Freddys FNAF" class = "Horror" href = "g4m3s/Five-Nights-At-Freddys.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/fnaf.png" alt="Icon" width="200" height="200"><figcaption>FNAF</figcaption></a>
@@ -72,6 +75,40 @@
     <a id = "The Impossible Quiz 2" class = "Flash" href = "g4m3s/flash-g4m3s/ImpossibleQuiz2.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/impossible2.avif" alt="Icon" width="200" height="200"><figcaption>The Impossible Quiz 2</figcaption></a>
     <a id = "The Worlds Hardest game" class = "Flash" href = "g4m3s/flash-g4m3s/worldshardestgame.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/hardgame1.png" alt="Icon" width="200" height="200"><figcaption>The World's Hardest Game</figcaption></a>
     <a id = "The Worlds Hardest game 2" class = "Flash" href = "g4m3s/flash-g4m3s/worldshardestgame2.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/hardgame2.png" alt="Icon" width="200" height="200"><figcaption>The World's Hardest Game 2</figcaption></a>
+    <a id = "2048" class = "Puzzle" href = "g4m3s/2048.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/2048.png" alt="Icon" width="200" height="200"><figcaption>2048</figcaption></a>
+    <a id = "Tetris" class = "Puzzle" href = "g4m3s/Tetris.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/tetris.png" alt="Icon" width="200" height="200"><figcaption>Tetris</figcaption></a>
+    <a id = "Friday Night Funking FNF" class = "Puzzle" href = "g4m3s/FridayNightFunkin.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/friday.gif" alt="Icon" width="200" height="200"><figcaption>Friday Night Funkin</figcaption></a>
+    <a id = "Swords and Sandals 2" class = "Flash" href = "g4m3s/flash-g4m3s/SwordsandSandals2.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/sas2.png" alt="Icon" width="200" height="200"><figcaption>Swords and Sandals 2</figcaption></a>
+    <a id = "agar.io" class = "Multiplayer" href = "g4m3s/agar.io.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/agar.png" alt="Icon" width="200" height="200"><figcaption>Agar.io</figcaption></a>
+    <a id = "Mini Golf" class = "Sports" href = "g4m3s/Minigolf.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/golfmini.png" alt="Icon" width="200" height="200"><figcaption>Mini Golf</figcaption></a>
+    <a id = "Run 3" class = "Platformer" href = "g4m3s/Run3.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/run3.jpg" alt="Icon" width="200" height="200"><figcaption>Run 3</figcaption></a>
+    <a id = "Uno" class = "Puzzle" href = "g4m3s/Uno.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/uno.png" alt="Icon" width="200" height="200"><figcaption>Uno</figcaption></a>
+    <a id = "Paper Minecraft MC" class = "Platformer" href = "g4m3s/PaperMinecraft.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/bird.png" alt="Icon" width="200" height="200"><figcaption>Flappy Bird</figcaption></a>
+    <a id = "Duck Life 1" class = "Puzzle" href = "g4m3s/ducklife.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/dl1.jpg" alt="Icon" width="200" height="200"><figcaption>Duck Life</figcaption></a>
+    <a id = "Duck Life 2" class = "Puzzle" href = "g4m3s/ducklife2.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/dl2.avif" alt="Icon" width="200" height="200"><figcaption>Duck Life 2</figcaption></a>
+    <a id = "Duck Life 3" class = "Puzzle" href = "g4m3s/ducklife3.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/dl3.avif" alt="Icon" width="200" height="200"><figcaption>Duck Life 3</figcaption></a>
+    <a id = "Duck Life 4" class = "Puzzle" href = "g4m3s/ducklife4.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/dl4.avif" alt="Icon" width="200" height="200"><figcaption>Duck Life 4</figcaption></a>
+    <a id = "Pizza Party" class = "Other" href = "g4m3s/PizzaParty.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/pizzaparty.png" alt="Icon" width="200" height="200"><figcaption>Pizza Party</figcaption></a>
+    <a id = "Yohoho.io" class = "Multiplayer" href = "g4m3s/Yohoho.io.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/yohoho.jpg" alt="Icon" width="200" height="200"><figcaption>Yohoho.io</figcaption></a>
+    <a id = "Moto X3M" class = "Sports" href = "g4m3s/MotoX3M.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/motox3m.jpg" alt="Icon" width="200" height="200"><figcaption>Moto X3M</figcaption></a>
+    <a id = "Stickman Peacekeeper" class = "Fighting" href = "g4m3s/Stickmanpeacekeeper.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/stickmanpeace.jpg" alt="Icon" width="200" height="200"><figcaption>Stickman Peacekeeper</figcaption></a>
+    <a id = "Endless Lake" class = "Platformer" href = "g4m3s/EndlessLake.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/endlesslake.jpg" alt="Icon" width="200" height="200"><figcaption>Endless Lake</figcaption></a>
+    <a id = "CS Surf" class = "Platformer" href = "g4m3s/CSSurf.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/cssurf.png" alt="Icon" width="200" height="200"><figcaption>CS Surf</figcaption></a>
+    <a id = "Habbo Clicker" class = "Other" href = "g4m3s/HabboClicker.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/habboclicker.jpg" alt="Icon" width="200" height="200"><figcaption>Habbo Clicker</figcaption></a>
+    <a id = "Money Movers" class = "Puzzle" href = "g4m3s/MoneyMovers.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/moneymovers1.jpg" alt="Icon" width="200" height="200"><figcaption>Money Movers</figcaption></a>
+    <a id = "Bingo" class = "Puzzle" href = "g4m3s/Bingo.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/Bingo.png" alt="Icon" width="200" height="200"><figcaption>Bingo</figcaption></a>
+    <a id = "Castle Defender" class = "Puzzle" href = "g4m3s/CastleDefender.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/castledefender.jpg" alt="Icon" width="200" height="200"><figcaption>Castle Defender</figcaption></a>
+
+
+
+
+
+
+
+
+
+
+
 
 
   </div>
