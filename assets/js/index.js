@@ -21,4 +21,19 @@ templatetopnav.innerHTML = `
 </div>
 `;
 
+const templategoogleany = document.createElement('template');
+
+templategoogleany.innerHTML = `
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HXPPJLK5JN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HXPPJLK5JN');
+</script>
+`;
+
+document.head.appendChild(templategoogleany.content);
 document.body.appendChild(templatetopnav.content);
