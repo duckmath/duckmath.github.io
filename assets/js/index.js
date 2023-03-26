@@ -19,6 +19,8 @@ templatetopnav.innerHTML = `
 <div class ="icon">
     <a href ="/index.html"><img onmouseover="spin(this)" onmouseout="unspin(this)" src="/assets/img/goose.png" alt="Icon" width="60" height="60"></a>
 </div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1533872335883359"
+     crossorigin="anonymous"></script>
 `;
 
 const templategoogleany = document.createElement('template');
