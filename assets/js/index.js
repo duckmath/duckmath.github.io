@@ -26,7 +26,6 @@ templatetopnav.innerHTML = `
 const templategoogleany = document.createElement('template');
 
 templategoogleany.innerHTML = `
- <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HXPPJLK5JN"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
