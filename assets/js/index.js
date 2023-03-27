@@ -37,5 +37,4 @@ templategoogleany.innerHTML = `
 </script>
 `;
 
-document.head.appendChild(templategoogleany.content);
 document.body.appendChild(templatetopnav.content);
