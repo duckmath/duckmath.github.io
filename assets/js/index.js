@@ -19,6 +19,22 @@ templatetopnav.innerHTML = `
 <div class ="icon">
     <a href ="/index.html"><img onmouseover="spin(this)" onmouseout="unspin(this)" src="/assets/img/goose.png" alt="Icon" width="60" height="60"></a>
 </div>
+
+`;
+
+const templategoogleany = document.createElement('template');
+
+templategoogleany.innerHTML = `
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1533872335883359"
+     crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HXPPJLK5JN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HXPPJLK5JN');
+</script>
 `;
 
 document.body.appendChild(templatetopnav.content);

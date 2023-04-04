@@ -54,15 +54,16 @@
 }
 
 .recommended{
-    color: #dddddd;
     position: absolute;
-    font-size: 35px;
-    offset: 50px;
-    font-family: "Arial", sans-serif;
-    font-weight: bolder;
-    transform: translateX(-50%);
-    left: 50%;
     top: 380%;
+    left: 50%;
+    text-align: center;
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+    font-family: 'League Spartan', sans-serif;
+    transform: translateX(-50%);
+    line-height: 120%;
 }
 
 .image_description1stgame{

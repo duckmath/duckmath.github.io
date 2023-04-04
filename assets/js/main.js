@@ -20,6 +20,9 @@ function openFullscreen() {
         elem.msRequestFullscreen();
     }
 }
+function ruffleFullscreen() {
+    alert("To Fullscreen, Right Click the Game and hit Enter Fullscreen");
+}
 
 function searchbar1() {
     const searchvalue = document.getElementById('query');
