@@ -115,4 +115,13 @@
     transform: translateX(-50%);
     vertical-align: bottom;
 }
+.controls {
+    font-size: 10px;
+    justify-content: center;
+    color: #dddddd;
+    line-height: 120%;
+    font-family: "Arial", sans-serif;
+    margin-inline-start: 0;
+
+}
 

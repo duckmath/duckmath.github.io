@@ -10,6 +10,14 @@ swfobject.embedSWF = function(url, cont, width, height){
 
     player.load({ url: url });
 }
+function focus()
+{
+    var iframe = document.getElementById('gameFrame')
+    iframe.contentWindow.focus();
+}
+
+window.setInterval(focus, 100);
+
 function openFullscreen() {
     var elem = document.getElementById("gameFrame");
     if (elem.requestFullscreen) {
