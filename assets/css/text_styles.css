@@ -6,7 +6,7 @@
     top: 30%;
     left: 50%;
     text-align: center;
-    font-size: 80px;
+    font-size: 100px;
     font-weight: bold;
     color: #ff0000;
     font-family: 'League Spartan', sans-serif;
@@ -34,7 +34,7 @@
     top: 10%;
     left: 50%;
     text-align: center;
-    font-size: 80px;
+    font-size: 100px;
     font-weight: bold;
     color: #ff0000;
     font-family: 'League Spartan', sans-serif;
@@ -48,9 +48,8 @@
     color: #dddddd;
     position: relative;
     font-size: 25px;
-    line-height: 120%;
+    line-height: 130%;
     font-family: "Arial", sans-serif;
-
 }
 
 .recommended{
