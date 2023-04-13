@@ -121,6 +121,8 @@ body {
     transform: translateY(4px);
 }
 .button-55 {
+    margin-top: 15px;
+    margin-bottom: 10px;
     align-self: center;
     background-color: #fff;
     background-image: none;
