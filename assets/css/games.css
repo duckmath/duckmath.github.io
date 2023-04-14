@@ -46,6 +46,7 @@
     letter-spacing: -1px;
 }
 .searchbar {
+    padding: 10px 10px;
     font-family: 'Nunito';
     font-size: 30px;
     font-weight: 800;
