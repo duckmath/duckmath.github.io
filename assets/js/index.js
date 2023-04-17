@@ -6,8 +6,8 @@ templatetopnav.innerHTML = `
         <a class = "topnavbutton">MORE↓</a>
         <div class="dropdown-content">
             <a href="/more/Unbl0ck3rs.html">Unbl0ck3rs</a>
-            <a href="/more/Virtual_Machines.html">Virtual Machines</a>
-            <a href="/more/chat.html">D1sc0rd</a>
+            <a href="/more/Virtual_Machines.html" style="background-color: #FFFF00">Virtual Machines</a>
+            <a href="/more/chat.html" style="background-color: #0000FF">D1sc0rd</a>
 
         </div>
     </div>
