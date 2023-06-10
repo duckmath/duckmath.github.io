@@ -13,7 +13,10 @@ swfobject.embedSWF = function(url, cont, width, height){
 function focus()
 {
     var iframe = document.getElementById('gameFrame')
-    iframe.contentWindow.focus();
+    if (iframe != null){
+        iframe.contentWindow.focus();
+    }
+
 }
 
 window.setInterval(focus, 100);
