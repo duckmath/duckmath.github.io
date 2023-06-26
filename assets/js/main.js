@@ -10,16 +10,17 @@ swfobject.embedSWF = function(url, cont, width, height){
 
     player.load({ url: url });
 }
-function focus()
-{
-    var iframe = document.getElementById('gameFrame')
-    if (iframe != null){
-        iframe.contentWindow.focus();
-    }
 
+function iframe_focus() {
+    var toBeFocused = document.getElementById("gameFrame");
+    toBeFocused.focus();
+    console.log("iframe focused");
 }
 
-window.setInterval(focus, 100);
+document.addEventListener("DOMContentLoaded", function() {
+    var iframe = document.getElementById("gameFrame");
+    iframe.addEventListener("mouseenter", iframe_focus);
+});
 
 function openFullscreen() {
     var elem = document.getElementById("gameFrame");
