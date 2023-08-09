@@ -29,8 +29,9 @@
   <noscript>Your browser doesn't have JavaScript enabled. Please enable JavaScript or switch to a browser that
     supports it.</noscript>
   <script src="/assets/js/index.js" type="text/javascript" defer></script>
-  <script src="https://yell0wsuit.page/assets/games/subway-surfers-unity/unity.js"></script>
-  <script src="UnityLoader.2019.2.js"></script>
+
+  <script type="module" src="https://unpkg.com/x-frame-bypass"></script>
+
   <!-- add unity and unity loader for js -->
 
 </head>
@@ -40,7 +41,7 @@
 
 <div class = "title_text"> Subway Surfers Mexico
 
-  <iframe class ="gameloc" id="gameFrame" allowfullscreen="" allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad;
+  <iframe is="x-frame-bypass" class ="gameloc" id="gameFrame" allowfullscreen="" allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad;
          keyboard-map *; xr-spatial-tracking; clipboard-write" name="gameFrame"
           scrolling="no" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock
                 allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin
