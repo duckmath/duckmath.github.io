@@ -18,8 +18,11 @@ function iframe_focus() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+
     var iframe = document.getElementById("gameFrame");
+    if (iframe){
     iframe.addEventListener("mouseenter", iframe_focus);
+    }
 });
 
 function openFullscreen() {
