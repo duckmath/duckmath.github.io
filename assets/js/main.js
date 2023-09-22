@@ -78,6 +78,12 @@ function sorterbuttons(button) {
 function sorter(category) {
     var icon = document.getElementById("icon_image");
     var elem = icon.getElementsByTagName("a")
+    var ads = document.getElementsByClassName("ad")
+    for (var i = 0; i < ads.length; i++) {
+        ads[i].style.visibility = "hidden";
+        ads[i].style.display = "none";
+    }
+
     for (var i = 0; i < elem.length; i++) {
         if (elem[i].className !== category) {
             elem[i].style.visibility = "collapse";
@@ -98,8 +104,14 @@ function showall() {
     for (var i = 0; i < elem.length; i++) {
         elem[i].style.visibility = "visible";
         elem[i].style.display = "inline-block";
-        }
     }
+    var ads = document.getElementsByClassName("ad")
+    for (var i = 0; i < ads.length; i++) {
+        ads[i].style.visibility = "visible";
+        ads[i].style.display = "inline-block";
+    }
+}
+
 
 function enlargeimage(image) {
     image.style.transform = "scale(1.15)";
