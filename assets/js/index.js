@@ -18,7 +18,7 @@ templatetopnav.innerHTML = `
     <a href="/index.html">HOME</a>
 </div>
 <div class ="icon">
-    <a href ="/index.html"><img onmouseover="spin(this)" onmouseout="unspin(this)" src="/assets/img/goose.png" alt="Icon" width="60" height="60"></a>
+    <a href ="/index.html"><img onmouseover="spin(this)" onmouseout="unspin(this)" src="/assets/img/goose.webp" alt="Icon" width="60" height="60"></a>
 </div>
 
 `;
