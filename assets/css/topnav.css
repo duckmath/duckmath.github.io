@@ -1,15 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
 
-
-
-
-
 .topnav {
     overflow: auto;
     position: fixed;
     top: 1%;
     width: 98%;
-    font-family: 'Tilt Warp', cursive;
+    font-family: 'Tilt Warp', sans-serif;
 }
 
 .topnav a {
@@ -50,7 +46,7 @@
     display: none;
     position: relative;
     overflow: visible;
-    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.4);
     color: black;
     background-color: red;
     width: 80px;
@@ -66,7 +62,7 @@
     float: right;
     background-color: red;
 
-    padding: 0px 20px;
+    padding: 0 20px;
     width : 140%
 
 }

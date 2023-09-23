@@ -11,11 +11,7 @@ body {
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     scroll-behavior: smooth;
-    background-color: #1f2029;
-    background: url("../img/bg.svg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: repeat;
+    background: #1f2029 url("../img/bg.svg") repeat fixed center;
 }
 
 .notbody{
@@ -31,11 +27,15 @@ body {
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     scroll-behavior: smooth;
+    background: #1f2029 url("../img/bg.svg") repeat fixed center;
+/* background shorthand  ===
     background-color: #1f2029;
     background: url("../img/bg.svg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: repeat;
+*/
+
 }
 
 .iframe{
