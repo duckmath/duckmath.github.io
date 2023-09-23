@@ -5,4 +5,4 @@ This is a fun website that I hope everyone can enjoy. Thanks, everyone for using
 # Credits
 - Code written by [Maddox](https://github.com/maddox05)
 - [Joe](https://www.instagram.com/parada.joseph/) for advertising and support!
-
+- [Divij](https://github.com/Divij-Agarwal-42) for front end
