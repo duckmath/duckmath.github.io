@@ -43,10 +43,19 @@ function searchbar1() {
     const searchvalue = document.getElementById('query');
     var icon_divs = document.getElementById("icon_image");
     var elem = icon_divs.getElementsByTagName("a")
+    var ads = document.getElementsByClassName("ad")
     if (searchvalue.value === ''){
         console.log("Nothing Searched")
+        for (var i = 0; i < ads.length; i++) {
+            ads[i].style.visibility = "visible";
+            ads[i].style.display = "inline-block";
+        }
     }
     else {
+        for (var i = 0; i < ads.length; i++) {
+            ads[i].style.visibility = "hidden";
+            ads[i].style.display = "none";
+        }
         for (var i = 0; i < elem.length; i++) {
             if (elem[i].id.toLowerCase().includes(searchvalue.value.toLowerCase())) {
                 elem[i].style.visibility = "visible";
