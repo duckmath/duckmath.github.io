@@ -26,3 +26,8 @@
     visibility: visible;
     opacity: 1;
 }
+
+.tooltip .tooltiptext:hover {
+    visibility: hidden;
+    opacity: 0;
+}
