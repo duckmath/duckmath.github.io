@@ -20,7 +20,6 @@ templatetopnav.innerHTML = `
 <div class ="icon">
     <a href ="/index.html"><img onmouseover="spin(this)" onmouseout="unspin(this)" src="/assets/img/goose.webp" alt="Icon" width="60" height="60"></a>
 </div>
-<!-- <footer class="footer">Copyright 2021-2023 duckmath.org</footer> -->
 
 `;
 
@@ -40,3 +39,4 @@ templategoogleany.innerHTML = `
 `;
 
 document.body.appendChild(templatetopnav.content);
+// <footer class="footer">Copyright 2021-2023 duckmath.org</footer>
