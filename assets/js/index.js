@@ -39,4 +39,5 @@ templategoogleany.innerHTML = `
 `;
 
 document.body.appendChild(templatetopnav.content);
+
 // <footer class="footer">Copyright 2021-2023 duckmath.org</footer>
