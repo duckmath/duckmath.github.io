@@ -16,7 +16,7 @@
 }
 
 
-.title_text{
+.title_text {
     position: absolute;
     top: 10%;
     left: 50%;
@@ -27,8 +27,15 @@
     font-family: 'League Spartan', sans-serif;
     transform: translateX(-50%);
     line-height: 120%;
+    
+    /* Flex for stacking */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This will center-align your iframe and button horizontally */
+    justify-content: center; /* Optional: This will center-align items vertically */
 
 }
+
 .title_text_main{
     position: relative;
     top: 10%;
