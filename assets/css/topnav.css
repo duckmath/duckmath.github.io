@@ -66,6 +66,7 @@
     width : 140%
 
 }
+
 .mobile-menu .dropdown {
     display: inline-block;
     position: relative;
@@ -99,7 +100,9 @@
 
 }
 #hamburger-icon{
-    margin-left:88vw;
+    top: 1%;
+    right: 1%;
+    float: right;
     display:none;
     cursor:pointer;
     font-family: 'Tilt Warp', sans-serif;
@@ -111,6 +114,7 @@
     margin:6px 0;
     transition:0.4s;
 }
+
 .open .bar1{
     -webkit-transform: rotate(-45deg ) translate(-6px,6px);
     transform: rotate(-45deg) translate(-6px,6px);
@@ -125,22 +129,30 @@
 .open .mobile-menu{
     display:flex;
     flex-direction: column;
-    margin-left: 82vh;
     justify-content: flex-start;
 }
-.mobile-menu{
+.mobile-menu {
     display: none;
     position: absolute;
-    top:50px;
-    left:0;
-    height: calc(100vh - 50px);
-    width: 100%;
+    top: 10%;
+    right: 0;
+    left: auto;
+    width: 40%;
     list-style: none;
+    background-color: #333; /* Add a background color to make the menu visible */
+    z-index: 1; /* Add z-index to make the menu appear on top */
+    padding: 2em 1em; /* Remove padding to prevent unwanted space */
+    margin: 0; /* Remove margin to prevent unwanted space */
 }
+
+.mobile-menu.open {
+    display: block; /* Show the menu when the hamburger icon is clicked */
+}
+
 ul a{
     color:white;
     text-decoration: none;
-    padding:4px;
+    padding: 4px;
 }
 ul a:hover{
     background-color: #eee8e8;
@@ -158,3 +170,4 @@ ul a:hover{
     color: #FFFFFF;
     background-color: #ce0a0a;
 }
+
