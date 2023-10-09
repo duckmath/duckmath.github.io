@@ -5,10 +5,10 @@ templatetopnav.innerHTML = `
     <div class="dropdown">
         <a class = "topnavbutton">MORE↓</a>
         <div class="dropdown-content">
-            <a href="/more/Unbl0ck3rs.html">Unbl0ck3rs</a>
-            <a href="/more/Virtual_Machines.html" style="background-color: #FFFF00">Virtual Machines</a>
-            <a href="/more/chat.html" style="background-color: #0000FF">D1sc0rd</a>
-            <a href="/more/G4m3-Requests.html" style="background-color: #00FF00">G4m3 Requests</a>
+            <a href="../../more/Unbl0ck3rs.html">Unbl0ck3rs</a>
+            <a href="../../more/Virtual_Machines.html" style="background-color: #FFFF00">Virtual Machines</a>
+            <a href="../../more/chat.html" style="background-color: #0000FF">D1sc0rd</a>
+            <a href="../../more/G4m3-Requests.html" style="background-color: #00FF00">G4m3 Requests</a>
         </div>
     </div>
     <a href ="/about.html">ABOUT</a>
