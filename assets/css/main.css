@@ -111,6 +111,7 @@ body {
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
+    margin-top: 25px; /* Adjust this value to get the desired amount of space */
 }
 
 .button:hover {background-color: #D30000}
