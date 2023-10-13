@@ -1,33 +1,51 @@
 .tooltip {
-    visibility: visible;
+  visibility: visible;
 }
 
 .tooltiptext {
-    font-size: 20px;
-    visibility: hidden;
-    width: 400px;
-    color: black;
-    text-align: center;
-    border-radius: 6px;
-    padding: 1px 0;
-    position: absolute;
-    z-index: 1;
-    border:3px solid black;
-    bottom: 100%;
-    right: -15%;
-    margin-left: -60px;
-    background-color:white;
-    opacity: 0;
-    transition: opacity .5s;
-    line-height: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  font-size: 16px;
+  visibility: hidden;
+  width: 312px;
+  color: rgb(199, 190, 12);
+  text-align: left;
+  border-radius: 6px;
+  padding: 1px 2px;
+  position: absolute;
+  z-index: 1;
+  border: 3px dotted rgb(89, 88, 88);
+  /* bottom: 100%; */
+  /* right: -15%; */
+  left: 2px;
+  top: 105px;
+  /* background-color: white; */
+  opacity: 0;
+  transition: opacity 0.5s;
+  line-height: 150%;
 }
 
 .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
 .tooltip .tooltiptext:hover {
-    visibility: hidden;
-    opacity: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+.tag {
+  position: absolute;
+  width: auto;
+}
+
+.message {
+  width: 100rem;
+  display: flex-column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+  padding-left: 10px;
 }
