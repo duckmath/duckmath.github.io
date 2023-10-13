@@ -42,10 +42,11 @@
     <noscript>Your browser doesn't have JavaScript enabled. Please enable JavaScript or switch to a browser that
         supports it.</noscript>
     <script src="assets/js/index.js" type="text/javascript" defer></script>
+    <script src="assets/js/recommedGame.js" type="text/javascript" defer></script>
 
 </head>
 
-<body>
+<body style="display: flex; flex-direction: column;">
 
     <div class="main_title_text">Duck Math
 
@@ -69,30 +70,38 @@
 
         </div>
 
-        <div class="recommended">Recommended
-            <a id="Retro Bowl" class="Sports" href="g4m3s/retro_bowl.html" style="text-decoration:none"><img
-                    onmouseover="enlargeimage(this)" onmouseout="notlarge(this)"
-                    src="assets/img/icons/retro_bowl_icon.webp" alt="Retro Bowl" width="200" height="200"
-                    loading="lazy"></a>
-            <a id="Cookie Clicker" class="Other" href="g4m3s/CookieClicker.html" style="text-decoration:none"><img
-                    onmouseover="enlargeimage(this)" onmouseout="notlarge(this)"
-                    src="assets/img/icons/cookieclicker.webp" alt="Cookie Clicker" width="200" height="200"
-                    loading="lazy"></a>
-            <a id="Tanuki Sunset" class="Driving" href="g4m3s/TanukiSunset.html" style="text-decoration:none"><img
-                    onmouseover="enlargeimage(this)" onmouseout="notlarge(this)" src="assets/img/icons/tanuki.webp"
-                    alt="Tanuki Sunset" width="200" height="200" loading="lazy"></a>
-            <br>
-            <div style="font-size: 0">Hi</div>
-            <div style="font-size: 20px; line-height: 120%">I am in no way responsible for ANY trouble
-                you get in for using this site at ANY time.
-                I don't own any of the content on this website.</div>
-            <br>
+        <div style="display: block;">
+            <div id="carousel" class="carousel">
+                <h4 class="recommended">Recommended Games</h2>
+                <div class="game-item active">
+                    <a href="g4m3s/retro_bowl.html" style="text-decoration:none">
+                        <img src="assets/img/icons/retro_bowl_icon.webp" alt="Retro Bowl" width="300" loading="lazy" onmouseover="enlargeimage(this)" onmouseout="notlarge(this)">
+                        <h5 style="color: white; margin: 0;">Retro Bowl</h5>
+                    </a>
+                </div>
+                <div class="game-item">
+                    <a href="g4m3s/CookieClicker.html" style="text-decoration:none">
+                        <img src="assets/img/icons/cookieclicker.webp" alt="Cookie Clicker" width="300" loading="lazy" onmouseover="enlargeimage(this)" onmouseout="notlarge(this)">
+                        <h5 style="color: white; margin: 0;">Cookie Clicker</h5>
+                    </a>
+                </div>
+                <div class="game-item">
+                    <a href="g4m3s/TanukiSunset.html" style="text-decoration:none">
+                        <img src="assets/img/icons/tanuki.webp" alt="Tanuki Sunset" width="300" loading="lazy" onmouseover="enlargeimage(this)" onmouseout="notlarge(this)">
+                        <h5 style="color: white; margin: 0;">Tanuki Sunset</h5>
+                    </a>
+                </div>
+            </div>
         </div>
 
-
-
     </div>
-
+    <footer>
+        <div style="font-size: 20px; line-height: 120%">
+            <p>I am in no way responsible for ANY trouble</p>
+            <p>you get in for using this site at ANY time.</p>
+            <p>I don't own any of the content on this website.</p>
+        </div>
+    </footer>
 
 </body>
 

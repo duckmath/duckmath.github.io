@@ -1,4 +1,8 @@
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 15px;
@@ -163,15 +167,33 @@ body {
     box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }
 
-.footer {
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    width: 99%;
 
-    bottom: 0;
-    margin: 0;
+.carousel {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    padding-top: 3rem;
+    height: 575px;
 }
 
+.game-item {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    width: 100%;
+    text-align: center;
+}
 
+.game-item.active {
+    opacity: 1;
+}
+
+footer {
+    margin-top: auto;
+    width: 100%;
+    color: red;
+    padding: 10px;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+}
