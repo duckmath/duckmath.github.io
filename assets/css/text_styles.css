@@ -9,6 +9,9 @@
   color: #ff0000;
   font-family: "League Spartan", sans-serif;
   line-height: 120%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title_text {

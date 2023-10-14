@@ -1,6 +1,4 @@
 body {
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -174,6 +172,7 @@ body {
     margin: auto;
     padding-top: 3rem;
     height: 575px;
+    margin-top: 200%;
 }
 
 .game-item {
@@ -190,10 +189,14 @@ body {
 
 footer {
     margin-top: auto;
-    width: 100%;
+    width: 50%;
     color: red;
     padding: 10px;
     text-align: center;
     z-index: 1;
     position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "League Spartan", sans-serif;
+    line-height: 120%;
 }
