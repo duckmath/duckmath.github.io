@@ -60,9 +60,9 @@
             }
 
             function get_latest_hw_version() {
-                return fetch("https://duckmath.org/g4m3s/happywheels/version.json")
+                return fetch("https://raw.githubusercontent.com/duckmath/duckmath-website-assets/main/version.json")
 
-                .then(function(response) { console.log(response.json()); return response.json(); })
+                .then(function(response) { return response.json(); })
                 .catch(function(error) {
                     throw error;
                 });
@@ -98,24 +98,19 @@
                 }
 
                 try {
-                    get_latest_hw_version().then(function(latest) {
-                        console.log("Loading Happy Wheels version " + latest["version"] + "...");
-                        var d_el = document.createElement("script");
-                        d_el.src = "./dependencies." + latest["dependencies"] + ".js";
-                        d_el.onload = function() {
-                            var i_el = document.createElement("script");
-                            i_el.src = "./index." + latest["index"] + ".js";
-
-                            document.body.appendChild(i_el);
-                        }
-                        document.body.appendChild(d_el);
-                    })
-                    .catch(function(error) {
-                        setTimeout(window.location.reload.bind(window.location), 500);
-                    });
+                    var d_el = document.createElement("script");
+                    d_el.src = "./dependencies." + "e2a4c58bfab1b2466a77f9915d9fcc24" + ".js";
+                    d_el.onload = function () {
+                        var i_el = document.createElement("script");
+                        i_el.src = "./index." + "e596cb0f4bec47c5a24aab569b9767e4" + ".js";
+                        document.body.appendChild(i_el);
+                    }
+                    document.body.appendChild(d_el);
                 } catch(e) {
-                    setTimeout(window.location.reload.bind(window.location), 500);
+                    report_loading_issue();
                 }
+                console.log("Happy Wheels loaded. JS started.")
+
             }
         })();
     </script>
