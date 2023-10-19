@@ -10,9 +10,7 @@ This is a fun website that is a collection of games from different sites, and I 
 
 - Site Link: [duckmath.org](https://duckmath.org/)
 
-<a href="https://duckmath.org">
-  <img src= "https://github.com/duckmath/duckmath.github.io/assets/146117946/c847a562-a347-40ba-974a-8163b70b1db8">
-</a>
+[![Ducky](https://github.com/duckmath/duckmath.github.io/assets/146117946/c847a562-a347-40ba-974a-8163b70b1db8)](https://duckmath.org)
 
 ## Join My Discord!
 
@@ -20,8 +18,7 @@ Join my discord below for any questions, concerns, about my website!
 
 - Discord: [discord.gg/t2EwRyhFcG](https://discord.gg/t2EwRyhFcG)
 
-<a href="https://discord.gg/t2EwRyhFcG">
-  <img src="https://github.com/duckmath/duckmath.github.io/assets/146117946/3afde79b-eca1-46af-a4c5-91e290b8e750">
+[![GitHubLogo](https://github.com/duckmath/duckmath.github.io/assets/146117946/3afde79b-eca1-46af-a4c5-91e290b8e750)](https://discord.gg/t2EwRyhFcG)
 </a>
 
 ## Credits
