@@ -43,7 +43,6 @@
 
 .message {
   width: 100rem;
-  display: flex-column;
   align-items: center;
   justify-content: center;
   margin-left: 2rem;

@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+@font-face {
+    font-family: 'Tilt Warp';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("https://fonts.gstatic.com/s/tiltwarp/v12/AlZc_zVDs5XpmO7yn3w7flUoytXJp3z29uEwmEMLEJljLXvT8UJSZQB2C1Y.woff2") format('woff2');
+}
 
 .topnav {
     overflow: auto;

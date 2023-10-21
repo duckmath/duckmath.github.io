@@ -1,5 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@font-face {
+  font-family: 'League Spartan';
+  font-weight: 800;
+  src: url('https://fonts.gstatic.com/s/leaguespartan/v8/JTURjIg1_i6t8kCHKm45_dJE3gnD_w.woff2') format('woff2');
+  font-display: swap;
+}
 
 .main_title_text {
   position: absolute;
@@ -12,6 +16,7 @@
   font-family: "League Spartan", sans-serif;
   transform: translateX(-50%);
   line-height: 120%;
+
 }
 
 .title_text {
@@ -62,7 +67,7 @@
   font-size: 80px;
   font-weight: bold;
   color: white;
-  font-family: "League Spartan", sans-serif;
+  font-family: "Arial", sans-serif;
   transform: translateX(-50%);
   line-height: 120%;
 }
