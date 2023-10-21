@@ -11,17 +11,16 @@ swfobject.embedSWF = function(url, cont, width, height){
     player.load({ url: url });
 }
 
-function iframe_focus() {
-    var toBeFocused = document.getElementById("gameFrame");
-    toBeFocused.focus();
+function iframe_focus(iframe) {
+    iframe.focus();
     console.log("iframe focused");
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-
     var iframe = document.getElementById("gameFrame");
     if (iframe){
-    iframe.addEventListener("mouseenter", iframe_focus);
+        iframe.addEventListener("mouseenter", () => {iframe_focus(iframe)});
+        window.onload = () => {iframe_focus(iframe)}
     }
 });
 
