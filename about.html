@@ -1,149 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1533872335883359"
+      crossorigin="anonymous"
+    ></script>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1533872335883359"
-            crossorigin="anonymous"></script>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-63K8BHHS38"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-63K8BHHS38"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-
-
-        gtag('config', 'G-63K8BHHS38');
+      gtag("config", "G-63K8BHHS38");
     </script>
 
-
-
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="DuckMath">
-    <meta name="description" content="About our site">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="DuckMath" />
+    <meta name="description" content="About our site" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
     <title>DuckMath</title>
-    <link rel="stylesheet" href="/assets/css/text_styles.css">
-    <link rel="stylesheet" href="/assets/css/topnav.css">
-    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/text_styles.css" />
+    <link rel="stylesheet" href="/assets/css/topnav.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
 
     <script src="/assets/js/main.js"></script>
-    <link rel="icon" type="image/x-icon" href="/assets/img/duck.png">
-    <link rel="mask-icon" type="" href="/assets/img/duck.png" color="#111">
-    <noscript>Your browser doesn't have JavaScript enabled. Please enable JavaScript or switch to a browser that
-        supports it.</noscript>
+    <link rel="icon" type="image/x-icon" href="/assets/img/duck.png" />
+    <link rel="mask-icon" type="" href="/assets/img/duck.png" color="#111" />
+    <noscript
+      >Your browser doesn't have JavaScript enabled. Please enable JavaScript or
+      switch to a browser that supports it.</noscript
+    >
     <script src="/assets/js/index.js" type="text/javascript" defer></script>
-    
+
     <style>
+      .parentBox {
+        width: 80%;
+        height: 90%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 2%;
+        font-family: arial;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .box {
+        background-color: #1310105f;
+        border-radius: 25px;
+        padding: 15px;
+        border: solid 3px grey;
+      }
+
+      .box1 {
+        grid-area: 1 / 2 / 2 / 5;
+      }
+
+      .box2 {
+        grid-area: 2 / 3 / 6 / 5;
+      }
+
+      .box3 {
+        grid-area: 2 / 1 / 6 / 3;
+      }
+
+      .box4 {
+        grid-area: 1 / 2 / 1 / 1;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      .img1 {
+        border-radius: 25px;
+        height: 100%;
+        width: 100%;
+      }
+
+      .paypalLink {
+        background-color: #08333e5f;
+        border-radius: 10px;
+      }
+
+      .paypalLink:hover {
+        background-color: #13738ac0;
+      }
+
+      .githubLink {
+        background-color: white;
+        border-radius: 60px;
+        border: white 2px solid;
+        width: 100px;
+        height: 100px;
+      }
+
+      .githubLink:hover {
+        background-color: grey;
+        border: solid 2px grey;
+      }
+
+      @media (max-width: 600px) {
         .parentBox {
-            width: 80%;
-            height: 80%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(4, 1fr);
-            gap: 2%;
-            font-family: arial;
-            font-size: 18px;
-            font-weight: 500;
+          display: flex;
+          flex-direction: column;
         }
-
-        .box {
-            background-color: #1310105f;
-            border-radius: 25px;
-            padding: 15px;
-            border: solid 3px grey;
+        .box4 {
+          align-self: stretch;
         }
-
-        .box1 {
-            grid-area: 1 / 2 / 2 / 5;
-
-        }
-
-        .box2 {
-            grid-area: 2 / 3 / 5 / 5;
-        }
-
-        .box3 {
-            grid-area: 2 / 1 / 5 / 3;
-        }
-
-        p {
-            text-align: center;
-        }
-
-        .img1 {
-            border-radius: 25px;
-        }
-
-        .paypalLink {
-            background-color: #08333e5f;
-            border-radius: 10px;
-
-        }
-
-        .paypalLink:hover {
-            background-color: #13738ac0;
-        }
-
-        .githubLink {
-            background-color: white;
-            border-radius: 60px;
-            border: white 2px solid;
-            width: 100px;
-            height: 100px;
-        }
-
-        .githubLink:hover {
-            background-color: grey;
-            border: solid 2px grey;
-        }
-
-
-
+      }
     </style>
+  </head>
+  <body>
+    <br /><br />
 
-</head>
-<body>
-<br><br>
+    <div class="parentBox" style="margin-top: 1.5rem">
+      <div class="box4">
+        <a href="./about.html"
+          ><img
+            class="img1"
+            src="assets/img/google-cert.webp"
+            alt="Google Search Award"
+            width="280px"
+            height="370px"
+        /></a>
+      </div>
 
-<div class = "parentBox">
-
-    <div class = "box4">
-        <a href="./about.html"><img class = "img1" src="assets/img/google-cert.webp" alt="Google Search Award" width = "280px" height = "370px"></a>
-    </div>
-
-    <div class = "box box1">
-        <p>Anyway I'm Maddox, I'm 18, been coding for 3 years now and am now going to purdue for computer science.<br>I hope you guys enjoy this site, this was my first large scale project. Love you guys!</p>
+      <div class="box box1">
+        <p>
+          Anyway I'm Maddox, I'm 18, been coding for 3 years now and am now
+          going to purdue for computer science.<br />I hope you guys enjoy this
+          site, this was my first large scale project. Love you guys!
+        </p>
         <p>Go to my GitHub to contact me if needed.</p>
-        <p><a href = "https://github.com/maddox05" style="text-align: center"><img style="text-align: center" class = "githubLink" src = "assets/img/github_logo.png" alt="GitHub"></a></p>
+        <p>
+          <a href="https://github.com/maddox05" style="text-align: center"
+            ><img
+              style="text-align: center"
+              class="githubLink"
+              src="assets/img/github_logo.png"
+              alt="GitHub"
+          /></a>
+        </p>
+      </div>
 
+      <div class="box box3">
+        <p>
+          If you've enjoyed using our site and want to help us keep improving
+          it, please consider making a donation<br />
+          <a href="https://www.paypal.com/paypalme/maddoxpublic" target="_blank"
+            ><img
+              class="paypalLink"
+              src="assets/img/paypal_icon.png"
+              width="50px"
+              height="50px"
+              alt="Paypal Donate Link"
+            />
+          </a>
+        </p>
+      </div>
+
+      <div class="box box2">
+        <h2 style="text-align: center; margin: 0">Thank you's</h2>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          "
+        >
+          <p style="margin: 0; text-wrap: wrap">
+            <a
+              href="https://www.instagram.com/parada.joseph/"
+              target="_blank"
+              style="color: #0000ee; font-weight: bold"
+              >Joe</a
+            >
+            for advertising and support!
+          </p>
+          <p style="margin: 0">
+            <a
+              href="https://github.com/Divij-Agarwal-42"
+              target="_blank"
+              style="color: #0000ee; font-weight: bold"
+              >Divij</a
+            >
+            for front end.
+          </p>
+        </div>
+      </div>
     </div>
-
-    <div class = "box box2">
-
-        <h1 style="text-align: center">Thank you's</h1>
-        <p><a href="https://www.instagram.com/parada.joseph/" target="_blank" style="color: #0000EE; font-weight: bold">Joe</a> for advertising and support!</p>
-        <p><a href="https://github.com/Divij-Agarwal-42" target="_blank" style="color: #0000EE; font-weight: bold">Divij</a> for front end.</p>
-    </div>
-
-    <div class = "box box3">
-        <p>If you've enjoyed using our site and want to help us keep improving it, please consider making a donation<br>
-            <a href="https://www.paypal.com/paypalme/maddoxpublic" target="_blank"><img class = "paypalLink" src = "assets/img/paypal_icon.png" width="80px" height = "80px" alt="Paypal Donate Link">
-        </a></p>
-    </div>
-
-</div>
-
-</body>
-
+  </body>
 </html>
-
