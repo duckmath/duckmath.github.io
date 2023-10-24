@@ -18,25 +18,25 @@ templatetopnav.innerHTML = `
     <a href="/index.html">HOME</a>
 </div>
 <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
-<div class="bar1"></div>
-<div class="bar2"></div>
-<div class="bar3"></div>
-<ul class="mobile-menu">
-  <li> <a href ="/about.html">ABOUT</a></li>
-  <li><a href ="/changelog.html">CHANGELOG</a></li>
-  <li><a href ="/leaderboard.html">LEADERBOARD</a></li>
-  <li><a href ="/g4m3s.html">G4M3S</a></li>
-  <li><a href="/index.html">HOME</a></li>
-  <li>
-  <a class = "topnavbutton">MORE↓</a>
-  <div class="dropdown-content">
-      <a href="/more/Unbl0ck3rs.html">Unbl0ck3rs</a>
-      <a href="/more/Virtual_Machines.html" style="background-color: #FFFF00">Virtual Machines</a>
-      <a href="/more/chat.html" style="background-color: #0000FF">D1sc0rd</a>
-      <a href="/more/G4m3-Requests.html" style="background-color: #00FF00">G4m3 Requests</a>
-  </div>
-  </li>
-</ul>
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+  <ul class="mobile-menu">
+    <li><a href="/index.html">HOME</a></li>
+    <li><a href ="/g4m3s.html">G4M3S</a></li>
+    <li><a href ="/leaderboard.html">LEADERBOARD</a></li>
+    <li><a href ="/changelog.html">CHANGELOG</a></li>
+    <li> <a href ="/about.html">ABOUT</a></li>
+    <li>
+    <a class = "topnavbutton">MORE↓</a>
+    <div class="dropdown-content">
+        <a href="/more/Unbl0ck3rs.html">Unbl0ck3rs</a>
+        <a href="/more/Virtual_Machines.html" style="background-color: #FFFF00">Virtual Machines</a>
+        <a href="/more/chat.html" style="background-color: #0000FF">D1sc0rd</a>
+        <a href="/more/G4m3-Requests.html" style="background-color: #00FF00">G4m3 Requests</a>
+    </div>
+    </li>
+  </ul>
 </div>
 <div class ="icon">
     <a href ="/index.html"><img onmouseover="spin(this)" onmouseout="unspin(this)" src="/assets/img/goose.webp" alt="Icon" width="60" height="60"></a>
@@ -46,20 +46,6 @@ templatetopnav.innerHTML = `
 function toggleMobileMenu(menu){
   menu.classList.toggle('open');
 }
-const templategoogleany = document.createElement("template");
-
-templategoogleany.innerHTML = `
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1533872335883359"
-     crossorigin="anonymous"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HXPPJLK5JN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HXPPJLK5JN');
-</script>
-`;
 
 document.body.appendChild(templatetopnav.content);
 
