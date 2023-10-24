@@ -28,3 +28,12 @@ A quick thanks to everyone who made this possible! 🙏😊
 - Code written by [Maddox](https://github.com/maddox05) and TONS of other [Contributors](https://github.com/duckmath/duckmath.github.io/graphs/contributors).
 - [Joe](https://www.instagram.com/parada.joseph/) for advertising and support!
 - [Divij](https://github.com/Divij-Agarwal-42) for front end.
+### Thanks to all Contributors
+
+Thanks a lot for spending your time helping the site and making duckmath grow.
+
+<p align="left">
+<a href="https://github.com/duckmath/duckmath.github.io/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=duckmath/duckmath.github.io" />
+ </a>
+</p>
