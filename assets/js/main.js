@@ -16,15 +16,16 @@ function iframe_focus(iframe) {
     console.log("iframe focused");
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    var iframe = document.getElementById("gameFrame");
+document.addEventListener("DOMContentLoaded", function() { // when the page loads
+    var iframe = document.getElementById("gameFrame"); // get the iframe game element
     if (iframe){
-        iframe.addEventListener("mouseenter", () => {iframe_focus(iframe)});
+        iframe.addEventListener("mouseenter", () => {iframe_focus(iframe)}); // add event listeners to the iframe that focus it when the mouse enters
         window.onload = () => {iframe_focus(iframe)}
+        iframe_focus(iframe); // focus the iframe (for some reason this doesn't work without the onload event)
     }
 });
 
-function openFullscreen() {
+function openFullscreen() { // open the game in fullscreen
     var elem = document.getElementById("gameFrame");
     if (elem.requestFullscreen) {
         elem.requestFullscreen();
@@ -65,7 +66,6 @@ function searchbar1() {
             }
         }
     }
-
 }
 
 function sorterbuttons(button) {
@@ -103,6 +103,7 @@ function sorter(category) {
         }
     }
 }
+
 function showall() {
     var icon = document.getElementById("icon_image");
     var elem = icon.getElementsByTagName("a")
@@ -120,7 +121,6 @@ function showall() {
     }
 }
 
-
 function enlargeimage(image) {
     image.style.transform = "scale(1.15)";
     image.style.transition = "transform 0.25s ease";
@@ -129,11 +129,7 @@ function enlargeimage(image) {
         fig.style.visibility = "visible";
 
     }
-
-
-
 }
-
 
 function notlarge(image) {
     image.style.transform = "scale(1)";
