@@ -6,7 +6,7 @@ Click the "Fork this Repository" button on the top right. After that, you will b
 
 ## My Website
 
-This is a fun website that is a collection of games from different sites, and I hope everyone can enjoy it. Thanks to everyone for using it, your support means everything. I know I coded this very badly, it's my first time using front-end, I should have used JS templates and a library such as React. :) 🦆
+This is a fun website that is a collection of applications from different sites, and I hope everyone can enjoy it. Thanks to everyone for using it, your support means everything. I know I coded this very badly, it's my first time using front-end, I should have used JS templates and a library such as React. :) 🦆
 
 - Site Link: [duckmath.org](https://duckmath.org/)
 
