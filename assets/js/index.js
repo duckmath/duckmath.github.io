@@ -2,6 +2,7 @@ const templatetopnav = document.createElement("template");
 
 templatetopnav.innerHTML = `
   <div class ="topnav">
+    <button><img style="padding-bottom: 0px" src="/assets/img/duck-login.webp" alt="Login" width="50" height="50"></button>
     <div class="dropdown">
         <a class = "topnavbutton">MORE↓</a>
         <div class="dropdown-content">
@@ -39,7 +40,7 @@ templatetopnav.innerHTML = `
   </ul>
 </div>
 <div class ="icon">
-    <a href ="/index.html"><img onmouseover="spin(this)" onmouseout="unspin(this)" src="/assets/img/goose.webp" alt="Icon" width="60" height="60"></a>
+    <a href ="/index.html"><img onmouseover="spin(this)" onmouseout="unspin(this)" src="/assets/img/goose.webp" alt="Home" width="60" height="60"></a>
 </div>
 
 `;
