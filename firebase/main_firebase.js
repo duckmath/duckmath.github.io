@@ -4,6 +4,10 @@
     import * as authentication from "./files/gstatic.com_firebasejs_10.5.2_firebase-auth.js";
     import * as firestore from "./files/gstatic.com_firebasejs_10.5.2_firebase-firestore.js";
 */
+let user_object = null
+
+let IS_SIGNED_IN = false
+
 import * as firebase from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
 import * as gAnalytics from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
 import * as authentication from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
@@ -19,6 +23,13 @@ const analytics = gAnalytics.getAnalytics(app);
 const db = firestore.getFirestore(app);
 const auth = authentication.getAuth(app)
 console.log("Firebase initialized");
+
+
+//Returns Boolean
+function isSignedIn(){
+    return IS_SIGNED_IN;
+}
+
 
 
 // Signs in with Google
@@ -52,8 +63,21 @@ function logOut(){
     });
 }
 
+/**
+ * Check the user's streak and return a boolean value.
+ *
+ * @returns {boolean} True if the user has a streak, false otherwise.
+ */
+function checkUsersStreak(current_user) { // may need to take current user
+    //how tf I get current user
+    if(isSignedIn()){
+
+    }
+    return true;
+}
+
 function streakPopUp(streak_object){
-    if(streak_object.firstChild.getAttribute("src") === "/assets/img/gray-streak-icon.webp"){ // means I'm not signed in, I can also just check user
+    if(streak_object.firstChild.getAttribute("src") === "/assets/img/gray-streak-icon.webp" && checkUsersStreak(user_object)){ // means I'm not signed in, I can also just check user
         console.log("You must be signed in to use streaks") // show the user this
         googleSignIn();
     }
@@ -95,14 +119,18 @@ https://firebase.google.com/docs/reference/js/auth.user
 */
 authentication.onAuthStateChanged(auth, (user) => { // do shit
     if (user) {
+        user_object = user
+        IS_SIGNED_IN = true;
         login_button.style.display = "none";
         logout_button.style.display = "inline"
-        console.log("Logged In")
         streak_icon.firstChild.src ="/assets/img/streak-icon.webp"
+        console.log("Logged In")
 
-        //change fire icon
-        //login_image.src = user.photoURL;
+
+
     } else {
+        user_object = null
+        IS_SIGNED_IN = false;
         login_button.style.display = "inline"
         logout_button.style.display = "none"
         console.log("Logged Out")
