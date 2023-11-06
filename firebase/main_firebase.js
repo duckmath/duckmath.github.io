@@ -52,18 +52,38 @@ function logOut(){
     });
 }
 
-
+function streakPopUp(streak_object){
+    if(streak_object.firstChild.getAttribute("src") === "/assets/img/gray-streak-icon.webp"){ // means I'm not signed in, I can also just check user
+        console.log("You must be signed in to use streaks") // show the user this
+        googleSignIn();
+    }
+    else{
+        window.location = "../streak.html";
+    }
+}
 const login_button = document.getElementById("LoginButton");
 const logout_button = document.getElementById("LogoutButton");
-
-if(login_button !== null && logout_button !== null){
+const streak_icon = document.getElementById("StreakIcon");
+if(streak_icon !== null){
     login_button.addEventListener("click", googleSignIn);
     logout_button.addEventListener("click", logOut);
+    streak_icon.addEventListener("click", function(){
+        streakPopUp(this)
+    });
     console.log("Event Listeners Added")
+
 }
 else{
-    console.log("Fatal Error; HTML DNE")
+    console.log("FATAL ERROR ICONS COULD NOT ADD JS CODE")
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -78,13 +98,15 @@ authentication.onAuthStateChanged(auth, (user) => { // do shit
         login_button.style.display = "none";
         logout_button.style.display = "inline"
         console.log("Logged In")
+        streak_icon.firstChild.src ="/assets/img/streak-icon.webp"
 
         //change fire icon
         //login_image.src = user.photoURL;
     } else {
         login_button.style.display = "inline"
-        logout_button.style.display = "none";
+        logout_button.style.display = "none"
         console.log("Logged Out")
+        streak_icon.firstChild.src ="/assets/img/gray-streak-icon.webp"
 
         //change fire icon
 

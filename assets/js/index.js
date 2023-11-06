@@ -2,7 +2,7 @@ const templatetopnav = document.createElement("template");
 
 templatetopnav.innerHTML = `
   <div class ="topnav">
-    <a href="#" id="LoginButton" style="color: #D30000;">LOGIN</a>
+    <a href="#" id="LoginButton" style="color: green;">LOGIN</a>
     <a href="#" id="LogoutButton" style="color: #D30000; display: none">LOGOUT</a>
     <div class="dropdown">
         <a class = "topnavbutton">MORE↓</a>
@@ -18,8 +18,8 @@ templatetopnav.innerHTML = `
     <a href ="/leaderboard.html">LEADERBOARD</a>
     <a href ="/g4m3s.html">G4M3S</a>
     <a href="/index.html">HOME</a>
-    <!-- streak -->
-    <button style="justify-content: center; place-content: center; text-align: center; float: right; background: none; display: none"><img src="/assets/img/streak-placeholder-removebg-preview.webp" alt="Login" width="50" height="50"></button>
+    <!-- streak NEEDS TO BE GRAYED OUT IF INACTIVE OR NOT LOGGED IN -->
+    <a id = "StreakIcon" href="#" style="padding: 5px 2px; justify-content: center " ><img src="/assets/img/gray-streak-icon.webp" alt="Streak" width="50" height="40"></a>
 </div>
 <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
   <div class="bar1"></div>
