@@ -119,6 +119,7 @@ https://firebase.google.com/docs/reference/js/auth.user
 */
 authentication.onAuthStateChanged(auth, (user) => { // do shit
     if (user) {
+        // somehow if I came here from streaks it could know, maybe use html post req or url parameters
         user_object = user
         IS_SIGNED_IN = true;
         login_button.style.display = "none";
