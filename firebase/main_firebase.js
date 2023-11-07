@@ -88,7 +88,7 @@ function streakPopUp(streak_object){
         googleSignIn();
     }
     else{
-        window.location = "../streak.html";
+        window.location = "/streak.html";
     }
 }
 const login_button = document.getElementById("LoginButton");
