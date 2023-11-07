@@ -2,6 +2,8 @@ const templatetopnav = document.createElement("template");
 
 templatetopnav.innerHTML = `
   <div class ="topnav">
+    <a href="#" id="LoginButton" style="color: green;">LOGIN</a>
+    <a href="#" id="LogoutButton" style="color: #D30000; display: none">LOGOUT</a>
     <div class="dropdown">
         <a class = "topnavbutton">MORE↓</a>
         <div class="dropdown-content">
@@ -16,6 +18,8 @@ templatetopnav.innerHTML = `
     <a href ="/leaderboard.html">LEADERBOARD</a>
     <a href ="/g4m3s.html">G4M3S</a>
     <a href="/index.html">HOME</a>
+    <!-- streak NEEDS TO BE GRAYED OUT IF INACTIVE OR NOT LOGGED IN -->
+    <a id = "StreakIcon" href="#" style="padding: 5px 2px; justify-content: center " ><img src="/assets/img/gray-streak-icon.webp" alt="Streak" width="50" height="40"></a>
 </div>
 <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
   <div class="bar1"></div>
@@ -39,7 +43,7 @@ templatetopnav.innerHTML = `
   </ul>
 </div>
 <div class ="icon">
-    <a href ="/index.html"><img onmouseover="spin(this)" onmouseout="unspin(this)" src="/assets/img/goose.webp" alt="Icon" width="60" height="60"></a>
+    <a href ="/index.html"><img onmouseover="spin(this)" onmouseout="unspin(this)" src="/assets/img/goose.webp" alt="Home" width="60" height="60"></a>
 </div>
 
 `;
