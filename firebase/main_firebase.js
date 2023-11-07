@@ -1,33 +1,39 @@
 /*
-    import * as firebase from "./files/gstatic.com_firebasejs_10.5.2_firebase-app.js";
-    import * as gAnalytics from "./files/gstatic.com_firebasejs_10.5.2_firebase-analytics.js";
-    import * as authentication from "./files/gstatic.com_firebasejs_10.5.2_firebase-auth.js";
-    import * as firestore from "./files/gstatic.com_firebasejs_10.5.2_firebase-firestore.js";
+import * as firebase from "./files/gstatic.com_firebasejs_10.5.2_firebase-app.js";
+import * as gAnalytics from "./files/gstatic.com_firebasejs_10.5.2_firebase-analytics.js";
+import * as authentication from "./files/gstatic.com_firebasejs_10.5.2_firebase-auth.js";
+import * as firestore from "./files/gstatic.com_firebasejs_10.5.2_firebase-firestore.js";
 */
-let user_object = null
 
-let IS_SIGNED_IN = false
+
 
 import * as firebase from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
-import * as gAnalytics from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+//import * as gAnalytics from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
 import * as authentication from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
 import * as firestore from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
 
 
 
 
+let user_object = null
+
 import { firebaseConfig } from "./private/firebase_key.js";
 
 const app = firebase.initializeApp(firebaseConfig);
-const analytics = gAnalytics.getAnalytics(app);
-const db = firestore.getFirestore(app);
+//const analytics = gAnalytics.getAnalytics(app);
 const auth = authentication.getAuth(app)
+const db = firestore.getFirestore(app);
 console.log("Firebase initialized");
 
 
 //Returns Boolean
 function isSignedIn(){
-    return IS_SIGNED_IN;
+    if(user_object == null){
+        return false;
+    }
+    else{
+        return true
+    }
 }
 
 
@@ -97,18 +103,9 @@ if(streak_icon !== null){
     console.log("Event Listeners Added")
 
 }
-else{
+else {
     console.log("FATAL ERROR ICONS COULD NOT ADD JS CODE")
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -121,7 +118,6 @@ authentication.onAuthStateChanged(auth, (user) => { // do shit
     if (user) {
         // somehow if I came here from streaks it could know, maybe use html post req or url parameters
         user_object = user
-        IS_SIGNED_IN = true;
         login_button.style.display = "none";
         logout_button.style.display = "inline"
         streak_icon.firstChild.src ="/assets/img/streak-icon.webp"
@@ -131,7 +127,6 @@ authentication.onAuthStateChanged(auth, (user) => { // do shit
 
     } else {
         user_object = null
-        IS_SIGNED_IN = false;
         login_button.style.display = "inline"
         logout_button.style.display = "none"
         console.log("Logged Out")
@@ -141,3 +136,16 @@ authentication.onAuthStateChanged(auth, (user) => { // do shit
 
     }
 });
+
+
+
+/*
+
+
+database shit should be on another page but idk how in js
+
+
+*/
+
+const user_streaks_collection = collection(db, "/user_streaks"); // maybe no slash
+
