@@ -117,7 +117,7 @@ https://firebase.google.com/docs/reference/js/auth.user
 authentication.onAuthStateChanged(auth, (user) => { // do shit
     if (user) {
         // somehow if I came here from streaks it could know, maybe use html post req or url parameters
-        user_object = user
+        user_object = user;
         login_button.style.display = "none";
         logout_button.style.display = "inline"
         streak_icon.firstChild.src ="/assets/img/streak-icon.webp"
@@ -151,16 +151,14 @@ const user_streaks_collection = firestore.collection(db, "user_streaks");
  *
  * @returns {boolean} True if the user has a streak, false otherwise.
  */
-async function checkUsersStreak(current_user) { // may need to take current user
-    //how tf I get current user
+async function checkUsersStreak(current_user_id) {
     if(isSignedIn()){
-        const current_user_id = current_user.uid;
+
         const query_items = await firestore.query(user_streaks_collection, firestore.where("has_streak", "==", true));
         try {
             const querySnapshot = await firestore.getDocs(query_items);
 
             for (const doc of querySnapshot.docs) {
-                console.log(doc.data())
                 if (doc.id === current_user_id) {
                     return true;
                 }
@@ -169,13 +167,8 @@ async function checkUsersStreak(current_user) { // may need to take current user
             console.error("Error querying Firestore:", error);
         }
     }
-
     return false;
 }
 
-const my_userid= "MIMSxtxbGjeBBdFos5O0xXDGCjx1";
-checkUsersStreak(my_userid).then((result) => {
-    console.log(result);
-});
 
 
