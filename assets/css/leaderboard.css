@@ -1,9 +1,22 @@
+.image-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Style for the image */
+.bottom-image {
+    max-width: 100%;
+    height: auto;
+}
 
 body {
     background-color: #1F2028;
 }
 
-#main {
+.main {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
