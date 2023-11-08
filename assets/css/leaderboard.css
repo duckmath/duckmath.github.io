@@ -33,7 +33,16 @@ body {
     font-size: 1rem;
 }
 
-#searchIcon {
+.searchbar{
+    grid-area: 2 / 3 / 3 / 4;
+    border-radius: 10px;
+    padding-left: 10px;
+    height: 2rem;
+    font-size: 1rem;
+
+}
+
+.searchIcon {
     grid-area: 2 / 2 / 3 / 3;
     position: relative;
     left: 80%;
