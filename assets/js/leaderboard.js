@@ -33,7 +33,7 @@ add_new_score("Subway Surfers", "bella", "12190", "/assets/img/icons/subway.webp
 
 
 add_new_score("", "Dylan", "68", "/assets/img/squiddy.gif", "/g4m3s/club-penguin.html")
-add_new_score("", "Maddox", "1337", "/assets/img/club-penguin-dance.gif", "/g4m3s/club-penguin.html")
+add_new_score("Club Penguin", "Maddox", "1337", "/assets/img/club-penguin-dance.gif", "/g4m3s/club-penguin.html")
 
 
 
