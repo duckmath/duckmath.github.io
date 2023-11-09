@@ -154,21 +154,45 @@ const user_streaks_collection = firestore.collection(db, "user_streaks");
 async function checkUsersStreak(current_user_id) {
     if(isSignedIn()){
 
-        const query_items = await firestore.query(user_streaks_collection, firestore.where("has_streak", "==", true));
+        const query_items = await firestore.query(user_streaks_collection, firestore.where("userID", "==", current_user_id)); // watch this line
         try {
-            const querySnapshot = await firestore.getDocs(query_items);
 
+            const querySnapshot = await firestore.getDocs(query_items);
+            if(querySnapshot.docs.length === 0){
+                console.log("No doc found")
+                return false
+            }
             for (const doc of querySnapshot.docs) {
                 if (doc.id === current_user_id) {
-                    return true;
+                    if(doc.data().has_streak === true){ // new line verify it works
+                        return true;
+                    }
                 }
             }
         } catch (error) {
-            console.error("Error querying Firestore:", error);
+            console.error("Error querying Firestore:\n", error);
         }
     }
     return false;
 }
+
+
+async function testCase1(){
+
+    checkUsersStreak("MIMSxtxbGjeBBdFos5O0xXDGCjx1").then((result) => {
+        if(result === true){
+            console.log("passed test case 1")
+        }
+        else{
+            console.log("failed test case 1")
+        }
+    })
+    .catch((error) => {
+        console.log("failed test case 1")
+    });
+}
+
+setTimeout(testCase1, 2000);
 
 
 
