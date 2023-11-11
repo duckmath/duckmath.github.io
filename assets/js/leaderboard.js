@@ -27,7 +27,7 @@ function add_new_score(game_text, username_text, score_text, image_path, game_pa
 add_new_score("Drift Boss", "nevamian", "20230", "/assets/img/icons/driftboss.webp", "/g4m3s/driftboss.html")
 add_new_score("Slope", "roshie", "230", "/assets/img/icons/slope.webp", "/g4m3s/slope.html")
 add_new_score("Tanuki Sunset", "Solarrelic", "703", "/assets/img/icons/tanuki.webp", "/g4m3s/TanukiSunset.html")
-add_new_score("Subway Surfers", "bella", "12190", "/assets/img/icons/subway.webp", "/g4m3s/subway_surfers.html")
+add_new_score("Subway Surfers", "Katty", "23262", "/assets/img/icons/subway.webp", "/g4m3s/subway_surfers.html")
 
 
 
