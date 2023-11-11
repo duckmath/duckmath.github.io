@@ -1,9 +1,20 @@
+const firebaseConfig = {
+    apiKey: "AIzaSyBzv3i9lYIhyiQrfYnELlf2OesAhKMIbdk",
+    authDomain: "duckmath-6e834.firebaseapp.com",
+    projectId: "duckmath-6e834",
+    storageBucket: "duckmath-6e834.appspot.com",
+    messagingSenderId: "239032497719",
+    appId: "1:239032497719:web:2fdd4271eddaf08897b1b2",
+    measurementId: "G-R6ZHT5H49D"
+};
+
 /*
 import * as firebase from "./files/gstatic.com_firebasejs_10.5.2_firebase-app.js";
 import * as gAnalytics from "./files/gstatic.com_firebasejs_10.5.2_firebase-analytics.js";
 import * as authentication from "./files/gstatic.com_firebasejs_10.5.2_firebase-auth.js";
 import * as firestore from "./files/gstatic.com_firebasejs_10.5.2_firebase-firestore.js";
 */
+
 
 
 
@@ -15,9 +26,9 @@ import * as firestore from "https://www.gstatic.com/firebasejs/10.5.2/firebase-f
 
 
 
+
 let user_object = null
 
-import { firebaseConfig } from "./private/firebase_key.js";
 
 const app = firebase.initializeApp(firebaseConfig);
 //const analytics = gAnalytics.getAnalytics(app);
@@ -69,18 +80,7 @@ function logOut(){
     });
 }
 
-/**
- * Check the user's streak and return a boolean value.
- *
- * @returns {boolean} True if the user has a streak, false otherwise.
- */
-function checkUsersStreak(current_user) { // may need to take current user
-    //how tf I get current user
-    if(isSignedIn()){
 
-    }
-    return true;
-}
 
 function streakPopUp(streak_object){
     if(streak_object.firstChild.getAttribute("src") === "/assets/img/gray-streak-icon.webp" && checkUsersStreak(user_object)){ // means I'm not signed in, I can also just check user
@@ -117,12 +117,11 @@ https://firebase.google.com/docs/reference/js/auth.user
 authentication.onAuthStateChanged(auth, (user) => { // do shit
     if (user) {
         // somehow if I came here from streaks it could know, maybe use html post req or url parameters
-        user_object = user
+        user_object = user;
         login_button.style.display = "none";
         logout_button.style.display = "inline"
         streak_icon.firstChild.src ="/assets/img/streak-icon.webp"
         console.log("Logged In")
-
 
 
     } else {
@@ -137,8 +136,6 @@ authentication.onAuthStateChanged(auth, (user) => { // do shit
     }
 });
 
-
-
 /*
 
 
@@ -147,5 +144,55 @@ database shit should be on another page but idk how in js
 
 */
 
-const user_streaks_collection = collection(db, "/user_streaks"); // maybe no slash
+const user_streaks_collection = firestore.collection(db, "user_streaks");
+
+/**
+ * Check if the user has a streak;
+ *
+ * @returns {boolean} True if the user has a streak, false otherwise.
+ */
+async function checkUsersStreak(current_user_id) {
+    if(isSignedIn()){
+
+        const query_items = await firestore.query(user_streaks_collection, firestore.where("userID", "==", current_user_id)); // watch this line
+        try {
+
+            const querySnapshot = await firestore.getDocs(query_items);
+            if(querySnapshot.docs.length === 0){
+                console.log("No doc found")
+                return false
+            }
+            for (const doc of querySnapshot.docs) {
+                if (doc.id === current_user_id) {
+                    if(doc.data().has_streak === true){ // new line verify it works
+                        return true;
+                    }
+                }
+            }
+        } catch (error) {
+            console.error("Error querying Firestore:\n", error);
+        }
+    }
+    return false;
+}
+
+
+async function testCase1(){
+
+    checkUsersStreak("MIMSxtxbGjeBBdFos5O0xXDGCjx1").then((result) => {
+        if(result === true){
+            console.log("passed test case 1")
+        }
+        else{
+            console.log("failed test case 1")
+        }
+    })
+    .catch((error) => {
+        console.log("failed test case 1")
+    });
+}
+
+setTimeout(testCase1, 2000);
+
+
 
