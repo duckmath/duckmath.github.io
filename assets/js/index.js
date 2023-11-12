@@ -47,8 +47,8 @@ templatetopnav.innerHTML = `
 </div>
 
 `;
-function toggleMobileMenu(menu){
-  menu.classList.toggle('open');
+function toggleMobileMenu(menu) {
+  menu.classList.toggle("open");
 }
 
 document.body.appendChild(templatetopnav.content);
