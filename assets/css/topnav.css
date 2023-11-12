@@ -1,179 +1,184 @@
 @font-face {
-    font-family: 'Tilt Warp';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url("https://fonts.gstatic.com/s/tiltwarp/v12/AlZc_zVDs5XpmO7yn3w7flUoytXJp3z29uEwmEMLEJljLXvT8UJSZQB2C1Y.woff2") format('woff2');
+  font-family: "Tilt Warp";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/tiltwarp/v12/AlZc_zVDs5XpmO7yn3w7flUoytXJp3z29uEwmEMLEJljLXvT8UJSZQB2C1Y.woff2")
+    format("woff2");
 }
 
 .topnav {
-    overflow: auto;
-    position: fixed;
-    top: 1%;
-    width: 98%;
-    font-family: 'Tilt Warp', sans-serif;
+  overflow: auto;
+  position: fixed;
+  top: 1%;
+  width: 98%;
+  font-family: "Tilt Warp", sans-serif;
 }
 
 .topnav a {
-    float: right;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 12px 10px;
-    text-decoration: none;
-    font-size: 17px;
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px 10px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+  background-color: #ddd;
+  color: black;
 }
 
 .topnav a.active {
-    background-color: #D30000;
-    color: white;
+  background-color: #d30000;
+  color: white;
 }
 
 .icon a img {
-    position: fixed;
-    top: 1%;
-    float: left;
+  position: fixed;
+  top: 1%;
+  float: left;
 }
 
 .dropdown {
-    display: inline-block;
-    position: relative;
-    float: right;
-    text-align: center;
-    text-decoration: none;
-    width: 80px;
+  position: relative;
+  float: right;
+  text-align: center;
+  text-decoration: none;
+  width: 80px;
 }
 
 .dropdown-content {
-    display: none;
-    position: relative;
-    overflow: visible;
-    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.4);
-    color: black;
-    background-color: red;
-    width: 80px;
-
+  display: none;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
+  color: black;
+  background-color: red;
+  width: 80px;
 }
+
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
+
 .dropdown-content a {
-    display: block;
-    color: #000000;
-    text-decoration: none;
-    float: right;
-    background-color: red;
-
-    padding: 0 20px;
-    width : 140%
-
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  float: right;
+  background-color: red;
+  padding: 0 20px;
+  width: 140%;
 }
 
 .mobile-menu .dropdown {
-    display: inline-block;
-    position: relative;
-    float: right;
-    text-align: center;
-    text-decoration: none;
-    width: 80px;
+  position: relative;
+  float: right;
+  text-align: center;
+  text-decoration: none;
+  width: 80px;
 }
+
 .mobile-menu .dropdown-content {
-    display: none;
-    position: relative;
-    overflow: visible;
-    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.4);
-    color: black;
-    background-color: red;
-    width: 80px;
-
+  display: none;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
+  color: black;
+  background-color: red;
+  width: 80px;
 }
+
 .mobile-menu .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
+
 .mobile-menu .dropdown-content a {
-    display: block;
-    color: #000000;
-    text-decoration: none;
-    float: right;
-    background-color: red;
-
-    padding: 0 20px;
-    width : 140%
-
-}
-#hamburger-icon{
-    top: 1%;
-    right: 1%;
-    float: right;
-    display:none;
-    cursor:pointer;
-    font-family: 'Tilt Warp', sans-serif;
-}
-#hamburger-icon div{
-    width:35px;
-    height:3px;
-    background-color: white;
-    margin:6px 0;
-    transition:0.4s;
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  float: right;
+  background-color: red;
+  padding: 0 20px;
+  width: 140%;
 }
 
-.open .bar1{
-    -webkit-transform: rotate(-45deg ) translate(-6px,6px);
-    transform: rotate(-45deg) translate(-6px,6px);
+#hamburger-icon {
+  top: 1%;
+  right: 1%;
+  float: right;
+  display: none;
+  cursor: pointer;
+  font-family: "Tilt Warp", sans-serif;
 }
-.open .bar2{
-    opacity:0;
+
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
 }
-.open .bar3{
-    -webkit-transform: rotate(45deg ) translate(-6px,-8px);
-    transform: rotate(45deg) translate(-6px,-8px);
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
 }
-.open .mobile-menu{
-    display:flex;
-    flex-direction: column;
-    justify-content: flex-start;
+
+.open .bar2 {
+  opacity: 0;
 }
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .mobile-menu {
-    display: none;
-    position: absolute;
-    top: 10%;
-    right: 0;
-    left: auto;
-    width: 40%;
-    list-style: none;
-    background-color: #333; /* Add a background color to make the menu visible */
-    z-index: 1; /* Add z-index to make the menu appear on top */
-    padding: 2em 1em; /* Remove padding to prevent unwanted space */
-    margin: 0; /* Remove margin to prevent unwanted space */
+  display: none;
+  position: absolute;
+  top: 10%;
+  right: 0;
+  left: auto;
+  width: 40%;
+  list-style: none;
+  background-color: #333;
+  z-index: 1;
+  padding: 2em 1em;
+  margin: 0;
 }
 
 .mobile-menu.open {
-    display: block; /* Show the menu when the hamburger icon is clicked */
+  display: block;
 }
 
-ul a{
-    color:white;
-    text-decoration: none;
-    padding: 4px;
+ul a {
+  color: white;
+  text-decoration: none;
+  padding: 4px;
 }
-ul a:hover{
-    background-color: #eee8e8;
-    color: black;
+ul a:hover {
+  background-color: #eee8e8;
+  color: black;
 }
-@media only screen and (max-width:720px){
-    .topnav{
-        display: none;
-    }
-    #hamburger-icon{
-        display: block;
-    }
+
+@media only screen and (max-width: 720px) {
+  .topnav {
+    display: none;
+  }
+  #hamburger-icon {
+    display: block;
+  }
 }
+
 .dropdown-content a:hover {
-    color: #FFFFFF;
-    background-color: #ce0a0a;
+  color: #ffffff;
+  background-color: #ce0a0a;
 }
-

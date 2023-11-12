@@ -1,7 +1,8 @@
 @font-face {
-  font-family: 'League Spartan';
+  font-family: "League Spartan";
   font-weight: 800;
-  src: url('https://fonts.gstatic.com/s/leaguespartan/v8/JTURjIg1_i6t8kCHKm45_dJE3gnD_w.woff2') format('woff2');
+  src: url("https://fonts.gstatic.com/s/leaguespartan/v8/JTURjIg1_i6t8kCHKm45_dJE3gnD_w.woff2")
+    format("woff2");
   font-display: swap;
 }
 
@@ -16,7 +17,6 @@
   font-family: "League Spartan", sans-serif;
   transform: translateX(-50%);
   line-height: 120%;
-
 }
 
 .title_text {
@@ -116,6 +116,7 @@
   transform: translateX(-50%);
   vertical-align: bottom;
 }
+
 .controls {
   font-size: 10px;
   justify-content: center;
