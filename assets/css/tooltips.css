@@ -17,11 +17,8 @@
   position: absolute;
   z-index: 1;
   border: 3px dotted rgb(89, 88, 88);
-  /* bottom: 100%; */
-  /* right: -15%; */
   left: 2px;
   top: 105px;
-  /* background-color: white; */
   opacity: 0;
   transition: opacity 0.5s;
   line-height: 150%;
