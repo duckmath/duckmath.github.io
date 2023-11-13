@@ -139,7 +139,7 @@ const user_streaks_collection = firestore.collection(db, "user_streaks");
  *
  * @returns {boolean} True if the user has a streak, false otherwise.
  */
-async function checkUsersStreak(current_user_id) {
+export async function checkUsersStreak(current_user_id) {
   if (isSignedIn()) {
     const query_items = await firestore.query(
       user_streaks_collection,
@@ -166,18 +166,4 @@ async function checkUsersStreak(current_user_id) {
   return false;
 }
 
-async function testCase1() {
-  checkUsersStreak("MIMSxtxbGjeBBdFos5O0xXDGCjx1")
-    .then((result) => {
-      if (result === true) {
-        console.log("passed test case 1");
-      } else {
-        console.log("failed test case 1");
-      }
-    })
-    .catch((error) => {
-      console.log("failed test case 1");
-    });
-}
 
-setTimeout(testCase1, 2000);
