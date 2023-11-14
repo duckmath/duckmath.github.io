@@ -1,4 +1,4 @@
-import {checkUsersStreak, getLoginDates} from "/firebase/main_firebase.js";
+import {checkUsersStreak, getLoginDates} from "../firebase/main_firebase.js";
 // must be logged in to run these test cases
 // if you are not logged in, you will get an error/TESTS WILL FAIL
 let run_tests_button;
