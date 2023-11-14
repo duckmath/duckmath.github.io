@@ -1,6 +1,7 @@
 # Contributing Guidelines
 
 Thank you for considering contributing to duckmath.org! We appreciate your help in making it better.
+Join the discord for a special role!
 
 ## How to Contribute
 
