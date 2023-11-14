@@ -1,3 +1,4 @@
+
 const firebaseConfig = {
   apiKey: "AIzaSyBzv3i9lYIhyiQrfYnELlf2OesAhKMIbdk",
   authDomain: "duckmath-6e834.firebaseapp.com",
@@ -127,7 +128,13 @@ authentication.onAuthStateChanged(auth, (user) => {
 /*
 
 
+
+
+
 database shit should be on another page but idk how in js
+
+
+
 
 
 */
@@ -143,8 +150,8 @@ export async function checkUsersStreak(current_user_id) {
   if (isSignedIn()) {
     const query_items = await firestore.query(
       user_streaks_collection,
-      firestore.where("userID", "==", current_user_id)
-    ); // watch this line
+      firestore.where("__name__", "==", current_user_id)
+    );
     try {
       const querySnapshot = await firestore.getDocs(query_items);
       if (querySnapshot.docs.length === 0) {
@@ -165,5 +172,63 @@ export async function checkUsersStreak(current_user_id) {
   }
   return false;
 }
+/**
+ * Returns a list of strings of dates the user had logged in.
+ *
+ * @returns {list} list of dates the user had logged in.
+ */
+export async function getLoginDates(current_user_id) {
+if (isSignedIn()) {
+    const query_items = await firestore.query(
+      user_streaks_collection,
+      firestore.where("__name__", "==", current_user_id)
+    );
+    try {
+      const querySnapshot = await firestore.getDocs(query_items);
+      if (querySnapshot.docs.length === 0) {
+        console.log("No doc found");
+        return [];
+      }
+      for (const doc of querySnapshot.docs) {
+        if (doc.id === current_user_id) {
+          if(doc.data().dates_logged_in === undefined){
+            return [];
+          }
+          return (doc.data().dates_logged_in);
+        }
+      }
+    } catch (error) {
+      console.error("Error querying Firestore:\n", error);
+    }
+  }
+  return [];
+}
 
+/**
+ * creates or updates a user streak
+ *
+ * @returns {void} no return for now
+ */
+async function streak(current_user_id) {
+    if (isSignedIn()) {
+        const query_items = await firestore.query(
+        user_streaks_collection,
+        firestore.where("__name__", "==", current_user_id)
+        );
+        try {
+          const querySnapshot = await firestore.getDocs(query_items);
+          if (querySnapshot.docs.length === 0) {
+            createStreak(current_user_id); // create new user doc
+            return false; // making streak now
+          }
+          else{
+            updateStreak(current_user_id, firestore.FieldValue.serverTimestamp()); // if user alr has streak then update there's
+          }
+        }
+        catch (error) {
+            console.error("Error querying Firestore:\n", error);
+          }
 
+    }
+    return false;
+}
