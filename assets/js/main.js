@@ -47,7 +47,7 @@ function openFullscreen() {
   }
 }
 function ruffleFullscreen() {
-  alert("To Fullscreen, Right Click the Game and hit Enter Fullscreen");
+  alert("To Fullscreen, Right Click the Application and hit Enter Fullscreen");
 }
 
 function searchbar1() {
