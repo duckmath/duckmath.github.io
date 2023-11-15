@@ -3,7 +3,7 @@ import {checkUsersStreak, getLoginDates} from "../firebase/main_firebase.js";
 // if you are not logged in, you will get an error/TESTS WILL FAIL
 let run_tests_button;
 
-if(window.location.href.includes("dev.html")){
+if(window.location.href.includes("dev.html")){ // if ur in dev.html
     run_tests_button = document.getElementById("run_tests_button");
     run_tests_button.addEventListener("click", () => {
         runTestCases().then(result => {
