@@ -14,7 +14,7 @@ This is a fun website that is a collection of applications from different sites,
 
 ## Join My Discord!
 
-Join my discord below for any questions, concerns, about my website!
+Join my discord below for any questions or concerns about the website!
 
 - Discord: [discord.gg/t2EwRyhFcG](https://discord.gg/t2EwRyhFcG)
 
