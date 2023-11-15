@@ -50,7 +50,7 @@ Slope.add_new_score();
 TanukiSunset = new Score("Tanuki Sunset", "Solarrelic", "703", "/assets/img/icons/tanuki.webp", "/g4m3s/TanukiSunset.html");
 TanukiSunset.add_new_score();
 
-SubwaySurfers = new Score("Subway Surfers", "Katty", "23262", "/assets/img/icons/subway.webp", "/g4m3s/subway_surfers.html");
+SubwaySurfers = new Score("Subway Surfers", "jonny p", "40674", "/assets/img/icons/subway.webp", "/g4m3s/subway_surfers.html");
 SubwaySurfers.add_new_score();
 
 MemeDylan = new Score("", "Dylan", "68", "/assets/img/squiddy.gif", "/g4m3s/club-penguin.html");
