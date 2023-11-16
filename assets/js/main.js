@@ -52,9 +52,9 @@ function ruffleFullscreen() {
 
 function searchbar1() {
   const searchvalue = document.getElementById("query");
-  var icon_divs = document.getElementById("icon_image");
-  var elem = icon_divs.getElementsByTagName("a");
-  var ads = document.getElementsByClassName("ad");
+  const icon_divs = document.getElementById("icon_image");
+  const elem = icon_divs.getElementsByTagName("a");
+  const ads = document.getElementsByClassName("ad");
   if (searchvalue.value === "") {
     console.log("Nothing Searched");
     for (var i = 0; i < ads.length; i++) {
@@ -117,12 +117,12 @@ function showall() {
   var elem = icon.getElementsByTagName("a");
   var all = document.getElementById("All");
 
-  sorterbuttons(all);
+  sorterbuttons(all); // remove ad
   for (var i = 0; i < elem.length; i++) {
     elem[i].style.visibility = "visible";
     elem[i].style.display = "inline-block";
   }
-  var ads = document.getElementsByClassName("ad");
+  const ads = document.getElementsByClassName("ad");
   for (var i = 0; i < ads.length; i++) {
     ads[i].style.visibility = "visible";
     ads[i].style.display = "inline-block";
@@ -132,41 +132,35 @@ function showall() {
 function enlargeimage(image) {
   image.style.transform = "scale(1.15)";
   image.style.transition = "transform 0.25s ease";
-  var fig = image.parentElement.getElementsByTagName("figcaption")[0];
-  if (fig !== undefined) {
+  const fig = image.parentElement.querySelector("figcaption");
+  showFigcaption(fig);
+}
+
+function resetImage(image) {
+  image.style.transform = "scale(1)";
+  image.style.transition = "transform 0.25s ease";
+  const fig = image.parentElement.querySelector("figcaption"); // returns first element
+  // that is a descendant of the element it was called from that matches the selectors
+  hideFigcaption(fig);
+}
+
+function showFigcaption(fig) {
+  if (fig !==  undefined && fig !== null) {
     fig.style.visibility = "visible";
   }
 }
 
-function notlarge(image) {
-  image.style.transform = "scale(1)";
-  image.style.transition = "transform 0.25s ease";
-  var fig = image.parentElement.getElementsByTagName("figcaption")[0];
-  if (fig !== undefined) {
+function hideFigcaption(fig) {
+  if (fig !==  undefined && fig !== null) {
     fig.style.visibility = "hidden";
   }
 }
 
-function showimage(element) {
-  var child = element.parentElement.getElementsByTagName("a")[0];
-  child.style.visibility = "visible";
-}
-function unimage(element) {
-  var child = element.parentElement.getElementsByTagName("a")[0];
-  child.style.visibility = "hidden";
-}
-function showimagea(element) {
-  element.style.visibility = "visible";
-}
-function unimagea(element) {
-  element.style.visibility = "hidden";
+function spin(element) {
+  element.style.transform = "rotate(359deg)";
+  element.style.transition = "transform 0.25s ease";
 }
 
-function spin(image) {
-  image.style.transform = "rotate(359deg)";
-  image.style.transition = "transform 0.25s ease";
-}
-
-function unspin(image) {
-  image.style.transform = "rotate(0deg)";
+function unspin(element) {
+  element.style.transform = "rotate(0deg)";
 }
