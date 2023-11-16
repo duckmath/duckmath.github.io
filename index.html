@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>DuckMath</title>
+
+    <!-- Scripts -->
     <script
       async
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1533872335883359"
@@ -18,9 +21,15 @@
       gtag("js", new Date());
       gtag("config", "G-63K8BHHS38");
     </script>
+    <script src="/assets/js/main.js" type="text/javascript" defer></script>
+    <script src="/assets/js/index.js" type="text/javascript" defer></script>
+    <script src="/firebase/main_firebase.js" type="module" defer></script>
+    <noscript>
+      Your browser doesn't have JavaScript enabled. Please enable JavaScript or
+      switch to a browser that supports it.
+    </noscript>
 
-    <title>DuckMath</title>
-
+    <!-- Meta Tags -->
     <meta property="og:title" content="DuckMath" />
     <meta
       property="og:description"
@@ -39,92 +48,113 @@
     />
     <meta name="language" content="English" />
 
+    <!-- Links -->
     <link rel=”canonical” href=”https://duckmath.org/”>
     <link rel="stylesheet" href="/assets/css/text_styles.css" />
     <link rel="stylesheet" href="/assets/css/topnav.css" />
     <link rel="stylesheet" href="/assets/css/main.css" />
-    <!--<link rel="stylesheet" href="/assets/css/gabes.css" />-->
+    <!--<link rel="stylesheet" href="/assets/css/games.css" />-->
     <link rel="stylesheet" href="/assets/css/tooltips.css" />
     <link rel="icon" type="image/x-icon" href="/assets/img/duck.png" />
     <link rel="mask-icon" type="" href="/assets/img/duck.png" color="#111" />
-
-    <script src="/assets/js/main.js" type="text/javascript" defer></script>
-    <script src="/assets/js/index.js" type="text/javascript" defer></script>
-    <script src="/firebase/main_firebase.js" type="module" defer></script>
-    <noscript
-      >Your browser doesn't have JavaScript enabled. Please enable JavaScript or
-      switch to a browser that supports it.</noscript
-    >
   </head>
   <body>
     <main class="main_title_text">
-      Duck Math
-      <div class="title_text_description">Enjoy all your favorite applications!<br>
-        PLEASE consider turning off your ad-blocker as ads support the site, Thanks!<br>
-
-        <button class="button-55" onclick="window.location.href='/g4m3s.html';">Play Now!</button>
-
-        <br>
-
-        <button class="tooltip button-55" style="min-width:320px; font-size: 45px;"
-                onclick="window.location='https://github.com/duckmath/duckmath.github.io'">Github
+      <h1 class="title">Duck Math</h1>
+      <div class="title_text_description">
+        <h4>
+          Enjoy your favorite apps!<br />
+          Support the site by disabling your ad-blocker. Thanks!
+        </h4>
+        <br />
+        <button
+          class="button-55 play-now"
+          onclick="window.location.href='/g4m3s.html';"
+        >
+          Play Now!
+        </button>
+        <br />
+        <a
+          href="https://github.com/duckmath/duckmath.github.io"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="tooltip button-55 github"
+        >
+          Github
           <div class="tooltiptext">
-                    <span class="tag">
-                        <img src="/assets/img/bulb.webp" width="32" height="32" alt="lamp" loading="lazy">
-                    </span>
-            <span class="message">This website is open source!<br> Go to this link to see the source
-                        code.</span>
+            <span class="tag">
+              <img
+                src="/assets/img/bulb.webp"
+                width="32"
+                height="32"
+                alt="lamp"
+                loading="lazy"
+              />
+            </span>
+            <span class="message"
+              >This website is open source!<br />
+              Go to this link to see the source code.
+            </span>
           </div>
-        </button>
-        <!-- HALLOWEEN
-        <br>
-        <img  src="/assets/img/pumpkingif-halloween.gif" height="200" width="200" style="margin-top: 60px" loading="lazy" alt="pumpkin-gif">
-            -->
-      </div>
-        </button>
+          <!-- HALLOWEEN
+        <br />
+        <img
+          src="/assets/img/pumpkingif-halloween.gif"
+          height="200"
+          width="200"
+          style="margin-top: 60px"
+          loading="lazy"
+          alt="pumpkin-gif"
+        /> -->
+        </a>
       </div>
       <div class="recommended">
-        Recommended
+        <h2>Recommended</h2>
         <a
           id="Retro Bowl"
           class="Sports recommended-btns"
           href="g4m3s/retro_bowl.html"
           ><img
-            onmouseover="enlargeimage(this)"
-            onmouseout="notlarge(this)"
+            class="rounded btns"
             src="assets/img/icons/retro_bowl_icon.webp"
             alt="Retro Bowl"
             width="200"
             height="200"
             loading="lazy"
+            figcaption="Retro Bowl"
         /></a>
-        <a id="Cookie Clicker"
+        <a
+          id="Cookie Clicker"
           class="Other recommended-btns"
           href="g4m3s/CookieClicker.html"
           ><img
-            onmouseover="enlargeimage(this)"
-            onmouseout="notlarge(this)"
+            class="rounded btns"
             src="assets/img/icons/cookieclicker.webp"
             alt="Cookie Clicker"
             width="200"
             height="200"
-            loading="lazy"/></a>
+            loading="lazy"
+            figcaption="Cookie Clicker"
+        /></a>
         <a
           id="Tanuki Sunset"
           class="Driving recommended-btns"
           href="g4m3s/TanukiSunset.html"
           ><img
-            onmouseover="enlargeimage(this)"
-            onmouseout="notlarge(this)"
+            class="rounded btns"
             src="assets/img/icons/tanuki.webp"
             alt="Tanuki Sunset"
             width="200"
             height="200"
             loading="lazy"
+            figcaption="Tanuki Sunset"
         /></a>
         <div class="disclaimer">
-          I am in no way responsible for ANY trouble you get in for using this
-          site at ANY time. I don't own any of the content on this website.
+          <h4>
+            I am not responsible for any issues you may encounter while using
+            this site.<br />
+            I do not own any content on this website.
+          </h4>
         </div>
         <br />
       </div>

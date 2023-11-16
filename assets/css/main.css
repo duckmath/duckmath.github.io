@@ -1,5 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Urbanist:700|Josefin Sans:400");
+
+/* CSS Colour Variables */
+:root {
+  --text: #fdf6dd;
+  --background: #1f2029;
+  --background-accent: #2b2c37;
+  --primary: #ffd500;
+  --secondary: #fdc500;
+  --accent: #e29417;
+}
+
 body {
-  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 15px;
   line-height: 1.7;
@@ -11,7 +22,48 @@ body {
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   scroll-behavior: smooth;
-  background: #1f2029 url("../img/bg.svg") repeat fixed center;
+  background: var(--background) url("../img/bg.svg") repeat fixed center;
+  font-family: "Josefin Sans";
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Urbanist";
+  font-weight: 700;
+  color: var(--text);
+  cursor: default;
+}
+
+html {
+  font-size: 100%;
+} /* 16px */
+
+h1 {
+  font-size: 4.21rem; /* 67.36px */
+}
+
+h2 {
+  font-size: 3.158rem; /* 50.56px */
+}
+
+h3 {
+  font-size: 2.369rem; /* 37.92px */
+}
+
+h4 {
+  font-size: 1.777rem; /* 28.48px */
+}
+
+h5 {
+  font-size: 1.333rem; /* 21.28px */
+}
+
+small {
+  font-size: 0.75rem; /* 12px */
 }
 
 .notbody {
@@ -125,33 +177,34 @@ body {
   margin-top: 15px;
   margin-bottom: 10px;
   align-self: center;
-  background-color: #fff;
+  background-color: var(--text);
   background-image: none;
   background-position: 0 90%;
   background-repeat: repeat no-repeat;
   background-size: 4px 3px;
-  border-style: solid;
-  border-width: 2px;
-  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  border-width: 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
   box-sizing: border-box;
-  color: #000000;
+  color: var(--background-accent);
   cursor: pointer;
   display: inline-block;
-  font-family: Neucha, sans-serif;
+  font-family: "Josefin Sans";
   font-size: 3rem;
   line-height: 70px;
   min-width: 400px;
   outline: none;
-  padding: .75rem;
+  padding: 0.75rem;
   text-decoration: none;
   transition: all 235ms ease-in-out;
   border-bottom-left-radius: 15px 255px;
   border-bottom-right-radius: 225px 15px;
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
-  user-select: none;
   -webkit-user-select: none;
+  user-select: none;
   touch-action: manipulation;
+  padding-bottom: 1px;
+  font-weight: 400;
 }
 
 .button-55:hover {
@@ -163,13 +216,39 @@ body {
   box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
 }
 
+.github {
+  min-width: 322.5px;
+}
+
+.btns {
+  transition: all 0.2s ease;
+}
+
+.btns:hover {
+  transform: scale(1.1);
+}
+
+.play-now {
+  padding-left: 128px;
+  padding-right: 128px;
+  margin-top: 0px;
+}
+
+.recommended {
+  min-width: 500px;
+}
+
 .recommended-btns {
   text-decoration: none;
 }
 
+.rounded {
+  border-radius: 15px;
+}
+
 .disclaimer {
   font-size: 20px;
-  line-height: 120%;
+  line-height: 165%;
   margin-top: 3rem;
 }
 
@@ -181,4 +260,19 @@ body {
   width: 99%;
   bottom: 0;
   margin: 0;
+}
+
+.title {
+  font-size: 7.5rem;
+  margin: 0;
+  color: var(--primary);
+}
+
+a {
+  text-decoration: none;
+}
+
+ins {
+  display: block;
+  text-align: center;
 }
