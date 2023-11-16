@@ -148,7 +148,7 @@ const user_streaks_collection = firestore.collection(db, "user_streaks");
  */
 export async function checkUsersStreak(current_user_id) {
   if (isSignedIn()) {
-    const query_items = await firestore.query(
+    const query_items = await firestore.query( // just find where doc id == user id each user should have their own doc.
       user_streaks_collection,
       firestore.where("__name__", "==", current_user_id)
     );
