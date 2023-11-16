@@ -129,6 +129,8 @@ function showall() {
   }
 }
 
+// Enlarge the image
+//! Could be deprecated in the near future
 function enlargeimage(image) {
   image.style.transform = "scale(1.15)";
   image.style.transition = "transform 0.25s ease";
@@ -142,6 +144,21 @@ function notlarge(image) {
   image.style.transform = "scale(1)";
   image.style.transition = "transform 0.25s ease";
   var fig = image.parentElement.getElementsByTagName("figcaption")[0];
+  if (fig !== undefined) {
+    fig.style.visibility = "hidden";
+  }
+}
+
+// Show and hide the name of the game
+function showName(element) {
+  var fig = element.parentElement.getElementsByTagName("figcaption")[0];
+  if (fig !== undefined) {
+    fig.style.visibility = "visible";
+  }
+}
+
+function hideName(element) {
+  var fig = element.parentElement.getElementsByTagName("figcaption")[0];
   if (fig !== undefined) {
     fig.style.visibility = "hidden";
   }
