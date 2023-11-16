@@ -14,26 +14,29 @@ class Score {
     add_new_score() {
         let main_tag = document.getElementById("main");
         main_tag.innerHTML += `
-        <div style = "
-            grid-column: 2 / 5 ;
+            <div style = "
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
             margin-top: 70px;
-            text-align: center;
             color: white;
             border: 2px white solid;
             border-radius: 10px;
             padding-top: 10px;
             font-family: monospace;
-            display: grid;
-            justify-content: center;
-            align-content: center;
-            align-items: center;
-            "> 
-            <h1 id = "game" style="float: left;">${this.game}</h1>
-            <h2 id = "username" style="float: left">${this.username}</h2>
-            <h2 id = "score" style="float: left">${this.score}</h2>
-            <a style="justify-content: center; justify-items: center" href=${this.link}><img src = ${this.icon} style = "width: 200px; height: 200px; float: left;" alt="Game Icon"></a>
-        </div>
-    `;
+            background: rgba(255, 0, 0, 1);
+            width: 65%;
+            transform: translate(27.5%, 27.5%);
+            ">
+                <div>
+                    <h1 id = "game" style="color: black;">${this.game}</h1>
+                    <h2 id = "username" style="color: black;">${this.username}</h2>
+                    <h2 id = "score" style="color: black;">${this.score}</h2>
+                </div>
+                <a href=${this.link}><img src = ${this.icon} style = "width: 200px; height: 200px;" alt="Game Icon"></a>
+            </div>
+            <br>
+       `;
     }
 }
 
@@ -56,6 +59,6 @@ SubwaySurfers.add_new_score();
 MemeDylan = new Score("", "Dylan", "68", "/assets/img/squiddy.gif", "/g4m3s/club-penguin.html");
 MemeDylan.add_new_score();
 
-ClubPenguin = new Score("Club Penguin", "Maddox", "1337", "/assets/img/club-penguin-dance.gif", "/g4m3s/club-penguin.html");
-ClubPenguin.add_new_score();
+new Score("Club Penguin", "Maddox", "1337", "/assets/img/club-penguin-dance.gif", "/g4m3s/club-penguin.html").add_new_score();
+
 

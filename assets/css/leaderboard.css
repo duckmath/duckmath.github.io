@@ -17,7 +17,6 @@ body {
 }
 
 .main {
-  display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
   position: absolute;
@@ -39,7 +38,6 @@ body {
 }
 
 #searchbar {
-  grid-area: 2 / 3 / 3 / 4;
   border-radius: 10px;
   padding-left: 10px;
   height: 2rem;
@@ -47,7 +45,6 @@ body {
 }
 
 .searchbar {
-  grid-area: 2 / 3 / 3 / 4;
   border-radius: 10px;
   padding-left: 10px;
   height: 2rem;
@@ -55,10 +52,6 @@ body {
 }
 
 .searchIcon {
-  grid-area: 2 / 2 / 3 / 3;
-  position: relative;
-  left: 80%;
-  top: 10%;
   width: 30px;
   height: auto;
 }
@@ -66,6 +59,6 @@ body {
 .blob {
   color: white;
   border: solid 1px silver;
-  width: 30%;
+  width: 10%;
   border-radius: 10px;
 }
