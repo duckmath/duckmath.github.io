@@ -41,24 +41,23 @@ class Score {
 }
 
 
+/**
+ * Goes to the leaderboard code and gets the scores.
+ *
+ * @returns {String} String that holds the js code to be evaluated.
+ */
+async function getScores() {
+    let response = await fetch("https://raw.githubusercontent.com/maddox0S/duckmath-scores/main/scores-class.js");
+    return await response.text();
+}
+async function main() {
+    let js_code = await getScores();
+    eval(js_code); // never use eval
+}
+main();
 
 
 
-driftBoss = new Score("Drift Boss", "nevamian", "20230", "/assets/img/icons/driftboss.webp", "/g4m3s/driftboss.html");
-driftBoss.add_new_score();
 
-Slope = new Score("Slope", "roshie", "230", "/assets/img/icons/slope.webp", "/g4m3s/slope.html");
-Slope.add_new_score();
-
-TanukiSunset = new Score("Tanuki Sunset", "Solarrelic", "703", "/assets/img/icons/tanuki.webp", "/g4m3s/TanukiSunset.html");
-TanukiSunset.add_new_score();
-
-SubwaySurfers = new Score("Subway Surfers", "jonny p", "40674", "/assets/img/icons/subway.webp", "/g4m3s/subway_surfers.html");
-SubwaySurfers.add_new_score();
-
-MemeDylan = new Score("", "Dylan", "68", "/assets/img/squiddy.gif", "/g4m3s/club-penguin.html");
-MemeDylan.add_new_score();
-
-new Score("Club Penguin", "Maddox", "1337", "/assets/img/club-penguin-dance.gif", "/g4m3s/club-penguin.html").add_new_score();
 
 
