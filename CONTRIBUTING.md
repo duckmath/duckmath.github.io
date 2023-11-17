@@ -29,6 +29,11 @@ To ensure a smooth contribution process, please follow these guidelines:
 - Use meaningful variable and function names.
 - Comment your code when necessary to improve readability.
 
+## Adding applications
+
+- Use any existing application's format and update the name and icon, as well as the main frame (the gabe/application itself)
+- _Please note that only '.webp' file images should be uploaded!_
+
 ## Reporting Issues
 
 - If you encounter any issues or have suggestions for improvements, please open an issue on the repository.
