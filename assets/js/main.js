@@ -19,14 +19,29 @@ function iframe_focus(iframe) {
   console.log("iframe focused");
 }
 
+function instaFocusIFrame(iframe){
+  if(window.location.href.includes("g4m3s/")) {
+    if(iframe !== null && iframe !== undefined){
+      iframe_focus(iframe);
+      // Check if iframe is focused
+      if(document.activeElement !== iframe){ // if iframe is not focused...
+        //set another timeout to try again
+        setTimeout(instaFocusIFrame, 1000);
+      }
+    }
+  }
+}
+
+
 document.addEventListener("DOMContentLoaded", function () {
   // when the page loads
-  var iframe = document.getElementById("gameFrame"); // get the iframe game element
+  const iframe = document.getElementById("gameFrame"); // get the iframe game element
   if (iframe) {
     iframe.addEventListener("mouseenter", () => {
       iframe_focus(iframe);
     }); // add event listeners to the iframe that focus it when the mouse enters
     window.onload = () => {
+      instaFocusIFrame(iframe);
       iframe_focus(iframe);
     };
     iframe_focus(iframe); // focus the iframe (for some reason this doesn't work without the onload event)
