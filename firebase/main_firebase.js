@@ -211,10 +211,7 @@ if (isSignedIn()) {
  */
 async function streak(current_user_id) {
     if (isSignedIn()) {
-        const query_items = await firestore.query(
-        user_streaks_collection,
-        firestore.where("__name__", "==", current_user_id)
-        );
+        const query_items = await firestore.query(user_streaks_collection, firestore.where("__name__", "==", current_user_id));
         try {
           const querySnapshot = await firestore.getDocs(query_items);
           if (querySnapshot.docs.length === 0) {
@@ -231,4 +228,46 @@ async function streak(current_user_id) {
 
     }
     return false;
+}
+
+/**
+ * Returns an amount of total streaks
+ *
+ * @returns {int} int of how many users have streaks currently.
+ */
+async function getTotalCurrentStreaks(){ // adds up all the users with streaks
+  const query_items = await firestore.query(user_streaks_collection, firestore.where("has_streak", "==", true));
+  const querySnapshot = await firestore.getDocs(query_items);
+  return querySnapshot.docs.length;
+}
+
+/**
+ * Returns number for highest streak
+ *
+ * @returns {int} int of the highest streak amount
+ */
+async function getHighestStreak(){
+  const query_items = await firestore.query(user_streaks_collection, firestore.where("highest_streak_amt", ">", 9));
+  const querySnapshot = await firestore.getDocs(query_items);
+  let highest_streak = 0;
+  for(const doc of querySnapshot.docs){
+    if(doc.data().highest_streak_amt > highest_streak){
+      highest_streak = doc.data().highest_streak_amt;
+    }
+  }
+  return highest_streak;
+}
+
+/**
+ * checks if on streak page and does stats for it
+ */
+if(window.location.href.includes("streak.html")){ // if on streak page
+  const statsDiv = document.getElementById("stats_div");
+
+      getTotalCurrentStreaks().then((result) => {
+          statsDiv.innerHTML += "<br>Total Current Streaks: " + result;
+      });
+      getHighestStreak().then((result) => {
+        statsDiv.innerHTML += "<br>Highest Streak: " + result;
+      });
 }
