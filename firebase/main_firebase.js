@@ -240,6 +240,7 @@ async function getTotalCurrentStreaks(){ // adds up all the users with streaks
   const querySnapshot = await firestore.getDocs(query_items);
   return querySnapshot.docs.length;
 }
+
 /**
  * Returns number for highest streak
  *
