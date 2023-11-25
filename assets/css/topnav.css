@@ -182,3 +182,29 @@ ul a:hover {
   color: #ffffff;
   background-color: #ce0a0a;
 }
+
+#LoginButton {
+  color: green;
+}
+
+#LogoutButton {
+  color: #d30000;
+  display: none;
+}
+
+.vm {
+  background-color: #ffff00;
+}
+
+.dis {
+  background-color: #0000ff;
+}
+
+.gr {
+  background-color: #00ff00;
+}
+
+#StreakIcon {
+  padding: 5px 2px;
+  justify-content: center;
+}
