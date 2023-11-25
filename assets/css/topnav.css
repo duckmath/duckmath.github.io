@@ -34,6 +34,10 @@
   color: white;
 }
 
+.topnavbutton {
+  cursor: pointer;
+}
+
 .icon a img {
   position: fixed;
   top: 1%;
@@ -178,6 +182,11 @@ ul a:hover {
   }
 }
 
+.dropdown-content a {
+  border-bottom: 2px solid black;
+  transition: all 0.25s ease;
+}
+
 .dropdown-content a:hover {
   color: #ffffff;
   background-color: #ce0a0a;
@@ -192,16 +201,8 @@ ul a:hover {
   display: none;
 }
 
-.vm {
-  background-color: #ffff00;
-}
-
-.dis {
-  background-color: #0000ff;
-}
-
-.gr {
-  background-color: #00ff00;
+.dropdown-content .gr {
+  border: 0;
 }
 
 #StreakIcon {
