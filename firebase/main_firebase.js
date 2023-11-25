@@ -278,9 +278,6 @@ if (window.location.href.includes("streak.html")) {
   });
   getHighestStreak().then((result) => {
     statsDiv.innerHTML += "<br />Highest streak: " + result;
-  });
-
-  setTimeout(() => {
     statsClass.add("loaded");
-  }, 1500);
+  });
 }
