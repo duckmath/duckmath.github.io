@@ -10,3 +10,4 @@
 .env/
 .env/firebase_config.env
 env/
+ignore
