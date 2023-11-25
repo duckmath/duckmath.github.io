@@ -132,7 +132,7 @@ body {
   background-size: 4px 3px;
   border-style: solid;
   border-width: 2px;
-  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
   box-sizing: border-box;
   color: #000000;
   cursor: pointer;
@@ -142,15 +142,15 @@ body {
   line-height: 70px;
   min-width: 400px;
   outline: none;
-  padding: .75rem;
+  padding: 0.75rem;
   text-decoration: none;
   transition: all 235ms ease-in-out;
   border-bottom-left-radius: 15px 255px;
   border-bottom-right-radius: 225px 15px;
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
-  user-select: none;
   -webkit-user-select: none;
+  user-select: none;
   touch-action: manipulation;
 }
 
@@ -181,4 +181,53 @@ body {
   width: 99%;
   bottom: 0;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*^ Streak.html */
+.claim-streak {
+  margin-top: 150px;
+  padding: 0px 10px 0px 10px;
+  margin-bottom: 2rem;
+  background-color: rgba(39, 48, 67, 0.5);
+  color: #ff0000;
+  border-radius: 1rem;
+  transition: all 0.25s cubic-bezier(0.05, 0.75, 0.12, 0.97);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.claim-streak:hover {
+  transform: scale(0.95);
+}
+
+.claim-streak:active {
+  transform: scale(0.925);
+}
+
+.streak-title {
+  font-size: 7.5rem;
+  margin: 0;
+}
+
+.streak-subtitle {
+  font-size: 2.75rem;
+  margin: 0;
+  margin-top: -2.5rem;
+  margin-bottom: -0.25rem;
+}
+
+#stats_div {
+  margin-bottom: 2.5rem;
+}
+
+#stats_div {
+  transform: scale(0);
+  transition: transform 0.25s ease;
+}
+
+#stats_div.loaded {
+  transform: scale(1);
 }
