@@ -176,6 +176,11 @@ ul a:hover {
   #hamburger-icon {
     display: block;
   }
+  .dropdown-content {
+    display: block !important;
+    min-width: 60px;
+    transform: translateX(49px);
+  }
 }
 
 .dropdown-content a:hover {
