@@ -154,6 +154,11 @@ body {
   touch-action: manipulation;
 }
 
+.button-55.github {
+  min-width: 320px;
+  font-size: 45px;
+}
+
 .button-55:hover {
   box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
   transform: translate3d(0, 2px, 0);
