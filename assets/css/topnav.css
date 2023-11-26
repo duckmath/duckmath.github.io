@@ -34,6 +34,10 @@
   color: white;
 }
 
+.topnavbutton {
+  cursor: pointer;
+}
+
 .icon a img {
   position: fixed;
   top: 1%;
@@ -183,7 +187,30 @@ ul a:hover {
   }
 }
 
+.dropdown-content a {
+  border-bottom: 2px solid black;
+  transition: all 0.25s ease;
+}
+
 .dropdown-content a:hover {
   color: #ffffff;
   background-color: #ce0a0a;
+}
+
+#LoginButton {
+  color: green;
+}
+
+#LogoutButton {
+  color: #d30000;
+  display: none;
+}
+
+.dropdown-content .gr {
+  border: 0;
+}
+
+#StreakIcon {
+  padding: 5px 2px;
+  justify-content: center;
 }
