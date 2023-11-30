@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Space+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Space+Mono&display=swap");
 
 .main_title_text {
   position: absolute;
@@ -37,13 +37,16 @@
   top: 10%;
   left: 50%;
   text-align: center;
-  font-size: 100px;
+  margin: 0px;
+  margin-top: 10rem;
+  font-size: 4rem;
   font-weight: bold;
   color: #ff0000;
   font-family: "League Spartan", sans-serif;
   transform: translateX(-50%);
   line-height: 120%;
   width: 100%;
+  cursor: default;
 }
 
 .title_text_description {
