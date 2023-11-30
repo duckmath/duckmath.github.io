@@ -280,14 +280,14 @@ a {
 }
 
 .input:focus,
-input:hover {
+.input:hover {
   outline: none;
   border-color: rgba(255, 0, 0, 0.4);
   background-color: #fff;
   box-shadow: 0 0 0 4px rgb(255 0 0 / 10%);
 }
 
-.icon {
+.search-icon {
   position: absolute;
   left: 1rem;
   fill: #9e9ea7;
