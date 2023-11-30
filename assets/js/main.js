@@ -172,12 +172,14 @@ function hideFig(elem) {
 function showFigcaption(fig) {
   if (fig !==  undefined && fig !== null) {
     fig.style.visibility = "visible";
+    fig.style.opacity = "1";
   }
 }
 
 function hideFigcaption(fig) {
   if (fig !==  undefined && fig !== null) {
     fig.style.visibility = "hidden";
+    fig.style.opacity = "0";
   }
 }
 
