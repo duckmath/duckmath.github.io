@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Tilt+Warp&display=swap");
+
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -76,10 +78,10 @@ body {
   right: 0;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.8);
-  color: #d30000;
+  color: #ff0000;
   font-size: 25px;
-  font-weight: bold;
-  font-family: "Impact", sans-serif;
+  font-weight: 100;
+  font-family: "Tilt Warp", "Montserrat", sans-serif;
   text-align: center;
   pointer-events: none;
   z-index: 1;
@@ -87,13 +89,13 @@ body {
   background-color: white;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
-  border-radius: 10px;
-  /*line-height: 1px;*/
+  border-radius: 1rem;
   margin-top: -30px;
   left: 50%;
   transform: translateX(-50%); /* Centers the figcaption horizontally */
   line-height: 150%;
   max-width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .button {
