@@ -1,75 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+
 .gameloc {
-    position: relative;
-    overflow: hidden;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr;
-    width: 900px;
-    height: 600px;
-    line-height: 50%;
-    margin: auto auto auto;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  width: 900px;
+  height: 600px;
+  line-height: 50%;
+  margin: auto auto auto;
 }
 
-.button1{
-    background-color: #ffffff;
-    border: none;
-    color: black;
-    padding: 14px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 25px;
-    border-radius: 10px;
-    font-family: "Impact", sans-serif;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    white-space: nowrap;
-    margin-top: -5px;
+.button1,
+.button2 {
+  border: none;
+  padding: 10px 14px;
+  min-width: 4rem;
+  transition: all 0.25s cubic-bezier(0.05, 0.75, 0.12, 0.97);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  border-radius: 10px;
+  margin: 4px 2px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: "Tilt Warp", sans-serif;
+  margin-bottom: 1.5rem;
 }
 
-.button2{
-    background-color: #ff0000;
-    border: none;
-    color: white;
-    padding: 14px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 25px;
-    border-radius: 10px;
-    font-family: "Impact", sans-serif;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    white-space: nowrap;
-    letter-spacing: -1px;
+.button1 {
+  background-color: #ffffff;
+  color: black;
+  margin-top: -5px;
+}
+
+.button2 {
+  background-color: #ff0000;
+  color: white;
+  letter-spacing: -1px;
+}
+
+.button1:hover,
+.button2:hover {
+  transform: scale(0.95);
+}
+
+.button1:active,
+.button2:active {
+  transform: scale(0.9);
 }
 
 .searchbar {
-    padding: 10px 10px;
-    font-family: 'Nunito';
-    font-size: 30px;
-    font-weight: 800;
-    width: 300px;
-    height: 30px;
-    border-radius: 10px;
-    top: 0;
-    margin-top: -10px;
-    border: none;
-    background: #333;
-    outline: none;
-    z-index: 2;
-    color: white;
+  padding: 10px 10px;
+  font-family: "Nunito";
+  font-size: 30px;
+  font-weight: 800;
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  top: 0;
+  margin-top: -10px;
+  border: none;
+  background: #333;
+  outline: none;
+  z-index: 2;
+  color: white;
 }
 
 .rounded {
-    border-radius: 1rem;
+  border-radius: 1rem;
 }
 
 #amt_games {
-    font-size: 60px;
-}
-
-.button1, .button2 {
-    min-width: 4rem;
+  font-size: 60px;
 }
