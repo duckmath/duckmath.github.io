@@ -239,8 +239,25 @@
         <a id = "Rolling Ball" class = "2D" href = "g4m3s/rolling-ball.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="resetImage(this)" src="assets/img/icons/rollingball.webp" alt="Icon" width="200" height="200" loading="lazy"><figcaption>Rolling Ball</figcaption></a>
         <a id = "Wheres My Water?" class = "2D" href = "g4m3s/wheres-my-water.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="resetImage(this)" src="assets/img/icons/wheresmywater.webp" alt="Icon" width="200" height="200" loading="lazy"><figcaption>Wheres My Water?</figcaption></a>
         <a id = "Incredibox" class = "2D" href = "g4m3s/incredibox.html" style="text-decoration:none"><img onmouseover="enlargeimage(this)" onmouseout="resetImage(this)" src="assets/img/icons/incredibox.webp" alt="Icon" width="200" height="200" loading="lazy"><figcaption>Incredibox</figcaption></a>
+        <br>
+        <div id="amt_games" style="font-size: 60px">Total Games: </div>
+
+        <script defer>
+            const all_games = document.getElementById("icon_image");
+            let total_games=0;
+            for(let i =0; i<all_games.children.length; i++){
+                if(all_games.children[i].tagName === "A"){
+                    total_games++;
+                }
+            }
+            const games_amt = document.getElementById("amt_games");
+            games_amt.innerHTML += total_games;
 
 
+
+
+
+        </script> <!-- list total games-->
 
 
 
