@@ -40,16 +40,27 @@ class Score {
     }
 }
 
-
 /**
- * Goes to the leaderboard code and gets the scores.
+ * Retrieves scores from the specified URL.
  *
- * @returns {String} String that holds the js code to be evaluated.
+ * @return {Promise<string>} The updated code with modified scores.
  */
 async function getScores() {
-    let response = await fetch("https://raw.githubusercontent.com/maddox0S/duckmath-scores/main/scores-class.js");
-    return await response.text();
+    // let response = await fetch("https://raw.githubusercontent.com/maddox0S/duckmath-scores/main/scores-class.js");
+    // return await response.text();
+    try {
+        const response = await fetch('https://raw.githubusercontent.com/maddox0S/duckmath-scores/main/scores-class.js');
+        const data = await response.text();
+
+        const updatedCode = data.replace(/new Score\("",/g, 'new Score("-",');
+
+        return updatedCode;
+    } catch (error) {
+        console.error('Error:', error);
+        throw error;
+    }
 }
+
 async function main() {
     let js_code = await getScores();
     eval(js_code); // never use eval
