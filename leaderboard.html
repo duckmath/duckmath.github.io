@@ -1,64 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>    
+        <!--^ Google Scripts -->
+        <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1533872335883359" crossorigin="anonymous"></script>
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-63K8BHHS38"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1533872335883359"
-            crossorigin="anonymous"></script>
+            gtag('config', 'G-63K8BHHS38');
+        </script>
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-63K8BHHS38"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+        <!--? Meta Tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="title" content="Leader DuckMath">
+        <meta name="description" content="Check your scores">
+        <meta name="language" content="English">
 
-        gtag('config', 'G-63K8BHHS38');
-    </script>
+        <title>Leaderboard - DuckMath</title>
 
+        <!--* CSS -->
+        <link rel="stylesheet" href="/assets/css/text_styles.css">
+        <link rel="stylesheet" href="/assets/css/topnav.css">
+        <link rel="stylesheet" href="/assets/css/main.css">
 
+        <!--~ Main script -->
+        <script src="/assets/js/main.js"></script>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="Leader DuckMath">
-    <meta name="description" content="Check your scores">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
-    <title>Leader DuckMath</title>
-    <link rel="stylesheet" href="/assets/css/text_styles.css">
-    <link rel="stylesheet" href="/assets/css/topnav.css">
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <script src="/assets/js/main.js"></script>
-    <link rel="icon" type="image/x-icon" href="/assets/img/duck.png">
-    <link rel="mask-icon" type="" href="/assets/img/duck.png" color="#111">
-    <noscript>Your browser doesn't have JavaScript enabled. Please enable JavaScript or switch to a browser that
-        supports it.</noscript>
-    <script src="/assets/js/index.js" type="text/javascript" defer></script>
-    <script src="/assets/js/leaderboard.js" type="text/javascript" defer></script>
+        <!--* Favicon -->
+        <link rel="icon" type="image/x-icon" href="/assets/img/duck.png">
+        <link rel="mask-icon" type="" href="/assets/img/duck.png" color="#111">
 
-    <script src="/firebase/main_firebase.js" type="module" defer></script>
-    <link rel = "stylesheet" href = "/assets/css/leaderboard.css">
+        <!--~ JavaScript -->
+        <noscript>Your browser doesn't have JavaScript enabled. Please enable JavaScript or switch to a browser that
+            supports it.</noscript>
+        <script src="/assets/js/index.js" type="text/javascript" defer=""></script>
+        <script src="/assets/js/leaderboard.js" type="text/javascript" defer=""></script>
+        <script src="/firebase/main_firebase.js" type="module" defer=""></script>
 
-
-</head>
-<body class="body">
-
-<main class="main" id = "main">
-    <h1 id = "leaderboard">Leaderboard
-    <br>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhIrLt3HjoUqEwmAeNwJEZUSYYOnxptRzfGmaFBrQJ70Ci8Q/viewform?usp=sf_link" style="font-size: 50px; color: #0000ee">Submit a score</a>
-    <br>
-    <img class="searchIcon" id = "searchIcon" src = "assets/img/magnifying-glass.png" alt="SearchIcon">
-
-    <input  id = "searchbar" placeholder="(Coming Soon)" >
-    </h1>
-
-
-
-
-
-</main>
-</body>
-
+        <!--* CSS -->
+        <link rel="stylesheet" href="/assets/css/leaderboard.css">
+    </head>
+    <body class="body">
+        <main class="main" id="main">
+            <h1 class="leaderboard-title">Leaderboard</h1>
+            <div class="center-container">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhIrLt3HjoUqEwmAeNwJEZUSYYOnxptRzfGmaFBrQJ70Ci8Q/viewform?usp=sf_link">
+                    <div class="submit-score">Submit a score</div>
+                </a>
+            </div>
+            <div class="center-container">
+                <div class="group">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
+                        <g>
+                            <path
+                                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+                            ></path>
+                        </g>
+                    </svg>
+                    <input class="input" type="search" placeholder="Coming soon..." disabled />
+                </div>
+            </div>
+        </main>
+    </body>
 </html>
-
-
