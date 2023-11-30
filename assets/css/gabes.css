@@ -75,3 +75,12 @@
 #amt_games {
   font-size: 60px;
 }
+
+/** Search Bar/Input */
+.input:focus,
+input:hover {
+  outline: none;
+  border-color: rgba(252, 191, 73, 0.4);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgb(252 191 73 / 10%);
+}
