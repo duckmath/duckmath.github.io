@@ -42,13 +42,13 @@ class Score {
 
 
 /**
- * Goes to the leaderboard code and gets the scores.
+ * Retrieves scores from the specified URL.
  *
- * @returns {String} String that holds the js code to be evaluated.
+ * @return {Promise<string>} The updated code with modified scores.
  */
 async function getScores() {
     let response = await fetch("https://raw.githubusercontent.com/maddox0S/duckmath-scores/main/scores-class.js");
-    return await response.text();
+    return await response.text(); // is promise for whatever fucking reason
 }
 async function main() {
     let js_code = await getScores();
