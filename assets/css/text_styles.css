@@ -1,10 +1,4 @@
-@font-face {
-  font-family: "League Spartan";
-  font-weight: 800;
-  src: url("https://fonts.gstatic.com/s/leaguespartan/v8/JTURjIg1_i6t8kCHKm45_dJE3gnD_w.woff2")
-    format("woff2");
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Space+Mono&display=swap');
 
 .main_title_text {
   position: absolute;
