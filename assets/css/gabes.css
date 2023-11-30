@@ -1,4 +1,3 @@
-
 .gameloc {
     position: relative;
     overflow: hidden;
@@ -63,4 +62,10 @@
 
 }
 
+.rounded {
+    border-radius: 1rem;
+}
 
+#amt_games {
+    font-size: 60px;
+}

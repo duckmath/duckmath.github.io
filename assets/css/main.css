@@ -52,6 +52,7 @@ body {
   justify-content: center;
   order: 0;
   align-items: center;
+  width: 100%;
 }
 
 .icon_image a {
@@ -235,4 +236,14 @@ a {
 
 #stats_div.loaded {
   transform: scale(1);
+}
+
+.ad {
+  width: 100%;
+  display: compact;
+}
+
+.adsbygoogle {
+  display: block;
+  text-align: center;
 }

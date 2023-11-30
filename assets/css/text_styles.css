@@ -49,6 +49,7 @@
   font-family: "League Spartan", sans-serif;
   transform: translateX(-50%);
   line-height: 120%;
+  width: 100%;
 }
 
 .title_text_description {
