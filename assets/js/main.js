@@ -159,6 +159,16 @@ function resetImage(image) {
   hideFigcaption(fig);
 }
 
+function viewFig(elem) {
+  const fig = elem.parentElement.querySelector("figcaption");
+  showFigcaption(fig);
+}
+
+function hideFig(elem) {
+  const fig = elem.parentElement.querySelector("figcaption");
+  hideFigcaption(fig);
+}
+
 function showFigcaption(fig) {
   if (fig !==  undefined && fig !== null) {
     fig.style.visibility = "visible";

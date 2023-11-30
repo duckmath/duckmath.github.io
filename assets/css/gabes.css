@@ -72,13 +72,25 @@
   border-radius: 1rem;
 }
 
+.expand {
+  transition: all 0.25s cubic-bezier(0.05, 0.75, 0.12, 0.97);
+}
+
+.expand:hover {
+  transform: scale(1.1);
+}
+
+.expand:active {
+  transform: scale(0.9);
+}
+
 #amt_games {
   font-size: 60px;
 }
 
 /** Search Bar/Input */
 .input:focus,
-input:hover {
+.input:hover {
   outline: none;
   border-color: rgba(252, 191, 73, 0.4);
   background-color: #fff;
