@@ -7,8 +7,8 @@
     height: 600px;
     line-height: 50%;
     margin: auto auto auto;
-
 }
+
 .button1{
     background-color: #ffffff;
     border: none;
@@ -25,8 +25,8 @@
     cursor: pointer;
     white-space: nowrap;
     margin-top: -5px;
-
 }
+
 .button2{
     background-color: #ff0000;
     border: none;
@@ -44,6 +44,7 @@
     white-space: nowrap;
     letter-spacing: -1px;
 }
+
 .searchbar {
     padding: 10px 10px;
     font-family: 'Nunito';
@@ -59,7 +60,6 @@
     outline: none;
     z-index: 2;
     color: white;
-
 }
 
 .rounded {
@@ -68,4 +68,8 @@
 
 #amt_games {
     font-size: 60px;
+}
+
+.button1, .button2 {
+    min-width: 4rem;
 }
