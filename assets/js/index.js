@@ -5,7 +5,7 @@ templatetopnav.innerHTML = `
 <a href="#" id="LoginButton">LOGIN</a>
 <a href="#" id="LogoutButton">LOGOUT</a>
 <div class="dropdown">
-  <a class="topnavbutton">MORE↓</a>
+  <a href="/more/index.html" class="topnavbutton">MORE↓</a>
   <div class="dropdown-content">
     <a href="/more/Unbl0ck3rs.html">Unbl0ck3rs</a>
     <a href="/more/Virtual_Machines.html" class="vm">Virtual Machines</a>
