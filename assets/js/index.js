@@ -2,8 +2,6 @@ const templatetopnav = document.createElement("template");
 
 templatetopnav.innerHTML = `
 <div class="topnav">
-<a href="#" id="LoginButton">LOGIN</a>
-<a href="#" id="LogoutButton">LOGOUT</a>
 <div class="dropdown">
   <a href="/more/index.html" class="topnavbutton">MORE↓</a>
   <div class="dropdown-content">
@@ -20,14 +18,6 @@ templatetopnav.innerHTML = `
 <a href="/leaderboard.html">LEADERBOARD</a>
 <a href="/g4m3s.html">G4M3S</a>
 <a href="/index.html">HOME</a>
-<!-- streak NEEDS TO BE GRAYED OUT IF INACTIVE OR NOT LOGGED IN -->
-<a id="StreakIcon" href="#"
-  ><img
-    src="/assets/img/gray-streak-icon.webp"
-    alt="Streak"
-    width="50"
-    height="40"
-/></a>
 </div>
 <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
 <div class="bar1"></div>
