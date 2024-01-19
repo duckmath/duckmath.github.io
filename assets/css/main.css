@@ -169,9 +169,13 @@ body {
   border: none;
   background: none;
   margin-top: 20px;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: color;
+  transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), font 0.2s ease,
+    margin 0.2s ease;
+}
+
+.btn-2:active {
+  margin-top: 22px;
+  font-size: 28px;
 }
 
 .btn-2:focus,
@@ -194,9 +198,8 @@ body {
   width: 0%;
   height: 2px;
   background-color: #c5283d;
-  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-  transition-duration: 400ms;
-  transition-property: width, left;
+  transition: width 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+    left 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .recommended-btns {

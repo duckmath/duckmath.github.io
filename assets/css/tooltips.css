@@ -14,13 +14,12 @@
   text-align: left;
   padding: 1px 2px;
   position: absolute;
-  z-index: 1;
-  border: 3px dotted rgb(89, 88, 88);
+  border: 3px dotted gray;
   border-radius: 2rem;
   left: -107px;
   top: 4rem;
   opacity: 0;
-  transition: all 0.5s ease;
+  transition: all 0.25s ease;
   line-height: 150%;
   pointer-events: none;
 }
@@ -44,8 +43,6 @@
 
 .message {
   width: 100rem;
-  align-items: center;
-  justify-content: center;
   margin-left: 2.33rem;
   padding-left: 10px;
 }
