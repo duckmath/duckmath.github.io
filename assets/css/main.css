@@ -298,3 +298,19 @@ a {
   height: 1rem;
   pointer-events: none;
 }
+
+.rounded {
+  border-radius: 1rem;
+}
+
+.expand {
+  transition: all 0.25s cubic-bezier(0.05, 0.75, 0.12, 0.97);
+}
+
+.expand:hover {
+  transform: scale(1.1);
+}
+
+.expand:active {
+  transform: scale(0.9);
+}

@@ -144,21 +144,6 @@ function showall() {
   }
 }
 
-function enlargeimage(image) {
-  image.style.transform = "scale(1.15)";
-  image.style.transition = "transform 0.25s ease";
-  const fig = image.parentElement.querySelector("figcaption");
-  showFigcaption(fig);
-}
-
-function resetImage(image) {
-  image.style.transform = "scale(1)";
-  image.style.transition = "transform 0.25s ease";
-  const fig = image.parentElement.querySelector("figcaption"); // returns first element
-  // that is a descendant of the element it was called from that matches the selectors
-  hideFigcaption(fig);
-}
-
 function viewFig(elem) {
   const fig = elem.parentElement.querySelector("figcaption");
   showFigcaption(fig);
