@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Tilt+Warp&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Tilt+Warp&family=Neucha:wght@400&display=swap");
 
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 15px;
   line-height: 1.7;
-  color: #ffffff;
+  color: white;
   overflow-x: hidden;
   letter-spacing: 0.2px;
   -webkit-transition: all 200ms linear;
@@ -21,7 +21,7 @@ body {
   font-weight: 500;
   font-size: 15px;
   line-height: 1.7;
-  color: #ffffff;
+  color: white;
   overflow-x: hidden;
   letter-spacing: 0.2px;
   -webkit-transition: all 200ms linear;
@@ -41,7 +41,7 @@ body {
 
 .iframe {
   position: relative;
-  color: #dddddd;
+  color: white;
 }
 
 .icon_image {
@@ -78,7 +78,7 @@ body {
   right: 0;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.8);
-  color: #ff0000;
+  color: red;
   font-size: 25px;
   font-weight: 100;
   font-family: "Tilt Warp", "Montserrat", sans-serif;
@@ -92,7 +92,7 @@ body {
   border-radius: 1rem;
   margin-top: -30px;
   left: 50%;
-  transform: translateX(-50%); /* Centers the figcaption horizontally */
+  transform: translateX(-50%);
   line-height: 150%;
   max-width: 100%;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -107,12 +107,12 @@ body {
   text-align: center;
   text-decoration: none;
   outline: none;
-  color: #fff;
+  color: white;
   background-color: #d30000;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
-  margin-top: 25px; /* Adjust this value to get the desired amount of space */
+  margin-top: 25px;
 }
 
 .button:hover {
@@ -125,51 +125,78 @@ body {
   transform: translateY(4px);
 }
 
-.button-55 {
-  margin-top: 15px;
-  margin-bottom: 10px;
-  align-self: center;
-  background-color: #fff;
-  background-image: none;
-  background-position: 0 90%;
-  background-repeat: repeat no-repeat;
-  background-size: 4px 3px;
-  border-style: solid;
-  border-width: 2px;
-  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
-  box-sizing: border-box;
-  color: #000000;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Neucha, sans-serif;
-  font-size: 3rem;
-  line-height: 70px;
-  min-width: 400px;
+.btn-1 {
+  width: 250px;
+  height: 60px;
+  font-family: "Neucha", sans-serif;
+  font-size: 22px;
+  background: white;
+  border: none;
+  border-radius: 50px;
+  color: #000;
   outline: none;
-  padding: 0.75rem;
-  text-decoration: none;
-  transition: all 235ms ease-in-out;
-  border-bottom-left-radius: 15px 255px;
-  border-bottom-right-radius: 225px 15px;
-  border-top-left-radius: 255px 15px;
-  border-top-right-radius: 15px 225px;
-  -webkit-user-select: none;
-  user-select: none;
-  touch-action: manipulation;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin-top: 100px;
 }
 
-.button-55.github {
-  min-width: 320px;
-  font-size: 45px;
+.btn-1:hover {
+  box-shadow: inset 0 0 0 4px #c5283d, inset 0 0 0 8px #e9724c,
+    inset 0 0 0 12px #ffc857;
+  background: #5a1a25;
+  font-size: 24px;
+  color: white;
 }
 
-.button-55:hover {
-  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
-  transform: translate3d(0, 2px, 0);
+.btn-1:active {
+  width: 240px;
+  height: 50px;
+  box-shadow: inset 0 0 0 3px #c5283d, inset 0 0 0 6px #e9724c,
+    inset 0 0 0 9px #ffc857;
+  background: #5a1a25;
+  color: white;
+  font-size: 23px;
+  margin-top: 105px;
+  margin-bottom: 5px;
 }
 
-.button-55:focus {
-  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+.btn-2 {
+  font-size: 30px;
+  color: white;
+  font-family: "Neucha", sans-serif;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  margin-top: 20px;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.btn-2:focus,
+.btn-2:hover {
+  color: white;
+}
+
+.btn-2:focus:after,
+.btn-2:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.btn-2:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #c5283d;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
 }
 
 .recommended-btns {
@@ -183,7 +210,7 @@ body {
 }
 
 .footer {
-  color: #fff;
+  color: white;
   padding: 10px;
   text-align: center;
   position: fixed;
@@ -202,7 +229,7 @@ a {
   padding: 0px 10px 0px 10px;
   margin-bottom: 2rem;
   background-color: rgba(39, 48, 67, 0.5);
-  color: #ff0000;
+  color: red;
   border-radius: 1rem;
   transition: all 0.25s cubic-bezier(0.05, 0.75, 0.12, 0.97);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -286,7 +313,7 @@ a {
 .input:hover {
   outline: none;
   border-color: rgba(255, 0, 0, 0.4);
-  background-color: #fff;
+  background-color: white;
   box-shadow: 0 0 0 4px rgb(255 0 0 / 10%);
 }
 
