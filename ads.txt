@@ -14,6 +14,9 @@ sovrn.com, 357833, DIRECT, fafdf38b16bf6b2b
 lijit.com, 357833, DIRECT, fafdf38b16bf6b2b
 lijit.com, 357833-eb, DIRECT, fafdf38b16bf6b2b
 
+#WG Player
+wgplayer.com, WGA5436899497, DIRECT
+
 #WG ADX			
 google.com, pub-4529402052683454, RESELLER, f08c47fec0942fa0	
 
