@@ -70,6 +70,20 @@
   line-height: 120%;
 }
 
+.middle_text_title{
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 27.5%;
+  height: 100%;
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px 10px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
 .image_description1stgame {
   text-decoration: none;
   position: absolute;
