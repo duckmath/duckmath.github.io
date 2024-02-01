@@ -18,7 +18,6 @@ templatetopnav.innerHTML = `
 <a href="/leaderboard.html">LEADERBOARD</a>
 <a href="/g4m3s.html">G4M3S</a>
 <a href="/index.html">HOME</a>
-<div class="middle_text_title"><img src="/assets/img/duck.webp" width="20" height="20">DuckMath</div>
 </div>
 
 
