@@ -19,6 +19,9 @@ templatetopnav.innerHTML = `
 <a href="/g4m3s.html">G4M3S</a>
 <a href="/index.html">HOME</a>
 </div>
+
+
+
 <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
 <div class="bar1"></div>
 <div class="bar2"></div>
