@@ -11,6 +11,33 @@
   margin: auto auto auto;
 }
 
+@keyframes rainbow {
+  0% { background-position: 0 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.button3 {
+  border: 2px solid transparent;
+  padding: 10px 14px;
+  min-width: 4rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+  border-radius: 10px;
+  margin: 4px 2px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: "Tilt Warp", sans-serif;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #ff0000, #ff8000, #ffff00, #00ff00, #0000ff, #8000ff, #ff00ff, #ff0000);
+  background-size: 800% 800%;
+  animation: rainbow 3s ease infinite;
+  background-color: #ffffff;
+  color: black;
+  margin-top: -5px;
+}
+
 .button1,
 .button2 {
   border: none;
@@ -28,6 +55,8 @@
   font-family: "Tilt Warp", sans-serif;
   margin-bottom: 1.5rem;
 }
+
+
 
 .button1 {
   background-color: #ffffff;

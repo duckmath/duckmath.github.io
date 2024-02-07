@@ -49,14 +49,15 @@
 
 <div class="title_text_main" id="title">
   <h1>G4M3S</h1>
-  <div class="group">
-    <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+    <div class="group">
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
         <g>
             <path
                 d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
             ></path>
         </g>
     </svg>
+
     <input oninput="showall();searchbar1();" onclick="showall();searchbar1();" id="query" class="input" type="search" placeholder="Search..." name="searchbar" />
   </div>
   <br />
@@ -73,10 +74,12 @@
   <button id = "Horror" class="button1" onclick="sorter('Horror');sorterbuttons(this);">Horror</button>
   <button id = "2D" class="button1" onclick="sorter('2D');sorterbuttons(this);">2D</button>
   <button id = "Other" class="button1" onclick="sorter('Other');sorterbuttons(this);">Other</button>
+    <button id = "New" class="button3" onclick="sorter('New');sorterbuttons(this);">New</button> <!-- wierd click effect -->
+
 
 
     <div class = "icon_image" id ="icon_image">
-        <a id = "Retro Bowl" class = "Sports" href = "g4m3s/retro_bowl.html" ><img class="rounded expand" onmouseover="viewFig(this)" onmouseout="hideFig(this)" src="assets/img/icons/retro_bowl_icon.webp" alt="Icon" width="200" height="200" loading="lazy"><figcaption>Retro Bowl</figcaption></a>
+        <a id = "Retro Bowl" class = "Multiplayer" href = "g4m3s/retro_bowl.html" ><img class="rounded expand" onmouseover="viewFig(this)" onmouseout="hideFig(this)" src="assets/img/icons/retro_bowl_icon.webp" alt="Icon" width="200" height="200" loading="lazy"><figcaption>Retro Bowl</figcaption></a>
         <a id = "Cookie Clicker" class = "Other" href = "g4m3s/CookieClicker.html" ><img class="rounded expand" onmouseover="viewFig(this)" onmouseout="hideFig(this)" src="assets/img/icons/cookieclicker.webp" alt="Icon" width="200" height="200" loading="lazy"><figcaption>Cookie Clicker</figcaption></a>
         <a id = "Geometry Dash" class = "Platformer" href = "g4m3s/geometry_dash.html" ><img class="rounded expand" onmouseover="viewFig(this)" onmouseout="hideFig(this)" src="assets/img/icons/geometrydash.webp" alt="Icon" width="200" height="200" loading="lazy"><figcaption>Geometry Dash</figcaption></a>
         <a id = "Fireboy and Watergirl" class = "Puzzle" href = "g4m3s/fireboy.html" ><img class="rounded expand" onmouseover="viewFig(this)" onmouseout="hideFig(this)" src="assets/img/icons/fireboy.webp" alt="Icon" width="200" height="200" loading="lazy"><figcaption>Fireboy & Watergirl</figcaption></a>
@@ -85,7 +88,7 @@
         <a id = "Raft Wars 1" class = "Flash" href = "g4m3s/flash-g4m3s/raftwars1.html" ><img class="rounded expand" onmouseover="viewFig(this)" onmouseout="hideFig(this)" src="assets/img/icons/rw1.webp" alt="Icon" width="200" height="200" loading="lazy"><figcaption>Raft Wars</figcaption></a>
         <a id = "Raft Wars 2" class = "Flash" href = "g4m3s/flash-g4m3s/raftwars2.html" ><img class="rounded expand" onmouseover="viewFig(this)" onmouseout="hideFig(this)" src="assets/img/icons/rw2.webp" alt="Icon" width="200" height="200" loading="lazy"><figcaption>Raft Wars 2</figcaption></a>
         <a id = "Subway Surfers" class = "Platformer" href = "g4m3s/subway_surfers.html" ><img class="rounded expand" onmouseover="viewFig(this)" onmouseout="hideFig(this)" src="assets/img/icons/subway.webp" alt="Icon" width="200" height="200" loading="lazy"><figcaption>Subway Surfers</figcaption></a>
-        <a id = "1v1.lol New" class = "Multiplayer" href = "g4m3s/1v1.lol(new).html" ><img class="rounded expand" onmouseover="viewFig(this)" onmouseout="hideFig(this)" src="assets/img/icons/1v1.webp" alt="Icon" width="200" height="200" loading="lazy"><figcaption>1v1.LOL</figcaption></a>
+        <a id = "1v1.lol New" class = "Multiplayer New" href = "g4m3s/1v1.lol(new).html" ><img class="rounded expand" onmouseover="viewFig(this)" onmouseout="hideFig(this)" src="assets/img/icons/1v1.webp" alt="Icon" width="200" height="200" loading="lazy"><figcaption>1v1.LOL</figcaption></a>
         <a id = "1v1.lol Old" class = "Multiplayer" href = "g4m3s/1v1.lol.html" ><img class="rounded expand" onmouseover="viewFig(this)" onmouseout="hideFig(this)" src="assets/img/icons/1v1.lol-old.webp" alt="Icon" width="200" height="200" loading="lazy"><figcaption>1v1.LOL (Old)</figcaption></a>
         <a id = "Minecraft MC" class = "Multiplayer" href = "g4m3s/Minecraft/Minecraft-landing.html" ><img class="rounded expand" onmouseover="viewFig(this)" onmouseout="hideFig(this)" src="assets/img/icons/minecraft.webp" alt="Icon" width="200" height="200" loading="lazy"><figcaption>Minecraft</figcaption></a>
         <a id = "Paper.io" class = "Multiplayer" href = "g4m3s/Paper.io.html" ><img class="rounded expand" onmouseover="viewFig(this)" onmouseout="hideFig(this)" src="assets/img/icons/paper.webp" alt="Icon" width="200" height="200" loading="lazy"><figcaption>Paper.io</figcaption></a>
@@ -270,13 +273,15 @@
         <a id = "Truck Loader 1 2 3 4" class = "2D" href = "g4m3s/truck-loader4.html" ><img class="rounded expand" onmouseover="viewFig(this)" onmouseout="hideFig(this)" src="assets/img/icons/truckloader4.webp" alt="Icon" width="200" height="200" loading="lazy"><figcaption>Truck Loader 4</figcaption></a>
         <a id = "Cluster Rush" class = "Platformer" href = "g4m3s/cluster-rush.html" ><img class="rounded expand" onmouseover="viewFig(this)" onmouseout="hideFig(this)" src="assets/img/icons/cluster_rush.webp" alt="Icon" width="200" height="200" loading="lazy"><figcaption>Cluster Rush</figcaption></a>
         <a id = "Arrow Master .io" class = "Other" href = "g4m3s/ArrowMaster.io.html" ><img class="rounded expand" onmouseover="viewFig(this)" onmouseout="hideFig(this)" src="assets/img/icons/arrowmaster.oi.webp" alt="Icon" width="200" height="200" loading="lazy"><figcaption>ArrowMasters</figcaption></a>
+        <a id = "Slime Rush TD 2" class = "2D New" href = "g4m3s/slime-rush-td.html" ><img class="rounded expand" onmouseover="viewFig(this)" onmouseout="hideFig(this)" src="assets/img/icons/slimerush.webp" alt="Icon" width="200" height="200" loading="lazy"><figcaption>Slime Rush TD</figcaption></a>
 
 
 
 
 
 
-        <br>
+
+        <br id="bottom">
 
     </div>
 </div>

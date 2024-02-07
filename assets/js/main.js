@@ -117,7 +117,7 @@ function sorter(category) {
   }
 
   for (var i = 0; i < elem.length; i++) {
-    if (elem[i].className !== category) {
+    if (!elem[i].className.includes(category)) { // if the element is not the category
       elem[i].style.visibility = "collapse";
       elem[i].style.display = "none";
     } else {
