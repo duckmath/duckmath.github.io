@@ -11,10 +11,7 @@
   margin: auto auto auto;
 }
 
-@keyframes rainbow {
-  0% { background-position: 0 50%; }
-  100% { background-position: 100% 50%; }
-}
+
 
 .centered-fixed {
   position: fixed;
@@ -37,6 +34,12 @@
   text-align: center;
   margin-top: -5px; /* Adjust this value to move the text up */
 }
+
+@keyframes rainbow {
+  0% { background-position: 0 50%; }
+  100% { background-position: 100% 50%; }
+}
+
 .button3 {
   border: 2px solid transparent;
   padding: 10px 14px;
