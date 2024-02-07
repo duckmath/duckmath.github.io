@@ -16,8 +16,7 @@ templatetopnav.innerHTML = `
 <a href="/about.html">ABOUT</a>
 <a href="/changelog.html">CHANGELOG</a>
 <a href="/leaderboard.html">LEADERBOARD</a>
-<a href="/g4m3s.html">G4M3S</a>
-<a href="/index.html">HOME</a>
+<a href="/index.html">G4M3S</a>
 <div class="centered-fixed">
      <img src="/assets/img/goose.webp" onmouseover="spin(this)"
     onmouseout="unspin(this)" alt="Duck" width="40" height="40" />
