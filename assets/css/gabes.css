@@ -16,6 +16,27 @@
   100% { background-position: 100% 50%; }
 }
 
+.centered-fixed {
+  position: fixed;
+  top: 1.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999; /* Ensure it appears above other content if needed */
+
+}
+.duckmath-header {
+  font-size: 2rem;
+  color: red;
+  text-align: center;
+  margin-top: -5px; /* Adjust this value to move the text up */
+}
+
+.small-text {
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  margin-top: -5px; /* Adjust this value to move the text up */
+}
 .button3 {
   border: 2px solid transparent;
   padding: 10px 14px;

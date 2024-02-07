@@ -127,6 +127,21 @@ function sorter(category) {
   }
 }
 
+function showchildren(parent) {
+  var children = parent.children;
+  for(var i = 0; i < children.length; i++) {
+    children[i].style.visibility = "visible";
+  }
+}
+
+function hidechildren(parent) {
+  var children = parent.children;
+  for(var i = 0; i < children.length; i++) {
+    children[i].style.visibility = "hidden";
+  }
+}
+
+
 function showall() {
   var icon = document.getElementById("icon_image");
   var elem = icon.getElementsByTagName("a");

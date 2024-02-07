@@ -18,6 +18,13 @@ templatetopnav.innerHTML = `
 <a href="/leaderboard.html">LEADERBOARD</a>
 <a href="/g4m3s.html">G4M3S</a>
 <a href="/index.html">HOME</a>
+<div class="centered-fixed">
+     <img src="/assets/img/goose.webp" onmouseover="spin(this)"
+    onmouseout="unspin(this)" alt="Duck" width="40" height="40" />
+      <span class="duckmath-header" onmouseenter="showchildren(this);" onmouseleave="hidechildren(this);">DuckMath<span class="small-text" style="visibility: hidden">.org</span></span>
+</div>
+
+
 </div>
 
 
@@ -42,17 +49,6 @@ templatetopnav.innerHTML = `
     </div>
   </li>
 </ul>
-</div>
-<div class="icon">
-<a href="/index.html"
-  ><img
-    onmouseover="spin(this)"
-    onmouseout="unspin(this)"
-    src="/assets/img/goose.webp"
-    alt="Home"
-    width="60"
-    height="60"
-/></a>
 </div>
 `;
 
