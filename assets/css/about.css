@@ -1,0 +1,81 @@
+.parentBox {
+    width: 80%;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 2%;
+    font-family: arial;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.box {
+    background-color: #1310105f;
+    border-radius: 25px;
+    padding: 15px;
+    border: solid 3px grey;
+}
+
+.box1 {
+    grid-area: 1 / 2 / 2 / 5;
+}
+
+.box2 {
+    grid-area: 2 / 3 / 6 / 5;
+}
+
+.box3 {
+    grid-area: 2 / 1 / 6 / 3;
+}
+
+.box4 {
+    grid-area: 1 / 2 / 1 / 1;
+}
+
+p {
+    text-align: center;
+}
+
+.img1 {
+    border-radius: 25px;
+    height: 100%;
+    width: 100%;
+}
+
+.paypalLink {
+    background-color: #08333e5f;
+    border-radius: 10px;
+}
+
+.paypalLink:hover {
+    background-color: #13738ac0;
+}
+
+.githubLink {
+    background-color: white;
+    border-radius: 60px;
+    border: white 2px solid;
+    width: 100px;
+    height: 100px;
+}
+
+.githubLink:hover {
+    background-color: grey;
+    border: solid 2px grey;
+}
+
+@media (max-width: 600px) {
+    .parentBox {
+        display: flex;
+        flex-direction: column;
+    }
+    .box4 {
+        align-self: stretch;
+    }
+}
