@@ -11,59 +11,34 @@
   margin: auto auto auto;
 }
 
-
-
 .centered-fixed {
   position: fixed;
   top: 1.5%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 999; /* Ensure it appears above other content if needed */
-
+  z-index: 999;
+  /* Ensure it appears above other content if needed */
 }
+
 .duckmath-header {
   font-size: 2rem;
   color: red;
   text-align: center;
-  margin-top: -5px; /* Adjust this value to move the text up */
+  margin-top: -5px;
+  /* Adjust this value to move the text up */
 }
 
 .small-text {
   font-size: 1rem;
   color: white;
   text-align: center;
-  margin-top: -5px; /* Adjust this value to move the text up */
-}
-
-@keyframes rainbow {
-  0% { background-position: 0 50%; }
-  100% { background-position: 100% 50%; }
-}
-
-.button3 {
-  border: 2px solid transparent;
-  padding: 10px 14px;
-  min-width: 4rem;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 25px;
-  border-radius: 10px;
-  margin: 4px 2px;
-  cursor: pointer;
-  white-space: nowrap;
-  font-family: "Tilt Warp", sans-serif;
-  margin-bottom: 1.5rem;
-  background: linear-gradient(90deg, #ff0000, #ff8000, #ffff00, #00ff00, #0000ff, #8000ff, #ff00ff, #ff0000);
-  background-size: 800% 800%;
-  animation: rainbow 3s ease infinite;
-  background-color: #ffffff;
-  color: black;
   margin-top: -5px;
+  /* Adjust this value to move the text up */
 }
 
 .button1,
-.button2 {
+.button2,
+.button3 {
   border: none;
   padding: 10px 14px;
   min-width: 4rem;
@@ -80,8 +55,6 @@
   margin-bottom: 1.5rem;
 }
 
-
-
 .button1 {
   background-color: #ffffff;
   color: black;
@@ -94,14 +67,39 @@
   letter-spacing: -1px;
 }
 
+.button3 {
+  /*
+    ? I chose 2 random colors (which can be changed), but imo it looks better with fewer colors
+    ! it looks better as an animation with a maximum of 3 separate colors
+  */
+  background: linear-gradient(90deg,
+      #f3f520,
+      #59d102,
+      #f3f520);
+  background-size: 400%;
+  animation: animation 7s cubic-bezier(0.75, 0.75, 0.75, 0.75) infinite;
+}
+
 .button1:hover,
-.button2:hover {
+.button2:hover,
+.button3:hover {
   transform: scale(0.95);
 }
 
 .button1:active,
-.button2:active {
+.button2:active,
+.button3:active {
   transform: scale(0.9);
+}
+
+@keyframes animation {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 400%;
+  }
 }
 
 .searchbar {

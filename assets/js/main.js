@@ -98,11 +98,23 @@ function sorterbuttons(button) {
   var elem = title.getElementsByTagName("button");
   for (var i = 0; i < elem.length; i++) {
     if (elem[i] !== button) {
-      elem[i].style.backgroundColor = "#ffffff";
-      elem[i].style.color = "black";
+      if (elem[i].id !== "New") {
+        elem[i].style.backgroundColor = "#fff";
+      } else {
+        elem[i].style.background =
+          "linear-gradient(90deg, #f3f520, #59d102, #f3f520)";
+        elem[i].style.backgroundSize = "400%"
+      }
+      elem[i].style.color = "#000";
     } else {
-      elem[i].style.backgroundColor = "#ff0000";
-      elem[i].style.color = "white";
+      if (elem[i].id !== "New") {
+        elem[i].style.backgroundColor = "#ff0000";
+      } else {
+        elem[i].style.background =
+          "linear-gradient(90deg, #f74c06, #f9bc2c, #f74c06)";
+        elem[i].style.backgroundSize = "400%"
+      }
+      elem[i].style.color = "#fff";
     }
   }
 }
