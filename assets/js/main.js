@@ -19,19 +19,19 @@ function iframe_focus(iframe) {
   console.log("iframe focused");
 }
 
-function instaFocusIFrame(iframe){
-  if(window.location.href.includes("g4m3s/")) {
-    if(iframe !== null && iframe !== undefined){
+function instaFocusIFrame(iframe) {
+  if (window.location.href.includes("g4m3s/")) {
+    if (iframe !== null && iframe !== undefined) {
       iframe_focus(iframe);
       // Check if iframe is focused
-      if(document.activeElement !== iframe){ // if iframe is not focused...
+      if (document.activeElement !== iframe) {
+        // if iframe is not focused...
         //set another timeout to try again
         setTimeout(instaFocusIFrame, 1000);
       }
     }
   }
 }
-
 
 document.addEventListener("DOMContentLoaded", function () {
   // when the page loads
@@ -53,7 +53,7 @@ let ticking = false;
 
 function onScroll() {
   if (!ticking) {
-    window.requestAnimationFrame(function() {
+    window.requestAnimationFrame(function () {
       const topnav = document.getElementById("topnav");
       if (topnav) {
         const currentScrollPos = window.pageYOffset;
@@ -127,7 +127,7 @@ function sorterbuttons(button) {
       } else {
         elem[i].style.background =
           "linear-gradient(90deg, #f3f520, #59d102, #f3f520)";
-        elem[i].style.backgroundSize = "400%"
+        elem[i].style.backgroundSize = "400%";
       }
       elem[i].style.color = "#000";
     } else {
@@ -136,7 +136,7 @@ function sorterbuttons(button) {
       } else {
         elem[i].style.background =
           "linear-gradient(90deg, #f74c06, #f9bc2c, #f74c06)";
-        elem[i].style.backgroundSize = "400%"
+        elem[i].style.backgroundSize = "400%";
       }
       elem[i].style.color = "#fff";
     }
@@ -153,7 +153,8 @@ function sorter(category) {
   }
 
   for (var i = 0; i < elem.length; i++) {
-    if (!elem[i].className.includes(category)) { // if the element is not the category
+    if (!elem[i].className.includes(category)) {
+      // if the element is not the category
       elem[i].style.visibility = "collapse";
       elem[i].style.display = "none";
     } else {
@@ -165,18 +166,17 @@ function sorter(category) {
 
 function showchildren(parent) {
   var children = parent.children;
-  for(var i = 0; i < children.length; i++) {
+  for (var i = 0; i < children.length; i++) {
     children[i].style.visibility = "visible";
   }
 }
 
 function hidechildren(parent) {
   var children = parent.children;
-  for(var i = 0; i < children.length; i++) {
+  for (var i = 0; i < children.length; i++) {
     children[i].style.visibility = "hidden";
   }
 }
-
 
 function showall() {
   var icon = document.getElementById("icon_image");
@@ -194,37 +194,3 @@ function showall() {
     ads[i].style.display = "inline-block";
   }
 }
-
-function viewFig(elem) {
-  const fig = elem.parentElement.querySelector("figcaption");
-  showFigcaption(fig);
-}
-
-function hideFig(elem) {
-  const fig = elem.parentElement.querySelector("figcaption");
-  hideFigcaption(fig);
-}
-
-function showFigcaption(fig) {
-  if (fig !==  undefined && fig !== null) {
-    fig.style.visibility = "visible";
-    fig.style.opacity = "1";
-  }
-}
-
-function hideFigcaption(fig) {
-  if (fig !==  undefined && fig !== null) {
-    fig.style.visibility = "hidden";
-    fig.style.opacity = "0";
-  }
-}
-
-function spin(element) {
-  element.style.transform = "rotate(359deg)";
-  element.style.transition = "transform 0.25s ease";
-}
-
-function unspin(element) {
-  element.style.transform = "rotate(0deg)";
-}
-
