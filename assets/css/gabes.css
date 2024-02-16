@@ -9,6 +9,9 @@
   height: 600px;
   line-height: 50%;
   margin: auto auto auto;
+  border: 0;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .centered-fixed {
@@ -56,14 +59,14 @@
 }
 
 .button1 {
-  background-color: #ffffff;
-  color: black;
+  background-color: #fff;
+  color: #000;
   margin-top: -5px;
 }
 
 .button2 {
   background-color: #ff0000;
-  color: white;
+  color: #fff;
   letter-spacing: -1px;
 }
 
@@ -113,7 +116,7 @@
   background: #333;
   outline: none;
   z-index: 2;
-  color: white;
+  color: #fff;
 }
 
 /** Search Bar/Input */

@@ -5,7 +5,7 @@ body {
   font-weight: 500;
   font-size: 15px;
   line-height: 1.7;
-  color: #ffffff;
+  color: #fff;
   overflow-x: hidden;
   letter-spacing: 0.2px;
   -webkit-transition: all 200ms linear;
@@ -22,7 +22,7 @@ body {
   font-weight: 500;
   font-size: 15px;
   line-height: 1.7;
-  color: #ffffff;
+  color: #fff;
   overflow-x: hidden;
   letter-spacing: 0.2px;
   -webkit-transition: all 200ms linear;
@@ -42,7 +42,7 @@ body {
 
 .iframe {
   position: relative;
-  color: #dddddd;
+  color: #fff;
 }
 
 .icon_image {
@@ -90,7 +90,7 @@ body {
 
 .small-text {
   font-size: 1rem;
-  color: white;
+  color: #fff;
   text-align: center;
   margin-top: -5px; /* Adjust this value to move the text up */
 }
@@ -109,7 +109,7 @@ body {
   pointer-events: none;
   z-index: 1;
   visibility: hidden;
-  background-color: white;
+  background-color: #fff;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 1rem;
@@ -123,29 +123,33 @@ body {
 }
 
 .button {
-  position: relative;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
+  border: none;
+  padding: 10px 14px;
+  min-width: 4rem;
+  transition: all 0.25s cubic-bezier(0.05, 0.75, 0.12, 0.97);
   text-align: center;
   text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #d30000;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-  margin-top: 25px; /* Adjust this value to get the desired amount of space */
+  display: inline-block;
+  font-size: 25px;
+  border-radius: 10px;
+  margin: 4px 2px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: "Tilt Warp", sans-serif;
+  margin-bottom: 1.5rem;
+  background-color: #fff;
+  color: #000;
+  margin-top: 2rem;
 }
 
 .button:hover {
-  background-color: #d30000;
+  background-color: #ff0000;
+  color: #fff;
+  transform: scale(0.95);
 }
 
 .button:active {
-  background-color: #d30000;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+  transform: scale(0.9);
 }
 
 .button-55 {
@@ -161,7 +165,7 @@ body {
   border-width: 2px;
   box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
   box-sizing: border-box;
-  color: #000000;
+  color: #000;
   cursor: pointer;
   display: inline-block;
   font-family: Neucha, sans-serif;
@@ -295,7 +299,7 @@ a {
   border: 2px solid transparent;
   border-radius: 1rem;
   outline: none;
-  background-color: #f3f3f4;
+  background-color: #fff;
   color: #0d0c22;
   transition: all 0.25s ease-in-out;
   cursor: text;
