@@ -57,7 +57,6 @@
   position: relative;
   overflow: visible;
   color: #000;
-  background-color: red;
   width: 80px;
 }
 
@@ -240,4 +239,9 @@ ul a:hover {
   margin-top: -10px;
   width: calc(100vw - 15px);
   height: 62px;
+}
+
+.header-scrolled .dropdown-content {
+  position: fixed;
+  top: 62px;
 }

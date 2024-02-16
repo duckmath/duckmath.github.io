@@ -10,7 +10,6 @@ templatetopnav.innerHTML = `
     <a href="/more/chat.html" class="dis">D1sc0rd</a>
     <a href="/more/G4m3-Requests.html" class="vm">G4m3 Requests</a>
     <a href="/more/takedown.html" class="gr last">DMCA</a>
-
   </div>
 </div>
 <a href="/about.html">📝ABOUT</a>
