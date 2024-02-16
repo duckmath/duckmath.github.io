@@ -1,7 +1,7 @@
 const templatetopnav = document.createElement("template");
 
 templatetopnav.innerHTML = `
-<div class="topnav">
+<div class="topnav" id="topnav">
 <div class="dropdown">
   <a href="/more/index.html" class="topnavbutton">MORE↓</a>
   <div class="dropdown-content">

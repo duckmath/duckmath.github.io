@@ -48,6 +48,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+document.addEventListener("scroll", function() {
+  // when scrolling
+  const topnav = document.getElementById("topnav");
+  if (topnav) {
+    if (window.pageYOffset > 0) {
+      topnav.classList.add("header-scrolled");
+    } else {
+      topnav.classList.remove("header-scrolled");
+    }
+  }
+});
+
 function openFullscreen() {
   // open the game in fullscreen
   var elem = document.getElementById("gameFrame");

@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
 
 .topnav {
-  overflow: auto;
+  overflow: hidden;
   position: fixed;
   top: 1%;
   width: 98%;
   font-family: "Tilt Warp", sans-serif;
+  transition: all 0.25s cubic-bezier(0, 0, 0, 1);
 }
 
 .topnav a {
@@ -161,6 +162,7 @@ ul a {
   text-decoration: none;
   padding: 4px;
 }
+
 ul a:hover {
   background-color: #eee8e8;
   color: black;
@@ -170,9 +172,11 @@ ul a:hover {
   .topnav {
     display: none;
   }
+
   #hamburger-icon {
     display: block;
   }
+
   .dropdown-content {
     display: block !important;
     min-width: 60px;
@@ -206,4 +210,12 @@ ul a:hover {
 #StreakIcon {
   padding: 5px 2px;
   justify-content: center;
+}
+
+.header-scrolled {
+  background-color: rgba(0, 0, 0, 0.25);
+  padding-top: 10px;
+  margin-top: -10px;
+  width: calc(100vw - 15px);
+  height: 62px;
 }
