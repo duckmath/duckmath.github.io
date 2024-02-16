@@ -14,6 +14,7 @@ body {
   -webkit-font-smoothing: antialiased !important;
   scroll-behavior: smooth;
   background: #1f2029 url("../img/bg.svg") repeat fixed center;
+  margin: 0;
 }
 
 .notbody {
@@ -78,8 +79,8 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 999; /* Ensure it appears above other content if needed */
-
 }
+
 .duckmath-header {
   font-size: 2rem;
   color: #ff0000;

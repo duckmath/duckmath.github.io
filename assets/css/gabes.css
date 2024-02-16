@@ -119,31 +119,24 @@
   color: #fff;
 }
 
-.rounded {
-  border-radius: 1rem;
-}
-
-.expand {
-  transition: all 0.25s cubic-bezier(0.05, 0.75, 0.12, 0.97);
-}
-
-.expand:hover {
-  transform: scale(1.1);
-}
-
-.expand:active {
-  transform: scale(0.9);
-}
-
-#amt_games {
-  font-size: 60px;
-}
-
 /** Search Bar/Input */
 .input:focus,
 .input:hover {
   outline: none;
-  border-color: rgb(252, 191, 73);
+  border-color: rgba(252, 191, 73, 0.4);
   background-color: #fff;
-  box-shadow: 0 0 0 4px rgb(252 191 73 / 25%);
+  box-shadow: 0 0 0 4px rgb(252 191 73 / 10%);
+}
+
+div.icon_image a img {
+  border-radius: 1rem;
+  transition: all 0.25s cubic-bezier(0.05, 0.75, 0.12, 0.97);
+}
+
+div.icon_image a img:hover {
+  transform: scale(1.1);
+}
+
+div.icon_image a img:active {
+  transform: scale(0.9);
 }

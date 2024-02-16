@@ -1,16 +1,15 @@
 const templatetopnav = document.createElement("template");
 
 templatetopnav.innerHTML = `
-<div class="topnav">
+<div class="topnav" id="topnav">
 <div class="dropdown">
   <a href="/more/index.html" class="topnavbutton">MORE↓</a>
   <div class="dropdown-content">
-    <a href="/more/Unbl0ck3rs.html">Unbl0ck3rs</a>
+    <a href="/more/Unbl0ck3rs.html" class="first">Unbl0ck3rs</a>
     <a href="/more/Virtual_Machines.html" class="vm">Virtual Machines</a>
     <a href="/more/chat.html" class="dis">D1sc0rd</a>
     <a href="/more/G4m3-Requests.html" class="vm">G4m3 Requests</a>
-    <a href="/more/takedown.html" class="gr">DMCA</a>
-
+    <a href="/more/takedown.html" class="gr last">DMCA</a>
   </div>
 </div>
 <a href="/about.html">📝ABOUT</a>
@@ -18,7 +17,7 @@ templatetopnav.innerHTML = `
 <a href="/index.html">🎮G4M3S</a>
 <div class="centered-fixed">
      <img src="/assets/img/goose.webp" onmouseover="spin(this)"
-    onmouseout="unspin(this)" alt="Duck" width="40" height="40" />
+    onmouseout="unspin(this)" alt="Duck"/>
       <span class="duckmath-header" onmouseenter="showchildren(this);" onmouseleave="hidechildren(this);">DuckMath<span class="small-text" style="visibility: hidden">.org</span></span>
 </div>
 
@@ -49,6 +48,15 @@ templatetopnav.innerHTML = `
 </ul>
 </div>
 `;
+
+function spin(element) {
+  element.style.transform = "rotate(360deg)";
+  element.style.transition = "transform 0.25s ease";
+}
+
+function unspin(element) {
+  element.style.transform = "";
+}
 
 function toggleMobileMenu(menu) {
   menu.classList.toggle("open");
