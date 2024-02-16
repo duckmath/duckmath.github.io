@@ -79,7 +79,6 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 999; /* Ensure it appears above other content if needed */
-
 }
 .duckmath-header {
   font-size: 2rem;
@@ -336,4 +335,16 @@ a {
 
 .expand:active {
   transform: scale(0.9);
+}
+
+*::-webkit-scrollbar,
+*::-webkit-scrollbar-thumb {
+  width: 26px;
+  border-radius: 13px;
+  background-clip: padding-box;
+  border: 10px solid transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 0 10px;
 }
