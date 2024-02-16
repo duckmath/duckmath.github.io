@@ -1,30 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
 
 .topnav {
-  overflow: auto;
+  overflow: hidden;
   position: fixed;
   top: 1%;
   width: 98%;
   font-family: "Tilt Warp", sans-serif;
+  transition: all 0.2s cubic-bezier(0, 0, 0, 1);
 }
 
 .topnav a {
   float: right;
-  color: #f2f2f2;
+  color: #fff;
   text-align: center;
-  padding: 12px 10px;
+  padding: 6px 5px;
+  margin: 6px 5px;
   text-decoration: none;
   font-size: 17px;
+  border-radius: 7px;
+  transition: all 0.2s cubic-bezier(0.05, 0.75, 0.12, 0.97);
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #d30000;
-  color: white;
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: scale(1.1);
 }
 
 .topnavbutton {
@@ -45,13 +44,19 @@
   width: 80px;
 }
 
+.dropdown-content.hidden {
+  transform: scale(0.5);
+}
+
+.dropdown-content.visible {
+  transform: scale(1);
+}
+
 .dropdown-content {
   display: none;
   position: relative;
   overflow: visible;
-  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
-  color: black;
-  background-color: red;
+  color: #000;
   width: 80px;
 }
 
@@ -61,12 +66,24 @@
 
 .dropdown-content a {
   display: block;
-  color: #000000;
+  color: #000;
   text-decoration: none;
   float: right;
   background-color: red;
   padding: 0 20px;
   width: 140%;
+  margin: 0;
+  border-radius: 0;
+}
+
+.dropdown-content a.first {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.dropdown-content a.last {
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 
 .mobile-menu .dropdown {
@@ -82,7 +99,7 @@
   position: relative;
   overflow: visible;
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.4);
-  color: black;
+  color: #000;
   background-color: red;
   width: 80px;
 }
@@ -93,7 +110,7 @@
 
 .mobile-menu .dropdown-content a {
   display: block;
-  color: #000000;
+  color: #000;
   text-decoration: none;
   float: right;
   background-color: red;
@@ -113,9 +130,9 @@
 #hamburger-icon div {
   width: 35px;
   height: 3px;
-  background-color: white;
+  background-color: #fff;
   margin: 6px 0;
-  transition: 0.4s;
+  transition: 0.25s;
 }
 
 .open .bar1 {
@@ -157,22 +174,25 @@
 }
 
 ul a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   padding: 4px;
 }
+
 ul a:hover {
-  background-color: #eee8e8;
-  color: black;
+  background-color: #fff;
+  color: #000;
 }
 
 @media only screen and (max-width: 720px) {
   .topnav {
     display: none;
   }
+
   #hamburger-icon {
     display: block;
   }
+
   .dropdown-content {
     display: block !important;
     min-width: 60px;
@@ -181,13 +201,18 @@ ul a:hover {
 }
 
 .dropdown-content a {
-  border-bottom: 2px solid black;
-  transition: all 0.25s ease;
+  border-bottom: 1px solid #9b0707;
+  transition: all 0.25s cubic-bezier(0.05, 0.75, 0.12, 0.97);
+}
+
+.dropdown-content a.last {
+  border: 0;
 }
 
 .dropdown-content a:hover {
-  color: #ffffff;
-  background-color: #ce0a0a;
+  color: #fff;
+  background-color: #9b0707;
+  transform: scale(0.95, 1);
 }
 
 #LoginButton {
@@ -206,4 +231,17 @@ ul a:hover {
 #StreakIcon {
   padding: 5px 2px;
   justify-content: center;
+}
+
+.header-scrolled {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 10px;
+  margin-top: -10px;
+  width: calc(100vw - 15px);
+  height: 62px;
+}
+
+.header-scrolled .dropdown-content {
+  position: fixed;
+  top: 62px;
 }
