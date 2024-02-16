@@ -34,6 +34,23 @@
 
     <!--^ Main Script -->
     <script src="/assets/js/main.js"></script>
+    <script>
+        function viewFig(elem) {
+            const fig = elem.parentElement.querySelector("figcaption");
+            if (fig) {
+                fig.style.visibility = "visible";
+                fig.style.opacity = "1";
+            }
+        }
+
+        function hideFig(elem) {
+            const fig = elem.parentElement.querySelector("figcaption");
+            if (fig) {
+                fig.style.visibility = "hidden";
+                fig.style.opacity = "0";
+            }
+        }
+    </script>
 
     <!--* Favicon -->
     <link rel="icon" type="image/x-icon" href="/assets/img/duck.webp">
