@@ -9,6 +9,9 @@
   height: 600px;
   line-height: 50%;
   margin: auto auto auto;
+  border: 0;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .centered-fixed {
@@ -56,14 +59,14 @@
 }
 
 .button1 {
-  background-color: #ffffff;
-  color: black;
+  background-color: #fff;
+  color: #000;
   margin-top: -5px;
 }
 
 .button2 {
   background-color: #ff0000;
-  color: white;
+  color: #fff;
   letter-spacing: -1px;
 }
 
@@ -72,10 +75,7 @@
     ? I chose 2 random colors (which can be changed), but imo it looks better with fewer colors
     ! it looks better as an animation with a maximum of 3 separate colors
   */
-  background: linear-gradient(90deg,
-      #f3f520,
-      #59d102,
-      #f3f520);
+  background: linear-gradient(90deg, #f3f520, #59d102, #f3f520);
   background-size: 400%;
   animation: animation 7s cubic-bezier(0.75, 0.75, 0.75, 0.75) infinite;
 }
@@ -116,7 +116,7 @@
   background: #333;
   outline: none;
   z-index: 2;
-  color: white;
+  color: #fff;
 }
 
 .rounded {
@@ -143,7 +143,7 @@
 .input:focus,
 .input:hover {
   outline: none;
-  border-color: rgba(252, 191, 73, 0.4);
+  border-color: rgb(252, 191, 73);
   background-color: #fff;
-  box-shadow: 0 0 0 4px rgb(252 191 73 / 10%);
+  box-shadow: 0 0 0 4px rgb(252 191 73 / 25%);
 }
