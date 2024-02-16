@@ -245,3 +245,7 @@ ul a:hover {
   position: fixed;
   top: 62px;
 }
+
+.topnav div img {
+  cursor: pointer;
+}
