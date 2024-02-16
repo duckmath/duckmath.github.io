@@ -48,17 +48,29 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-document.addEventListener("scroll", function() {
-  // when scrolling
-  const topnav = document.getElementById("topnav");
-  if (topnav) {
-    if (window.pageYOffset > 0) {
-      topnav.classList.add("header-scrolled");
-    } else {
-      topnav.classList.remove("header-scrolled");
-    }
+let prevScrollPos = window.pageYOffset;
+let ticking = false;
+
+function onScroll() {
+  if (!ticking) {
+    window.requestAnimationFrame(function() {
+      const topnav = document.getElementById("topnav");
+      if (topnav) {
+        const currentScrollPos = window.pageYOffset;
+        if (currentScrollPos > 0 && prevScrollPos === 0) {
+          topnav.classList.add("header-scrolled");
+        } else if (currentScrollPos === 0 && prevScrollPos > 0) {
+          topnav.classList.remove("header-scrolled");
+        }
+        prevScrollPos = currentScrollPos;
+      }
+      ticking = false;
+    });
+    ticking = true;
   }
-});
+}
+
+document.addEventListener("scroll", onScroll);
 
 function openFullscreen() {
   // open the game in fullscreen
