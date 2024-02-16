@@ -239,7 +239,7 @@ ul a:hover {
   margin-top: -10px;
   width: calc(100vw - 26px);
   height: 62px;
-  border-radius: 0 0 12px 12px;
+  border-bottom-right-radius: 15px;
 }
 
 .header-scrolled .dropdown-content {
