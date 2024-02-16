@@ -194,3 +194,19 @@ function showall() {
     ads[i].style.display = "inline-block";
   }
 }
+
+function viewFig(elem) {
+  const fig = elem.parentElement.querySelector("figcaption");
+  if (fig) {
+    fig.style.visibility = "visible";
+    fig.style.opacity = "1";
+  }
+}
+
+function hideFig(elem) {
+  const fig = elem.parentElement.querySelector("figcaption");
+  if (fig) {
+    fig.style.visibility = "hidden";
+    fig.style.opacity = "0";
+  }
+}
