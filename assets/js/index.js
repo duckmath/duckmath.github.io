@@ -49,6 +49,15 @@ templatetopnav.innerHTML = `
 </div>
 `;
 
+function spin(element) {
+  element.style.transform = "rotate(360deg)";
+  element.style.transition = "transform 0.25s ease";
+}
+
+function unspin(element) {
+  element.style.transform = "";
+}
+
 function toggleMobileMenu(menu) {
   menu.classList.toggle("open");
 }
