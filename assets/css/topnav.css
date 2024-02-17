@@ -237,11 +237,16 @@ ul a:hover {
   background-color: rgba(0, 0, 0, 0.5);
   padding-top: 10px;
   margin-top: -10px;
-  width: calc(100vw - 15px);
+  width: calc(100vw - 26px);
   height: 62px;
+  border-bottom-right-radius: 15px;
 }
 
 .header-scrolled .dropdown-content {
   position: fixed;
   top: 62px;
+}
+
+.topnav div img {
+  cursor: pointer;
 }
