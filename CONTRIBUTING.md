@@ -10,8 +10,9 @@ Join the discord for a special role!
 2. Create a new branch for your changes: `git checkout -b feature/your-feature-name`.
 3. Make your changes and test them locally.
 4. Commit your changes: `git commit -m "Add your commit message here"`.
-5. Push your changes to your forked repository: `git push origin feature/your-feature-name`.
-6. Open a pull request to the main repository.
+5. Add your name and GitHub link to the [contributor list](https://github.com/duckmath/duckmath.github.io/blob/main/CONTRIBUTORS.md). Format: `- [Your Name](https://github.com/your-github-username)`
+6. Push your changes to your forked repository: `git push origin feature/your-feature-name`.
+7. Open a pull request to the main repository.
 
 ## Guidelines
 
