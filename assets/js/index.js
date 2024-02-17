@@ -17,7 +17,7 @@ templatetopnav.innerHTML = `
 <a href="/index.html">🎮G4M3S</a>
 <div class="centered-fixed">
      <img src="/assets/img/goose.webp" onmouseover="spin(this)"
-    onmouseout="unspin(this)" alt="Duck"/>
+    onmouseout="unspin(this)" alt="Duck" onClick="home()" width="40px" height="40px" />
       <span class="duckmath-header" onmouseenter="showchildren(this);" onmouseleave="hidechildren(this);">DuckMath<span class="small-text" style="visibility: hidden">.org</span></span>
 </div>
 

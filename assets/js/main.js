@@ -210,3 +210,16 @@ function hideFig(elem) {
     fig.style.opacity = "0";
   }
 }
+
+function spin(element) {
+  element.style.transform = "rotate(359deg)";
+  element.style.transition = "transform 0.25s ease";
+}
+
+function unspin(element) {
+  element.style.transform = "rotate(0deg)";
+}
+
+function home() {
+  window.location.href = "/";
+}
