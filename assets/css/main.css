@@ -345,6 +345,7 @@ a {
 *::-webkit-scrollbar,
 *::-webkit-scrollbar-thumb {
   width: 26px;
+  min-height: 40px;
   border-radius: 13px;
   background-clip: padding-box;
   border: 10px solid transparent;
@@ -360,4 +361,10 @@ a {
 
 *::-webkit-scrollbar-thumb:active {
   box-shadow: inset 0 0 0 10px #fff;
+}
+
+@media only screen and (max-width: 720px) {
+  *::-webkit-scrollbar {
+    display: none;
+  }
 }
