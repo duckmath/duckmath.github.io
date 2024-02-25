@@ -236,7 +236,9 @@ ul a:hover {
 .header-scrolled {
   background-color: rgba(0, 0, 0, 0.5);
   padding-top: 10px;
-  margin-top: -10px;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: calc(100vw - 26px);
   height: 62px;
   border-bottom-right-radius: 15px;
