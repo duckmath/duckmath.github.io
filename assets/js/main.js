@@ -95,7 +95,7 @@ function searchbar1() {
   const searchvalue = document.getElementById("query");
   const icon_divs = document.getElementById("icon_image");
   const elem = icon_divs.getElementsByTagName("a");
-  const ads = document.getElementsByClassName("ad", "google_auto_placed");
+  const ads = document.getElementsByClassName("ad google_auto_placed");
   if (searchvalue.value === "") {
     console.log("Nothing Searched");
     for (var i = 0; i < ads.length; i++) {
