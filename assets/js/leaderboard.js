@@ -35,7 +35,7 @@ class Score {
  */
 async function getScores() {
     let response = await fetch("https://raw.githubusercontent.com/duckmath/duckmath-leaderboard/main/scores.js");
-    return await response.text(); // is promise for whatever fucking reason
+    return await response.text(); // is promise for whatever reason
 }
 
 async function main() {
