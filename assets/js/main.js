@@ -54,11 +54,9 @@ document.addEventListener("click", function (event) {
     if (document.body.scrollHeight <= window.innerHeight) {
       document.body.classList.add("no-scroll");
       topnav.classList.add("no-scroll");
-      console.log("no scroll");
     } else {
       document.body.classList.remove("no-scroll");
       topnav.classList.remove("no-scroll");
-      console.log("scroll");
     }
   }
 });
