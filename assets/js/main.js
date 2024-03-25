@@ -48,6 +48,21 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+document.addEventListener("click", function (event) {
+  if (event.target.classList.contains("sorter")) {
+    const topnav = document.getElementById("topnav");
+    if (document.body.scrollHeight <= window.innerHeight) {
+      document.body.classList.add("no-scroll");
+      topnav.classList.add("no-scroll");
+      console.log("no scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+      topnav.classList.remove("no-scroll");
+      console.log("scroll");
+    }
+  }
+});
+
 let prevScrollPos = window.pageYOffset;
 let ticking = false;
 
@@ -88,8 +103,6 @@ function openFullscreen() {
 function ruffleFullscreen() {
   alert("To Fullscreen, Right Click the Application and hit Enter Fullscreen");
 }
-
-
 
 function searchbar1() {
   const searchvalue = document.getElementById("query");
