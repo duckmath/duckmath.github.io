@@ -9,7 +9,8 @@ templatetopnav.innerHTML = `
     <a href="/more/Virtual_Machines.html" class="vm">Virtual Machines</a>
     <a href="/more/chat.html" class="dis">D1sc0rd</a>
     <a href="/more/G4m3-Requests.html" class="vm">G4m3 Requests</a>
-    <a href="/more/takedown.html" class="gr last">DMCA</a>
+    <a href="/more/takedown.html" class="vm">DMCA</a>
+    <a href="/more/blank.html" class="gr last">about:blank</a>
   </div>
 </div>
 <a href="/about.html">📝ABOUT</a>
