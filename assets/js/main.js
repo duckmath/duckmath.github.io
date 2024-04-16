@@ -109,16 +109,16 @@ function searchbar1() {
   const ads = document.getElementsByClassName("ad google_auto_placed");
   if (searchvalue.value === "") {
     console.log("Nothing Searched");
-    for (var i = 0; i < ads.length; i++) {
+    for (let i = 0; i < ads.length; i++) {
       ads[i].style.visibility = "visible";
       ads[i].style.display = "inline-block";
     }
   } else {
-    for (var i = 0; i < ads.length; i++) {
+    for (let i = 0; i < ads.length; i++) {
       ads[i].style.visibility = "hidden";
       ads[i].style.display = "none";
     }
-    for (var i = 0; i < elem.length; i++) {
+    for (let i = 0; i < elem.length; i++) {
       if (elem[i].id.toLowerCase().includes(searchvalue.value.toLowerCase())) {
         elem[i].style.visibility = "visible";
         elem[i].style.display = "inline-block";
@@ -133,7 +133,7 @@ function searchbar1() {
 function sorterbuttons(button) {
   var title = document.getElementById("title");
   var elem = title.getElementsByTagName("button");
-  for (var i = 0; i < elem.length; i++) {
+  for (let i = 0; i < elem.length; i++) {
     if (elem[i] !== button) {
       if (elem[i].id !== "New") {
         elem[i].style.backgroundColor = "#fff";
@@ -159,13 +159,13 @@ function sorterbuttons(button) {
 function sorter(category) {
   var icon = document.getElementById("icon_image");
   var elem = icon.getElementsByTagName("a");
-  var ads = document.getElementsByClassName("ad");
-  for (var i = 0; i < ads.length; i++) {
+  var ads = document.getElementsByClassName("ad google-auto-placed");
+  for (let i = 0; i < ads.length; i++) {
     ads[i].style.visibility = "hidden";
     ads[i].style.display = "none";
   }
 
-  for (var i = 0; i < elem.length; i++) {
+  for (let i = 0; i < elem.length; i++) {
     if (!elem[i].className.includes(category)) {
       // if the element is not the category
       elem[i].style.visibility = "collapse";
@@ -179,14 +179,14 @@ function sorter(category) {
 
 function showchildren(parent) {
   var children = parent.children;
-  for (var i = 0; i < children.length; i++) {
+  for (let i = 0; i < children.length; i++) {
     children[i].style.visibility = "visible";
   }
 }
 
 function hidechildren(parent) {
   var children = parent.children;
-  for (var i = 0; i < children.length; i++) {
+  for (let i = 0; i < children.length; i++) {
     children[i].style.visibility = "hidden";
   }
 }
@@ -197,12 +197,12 @@ function showall() {
   var all = document.getElementById("All");
 
   sorterbuttons(all); // remove ad
-  for (var i = 0; i < elem.length; i++) {
+  for (let i = 0; i < elem.length; i++) {
     elem[i].style.visibility = "visible";
     elem[i].style.display = "inline-block";
   }
   const ads = document.getElementsByClassName("ad");
-  for (var i = 0; i < ads.length; i++) {
+  for (let i = 0; i < ads.length; i++) {
     ads[i].style.visibility = "visible";
     ads[i].style.display = "inline-block";
   }
