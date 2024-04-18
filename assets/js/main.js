@@ -1,7 +1,7 @@
 var swfobject = {};
 
 swfobject.embedSWF = function (url, cont, width, height) {
-  var ruffle = window.RufflePlayer.newest(),
+  let ruffle = window.RufflePlayer.newest(),
     player = Object.assign(
       document.getElementById(cont).appendChild(ruffle.createPlayer()),
       {
@@ -87,7 +87,7 @@ document.addEventListener("scroll", onScroll);
 
 function openFullscreen() {
   // open the game in fullscreen
-  var elem = document.getElementById("gameFrame");
+  let elem = document.getElementById("gameFrame");
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
   } else if (elem.webkitRequestFullscreen) {
@@ -106,7 +106,7 @@ function searchbar1() {
   const searchvalue = document.getElementById("query");
   const icon_divs = document.getElementById("icon_image");
   const elem = icon_divs.getElementsByTagName("a");
-  const ads = document.getElementsByClassName("ad google_auto_placed");
+  const ads = document.getElementsByClassName("ad");
   if (searchvalue.value === "") {
     console.log("Nothing Searched");
     for (let i = 0; i < ads.length; i++) {
@@ -131,8 +131,8 @@ function searchbar1() {
 }
 
 function sorterbuttons(button) {
-  var title = document.getElementById("title");
-  var elem = title.getElementsByTagName("button");
+  const title = document.getElementById("title");
+  const elem = title.getElementsByTagName("button");
   for (let i = 0; i < elem.length; i++) {
     if (elem[i] !== button) {
       if (elem[i].id !== "New") {
@@ -156,14 +156,44 @@ function sorterbuttons(button) {
   }
 }
 
-function sorter(category) {
-  var icon = document.getElementById("icon_image");
-  var elem = icon.getElementsByTagName("a");
-  var ads = document.getElementsByClassName("ad google-auto-placed");
+function hide_all_ads() {
+  let ads = document.getElementsByClassName("ad");
+  let more_ads = document.getElementsByClassName("google-auto-placed");
+
+  let all_ads = [];
   for (let i = 0; i < ads.length; i++) {
-    ads[i].style.visibility = "hidden";
-    ads[i].style.display = "none";
+    all_ads.push(ads[i]);
   }
+  for (let i = 0; i < more_ads.length; i++) {
+    more_ads.push(ads[i]);
+  }
+  for (let i = 0; i < ads.length; i++) {
+    all_ads[i].style.visibility = "hidden";
+    all_ads[i].style.display = "none";
+  }
+}
+
+function show_all_ads() {
+  let ads = document.getElementsByClassName("ad");
+  let more_ads = document.getElementsByClassName("google-auto-placed");
+
+  let all_ads = [];
+  for (let i = 0; i < ads.length; i++) {
+    all_ads.push(ads[i]);
+  }
+  for (let i = 0; i < more_ads.length; i++) {
+    more_ads.push(ads[i]);
+  }
+  for (let i = 0; i < ads.length; i++) {
+    all_ads[i].style.visibility = "visible";
+    all_ads[i].style.display = "inline-block";
+  }
+}
+
+function sorter(category) {
+  const icon = document.getElementById("icon_image");
+  const elem = icon.getElementsByTagName("a");
+  hide_all_ads()
 
   for (let i = 0; i < elem.length; i++) {
     if (!elem[i].className.includes(category)) {
@@ -178,34 +208,30 @@ function sorter(category) {
 }
 
 function showchildren(parent) {
-  var children = parent.children;
+  const children = parent.children;
   for (let i = 0; i < children.length; i++) {
     children[i].style.visibility = "visible";
   }
 }
 
 function hidechildren(parent) {
-  var children = parent.children;
+  const children = parent.children;
   for (let i = 0; i < children.length; i++) {
     children[i].style.visibility = "hidden";
   }
 }
 
 function showall() {
-  var icon = document.getElementById("icon_image");
-  var elem = icon.getElementsByTagName("a");
-  var all = document.getElementById("All");
+  const icon = document.getElementById("icon_image");
+  const elem = icon.getElementsByTagName("a");
+  const all = document.getElementById("All");
 
   sorterbuttons(all); // remove ad
   for (let i = 0; i < elem.length; i++) {
     elem[i].style.visibility = "visible";
     elem[i].style.display = "inline-block";
   }
-  const ads = document.getElementsByClassName("ad");
-  for (let i = 0; i < ads.length; i++) {
-    ads[i].style.visibility = "visible";
-    ads[i].style.display = "inline-block";
-  }
+  show_all_ads()
 }
 
 function viewFig(elem) {
