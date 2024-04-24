@@ -15,6 +15,9 @@ function change_iframe_link(){
     const iframe = document.getElementById("gameFrame");
     iframe.src = intersteller_links[index_of_array];
 
+    const next_link_bt = document.getElementById("next");
+    next_link_bt.innerText = "Next Link: " + index_of_array
+
 }
 
 function change_link(){
