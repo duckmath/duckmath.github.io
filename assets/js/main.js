@@ -182,7 +182,7 @@ function show_all_ads() {
     all_ads.push(ads[i]);
   }
   for (let i = 0; i < more_ads.length; i++) {
-    more_ads.push(ads[i]);
+    all_ads.push(more_ads[i]);
   }
   for (let i = 0; i < ads.length; i++) {
     all_ads[i].style.visibility = "visible";
