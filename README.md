@@ -32,7 +32,7 @@ A quick thanks to everyone who made this possible! 🙏😊
 
 Thanks a lot for spending your time helping the site and making duckmath grow.
 
-<p align="left">
+<p align="left"> <!-- hello -->
 <a href="https://github.com/duckmath/duckmath.github.io/graphs/contributors">
   <img src="https://contributors-img.web.app/image?repo=duckmath/duckmath.github.io" />
  </a>
