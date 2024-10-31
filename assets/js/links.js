@@ -1,26 +1,190 @@
-const intersteller_links = ["https://quarterpounder.mrlewburger.com/","https://dove.soapagent.com/","https://interesting.artsoap.cl/ ","https://gointerstellar.app/","https://1.southwestvoodoo.com/","https://meteorologist.wikipedia.usercontent.motorcycles/   ","https://underrated-game-group.on-top.super-modding.quest/ ","https://underrated-game-group.is-really.pro/ ","https://edumath.xyz/ ","https://starrprox.my.to/ ","https://world.newhopes.info/","https://1.room4rent.cl/","https://antihistamines.medscience.cl/","https://engines.chaosengines.net/","https://s1.cambrianscientific.com/","https://dramatic-arts.mackproductions.com/","https://meteor.newsofmaricopa.com/","https://gltlab.fr/ ","https://store.hkordermedicine.hk/","https://hygiene.soapagent.com/","https://representative.cioconsultores.cl/","https://training.tecteach.net/","https://carriers.mobile-node.net/","https://roses.petel.us/","https://testing.nlstar.club/","https://safety.electricalone.com/","https://int.adepoju.org/","https://spacial-awareness.potomacriversafetycommittee.org/","https://1.rodolfocolen.com/","https://dove.soapclient.com/","https://coolmathgames.com/ ","https://1.tartsandcrafts.ca/","https://cultures.linexedu.eu/","https://winter.skimanshop.it/","https://cheap.showmyhomes.com/","https://1.rootsbobcat.com/","https://2.macao.net/","https://behavior.lasersoft.net.au/","https://learn-to-invest.sensibleinvesting.com.au/","https://acetaminophen.deleesportsmedicine.com/","https://books.michelleingah.com/","https://ca.skimanshop.it/","https://pies.tartsandcrafts.ca/","https://china.taoism-dingshun.org/","https://china.dingshun.hk/","https://ios.4webhelp.ca/","https://testing.sgmlguru.org/","https://1.oceanracingseries.co.za/","https://lenses.proheroeyewear.com/","https://financial.tripreceipts.com/","https://t.lifestylethailand.com/","https://the.strategyofcombat.com/","https://k12mathematics.uk.to/","https://travel.tourismwelfare.org.np/","https://entrepreneurship.keybusinessconnection.com/","https://math-edpuzzle.videospeed.cl/","https://2.intothelightprod.com/","https://1.burgermap.org/","https://help.gotoinfo.ch/","https://acting.intothelightprod.com/","https://e.tecteach.net/","https://s1.macao.net/","https://57.admain.cl/","https://health.k4ds.org/","https://h2o.lakeballs.fi/","https://news.power-media.ro/","https://s.cambrianscientific.com/","https://vitamin-a.rednutricional.cl/","https://positive.reason.org.nz/","https://hazards.legonas.net/","https://boeing.morlockaerospace.com/","https://video.spectrumhealing.info/","https://go.readymindit.com/","https://agent.room4rent.cl/","https://cdn.yourciooncall.com/","https://mre.stormfood.com/","https://1.tomholden.info/","https://landscape.ambientinformatica.com.br/","https://safety-practices.rpvelectrics.com.au/","https://biology-img.shekinahphotography.com/","https://safety.thehorseplace.us/","https://us1.cambrianscientific.com/","https://i.businessrelay.co.za/","https://math.masteryourtest.com/","https://cdn.businessrelay.co.za/","https://basketball.prosports.cl/","https://1.belizebuilders.com/","https://1.australianhuntermag.com.au/","https://production.mechtronics.net/","https://s1.hancockcountyfoodpantry.com/","https://cheap.winterhouse.info/","https://natural.oaksatstoneycreek.org/","https://edpuzzle.videospeed.cl/","https://einstein.lawson-engineers.co.uk/","https://mathematics.masteryourtest.com/","https://workshop.precisewarehousing.com/","https://attractions.uk.to/","https://1.lscomm.net/","https://wash.soapagent.com/","https://cdn.masonic-lodge.ca/","https://s1.sen.org.nz/","https://smart.loghomelights.com/","https://1.vivocolor.cl/","https://soccer.oldsouthmarlinclub.com/","https://hiphop.symphonic-music.com/","https://1.videospeed.cl/","https://law.dhconsulting.cl/","https://ocean.lakeballs.fi/","https://construct.rustyfoundation.com/","https://youth.prosports.cl/","https://football-wa.deakinsports.com.au/","https://soccer.deakinsports.com.au/","https://1.deleesportsmedicine.com/","https://gravity.omniscien.cl/","https://1.chowpatty.com/","https://lights.skylinedesignstudio.com.au/","https://cdn.i-mind.cl/","https://space-history.us.to/","https://mystic.xyz.moochurch.com/","https://stats.volkszaehler.org/","https://forum.cloud.rigaprecast.com/","https://sunrise.sun.2of1.org/","https://delta.y.glenwaverleychurches.org/","https://x.n.dnsmirror.org/","https://x.a.ubiq.org/","https://i.a.ubiq.org/","https://s.j0.icom.org.np/","https://x.o.h4xxel.org/","https://k.c.gracemp.org/","https://test.sun.2of1.org/","https://frontend.development.sanluix.org/","https://w.q.sagesinst.org/","https://sundown.sun.mountofoliveschurch.com/","https://sunflower.sun.mountofoliveschurch.com/","https://alpha.y.glenwaverleychurches.org/","https://w.n.dnsmirror.org/","https://r.j0.icom.org.np/","https://vp.c.gracemp.org/","https://n.c.gracemp.org/","https://sunrays.sun.mountofoliveschurch.com/","https://luminous.xyz.moochurch.com/","https://demo.cloud.rigaprecast.com/","https://backend.development.sanluix.org/","https://docs.cloud.rigaprecast.com/","https://mobile.development.sanluix.org/","https://x4.o.h4xxel.org/","https://w.t.texasmath.org/","https://shop.twinslist.org/","https://sunflower.sun.2of1.org/","https://b.j0.icom.org.np/","https://farms.stentwood.com.au/","https://database.development.sanluix.org/","https://aurora.xyz.moochurch.com/","https://j.o.h4xxel.org/","https://jubilee.xyz.moochurch.com/","https://app.cloud.rigaprecast.com/","https://beta.y.glenwaverleychurches.org/","https://blog.cloud.rigaprecast.com/","https://tools.development.sanluix.org/","https://kappa.y.glenwaverleychurches.org/","https://epsilon.y.glenwaverleychurches.org/","https://z.d.2of1.org/","https://sundown.sun.2of1.org/","https://api.cloud.rigaprecast.com/","https://login.thegalleryofart.info/","https://roundrockisd.online/","https://adsadkjsadjksakldjxx.math-solver.online/",];
-
+const intersteller_links = [
+  "https://quarterpounder.mrlewburger.com/",
+  "https://dove.soapagent.com/",
+  "https://interesting.artsoap.cl/ ",
+  "https://gointerstellar.app/",
+  "https://1.southwestvoodoo.com/",
+  "https://meteorologist.wikipedia.usercontent.motorcycles/   ",
+  "https://underrated-game-group.on-top.super-modding.quest/ ",
+  "https://underrated-game-group.is-really.pro/ ",
+  "https://edumath.xyz/ ",
+  "https://starrprox.my.to/ ",
+  "https://world.newhopes.info/",
+  "https://1.room4rent.cl/",
+  "https://antihistamines.medscience.cl/",
+  "https://engines.chaosengines.net/",
+  "https://s1.cambrianscientific.com/",
+  "https://dramatic-arts.mackproductions.com/",
+  "https://meteor.newsofmaricopa.com/",
+  "https://gltlab.fr/ ",
+  "https://store.hkordermedicine.hk/",
+  "https://hygiene.soapagent.com/",
+  "https://representative.cioconsultores.cl/",
+  "https://training.tecteach.net/",
+  "https://carriers.mobile-node.net/",
+  "https://roses.petel.us/",
+  "https://testing.nlstar.club/",
+  "https://safety.electricalone.com/",
+  "https://int.adepoju.org/",
+  "https://spacial-awareness.potomacriversafetycommittee.org/",
+  "https://1.rodolfocolen.com/",
+  "https://dove.soapclient.com/",
+  "https://coolmathgames.com/ ",
+  "https://1.tartsandcrafts.ca/",
+  "https://cultures.linexedu.eu/",
+  "https://winter.skimanshop.it/",
+  "https://cheap.showmyhomes.com/",
+  "https://1.rootsbobcat.com/",
+  "https://2.macao.net/",
+  "https://behavior.lasersoft.net.au/",
+  "https://learn-to-invest.sensibleinvesting.com.au/",
+  "https://acetaminophen.deleesportsmedicine.com/",
+  "https://books.michelleingah.com/",
+  "https://ca.skimanshop.it/",
+  "https://pies.tartsandcrafts.ca/",
+  "https://china.taoism-dingshun.org/",
+  "https://china.dingshun.hk/",
+  "https://ios.4webhelp.ca/",
+  "https://testing.sgmlguru.org/",
+  "https://1.oceanracingseries.co.za/",
+  "https://lenses.proheroeyewear.com/",
+  "https://financial.tripreceipts.com/",
+  "https://t.lifestylethailand.com/",
+  "https://the.strategyofcombat.com/",
+  "https://k12mathematics.uk.to/",
+  "https://travel.tourismwelfare.org.np/",
+  "https://entrepreneurship.keybusinessconnection.com/",
+  "https://math-edpuzzle.videospeed.cl/",
+  "https://2.intothelightprod.com/",
+  "https://1.burgermap.org/",
+  "https://help.gotoinfo.ch/",
+  "https://acting.intothelightprod.com/",
+  "https://e.tecteach.net/",
+  "https://s1.macao.net/",
+  "https://57.admain.cl/",
+  "https://health.k4ds.org/",
+  "https://h2o.lakeballs.fi/",
+  "https://news.power-media.ro/",
+  "https://s.cambrianscientific.com/",
+  "https://vitamin-a.rednutricional.cl/",
+  "https://positive.reason.org.nz/",
+  "https://hazards.legonas.net/",
+  "https://boeing.morlockaerospace.com/",
+  "https://video.spectrumhealing.info/",
+  "https://go.readymindit.com/",
+  "https://agent.room4rent.cl/",
+  "https://cdn.yourciooncall.com/",
+  "https://mre.stormfood.com/",
+  "https://1.tomholden.info/",
+  "https://landscape.ambientinformatica.com.br/",
+  "https://safety-practices.rpvelectrics.com.au/",
+  "https://biology-img.shekinahphotography.com/",
+  "https://safety.thehorseplace.us/",
+  "https://us1.cambrianscientific.com/",
+  "https://i.businessrelay.co.za/",
+  "https://math.masteryourtest.com/",
+  "https://cdn.businessrelay.co.za/",
+  "https://basketball.prosports.cl/",
+  "https://1.belizebuilders.com/",
+  "https://1.australianhuntermag.com.au/",
+  "https://production.mechtronics.net/",
+  "https://s1.hancockcountyfoodpantry.com/",
+  "https://cheap.winterhouse.info/",
+  "https://natural.oaksatstoneycreek.org/",
+  "https://edpuzzle.videospeed.cl/",
+  "https://einstein.lawson-engineers.co.uk/",
+  "https://mathematics.masteryourtest.com/",
+  "https://workshop.precisewarehousing.com/",
+  "https://attractions.uk.to/",
+  "https://1.lscomm.net/",
+  "https://wash.soapagent.com/",
+  "https://cdn.masonic-lodge.ca/",
+  "https://s1.sen.org.nz/",
+  "https://smart.loghomelights.com/",
+  "https://1.vivocolor.cl/",
+  "https://soccer.oldsouthmarlinclub.com/",
+  "https://hiphop.symphonic-music.com/",
+  "https://1.videospeed.cl/",
+  "https://law.dhconsulting.cl/",
+  "https://ocean.lakeballs.fi/",
+  "https://construct.rustyfoundation.com/",
+  "https://youth.prosports.cl/",
+  "https://football-wa.deakinsports.com.au/",
+  "https://soccer.deakinsports.com.au/",
+  "https://1.deleesportsmedicine.com/",
+  "https://gravity.omniscien.cl/",
+  "https://1.chowpatty.com/",
+  "https://lights.skylinedesignstudio.com.au/",
+  "https://cdn.i-mind.cl/",
+  "https://space-history.us.to/",
+  "https://mystic.xyz.moochurch.com/",
+  "https://stats.volkszaehler.org/",
+  "https://forum.cloud.rigaprecast.com/",
+  "https://sunrise.sun.2of1.org/",
+  "https://delta.y.glenwaverleychurches.org/",
+  "https://x.n.dnsmirror.org/",
+  "https://x.a.ubiq.org/",
+  "https://i.a.ubiq.org/",
+  "https://s.j0.icom.org.np/",
+  "https://x.o.h4xxel.org/",
+  "https://k.c.gracemp.org/",
+  "https://test.sun.2of1.org/",
+  "https://frontend.development.sanluix.org/",
+  "https://w.q.sagesinst.org/",
+  "https://sundown.sun.mountofoliveschurch.com/",
+  "https://sunflower.sun.mountofoliveschurch.com/",
+  "https://alpha.y.glenwaverleychurches.org/",
+  "https://w.n.dnsmirror.org/",
+  "https://r.j0.icom.org.np/",
+  "https://vp.c.gracemp.org/",
+  "https://n.c.gracemp.org/",
+  "https://sunrays.sun.mountofoliveschurch.com/",
+  "https://luminous.xyz.moochurch.com/",
+  "https://demo.cloud.rigaprecast.com/",
+  "https://backend.development.sanluix.org/",
+  "https://docs.cloud.rigaprecast.com/",
+  "https://mobile.development.sanluix.org/",
+  "https://x4.o.h4xxel.org/",
+  "https://w.t.texasmath.org/",
+  "https://shop.twinslist.org/",
+  "https://sunflower.sun.2of1.org/",
+  "https://b.j0.icom.org.np/",
+  "https://farms.stentwood.com.au/",
+  "https://database.development.sanluix.org/",
+  "https://aurora.xyz.moochurch.com/",
+  "https://j.o.h4xxel.org/",
+  "https://jubilee.xyz.moochurch.com/",
+  "https://app.cloud.rigaprecast.com/",
+  "https://beta.y.glenwaverleychurches.org/",
+  "https://blog.cloud.rigaprecast.com/",
+  "https://tools.development.sanluix.org/",
+  "https://kappa.y.glenwaverleychurches.org/",
+  "https://epsilon.y.glenwaverleychurches.org/",
+  "https://z.d.2of1.org/",
+  "https://sundown.sun.2of1.org/",
+  "https://api.cloud.rigaprecast.com/",
+  "https://login.thegalleryofart.info/",
+  "https://roundrockisd.online/",
+  "https://adsadkjsadjksakldjxx.math-solver.online/",
+];
 
 // class ify mate
 
-var index_of_array =0;
+var index_of_array = 0;
 
+function change_iframe_link() {
+  document.addEventListener("DOMContentLoaded", function () {
+    // Your code to execute after the DOM is fully loaded
+    console.log("DOM is fully loaded");
+  });
+  const iframe = document.getElementById("gameFrame");
+  iframe.src = intersteller_links[index_of_array];
 
-
-function change_iframe_link(){
-    document.addEventListener('DOMContentLoaded', function() {
-        // Your code to execute after the DOM is fully loaded
-        console.log('DOM is fully loaded');
-    });
-    const iframe = document.getElementById("gameFrame");
-    iframe.src = intersteller_links[index_of_array];
-
-    const next_link_bt = document.getElementById("next");
-    next_link_bt.innerText = "Next Link: " + index_of_array
-
+  const next_link_bt = document.getElementById("next");
+  next_link_bt.innerText = "Next Link: " + index_of_array;
 }
 
-function change_link(){
-    index_of_array+=1;
-    change_iframe_link();
+function change_link() {
+  index_of_array += 1;
+  change_iframe_link();
 }

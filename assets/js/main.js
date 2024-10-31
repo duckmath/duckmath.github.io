@@ -8,7 +8,7 @@ swfobject.embedSWF = function (url, cont, width, height) {
         width: width,
         height: height,
         style: "width: " + width + "px; height: " + height + "px",
-      }
+      },
     );
 
   player.load({ url: url });
@@ -193,7 +193,7 @@ function show_all_ads() {
 function sorter(category) {
   const icon = document.getElementById("icon_image");
   const elem = icon.getElementsByTagName("a");
-  hide_all_ads()
+  hide_all_ads();
 
   for (let i = 0; i < elem.length; i++) {
     if (!elem[i].className.includes(category)) {
@@ -231,7 +231,7 @@ function showall() {
     elem[i].style.visibility = "visible";
     elem[i].style.display = "inline-block";
   }
-  show_all_ads()
+  show_all_ads();
 }
 
 function viewFig(elem) {
