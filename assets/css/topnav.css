@@ -235,12 +235,6 @@ ul a:hover {
 
 .header-scrolled {
   background-color: rgba(0, 0, 0, 0.5);
-  /* Fallback for browsers that don't support backdrop-filter */
-  background-color: rgba(0, 0, 0, 0.8);
-  @supports (backdrop-filter: blur(5px)) {
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-  }
   padding-top: 10px;
   position: fixed;
   top: 0;
@@ -248,6 +242,19 @@ ul a:hover {
   width: calc(100vw - 26px);
   height: 62px;
   border-bottom-right-radius: 15px;
+}
+
+.header-scrolled .centered-fixed-blur {
+  z-index: -1;
+  position: relative;
+  height: 72px;
+  margin-top: -10px;
+  /* Fallback for browsers that don't support backdrop-filter */
+  width: 100%;
+  @supports (backdrop-filter: blur(5px)) {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+  }
 }
 
 .header-scrolled .dropdown-content {
