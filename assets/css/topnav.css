@@ -244,6 +244,19 @@ ul a:hover {
   border-bottom-right-radius: 15px;
 }
 
+.header-scrolled .centered-fixed-blur {
+  z-index: -1;
+  position: relative;
+  height: 72px;
+  margin-top: -10px;
+  /* Fallback for browsers that don't support backdrop-filter */
+  width: 100%;
+  @supports (backdrop-filter: blur(5px)) {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+  }
+}
+
 .header-scrolled .dropdown-content {
   position: fixed;
   top: 62px;
