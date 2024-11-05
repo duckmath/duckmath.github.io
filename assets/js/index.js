@@ -16,6 +16,7 @@ templatetopnav.innerHTML = `
 <a href="/about.html">📝ABOUT</a>
 <a href="/leaderboard.html">🏆LEADERBOARD</a>
 <a href="/index.html">🎮G4M3S</a>
+<div class="centered-fixed-blur"></div>
 <div class="centered-fixed">
      <img src="/assets/img/scaled_goose_pixel.png" onmouseover="spin(this)"
     onmouseout="unspin(this)" alt="Duck" onClick="home()" width="40px" height="40px" />
