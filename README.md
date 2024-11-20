@@ -12,15 +12,3 @@ This is a fun website that is a collection of applications from different sites,
 
 [![Ducky](https://github-production-user-asset-6210df.s3.amazonaws.com/146117946/276101079-c847a562-a347-40ba-974a-8163b70b1db8.png)](https://games211.github.io)
 
-## Join My Discord!
-
-Join my discord below for any questions or concerns about the website!
-
-[![GitHubLogo](https://github-production-user-asset-6210df.s3.amazonaws.com/146117946/276102576-3afde79b-eca1-46af-a4c5-91e290b8e750.png)](https://discord.gg/t2EwRyhFcG)
-</a>
-
-<p align="left"> <!-- hello -->
-<a href="https://github.com/duckmath/duckmath.github.io/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=duckmath/duckmath.github.io" />
- </a>
-</p>
