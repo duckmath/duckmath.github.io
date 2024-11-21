@@ -267,6 +267,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const headerSpan = document.getElementById("duckmath-header");
   const TLD = window.location.hostname.split(".")[0];
   const ending = window.location.hostname.split(".")[1];
-  headerSpan.firstChild.textContent = TLD;
+  headerSpan.firstChild.textContent = TLD[0].toUpperCase() + TLD.slice(1);
   headerSpan.children[0].textContent = "." + ending;
 });
