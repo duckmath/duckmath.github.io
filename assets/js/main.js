@@ -268,5 +268,5 @@ document.addEventListener("DOMContentLoaded", function () {
   const TLD = window.location.hostname.split(".")[0];
   const ending = window.location.hostname.split(".")[1];
   headerSpan.firstChild.textContent = TLD;
-  headerSpan.children[0].textContent = ending;
+  headerSpan.children[0].textContent = "." + ending;
 });
