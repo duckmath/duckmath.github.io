@@ -25,7 +25,7 @@
 
 .duckmath-header {
   font-size: 2rem;
-  color: red;
+  color: var(--input-border);
   text-align: center;
   margin-top: -5px;
   /* Adjust this value to move the text up */

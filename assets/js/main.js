@@ -8,7 +8,7 @@ swfobject.embedSWF = function (url, cont, width, height) {
         width: width,
         height: height,
         style: "width: " + width + "px; height: " + height + "px",
-      },
+      }
     );
 
   player.load({ url: url });
@@ -262,3 +262,8 @@ function unspin(element) {
 function home() {
   window.location.href = "/";
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const headerSpan = document.getElementById("duckmath-header");
+  headerSpan.textContent = window.location.hostname;
+});

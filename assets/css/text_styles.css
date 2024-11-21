@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
 
 .main_title_text {
   position: absolute;
@@ -7,9 +7,9 @@
   text-align: center;
   font-size: 100px;
   font-weight: bold;
-  color: #ff0000;
+  color: var(--input-border);
   font-family: "League Spartan", sans-serif;
-  transform: translateX(-50%);
+  transform: (-50%);
   line-height: 120%;
 }
 
@@ -21,7 +21,7 @@
   text-align: center;
   font-size: 80px;
   font-weight: bold;
-  color: #ff0000;
+  color: var(--input-border);
   font-family: "League Spartan", sans-serif;
   line-height: 120%;
 
@@ -70,7 +70,7 @@
   line-height: 120%;
 }
 
-.middle_text_title{
+.middle_text_title {
   position: fixed;
   justify-content: center;
   align-items: center;

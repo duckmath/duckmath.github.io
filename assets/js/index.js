@@ -20,7 +20,7 @@ templatetopnav.innerHTML = `
 <div class="centered-fixed">
      <img src="/assets/img/scaled_goose_pixel.png" onmouseover="spin(this)"
     onmouseout="unspin(this)" alt="Duck" onClick="home()" width="40px" height="40px" />
-      <span class="duckmath-header" onmouseenter="showchildren(this);" onmouseleave="hidechildren(this);">DuckMath<span class="small-text" style="visibility: hidden">.org</span></span>
+      <span id="duckmath-header" class="duckmath-header" onmouseenter="showchildren(this);" onmouseleave="hidechildren(this);">DuckMath<span class="small-text" style="visibility: hidden">.org</span></span>
 </div>
 
 
