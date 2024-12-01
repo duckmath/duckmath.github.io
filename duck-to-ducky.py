@@ -90,4 +90,38 @@ for i in files:
                 built_insert += f'(\'{curTitle}\', \'{curLink}\', \'{curIcon}\', \'{cur_cat}\'),\n'
 
 
+#print(built_insert)
+
+built_insert = '''
+INSERT INTO apps (title, link, icon, categories) VALUES '''
+files = os.listdir('./g4m3s/flash-g4m3s/')
+for i in files:
+    with open("./g4m3s/flash-g4m3s/"+i, 'r') as file:
+        content = file.read()
+
+        title_keyword = "<div class=\"title_text\">"
+        title_index = content.find(title_keyword)
+        if(title_index!=-1):
+            curTitle = get_title(content[title_index+len(title_keyword):title_index+len(title_keyword)+60])
+
+        swf_keyword = '''<script id="gabe">
+        swfobject.embedSWF(
+          "../../assets/flashfiles/'''
+        swf_ind = content.find(swf_keyword)
+        if(swf_ind != -1):
+            swf_item = read_in_quotes(content[len(swf_keyword) + swf_ind: len(swf_keyword) + swf_ind+30])
+
+        # use html file to find title in index
+        with open('./index.html', 'r') as index_file:
+            ind_cont = index_file.read()
+            gabe_loc  = ind_cont.find("g4m3s/flash-g4m3s/" + i)
+            if(gabe_loc!=-1):
+                total_gabe  = ind_cont[gabe_loc: gabe_loc+350]
+                image = total_gabe.find("assets/img/icons/")
+                if(image!=-1):
+                    curImage  = read_in_quotes(total_gabe[len("assets/img/icons/")+image:len("assets/img/icons/")+image+80])
+        if(curImage and curTitle and swf_item and image):
+            built_insert += f'(\'{curTitle}\',\'https://maddox.page/basic-ruffle-player/?file={swf_item}\',\'https://raw.githubusercontent.com/duckmath/icons/refs/heads/main/{curImage}\',\'Flash\'),\n'
+
 print(built_insert)
+# now add ruffle games #g4m3s/flash-g4m3s
