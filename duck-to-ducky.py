@@ -45,7 +45,7 @@ def read_in_quotes(word):
 
 
 built_insert = '''
-INSERT INTO apps (title, link, icon) VALUES '''
+INSERT INTO apps (title, link, icon, categories) VALUES '''
 
 
 import os
@@ -76,8 +76,18 @@ for i in files:
                     curIcon  = "https://raw.githubusercontent.com/duckmath/icons/refs/heads/main/"+read_dm_icon_filename(index_content[cur_icon_index+len(cur_icon_keyword): cur_icon_index+len(cur_icon_keyword)+500])
                     #print(curIcon)
 
+                cur_categories_keyword = "class=\""
+                cur_categories_index = cur_icon_index-50
+                for i in range(cur_categories_index, cur_icon_index):
+                    if(index_content[i]=='c' and index_content[i+1]=='l' and index_content[i+2]=='a' and index_content[i+3]=='s' and index_content[i+4]=='s' and index_content[i+5]=='=' and index_content[i+6]=='\"'):
+                        cur_categories_index = i
+                        break
+                if(cur_categories_index!=-1):
+
+                    cur_cat = read_in_quotes(index_content[cur_categories_index+len(cur_categories_keyword): cur_categories_index+len(cur_categories_keyword)+100])
+
             if(curTitle and curIcon and curLink):
-                built_insert += f'(\'{curTitle}\', \'{curLink}\', \'{curIcon}\'),\n'
+                built_insert += f'(\'{curTitle}\', \'{curLink}\', \'{curIcon}\', \'{cur_cat}\'),\n'
 
 
 print(built_insert)
