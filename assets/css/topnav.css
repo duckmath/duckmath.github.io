@@ -234,7 +234,7 @@ ul a:hover {
 }
 
 .header-scrolled {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.05);
   padding-top: 10px;
   position: fixed;
   top: 0;
@@ -251,7 +251,7 @@ ul a:hover {
   margin-top: -10px;
   /* Fallback for browsers that don't support backdrop-filter */
   width: 100%;
-  @supports (backdrop-filter: blur(5px)) {
+  @supports (backdrop-filter: blur(10px)) {
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
   }
