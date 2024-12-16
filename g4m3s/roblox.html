@@ -37,37 +37,41 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="English" />
     <title>Duck</title>
-    <link rel="stylesheet" href="/assets/css/text_styles.css" />
-    <link rel="stylesheet" href="/assets/css/topnav.css" />
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <link rel="stylesheet" href="/assets/css/gabes.css" />
-    <script src="/assets/js/main.js"></script>
-    <link rel="icon" type="image/x-icon" href="/assets/img/duck.webp" />
-    <link rel="mask-icon" type="" href="/assets/img/duck.webp" color="#111" />
+    <link rel="stylesheet" href="../assets/css/text_styles.css" />
+    <link rel="stylesheet" href="../assets/css/topnav.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/gabes.css" />
+    <script src="../assets/js/main.js"></script>
+    <link rel="icon" type="image/x-icon" href="../assets/img/duck.webp" />
+    <link rel="mask-icon" type="" href="../assets/img/duck.webp" color="#111" />
     <noscript
       >Your browser doesn't have JavaScript enabled. Please enable JavaScript or
       switch to a browser that supports it.</noscript
     >
-
+    <script src="../assets/js/index.js" type="text/javascript" defer></script>
     <!-- Removed Firebase module 2 -->
   </head>
   <body>
     <!-- where auto would go -->
 
-    <iframe
-      class="gameloc"
-      id="gameFrame"
-      style="width: 100vw; height: 100vh; border: none"
-      allowfullscreen=""
-      allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad;
+    <div class="title_text">
+      Retro Bowl
+      <span>reload to fix</span>
+      <iframe
+        class="gameloc"
+        id="gameFrame"
+        allowfullscreen=""
+        allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad;
          keyboard-map *; xr-spatial-tracking; clipboard-write"
-      name="gameFrame"
-      scrolling="yes"
-      sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock
+        name="gameFrame"
+        scrolling="no"
+        sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock
                 allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin
                 allow-downloads"
-      src="https://extrememath.dev/uv.html?site=https://now.gg/play/roblox-corporation/5349/roblox"
-      title="Game"
-    ></iframe>
+        src="https://extrememath.dev/uv.html?site=https://now.gg/play/roblox-corporation/5349/roblox"
+        title="Game"
+      ></iframe>
+      <button class="button" onclick="openFullscreen();">Fullscreen</button>
+    </div>
   </body>
 </html>
