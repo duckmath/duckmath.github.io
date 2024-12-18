@@ -23,7 +23,7 @@
   font-weight: bold;
   color: var(--input-border);
   font-family: "League Spartan", sans-serif;
-  line-height: 120%;
+  line-height: 300%;
 
   /* Flex for stacking */
   display: flex;

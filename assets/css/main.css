@@ -33,6 +33,7 @@ body {
 }
 
 .notbody {
+  background-image: url("../img/snowflake.gif");
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 15px;
@@ -40,19 +41,13 @@ body {
   color: #fff;
   overflow-x: hidden;
   letter-spacing: 0.2px;
-  -webkit-transition: all 200ms linear;
-  transition: all 200ms linear;
+  /* -webkit-transition: all 200ms linear; */
+  /* transition: all 200ms linear; */
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   scroll-behavior: smooth;
-  background: #1f2029 url("../img/bg.svg") repeat fixed center;
-  /* background shorthand  ===
-    background-color: #1f2029;
-    background: url("../img/bg.svg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: repeat;
-*/
+
+  /* background: #1f2029 url("../img/bg.svg") repeat fixed center; */
 }
 
 .iframe {
