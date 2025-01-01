@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Tilt+Warp&display=swap");
 
 :root {
-  --primary-color: #386641; /* Deep Blue for primary elements */
-  --secondary-color: #6a994e; /* Soft White for secondary elements */
-  --accent-color: #a7c957; /* Vibrant Green for accents and buttons */
+  --primary-color: red; /* Deep Blue for primary elements */
+  --secondary-color: red; /* Soft White for secondary elements */
+  --accent-color: red; /* Vibrant Green for accents and buttons */
   --menu-background: #f2e8cf; /* Muted Navy for the menu background */
   --body-background: #bc4749; /* Very Light Gray for the body background */
-  --segment-background: #386641; /* Off-White for card/segment backgrounds */
-  --input-background: #386641; /* Soft Gray for input fields */
-  --input-border: #4c9a3d; /* Light Blue Gray for input borders */
-  --dropdown-background: #386641; /* Sky Blue for dropdowns */
+  --segment-background: red; /* Off-White for card/segment backgrounds */
+  --input-background: red; /* Soft Gray for input fields */
+  --input-border: red; /* Light Blue Gray for input borders */
+  --dropdown-background: red; /* Sky Blue for dropdowns */
 }
 
 body {
-  background-image: url("../img/snowflake.gif");
+  background-image: url("../img/bg.svg");
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 15px;
