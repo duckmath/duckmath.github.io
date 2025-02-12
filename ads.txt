@@ -1,8 +1,8 @@
 google.com, pub-8362959866002557, DIRECT, f08c47fec0942fa0
 
+wgplayer.com, WGA5436899497, DIRECT
 #WG ADX			
 google.com, pub-4529402052683454, RESELLER, f08c47fec0942fa0	
-
 
 # WGMedia.net
 Media.net, 8CUH9L1I2, Direct
