@@ -8,7 +8,7 @@ swfobject.embedSWF = function (url, cont, width, height) {
         width: width,
         height: height,
         style: "width: " + width + "px; height: " + height + "px",
-      },
+      }
     );
 
   player.load({ url: url });
@@ -273,3 +273,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const title = document.querySelector("title");
   title.textContent = TLD;
 });
+
+///
+// append google code to site if needed
+const googleCode = document.createElement("script");
+googleCode.src =
+  "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8362959866002557";
+googleCode.async = true;
+googleCode.crossOrigin = "anonymous";
+
+if (window.location.hostname.split(".")[0] !== "duckmath") {
+  console.log("appended");
+  document.head.appendChild(googleCode);
+}
+///
