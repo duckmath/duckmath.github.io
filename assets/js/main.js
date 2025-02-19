@@ -8,7 +8,7 @@ swfobject.embedSWF = function (url, cont, width, height) {
         width: width,
         height: height,
         style: "width: " + width + "px; height: " + height + "px",
-      }
+      },
     );
 
   player.load({ url: url });
