@@ -78,19 +78,21 @@
     <div class="title_text">
       Breaking The Bank
 
-      <div id="ruffle" class="gameloc"></div>
-      <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-      <script id="gabe">
-        swfobject.embedSWF(
-          "../../assets/flashfiles/breakingthebank.swf",
-          "ruffle",
-          800,
-          600,
-        );
-      </script>
-      <button id="button" class="button" onclick="ruffleFullscreen();">
-        Fullscreen
-      </button>
+       <iframe
+        class="gameloc"
+        id="gameFrame"
+        allowfullscreen=""
+        allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad;
+         keyboard-map *; xr-spatial-tracking; clipboard-write"
+        name="gameFrame"
+        scrolling="no"
+        sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock
+                allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin
+                allow-downloads"
+          src="https://maddox.page/basic-ruffle-player/?file=breakingthebank.swf" title="Game"
+      ></iframe>
+      <button class="button" onclick="openFullscreen();">Fullscreen</button>
+    </div>
     </div>
   </body>
 </html>
