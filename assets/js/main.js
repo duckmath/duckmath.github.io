@@ -281,9 +281,33 @@ googleCode.src =
   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8362959866002557";
 googleCode.async = true;
 googleCode.crossOrigin = "anonymous";
+googleCode.fetchPriority = "high";
 
-if (window.location.hostname.split(".")[0] !== "duckmath") {
+if (window.location.hostname.split(".")[0]) {
   console.log("appended");
   document.head.appendChild(googleCode);
+} else {
+  console.log("appended wee");
+  const link = document.createElement("link");
+  link.rel = "dns-prefetch";
+  link.href = "https://universal.wgplayer.com";
+  const script = document.createElement("script");
+
+  // Set the async attribute to true
+  script.async = true;
+
+  // Set the src attribute with the dynamic URL
+  script.src =
+    "https://universal.wgplayer.com/tag/?lh=" +
+    window.location.hostname +
+    "&wp=" +
+    window.location.pathname +
+    "&ws=" +
+    window.location.search;
+
+  // Set the fetchPriority attribute to 'high'
+  script.fetchPriority = "high";
+  document.head.appendChild(link);
+  document.head.appendChild(script);
 }
 ///
