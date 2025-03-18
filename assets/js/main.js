@@ -283,31 +283,26 @@ googleCode.async = true;
 googleCode.crossOrigin = "anonymous";
 googleCode.fetchPriority = "high";
 
-if (window.location.hostname.split(".")[0]) {
+if (window.location.hostname.split(".")[0] !== "duckmath") {
   console.log("appended");
   document.head.appendChild(googleCode);
 } else {
-  console.log("appended wee");
-  const link = document.createElement("link");
-  link.rel = "dns-prefetch";
-  link.href = "https://universal.wgplayer.com";
-  const script = document.createElement("script");
-
-  // Set the async attribute to true
-  script.async = true;
-
-  // Set the src attribute with the dynamic URL
-  script.src =
+  !(function (e, t) {
+    (a = e.createElement("script")),
+      (m = e.getElementsByTagName("script")[0]),
+      (a.async = 1),
+      (a.src = t),
+      (a.fetchPriority = "high"),
+      m.parentNode.insertBefore(a, m);
+  })(
+    document,
     "https://universal.wgplayer.com/tag/?lh=" +
-    window.location.hostname +
-    "&wp=" +
-    window.location.pathname +
-    "&ws=" +
-    window.location.search;
-
-  // Set the fetchPriority attribute to 'high'
-  script.fetchPriority = "high";
-  document.head.appendChild(link);
-  document.head.appendChild(script);
+      window.location.hostname +
+      "&wp=" +
+      window.location.pathname +
+      "&ws=" +
+      window.location.search
+  );
+  console.log("appended wee");
 }
 ///
