@@ -287,23 +287,25 @@ if (window.location.hostname.split(".")[0] !== "duckmath") {
   console.log("appended goog");
   document.head.appendChild(googleCode);
 } else {
-  // todo add link prefetch
-  // !(function (e, t) {
-  //   (a = e.createElement("script")),
-  //     (m = e.getElementsByTagName("script")[0]),
-  //     (a.async = 1),
-  //     (a.src = t),
-  //     (a.fetchPriority = "high"),
-  //     m.parentNode.insertBefore(a, m);
-  // })(
-  //   document,
-  //   "https://universal.wgplayer.com/tag/?lh=" +
-  //     window.location.hostname +
-  //     "&wp=" +
-  //     window.location.pathname +
-  //     "&ws=" +
-  //     window.location.search
-  // );
-  // console.log("appended wee");
+  //  <link rel="dns-prefetch" href="https://universal.wgplayer.com" />
+  // this should be in no matter what ^
+
+  !(function (e, t) {
+    (a = e.createElement("script")),
+      (m = e.getElementsByTagName("script")[0]),
+      (a.async = 1),
+      (a.src = t),
+      (a.fetchPriority = "high"),
+      m.parentNode.insertBefore(a, m);
+  })(
+    document,
+    "https://universal.wgplayer.com/tag/?lh=" +
+      window.location.hostname +
+      "&wp=" +
+      window.location.pathname +
+      "&ws=" +
+      window.location.search
+  );
+  console.log("appended wee");
 }
 ///
