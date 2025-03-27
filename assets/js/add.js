@@ -5,9 +5,8 @@ googleCode.src =
   "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8362959866002557";
 googleCode.async = true;
 googleCode.crossOrigin = "anonymous";
-googleCode.fetchPriority = "high";
 
-if (window.location.hostname.split(".")[0] !== "duckmath") {
+if (window.location.hostname.split(".")[0]) {
   console.log("appended goog");
   document.head.appendChild(googleCode);
 } else {
