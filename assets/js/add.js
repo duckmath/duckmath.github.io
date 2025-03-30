@@ -6,7 +6,7 @@ googleCode.src =
 googleCode.async = true;
 googleCode.crossOrigin = "anonymous";
 
-if (window.location.hostname.split(".")[0] !== "duckmath") {
+if (window.location.hostname.split(".")[0] != "duckmath") {
   console.log("appended goog");
   document.head.appendChild(googleCode);
 } else {
