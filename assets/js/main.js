@@ -263,6 +263,7 @@ function home() {
   window.location.href = "/";
 }
 
+// set banner of site
 document.addEventListener("DOMContentLoaded", function () {
   const headerSpan = document.getElementById("duckmath-header");
   let TLD = window.location.hostname.split(".")[0];

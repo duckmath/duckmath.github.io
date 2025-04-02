@@ -130,5 +130,12 @@ synacor.com, 82171, RESELLER, e108f11b2cdf7d5b
 yahoo.com, 59244, RESELLER
 loopme.com, 9718, RESELLER, 6c8d5f95897a5a3b
 
+#WGPlayground ADX
+google.com, pub-9427048641572074, RESELLER, f08c47fec0942fa0
+google.com, pub-7248593568933467, RESELLER, f08c47fec0942fa0
+google.com, pub-4529402052683454, RESELLER, f08c47fec0942fa0
+wgplayer.com, WGP5265933821, DIRECT
+                                    
+
 
 
