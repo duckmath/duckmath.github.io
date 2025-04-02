@@ -16,6 +16,7 @@ function getTagFromSiteName() {
     case "quizquack":
       return quizquack_tag;
     default:
+      console.log("Unknown site name:", sitename);
       return null;
   }
 }
