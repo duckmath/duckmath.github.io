@@ -39,20 +39,33 @@
     <div class="title_text">
       Smash Karts
 
-      <iframe
-        class="gameloc"
-        id="gameFrame"
-        allowfullscreen=""
-        allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad;
-         keyboard-map *; xr-spatial-tracking; clipboard-write"
-        name="gameFrame"
-        scrolling="no"
-        sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock
-                allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin
-                allow-downloads"
-        src="https://mj89sp3sau2k7lj1eg3k40hkeppguj6j-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=http://www.gstatic.com/sites-gadgets/iframe/iframe.xml&amp;container=enterprise&amp;view=default&amp;lang=ru&amp;country=ALL&amp;sanitize=0&amp;v=c8088f253fe9d6d6&amp;libs=core&amp;mid=3921&amp;parent=https://google.com/static_files#up_scroll=no&amp;up_iframeURL=https://schoolkarts.com/"
-        title="Game"
-      ></iframe>
+      <div
+        class="gabe-container"
+        style="display: flex; justify-content: space-between; width: 100%"
+      >
+        <div
+          class="add-left"
+          style="width: 160px; min-height: 600px; margin-right: 10px"
+        ></div>
+        <iframe
+          class="gameloc"
+          id="gameFrame"
+          allowfullscreen=""
+          allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad;
+           keyboard-map *; xr-spatial-tracking; clipboard-write"
+          name="gameFrame"
+          scrolling="no"
+          sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock
+          allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin
+          allow-downloads"
+          src="https://mj89sp3sau2k7lj1eg3k40hkeppguj6j-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=http://www.gstatic.com/sites-gadgets/iframe/iframe.xml&amp;container=enterprise&amp;view=default&amp;lang=ru&amp;country=ALL&amp;sanitize=0&amp;v=c8088f253fe9d6d6&amp;libs=core&amp;mid=3921&amp;parent=https://google.com/static_files#up_scroll=no&amp;up_iframeURL=https://schoolkarts.com/"
+          title="Game"
+        ></iframe>
+        <div
+          class="add-right"
+          style="width: 160px; min-height: 600px; margin-left: 10px"
+        ></div>
+      </div>
       <button class="button" onclick="openFullscreen();">Fullscreen</button>
     </div>
   </body>

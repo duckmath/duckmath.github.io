@@ -39,20 +39,33 @@
     <div class="title_text">
       1v1.lol
 
-      <iframe
-        class="gameloc"
-        id="gameFrame"
-        allowfullscreen=""
-        allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad;
-         keyboard-map *; xr-spatial-tracking; clipboard-write"
-        name="gameFrame"
-        scrolling="no"
-        sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock
-                allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin
-                allow-downloads"
-        src="https://education76.github.io/g77/1v1-lol-3/"
-        title="Game"
-      ></iframe>
+      <div
+        class="gabe-container"
+        style="display: flex; justify-content: space-between; width: 100%"
+      >
+        <div
+          class="add-left"
+          style="width: 160px; min-height: 600px; margin-right: 10px"
+        ></div>
+        <iframe
+          class="gameloc"
+          id="gameFrame"
+          allowfullscreen=""
+          allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad;
+           keyboard-map *; xr-spatial-tracking; clipboard-write"
+          name="gameFrame"
+          scrolling="no"
+          sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock
+          allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin
+          allow-downloads"
+          src="https://education76.github.io/g77/1v1-lol-3/"
+          title="Game"
+        ></iframe>
+        <div
+          class="add-right"
+          style="width: 160px; min-height: 600px; margin-left: 10px"
+        ></div>
+      </div>
       <button class="button" onclick="openFullscreen();">Fullscreen</button>
     </div>
     <!-- https://images-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/ko1ov/get@0f07946b63206a3989fb430901740f041cd34922/main.xml-->
