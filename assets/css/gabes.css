@@ -5,8 +5,8 @@
   overflow: hidden;
   justify-content: center;
   grid-template-columns: 1fr 1fr;
-  width: 900px;
-  height: 600px;
+  width: 600px;
+  height: 500px;
   line-height: 50%;
   margin: auto auto auto;
   border: 0;
