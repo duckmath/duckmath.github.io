@@ -36,7 +36,8 @@ gtag("js", new Date());
 
 gtag("config", getTagFromSiteName());
 
-if (sitename != "duckmath") {
+if (sitename != "tmp") {
+  //
   ///
   // append google code to site if needed
   const googleCode = document.createElement("script");
