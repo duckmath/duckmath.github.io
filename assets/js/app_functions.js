@@ -88,7 +88,9 @@ async function hydrateAppPage() {
 
   // Populate the page with app data
 
-  document.getElementById("main_div").prepend(appData.title);
+  document
+    .getElementById("main_div")
+    .prepend(appData.title.replaceAll("-", " "));
   document.getElementById("gameFrame").src = appData.link;
 }
 
