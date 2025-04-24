@@ -97,7 +97,13 @@ document.addEventListener("DOMContentLoaded", function () {
   if (appListElement) {
     list_all_apps(appListElement);
   }
-  if (window.location.pathname.includes("g4m3s")) {
+  if (
+    window.location.pathname.includes("g4m3s") &&
+    window.location.search.includes("title")
+  ) {
     hydrateAppPage();
+  } else if (window.location.pathname.includes("g4m3s")) {
+    alert("No app title provided in the URL.");
+    window.location.href = "/404.html";
   }
 });
