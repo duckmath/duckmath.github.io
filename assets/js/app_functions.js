@@ -34,15 +34,57 @@ function create_in_article_ad() {
   adDiv.appendChild(script);
   return adDiv;
 }
+const APP_VER = "apps5";
+const REQUERY_TIME = 2; // in days
+async function get_all_apps() {
+  const date_last_queryed = JSON.parse(localStorage.getItem("dlq"));
+  const local_apps = JSON.parse(localStorage.getItem(APP_VER));
+  console.log((new Date().getTime() - date_last_queryed) / 1000 / 60 / 60 / 24);
+
+  const onLocalHost = false; // window.location.includes("localhost");
+  if (
+    !onLocalHost &&
+    Array.isArray(local_apps) &&
+    date_last_queryed &&
+    (new Date().getTime() - date_last_queryed) / 1000 / 60 / 60 / 24 <=
+      REQUERY_TIME &&
+    local_apps?.[0] !== null
+  ) {
+    console.log("Using local apps data.");
+    return local_apps;
+  } else {
+    console.log("Fetching apps data from Supabase.");
+    const { data, error } = await supabaseClient.rpc(
+      "get_apps_ordered_by_title"
+    );
+    if (error) {
+      console.error("Error fetching apps:", error);
+      window.alert(
+        "Error fetching apps. Please try again later. If the problem persists, please contact support."
+      );
+      return null;
+    }
+    // Store the data in local storage with a timestamp
+    localStorage.setItem(APP_VER, JSON.stringify(data));
+    localStorage.setItem("dlq", JSON.stringify(new Date().getTime()));
+    return data;
+  }
+}
+
+function remove_all_children(element) {
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
+  }
+}
 
 /**
  *
  * @param {Element} element
  */
 async function list_all_apps(element) {
-  const { data, error } = await supabaseClient.rpc("get_apps_ordered_by_title");
-  const query = data;
-
+  const query = await get_all_apps();
+  remove_all_children(element);
+  query.sort((a, b) => (a.is_featured === true ? -1 : 0));
   for (let i = 0; i < query.length; i++) {
     /**
      * <a id="Retro Bowl" class="Sports 2D" href="g4m3s/retro_bowl.html"
@@ -92,18 +134,24 @@ async function list_all_apps(element) {
 }
 
 async function get_app_by_title(title) {
-  const { data, error } = await supabaseClient
-    .from("apps")
-    .select("*")
-    .eq("title", title)
-    .single();
+  const apps = await get_all_apps();
 
-  if (error) {
+  if (!apps) {
     console.error("Error fetching app:", error);
+    window.alert(
+      "Error fetching exact app. Please try again later. If the problem persists, please contact support."
+    );
+    return null;
+  }
+  const app = apps.find((app) => app.title === title);
+  if (!app) {
+    console.error("App not found:", title);
+    window.alert("App not found. Trying going back to home page.");
+    window.location.href = "/g404.html";
     return null;
   }
 
-  return data;
+  return app;
 }
 
 async function hydrateAppPage() {
@@ -118,7 +166,9 @@ async function hydrateAppPage() {
   const appData = await get_app_by_title(appTitle);
 
   if (!appData) {
-    console.error("App not found:", appTitle);
+    console.error("Class not found:", appTitle);
+    window.alert("Class not found. Trying going back to home page.");
+    window.location.href = "/g404.html";
     return;
   }
 
@@ -150,6 +200,6 @@ document.addEventListener("DOMContentLoaded", function () {
     hydrateAppPage();
   } else if (window.location.pathname.includes("g4m3s")) {
     alert("No app title provided in the URL.");
-    window.location.href = "/404.html";
+    window.location.href = "/g404.html";
   }
 });
