@@ -3,6 +3,38 @@ const supabaseKey =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhxbGdwcGd1eGhxZWFvbmp6aW52Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzI2MjYwNDQsImV4cCI6MjA0ODIwMjA0NH0.4LuWk4qxp0NRZ5_erEIJq5BHq5qZiSE4zTUFS1ioZw8";
 const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
+function create_in_article_ad() {
+  /**
+   * <div class="ad">
+          <ins
+            class="adsbygoogle"
+            style="display: block"
+            data-ad-client="ca-pub-8362959866002557"
+            data-ad-slot="8239998772"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+   */
+  const adDiv = document.createElement("div");
+  adDiv.className = "ad";
+  const ins = document.createElement("ins");
+  ins.className = "adsbygoogle";
+  ins.style.display = "block";
+  ins.setAttribute("data-ad-client", "ca-pub-8362959866002557");
+  ins.setAttribute("data-ad-slot", "8239998772");
+  ins.setAttribute("data-ad-format", "auto");
+  ins.setAttribute("data-full-width-responsive", "true");
+  const script = document.createElement("script");
+  script.innerHTML = "(adsbygoogle = window.adsbygoogle || []).push({});";
+  adDiv.appendChild(ins);
+  adDiv.appendChild(script);
+  return adDiv;
+}
+
 /**
  *
  * @param {Element} element
@@ -52,6 +84,10 @@ async function list_all_apps(element) {
     a.appendChild(figcaption);
 
     element.appendChild(a);
+    if (i % 40 === 0 && i !== 0) {
+      const adDiv = create_in_article_ad();
+      element.appendChild(adDiv);
+    }
   }
 }
 
