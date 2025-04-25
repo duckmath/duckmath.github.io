@@ -171,6 +171,9 @@ async function hydrateAppPage() {
     window.location.href = "/g404.html";
     return;
   }
+  // window.document.title =
+  //   appTitle.replaceAll("-", " ") +
+  //   ` - ${window.location.hostname.split(".")[0]}`;
 
   // Populate the page with app data
   // Create span for description with inline CSS
