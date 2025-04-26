@@ -119,7 +119,12 @@ function searchbar1() {
       ads[i].style.display = "none";
     }
     for (let i = 0; i < elem.length; i++) {
-      if (elem[i].id.toLowerCase().includes(searchvalue.value.toLowerCase())) {
+      if (
+        elem[i].id
+          .toLowerCase()
+          .replaceAll("-", " ")
+          .includes(searchvalue.value.toLowerCase())
+      ) {
         elem[i].style.visibility = "visible";
         elem[i].style.display = "inline-block";
       } else {

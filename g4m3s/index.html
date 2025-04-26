@@ -4,7 +4,6 @@
     <link rel="dns-prefetch" href="https://universal.wgplayer.com" />
     <script src="/assets/js/add.js"></script>
 
-    <meta http-equiv="refresh" content="0;url=/g4m3s.html" />
     <meta charset="UTF-8" />
     <meta
       property="og:image"
@@ -15,26 +14,99 @@
     <meta name="title" content="DuckMath" />
     <meta
       name="description"
-      content="Play your favorite online g4m3s free now!"
+      content="learn and have fun with this interactive experience"
     />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="English" />
     <title>Duck</title>
-    <link rel="stylesheet" href="/assets/css/text_styles.css" />
-    <link rel="stylesheet" href="/assets/css/topnav.css" />
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <link rel="stylesheet" href="/assets/css/gabes.css" />
-    <script src="/assets/js/main.js"></script>
-    <link rel="icon" type="image/x-icon" href="/assets/img/duck.webp" />
-    <link rel="mask-icon" type="" href="/assets/img/duck.webp" color="#111" />
+    <link rel="stylesheet" href="../assets/css/text_styles.css" />
+    <link rel="stylesheet" href="../assets/css/topnav.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/gabes.css" />
+    <script src="../assets/js/main.js"></script>
+    <link rel="icon" type="image/x-icon" href="../assets/img/duck.webp" />
+    <link rel="mask-icon" type="" href="../assets/img/duck.webp" color="#111" />
     <noscript
       >Your browser doesn't have JavaScript enabled. Please enable JavaScript or
       switch to a browser that supports it.</noscript
     >
-    <script src="/assets/js/index.js" type="text/javascript" defer></script>
+    <script src="../assets/js/index.js" type="text/javascript" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../assets/js/app_functions.js" type="text/javascript"></script>
+
     <!-- Removed Firebase module 2 -->
   </head>
   <body>
     <!-- where auto would go -->
+
+    <div class="title_text" id="main_div">
+      <!-- title  -->
+
+      <div
+        class="gabe-container"
+        style="display: flex; justify-content: space-between; width: 100%"
+      >
+        <div style="width: 180px; height: 600px">
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8362959866002557"
+            crossorigin="anonymous"
+          ></script>
+          <!-- DuckyDisplayAd -->
+          <ins
+            class="adsbygoogle"
+            style="display: block"
+            data-ad-client="ca-pub-8362959866002557"
+            data-ad-slot="8999498983"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+        <iframe
+          class="gameloc"
+          id="gameFrame"
+          allowfullscreen=""
+          allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad;
+           keyboard-map *; xr-spatial-tracking; clipboard-write"
+          name="gameFrame"
+          scrolling="no"
+          sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock
+          allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin
+          allow-downloads"
+          src="/loading.html"
+          title="Game"
+        ></iframe>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8362959866002557"
+          crossorigin="anonymous"
+        ></script>
+        <!-- DuckyDisplayAd -->
+        <div style="width: 180px; height: 600px">
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8362959866002557"
+            crossorigin="anonymous"
+          ></script>
+          <!-- DuckyDisplayAd -->
+          <ins
+            class="adsbygoogle"
+            style="display: block"
+            data-ad-client="ca-pub-8362959866002557"
+            data-ad-slot="8999498983"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
+          ></ins>
+          <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      </div>
+      <button class="button" onclick="openFullscreen();">Fullscreen</button>
+    </div>
   </body>
 </html>
