@@ -5,6 +5,7 @@ const duckmath_tag = "G-63K8BHHS38";
 const nullxiety_tag = "G-5GCMDH3FDB";
 const quizquack_tag = "G-55QC47N5PZ";
 const ducksum_tag = "G-P9P8QKJZGL";
+const duckmath_github_io = ""; // cant do this one cuz of how i split the sitename. i coulddd but idc
 
 console.log("Sitename:", sitename);
 
@@ -18,6 +19,7 @@ function getTagFromSiteName() {
       return quizquack_tag;
     case "ducksum":
       return ducksum_tag;
+
     default:
       console.log("Unknown site name:", sitename);
       return null;
