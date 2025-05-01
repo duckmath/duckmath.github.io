@@ -39,7 +39,7 @@ gtag("js", new Date());
 gtag("config", getTagFromSiteName());
 
 if (sitename != "duckmath" || Math.random() > 0.5) {
-  //
+  ////
   ///
   // append google code to site if needed
   const googleCode = document.createElement("script");
