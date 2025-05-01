@@ -5,6 +5,7 @@ const duckmath_tag = "G-63K8BHHS38";
 const nullxiety_tag = "G-5GCMDH3FDB";
 const quizquack_tag = "G-55QC47N5PZ";
 const ducksum_tag = "G-P9P8QKJZGL";
+const duckmath_github_io = ""; // cant do this one cuz of how i split the sitename. i coulddd but idc
 
 console.log("Sitename:", sitename);
 
@@ -18,6 +19,7 @@ function getTagFromSiteName() {
       return quizquack_tag;
     case "ducksum":
       return ducksum_tag;
+
     default:
       console.log("Unknown site name:", sitename);
       return null;
@@ -36,8 +38,8 @@ gtag("js", new Date());
 
 gtag("config", getTagFromSiteName());
 
-if (sitename != "tmp") {
-  //
+if (sitename != "duckmath" || Math.random() > 0.5) {
+  ////
   ///
   // append google code to site if needed
   const googleCode = document.createElement("script");
@@ -47,25 +49,31 @@ if (sitename != "tmp") {
   googleCode.crossOrigin = "anonymous";
   document.head.appendChild(googleCode);
   console.log("appended goog");
+  gtag("config", getTagFromSiteName(), {
+    m_ad_variant: "Adsense",
+  });
 } else {
   //  <link rel="dns-prefetch" href="https://universal.wgplayer.com" />
   // this should be in no matter what ^
-  // !(function (e, t) {
-  //   (a = e.createElement("script")),
-  //     (m = e.getElementsByTagName("script")[0]),
-  //     (a.async = 1),
-  //     (a.src = t),
-  //     (a.fetchPriority = "high"),
-  //     m.parentNode.insertBefore(a, m);
-  // })(
-  //   document,
-  //   "https://universal.wgplayer.com/tag/?lh=" +
-  //     window.location.hostname +
-  //     "&wp=" +
-  //     window.location.pathname +
-  //     "&ws=" +
-  //     window.location.search
-  // );
-  // console.log("appended wee");
+  !(function (e, t) {
+    (a = e.createElement("script")),
+      (m = e.getElementsByTagName("script")[0]),
+      (a.async = 1),
+      (a.src = t),
+      (a.fetchPriority = "high"),
+      m.parentNode.insertBefore(a, m);
+  })(
+    document,
+    "https://universal.wgplayer.com/tag/?lh=" +
+      window.location.hostname +
+      "&wp=" +
+      window.location.pathname +
+      "&ws=" +
+      window.location.search
+  );
+  console.log("appended wee");
+  gtag("config", getTagFromSiteName(), {
+    m_ad_variant: "Weegoo",
+  });
 }
 ///
