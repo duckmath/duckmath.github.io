@@ -26,6 +26,8 @@ function getTagFromSiteName() {
   }
 }
 
+const tagId = getTagFromSiteName();
+
 googleAna.src = `https://www.googletagmanager.com/gtag/js?id=${getTagFromSiteName()}`;
 
 document.head.appendChild(googleAna);
@@ -35,6 +37,7 @@ function gtag() {
   dataLayer.push(arguments);
 }
 gtag("js", new Date());
+let adVariant = "None";
 
 if (sitename != "duckmath" || Math.random() > 0.5) {
   ////
@@ -47,9 +50,7 @@ if (sitename != "duckmath" || Math.random() > 0.5) {
   googleCode.crossOrigin = "anonymous";
   document.head.appendChild(googleCode);
   console.log("appended goog");
-  gtag("config", getTagFromSiteName(), {
-    m_ad_variant: "Adsense",
-  });
+  adVariant = "Adsense";
 } else {
   //  <link rel="dns-prefetch" href="https://universal.wgplayer.com" />
   // this should be in no matter what ^
@@ -70,8 +71,10 @@ if (sitename != "duckmath" || Math.random() > 0.5) {
       window.location.search
   );
   console.log("appended wee");
-  gtag("config", getTagFromSiteName(), {
-    m_ad_variant: "Weegoo",
-  });
+  adVariant = "Weegoo";
 }
+
+gtag("config", tagId, {
+  m_ad_variant: adVariant,
+});
 ///
