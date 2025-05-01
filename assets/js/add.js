@@ -36,8 +36,6 @@ function gtag() {
 }
 gtag("js", new Date());
 
-gtag("config", getTagFromSiteName());
-
 if (sitename != "duckmath" || Math.random() > 0.5) {
   ////
   ///
