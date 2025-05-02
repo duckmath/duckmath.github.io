@@ -39,7 +39,8 @@ if (tagId) {
   gtag("js", new Date());
   let adVariant = "None";
 
-  if (sitename != "duckmath" || Math.random() > 0.5) {
+  if (sitename != "duckmath" || true) {
+    // always run for now
     ////
     ///
     // append google code to site if needed
