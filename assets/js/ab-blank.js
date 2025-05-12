@@ -11,4 +11,5 @@ function abBlank(url, title) {
   frame.src = url;
   blank.body.appendChild(frame);
 }
-abBlank("https://duckmath.org", "");
+const url = window.location.origin;
+abBlank(url, "");
