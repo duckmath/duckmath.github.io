@@ -135,6 +135,18 @@ google.com, pub-9427048641572074, RESELLER, f08c47fec0942fa0
 google.com, pub-7248593568933467, RESELLER, f08c47fec0942fa0
 google.com, pub-4529402052683454, RESELLER, f08c47fec0942fa0
 wgplayer.com, WGP5265933821, DIRECT
+
+
+ogury.com, 41a43029-dfc6-44fc-9b29-ceb40b316c96, RESELLER
+appnexus.com, 11470, RESELLER
+pubmatic.com, 163238, RESELLER, 5d62403b186f2ace
+smartadserver.com, 4537, RESELLER, 060d053dcf45cbf3
+rubiconproject.com, 25198, RESELLER, 0bfd66d529a55807
+video.unrulymedia.com, 533898005, RESELLER
+dauup.com, 34141, RESELLER
+thebrave.io, 1234746, RESELLER, c25b2154543746ac
+toponad.com, 16719c20554a4f, RESELLER, 1d49fe424a1a456d
+sharethrough.com, OAW69Fon, RESELLER, d53b998a7bd4ecd2
                                     
 
 
