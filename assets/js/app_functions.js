@@ -84,7 +84,6 @@ function remove_all_children(element) {
 async function list_all_apps(element) {
   const query = await get_all_apps();
   remove_all_children(element);
-  query.sort((a, b) => (a.is_featured === true ? -1 : 0));
   for (let i = 0; i < query.length; i++) {
     /**
      * <a id="Retro Bowl" class="Sports 2D" href="games/retro_bowl.html"
