@@ -20,7 +20,7 @@ function iframe_focus(iframe) {
 }
 
 function instaFocusIFrame(iframe) {
-  if (window.location.href.includes("g4m3s/")) {
+  if (window.location.href.includes("games/")) {
     if (iframe !== null && iframe !== undefined) {
       iframe_focus(iframe);
       // Check if iframe is focused

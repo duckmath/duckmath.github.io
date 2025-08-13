@@ -1,35 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
 
 .main_title_text {
-  position: absolute;
-  top: 20%;
-  left: 50%;
+  position: relative;
   text-align: center;
   font-size: 100px;
   font-weight: bold;
   color: var(--input-border);
   font-family: "League Spartan", sans-serif;
-  transform: (-50%);
   line-height: 120%;
+  margin: 6rem auto 0;
+  width: 100%;
 }
 
 .title_text {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
   text-align: center;
   font-size: 80px;
   font-weight: bold;
   color: var(--input-border);
   font-family: "League Spartan", sans-serif;
   line-height: 300%;
+  margin: 6rem auto 0;
+  width: 100%;
 
   /* Flex for stacking */
   display: flex;
   flex-direction: column;
-  align-items: center; /* This will center-align your iframe and button horizontally */
-  justify-content: center; /* Optional: This will center-align items vertically */
+  align-items: center; /* center horizontally */
 }
 
 .title_text_main {
@@ -58,16 +55,15 @@
 }
 
 .recommended {
-  position: absolute;
-  top: 380%;
-  left: 50%;
+  position: relative;
   text-align: center;
   font-size: 80px;
   font-weight: bold;
   color: white;
   font-family: "Arial", sans-serif;
-  transform: translateX(-50%);
   line-height: 120%;
+  margin: 4rem auto 0;
+  width: 100%;
 }
 
 .middle_text_title {
@@ -97,19 +93,18 @@
 }
 
 .aboutandchangelog_title {
-  position: absolute;
-  top: 10%;
-  left: 50%;
+  position: relative;
   text-align: center;
   font-size: 80px;
   font-weight: bold;
   color: #ffffff;
   font-family: "League Spartan", sans-serif;
-  transform: translateX(-50%);
   line-height: 120%;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.2);
   padding: 20px;
+  margin: 6rem auto 2rem;
+  width: fit-content;
 }
 
 .about_text {

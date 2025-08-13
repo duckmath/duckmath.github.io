@@ -87,7 +87,7 @@ async function list_all_apps(element) {
   query.sort((a, b) => (a.is_featured === true ? -1 : 0));
   for (let i = 0; i < query.length; i++) {
     /**
-     * <a id="Retro Bowl" class="Sports 2D" href="g4m3s/retro_bowl.html"
+     * <a id="Retro Bowl" class="Sports 2D" href="games/retro_bowl.html"
           ><img
             onmouseover="viewFig(this)"
             onmouseout="hideFig(this)"
@@ -109,7 +109,7 @@ async function list_all_apps(element) {
     const a = document.createElement("a");
     a.id = appTitle;
     a.className = appCategory;
-    a.href = `/g4m3s/?title=${appTitle}`;
+    a.href = `/games/?title=${appTitle}`;
     const img = document.createElement("img");
     img.onmouseover = function () {
       viewFig(this);
@@ -171,9 +171,9 @@ async function hydrateAppPage() {
     window.location.href = "/g404.html";
     return;
   }
-  // window.document.title =
-  //   appTitle.replaceAll("-", " ") +
-  //   ` - ${window.location.hostname.split(".")[0]}`;
+  window.document.title =
+    appTitle.replaceAll("-", " ") +
+    ` - ${window.location.hostname.split(".")[0]}`;
 
   // Populate the page with app data
   // Create span for description with inline CSS
@@ -189,6 +189,54 @@ async function hydrateAppPage() {
     .getElementById("main_div")
     .prepend(appData.title.replaceAll("-", " "));
   document.getElementById("gameFrame").src = appData.link;
+
+  // Populate minimal related games (3 items) after fullscreen button
+  try {
+    const allApps = await get_all_apps();
+    const relatedWrap = document.getElementById("related-games");
+    if (relatedWrap && Array.isArray(allApps)) {
+      remove_all_children(relatedWrap);
+      const currentCats = new Set(
+        Array.isArray(appData.categories)
+          ? appData.categories
+          : typeof appData.categories === "string"
+          ? appData.categories.split(" ")
+          : []
+      );
+      const scored = allApps
+        .filter((a) => a.title !== appData.title)
+        .map((a) => {
+          const aCats = Array.isArray(a.categories)
+            ? a.categories
+            : typeof a.categories === "string"
+            ? a.categories.split(" ")
+            : [];
+          const overlap = aCats.some((c) => currentCats.has(c));
+          return { app: a, score: overlap ? 1 : 0 };
+        })
+        .filter((x) => x.score > 0)
+        .slice(0, 3);
+      const finalList =
+        scored.length > 0 ? scored.map((x) => x.app) : allApps.slice(0, 3);
+
+      for (const rel of finalList) {
+        const a = document.createElement("a");
+        a.href = `/games/?title=${rel.title}`;
+        const img = document.createElement("img");
+        img.src = rel.icon;
+        img.alt = rel.title;
+        img.loading = "lazy";
+        img.style.width = "120px";
+        img.style.height = "120px";
+        img.style.objectFit = "cover";
+        img.style.borderRadius = "10px";
+        a.appendChild(img);
+        relatedWrap.appendChild(a);
+      }
+    }
+  } catch (e) {
+    console.warn("Unable to populate related games", e);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -197,11 +245,11 @@ document.addEventListener("DOMContentLoaded", function () {
     list_all_apps(appListElement);
   }
   if (
-    window.location.pathname.includes("g4m3s") &&
+    window.location.pathname.includes("games") &&
     window.location.search.includes("title")
   ) {
     hydrateAppPage();
-  } else if (window.location.pathname.includes("g4m3s")) {
+  } else if (window.location.pathname.includes("games")) {
     alert("No app title provided in the URL.");
     window.location.href = "/g404.html";
   }
