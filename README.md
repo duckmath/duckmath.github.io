@@ -161,6 +161,7 @@ If you want to support the project financially or with hosting, reach out throug
 ## Socials
 Contact us on any of these!
 
+- Github [github/duckmath](https://github.com/duckmath/duckmath.github.io)
 - Discord: [The Duck Pond](https://discord.gg/aMUVSARrEy)
 - Tiktok: [rockyf2p](https://www.tiktok.com/@rockyf2p)
 - Youtube [duckmath yt](https://www.youtube.com/@duckmathgames)
