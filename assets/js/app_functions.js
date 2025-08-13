@@ -177,14 +177,32 @@ async function hydrateAppPage() {
     ` - ${window.location.hostname.split(".")[0]}`;
 
   // Populate the page with app data
-  // Create span for description with inline CSS
-  const descSpan = document.createElement("span");
-  descSpan.textContent = appData.desc;
-  descSpan.style.fontSize = "0.85rem";
-  descSpan.style.color = "rgb(0, 240, 255)";
-  descSpan.style.display = "block";
-  descSpan.style.lineHeight = "1";
-  document.getElementById("main_div").prepend(descSpan);
+  // Render markdown description safely under the game
+  try {
+    const descTarget = document.getElementById("game-description");
+    if (descTarget && appData.desc) {
+      const rawHtml =
+        typeof window !== "undefined" && window.marked && window.marked.parse
+          ? window.marked.parse(appData.desc)
+          : appData.desc;
+      const safeHtml =
+        typeof window !== "undefined" &&
+        window.DOMPurify &&
+        window.DOMPurify.sanitize
+          ? window.DOMPurify.sanitize(rawHtml)
+          : rawHtml;
+      descTarget.innerHTML = safeHtml;
+    }
+  } catch (e) {
+    console.warn(
+      "Failed to render markdown description; falling back to text.",
+      e
+    );
+    const descTarget = document.getElementById("game-description");
+    if (descTarget && appData.desc) {
+      descTarget.textContent = appData.desc;
+    }
+  }
 
   document
     .getElementById("main_div")

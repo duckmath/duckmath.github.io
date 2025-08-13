@@ -24,12 +24,84 @@
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="stylesheet" href="../assets/css/gabes.css" />
     <script src="../assets/js/main.js"></script>
+    <style>
+      /* Scoped styling for game description */
+      #game-description-box {
+        margin-top: 16px;
+        padding: 16px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) inset;
+        color: #ffffff;
+        text-align: left;
+        font-size: 0.8rem;
+      }
+      #game-description-box * {
+        line-height: 1.6;
+      }
+      #game-description-box h1,
+      #game-description-box h2,
+      #game-description-box h3,
+      #game-description-box h4,
+      #game-description-box h5,
+      #game-description-box h6 {
+        margin: 0 0 8px 0;
+        line-height: 1.4;
+      }
+      #game-description-box h1 {
+        font-size: 1.25rem;
+      }
+      #game-description-box h2 {
+        color: #5ee7ff;
+        font-size: 2.3rem;
+      }
+      #game-description-box h3,
+      #game-description-box h4,
+      #game-description-box h5,
+      #game-description-box h6 {
+        font-size: 0.95rem;
+      }
+      #game-description-box p {
+        margin: 0 0 10px 0;
+      }
+      #game-description-box ul,
+      #game-description-box ol {
+        margin: 0 0 10px 18px;
+        padding: 0 0 0 18px;
+      }
+      #game-description-box a {
+        color: #5ee7ff;
+        text-decoration: underline;
+      }
+      #game-description-box code {
+        background: rgba(255, 255, 255, 0.08);
+        padding: 2px 6px;
+        border-radius: 6px;
+        font-size: 0.8rem;
+      }
+      #game-description-box pre {
+        background: rgba(255, 255, 255, 0.06);
+        padding: 10px;
+        border-radius: 8px;
+        overflow: auto;
+        font-size: 0.8rem;
+      }
+    </style>
     <link rel="icon" type="image/x-icon" href="../assets/img/duck.webp" />
     <link rel="mask-icon" type="" href="../assets/img/duck.webp" color="#111" />
     <noscript
       >Your browser doesn't have JavaScript enabled. Please enable JavaScript or
       switch to a browser that supports it.</noscript
     >
+    <script
+      src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/dompurify@3.0.8/dist/purify.min.js"
+      defer
+    ></script>
     <script src="../assets/js/index.js" type="text/javascript" defer></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -107,6 +179,9 @@
         </div>
       </div>
       <button class="button" onclick="openFullscreen();">Fullscreen</button>
+      <div id="game-description-box">
+        <div id="game-description"></div>
+      </div>
       <div id="related-games-container" style="margin-top: 12px">
         <h2 style="margin: 8px 0">Related Games</h2>
         <div
