@@ -73,7 +73,7 @@ templatefooter.innerHTML = `
       <div style="display: flex; align-items: center; gap: 12px;">
         <img src="/assets/img/duck.webp" alt="DuckMath" width="40" height="40" style="border-radius: 6px;"/>
         <div>
-          <div style="font-weight: 700; font-size: 1.05rem;">DuckMath.org — Actually Unblocked Games</div>
+          <div style="font-weight: 700; font-size: 1.05rem;">DuckMath.org — Always Unblocked Games</div>
           <div style="opacity: 0.9; font-size: 0.95rem;">1,000,000+ active users since 2022</div>
         </div>
       </div>
@@ -89,6 +89,7 @@ templatefooter.innerHTML = `
           <a href="/about.html" style="text-decoration: none; color: inherit; opacity: 0.95;">About</a>
           <a href="/leaderboard.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Leaderboard</a>
           <a href="/games_list.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Games</a>
+          <a href="/blog/" style="text-decoration: none; color: inherit; opacity: 0.95;">Blog</a>
           <a href="/more/Proxies.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Proxies & Cloak Mode</a>
           <a href="/more/discord.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Discord (In‑Site)</a>
           <a href="/more/Game_help.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Help & Requests</a>
