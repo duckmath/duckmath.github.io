@@ -29,6 +29,14 @@
   align-items: center; /* center horizontally */
 }
 
+/* Ensure descriptions inside .title_text are readable size */
+.title_text p {
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: normal;
+  margin: 8px auto 12px;
+}
+
 .title_text_main {
   position: relative;
   top: 10%;

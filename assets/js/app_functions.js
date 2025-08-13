@@ -142,7 +142,9 @@ async function get_app_by_title(title) {
     );
     return null;
   }
-  const app = apps.find((app) => app.title === title);
+  const app = apps.find(
+    (app) => app.title.toLowerCase() === title.toLowerCase()
+  );
   if (!app) {
     console.error("App not found:", title);
     window.alert("App not found. Trying going back to home page.");
@@ -242,6 +244,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const appListElement = document.getElementById("icon_image");
   if (appListElement) {
     list_all_apps(appListElement);
+  }
+  if (window.location.pathname.includes("games_list")) {
+    return;
   }
   if (
     window.location.pathname.includes("games") &&

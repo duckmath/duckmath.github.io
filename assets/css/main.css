@@ -227,6 +227,15 @@ body {
 
 a {
   text-decoration: none;
+  color: #ff3b3b;
+}
+
+a:visited {
+  color: #d62828;
+}
+
+a:hover {
+  color: #ff6b6b;
 }
 
 /*^ Streak.html */

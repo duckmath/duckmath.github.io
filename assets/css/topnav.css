@@ -21,6 +21,15 @@
   transition: all 0.2s cubic-bezier(0.05, 0.75, 0.12, 0.97);
 }
 
+.topnav a:link,
+.topnav a:visited {
+  color: #fff;
+}
+
+.topnav a:hover {
+  color: #fff;
+}
+
 .topnav a:hover {
   background-color: rgba(255, 255, 255, 0.25);
   transform: scale(1.1);
@@ -74,6 +83,11 @@
   width: 140%;
   margin: 0;
   border-radius: 0;
+}
+
+.dropdown-content a:link,
+.dropdown-content a:visited {
+  color: #000;
 }
 
 .dropdown-content a.first {
@@ -177,6 +191,11 @@ ul a {
   color: #fff;
   text-decoration: none;
   padding: 4px;
+}
+
+ul a:link,
+ul a:visited {
+  color: #fff;
 }
 
 ul a:hover {
