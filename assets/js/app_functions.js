@@ -83,6 +83,9 @@ function remove_all_children(element) {
  */
 async function list_all_apps(element) {
   const query = await get_all_apps();
+  if (!Array.isArray(query)) {
+    return;
+  }
   remove_all_children(element);
   for (let i = 0; i < query.length; i++) {
     /**
@@ -135,11 +138,8 @@ async function list_all_apps(element) {
 async function get_app_by_title(title) {
   const apps = await get_all_apps();
 
-  if (!apps) {
-    console.error("Error fetching app:", error);
-    window.alert(
-      "Error fetching exact app. Please try again later. If the problem persists, please contact support."
-    );
+  if (!Array.isArray(apps)) {
+    console.error("Error fetching apps list");
     return null;
   }
   const app = apps.find(
@@ -147,12 +147,76 @@ async function get_app_by_title(title) {
   );
   if (!app) {
     console.error("App not found:", title);
-    window.alert("App not found. Trying going back to home page.");
-    window.location.href = "/g404.html";
     return null;
   }
 
   return app;
+}
+
+function renderGameNotFound(message) {
+  try {
+    const reason =
+      message ||
+      "We couldn't find that game. It may have been moved or removed.";
+    const pagePrefix = window.location.hostname.split(".")[0];
+    try {
+      window.document.title = `Game Not Found - ${pagePrefix}`;
+    } catch (_) {}
+
+    const titleEl = document.getElementById("game-title");
+    if (titleEl) {
+      titleEl.textContent = "Game not found";
+    }
+
+    const iframeWrap = document.querySelector(".game-iframe-container");
+    if (iframeWrap) {
+      iframeWrap.innerHTML =
+        '<div style="padding:24px; text-align:center; min-height:200px; display:flex; align-items:center; justify-content:center;">' +
+        `<div>` +
+        `<div style="font-size:1.25rem; font-weight:600; margin-bottom:8px;">Game not found</div>` +
+        `<div style="opacity:0.9; margin-bottom:12px;">${reason}</div>` +
+        `<a href="/" style="color:#ff6b6b; text-decoration:none;">\u2190 Back to games</a>` +
+        `</div>` +
+        `</div>`;
+    }
+
+    const descTarget = document.getElementById("game-description");
+    if (descTarget) {
+      descTarget.textContent = "";
+    }
+
+    const relatedWrap = document.getElementById("related-games");
+    if (relatedWrap) {
+      try {
+        get_all_apps()
+          .then((all) => {
+            if (!Array.isArray(all)) return;
+            remove_all_children(relatedWrap);
+            const picks = all.slice(0, 3);
+            for (const rel of picks) {
+              const a = document.createElement("a");
+              a.href = `/games/?title=${rel.title}`;
+              const img = document.createElement("img");
+              img.src = rel.icon;
+              img.alt = rel.title;
+              img.loading = "lazy";
+              img.style.width = "120px";
+              img.style.height = "120px";
+              img.style.objectFit = "cover";
+              img.style.borderRadius = "10px";
+              a.appendChild(img);
+              relatedWrap.appendChild(a);
+            }
+          })
+          .catch(() => {});
+      } catch (_) {}
+    }
+  } catch (e) {
+    // As a last resort, fall back to 404 page
+    try {
+      window.location.href = "/g404.html";
+    } catch (_) {}
+  }
 }
 
 async function hydrateAppPage() {
@@ -161,15 +225,20 @@ async function hydrateAppPage() {
 
   if (!appTitle) {
     console.error("No app title provided in the URL.");
+    renderGameNotFound("No game specified in the URL.");
     return;
   }
 
   const appData = await get_app_by_title(appTitle);
 
   if (!appData) {
-    console.error("Class not found:", appTitle);
-    window.alert("Class not found. Trying going back to home page.");
-    window.location.href = "/g404.html";
+    console.error("Game not found:", appTitle);
+    renderGameNotFound(
+      `We couldn't find "${appTitle.replaceAll(
+        "-",
+        " "
+      )}". It may have been moved or renamed.`
+    );
     return;
   }
   window.document.title =
@@ -200,7 +269,7 @@ async function hydrateAppPage() {
     );
     const descTarget = document.getElementById("game-description");
     if (descTarget && appData.desc) {
-      descTarget.textContent = appData.desc;
+      descTarget.innerText = appData.desc;
     }
   }
 
@@ -272,7 +341,6 @@ document.addEventListener("DOMContentLoaded", function () {
   ) {
     hydrateAppPage();
   } else if (window.location.pathname.includes("games")) {
-    alert("No app title provided in the URL.");
-    window.location.href = "/g404.html";
+    renderGameNotFound("No game specified in the URL.");
   }
 });
