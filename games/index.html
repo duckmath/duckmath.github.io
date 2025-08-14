@@ -33,7 +33,7 @@
 
       /* Main container */
       .main-container {
-        max-width: 1400px;
+        max-width: 1600px;
         margin: 0 auto;
         padding: 0 20px;
         display: grid;
@@ -44,7 +44,8 @@
           "left-ad game-card right-ad"
           "description description description"
           "related related related";
-        gap: 24px;
+        column-gap: 12px;
+        row-gap: 24px;
         align-items: start;
         grid-auto-flow: row dense;
       }
@@ -69,9 +70,13 @@
       /* Game card - main focus */
       .game-card {
         grid-area: game-card;
-        padding: 24px;
         text-align: center;
         min-width: 0; /* Allow shrinking */
+        overflow-x: auto; /* Ensure game never gets clipped; allow scroll */
+        width: max-content; /* shrink to match iframe container */
+        justify-self: center; /* center within grid */
+        min-width: 600px !important; /* do not shrink below this */
+        max-width: 800px !important; /* do not grow above this */
       }
 
       .game-title {
@@ -90,18 +95,19 @@
         z-index: 1000;
         position: relative;
         border-radius: 12px;
-        overflow: hidden;
+        overflow: hidden; /* rounded corners */
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
         margin-bottom: 20px;
-        min-height: 400px;
-        width: 100%;
-        max-width: 800px; /* Caps width on large screens */
-        aspect-ratio: 4 / 3; /* Preserves full game view without clipping */
+        min-width: 600px !important; /* do not shrink below this */
+        max-width: 800px !important; /* do not grow above this */
+        aspect-ratio: 4 / 3; /* maintain full view without cropping */
         margin-left: auto;
         margin-right: auto;
       }
 
       .game-iframe-container iframe {
+        position: absolute;
+        inset: 0;
         width: 100%;
         height: 100%;
         border: none;
@@ -116,28 +122,34 @@
         grid-area: left-ad;
         width: 180px !important; /* Force fixed width */
         height: 600px !important; /* Force fixed height */
-        justify-self: center;
+        justify-self: end;
       }
 
       .right-ad {
         grid-area: right-ad;
         width: 180px !important; /* Force fixed width */
         height: 600px !important; /* Force fixed height */
-        justify-self: center;
+        justify-self: start;
       }
 
       /* Top horizontal banner - FIXED SIZE */
       .top-ad {
         grid-area: top-banner;
-        width: 728px !important; /* Force fixed width */
+        width: 600px !important; /* Force fixed width */
         height: 90px !important; /* Force fixed height */
         justify-self: center;
       }
 
       .top-ad .ad-card {
-        padding: 4px;
-        width: 728px !important;
+        padding: 0; /* avoid inflating the ad box */
+        width: 600px !important;
         height: 90px !important;
+      }
+      .top-ad .adsbygoogle {
+        display: block !important;
+        width: 600px !important;
+        height: 90px !important;
+        margin: 0 auto !important;
       }
 
       .ad-card {
@@ -179,8 +191,9 @@
         height: 600px !important;
       }
 
-      .top-ad ins.adsbygoogle[data-ad-format="auto"] {
-        width: 728px !important;
+      .top-ad ins.adsbygoogle[data-ad-format="auto"],
+      .top-ad ins.adsbygoogle {
+        width: 600px !important;
         height: 90px !important;
       }
 
@@ -364,8 +377,7 @@
         }
 
         .game-iframe-container {
-          min-width: 0; /* Allow responsive shrink */
-          min-height: 0; /* Aspect-ratio controls height */
+          min-width: 800px; /* keep full game; allow horizontal scroll if needed */
         }
 
         .left-ad {
@@ -397,8 +409,7 @@
         }
 
         .game-iframe-container {
-          min-width: 0; /* Allow responsive shrink */
-          min-height: 0; /* Aspect-ratio controls height */
+          min-width: 800px; /* keep full game; allow horizontal scroll if needed */
         }
 
         .left-ad,
@@ -522,11 +533,9 @@
           ></script>
           <ins
             class="adsbygoogle"
-            style="display: inline-block; width: 728px; height: 90px"
+            style="display: inline-block; width: 600px; height: 90px"
             data-ad-client="ca-pub-8362959866002557"
             data-ad-slot="8999498983"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
           ></ins>
           <script>
             (adsbygoogle = window.adsbygoogle || []).push({});

@@ -14,7 +14,7 @@ templatetopnav.innerHTML = `
 </div>
 <a href="/about.html">📝ABOUT</a>
 <a href="/leaderboard.html">🏆LEADERBOARD</a>
-<a href="/games_list.html">🎮GAMES</a>
+<a href="/">🎮GAMES</a>
 <div class="centered-fixed-blur"></div>
 <div class="centered-fixed">
      <img src="/assets/img/scaled_goose_pixel.png" onmouseover="spin(this)"
@@ -33,7 +33,7 @@ templatetopnav.innerHTML = `
 <div class="bar3"></div>
 <ul class="mobile-menu">
   <li><a href="/index.html">HOME</a></li>
-  <li><a href="/games_list.html">GAMES</a></li>
+  <li><a href="/">GAMES</a></li>
   <li><a href="/leaderboard.html">LEADERBOARD</a></li>
   <li><a href="/about.html">ABOUT</a></li>
   <li>
@@ -88,7 +88,7 @@ templatefooter.innerHTML = `
         <div style="display: grid; gap: 6px;">
           <a href="/about.html" style="text-decoration: none; color: inherit; opacity: 0.95;">About</a>
           <a href="/leaderboard.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Leaderboard</a>
-          <a href="/games_list.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Games</a>
+          <a href="/" style="text-decoration: none; color: inherit; opacity: 0.95;">Games</a>
           <a href="/blog/" style="text-decoration: none; color: inherit; opacity: 0.95;">Blog</a>
           <a href="/more/Proxies.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Proxies & Cloak Mode</a>
           <a href="/more/discord.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Discord (In‑Site)</a>

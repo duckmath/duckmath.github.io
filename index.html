@@ -66,7 +66,7 @@
         "@type": "SiteNavigationElement",
         "name": ["Games", "Leaderboard", "Discord"],
         "url": [
-          "https://duckmath.org/games_list.html",
+          "https://duckmath.org/",
           "https://duckmath.org/leaderboard.html",
           "https://duckmath.org/more/discord.html"
         ]
@@ -74,6 +74,132 @@
     </script>
   </head>
   <body>
+    <div class="title_text_main" id="title">
+      <!--<h1>G4M3S</h1>-->
+      <div class="group">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+          <g>
+            <path
+              d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+            ></path>
+          </g>
+        </svg>
+
+        <input
+          oninput="showall();searchbar1();"
+          onclick="showall();searchbar1();"
+          id="query"
+          class="input"
+          type="search"
+          placeholder="Search..."
+          name="searchbar"
+        />
+      </div>
+      <br />
+
+      <button
+        id="All"
+        class="button2 sorter"
+        onclick="showall();sorterbuttons(this);"
+      >
+        All
+      </button>
+      <button
+        id="Multiplayer"
+        class="button1 sorter"
+        onclick="sorter('Multiplayer');sorterbuttons(this);"
+      >
+        Multiplayer
+      </button>
+      <button
+        id="Flash"
+        class="button1 sorter"
+        onclick="sorter('Flash');sorterbuttons(this);"
+      >
+        Flash
+      </button>
+      <button
+        id="Emulator"
+        class="button1 sorter"
+        onclick="sorter('Emulator');sorterbuttons(this);"
+      >
+        Emulator
+      </button>
+      <button
+        id="Platformer"
+        class="button1 sorter"
+        onclick="sorter('Platformer');sorterbuttons(this);"
+      >
+        Platformer
+      </button>
+      <button
+        id="Puzzle"
+        class="button1 sorter"
+        onclick="sorter('Puzzle');sorterbuttons(this);"
+      >
+        Puzzle
+      </button>
+      <button
+        id="Sports"
+        class="button1 sorter"
+        onclick="sorter('Sports');sorterbuttons(this);"
+      >
+        Sports
+      </button>
+      <button
+        id="Driving"
+        class="button1 sorter"
+        onclick="sorter('Driving');sorterbuttons(this);"
+      >
+        Driving
+      </button>
+      <button
+        id="Fighting"
+        class="button1 sorter"
+        onclick="sorter('Fighting');sorterbuttons(this);"
+      >
+        Fighting
+      </button>
+      <button
+        id="Horror"
+        class="button1 sorter"
+        onclick="sorter('Horror');sorterbuttons(this);"
+      >
+        Horror
+      </button>
+      <button
+        id="2D"
+        class="button1 sorter"
+        onclick="sorter('2D');sorterbuttons(this);"
+      >
+        2D
+      </button>
+      <button
+        id="Other"
+        class="button1 sorter"
+        onclick="sorter('Other');sorterbuttons(this);"
+      >
+        Other
+      </button>
+      <button
+        id="New"
+        class="button3 sorter"
+        onclick="sorter('New');sorterbuttons(this);"
+      >
+        New
+      </button>
+      <!-- wierd click effect -->
+
+      <div class="icon_image" id="icon_image">
+        <iframe
+          src="/circle-loading.html"
+          width="100%"
+          height="800px"
+          frameborder="0"
+          title="Full-width iframe"
+        ></iframe>
+      </div>
+    </div>
     <header class="hero" role="banner">
       <div class="hero-inner">
         <h1 class="hero-title">Always Unblocked Games</h1>
@@ -81,34 +207,15 @@
           250+ free browser games. Fast. Clean. 20+ Links.
         </p>
 
-        <form
-          id="homepage-search"
-          class="search"
-          role="search"
-          aria-label="Search games"
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
-            <g>
-              <path
-                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
-              ></path>
-            </g>
-          </svg>
-          <input
-            id="homepage-query"
-            name="q"
-            class="input"
-            type="search"
-            placeholder="Search 250+ games (e.g., Retro Bowl, Slope, 1v1.lol)"
-            autocomplete="off"
-          />
-          <button class="btn-primary" type="submit">Search</button>
-        </form>
-
         <div class="hero-ctas">
-          <a class="btn-secondary" href="/games_list.html">Browse Games</a>
-          <a class="btn-tertiary" href="/more/Proxies.html">Proxies & Cloak</a>
-          <a class="btn-tertiary" href="/leaderboard.html">Leaderboard</a>
+          <a class="btn-primary" href="#">Play now!</a>
+          <a
+            class="btn-tertiary"
+            href="https://github.com/duckmath/duckmath.github.io"
+            target="_blank"
+            rel="noopener"
+            >GitHub</a
+          >
         </div>
       </div>
     </header>
@@ -229,7 +336,7 @@
         <p>
           DuckMath is your hub for <strong>unblocked games</strong>: action,
           puzzle, sports, platformers, and more. Browse
-          <a href="/games_list.html">250+ games</a>, try our
+          <a href="/">250+ games</a>, try our
           <a href="/more/Proxies.html">proxies & cloak mode</a>, and climb the
           <a href="/leaderboard.html">leaderboard</a>. We update frequently and
           prioritize speed, access, and safety.
@@ -312,31 +419,6 @@
           }
         ]
       }
-    </script>
-
-    <script>
-      (function () {
-        var form = document.getElementById("homepage-search");
-        var input = document.getElementById("homepage-query");
-        if (input) {
-          var go = function () {
-            window.location.href = "/games_list.html";
-          };
-          input.addEventListener("focus", go);
-          input.addEventListener("click", go);
-        }
-        if (form) {
-          form.addEventListener("submit", function (e) {
-            e.preventDefault();
-            var q = document.getElementById("homepage-query");
-            var value = q && q.value ? q.value.trim() : "";
-            var target =
-              "/games_list.html" +
-              (value ? "?q=" + encodeURIComponent(value) : "");
-            window.location.href = target;
-          });
-        }
-      })();
     </script>
 
     <noscript

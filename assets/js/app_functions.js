@@ -39,7 +39,7 @@ const REQUERY_TIME = 2; // in days
 async function get_all_apps() {
   const date_last_queryed = JSON.parse(localStorage.getItem("dlq"));
   const local_apps = JSON.parse(localStorage.getItem(APP_VER));
-  console.log((new Date().getTime() - date_last_queryed) / 1000 / 60 / 60 / 24);
+  // console.log((new Date().getTime() - date_last_queryed) / 1000 / 60 / 60 / 24);
 
   const onLocalHost = false; // window.location.includes("localhost");
   if (
@@ -261,11 +261,11 @@ async function hydrateAppPage() {
 document.addEventListener("DOMContentLoaded", function () {
   const appListElement = document.getElementById("icon_image");
   if (appListElement) {
-    list_all_apps(appListElement);
+    list_all_apps(appListElement).then(() => {
+      document.dispatchEvent(new Event("GamesLoaded"));
+    });
   }
-  if (window.location.pathname.includes("games_list")) {
-    return;
-  }
+
   if (
     window.location.pathname.includes("games") &&
     window.location.search.includes("title")

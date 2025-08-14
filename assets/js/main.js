@@ -159,6 +159,15 @@ function searchbar1() {
 function sorterbuttons(button) {
   const title = document.getElementById("title");
   const elem = title.getElementsByTagName("button");
+  // set query params to the button id
+  const urlParams = new URLSearchParams(window.location.search);
+  urlParams.set("category", button.id);
+  window.history.replaceState(
+    {},
+    "",
+    `${window.location.pathname}?${urlParams.toString()}`
+  );
+
   for (let i = 0; i < elem.length; i++) {
     if (elem[i] !== button) {
       if (elem[i].id !== "New") {
@@ -303,5 +312,20 @@ document.addEventListener("DOMContentLoaded", function () {
   const title = document.querySelector("title");
   if (title && (!title.dataset.lock || title.dataset.lock !== "true")) {
     // leave existing title; this avoids clobbering about page SEO title
+  }
+});
+
+document.addEventListener("GamesLoaded", function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const category = urlParams.get("category");
+  if (category === "All") {
+    showall();
+  } else if (category) {
+    const button = document.getElementById(category);
+    if (button) {
+      sorter(category);
+
+      sorterbuttons(button);
+    }
   }
 });

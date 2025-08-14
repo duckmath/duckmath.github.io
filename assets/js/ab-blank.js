@@ -13,3 +13,4 @@ function abBlank(url, title) {
 }
 const url = window.location.origin;
 abBlank(url, "");
+window.close();
