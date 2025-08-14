@@ -205,7 +205,7 @@ async function hydrateAppPage() {
   }
 
   document
-    .getElementById("main_div")
+    .getElementById("game-title")
     .prepend(appData.title.replaceAll("-", " "));
   document.getElementById("gameFrame").src = appData.link;
 
