@@ -202,8 +202,7 @@ function renderGameNotFound(message) {
               img.loading = "lazy";
               img.style.width = "120px";
               img.style.height = "120px";
-              img.style.objectFit = "cover";
-              img.style.borderRadius = "10px";
+
               a.appendChild(img);
               relatedWrap.appendChild(a);
             }
@@ -303,7 +302,7 @@ async function hydrateAppPage() {
           return { app: a, score: overlap ? 1 : 0 };
         })
         .filter((x) => x.score > 0)
-        .slice(0, 3);
+        .slice(0, 6);
       const finalList =
         scored.length > 0 ? scored.map((x) => x.app) : allApps.slice(0, 3);
 
