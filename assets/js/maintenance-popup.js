@@ -46,7 +46,7 @@
                     margin: 1.5rem 0;
                     color: #555;
                 ">
-                    We're making changes to the site that may cause DuckMath to get blocked at your school or workplace.
+                    We're making changes to the site that may cause DuckMath to get b10cked at your school or workplace.
                 </p>
                 
                 <p style="
@@ -55,8 +55,8 @@
                     margin: 1.5rem 0;
                     color: #555;
                 ">
-                    <strong>Want to keep playing?</strong><br>
-                    Join our Discord community to get backup links and stay updated on new mirror sites.
+                    <strong>We want you to stay! So just in case:</strong><br>
+                    Join our D1sc0rd community to get backup l1nks and stay updated on new mirr0r sites.
                 </p>
                 
                 <div style="
@@ -66,7 +66,7 @@
                     margin-top: 2rem;
                     flex-wrap: wrap;
                 ">
-                    <a href="https://dsc.gg/duckmath" target="_blank" style="
+                    <a href="https://discord.gg/aMUVSARrEy" target="_blank" style="
                         background-color: #5865F2;
                         color: white;
                         padding: 0.8rem 1.5rem;
@@ -76,7 +76,7 @@
                         transition: all 0.3s ease;
                         display: inline-block;
                     " onmouseover="this.style.backgroundColor='#4752C4'" onmouseout="this.style.backgroundColor='#5865F2'">
-                        🔗 Join Discord
+                        🔗 Join D1sc0rd
                     </a>
                     
                     <button onclick="closeMaintenancePopup()" style="
