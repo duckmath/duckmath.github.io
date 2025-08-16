@@ -183,7 +183,7 @@ async function hydrateAppPage() {
   descSpan.style.color = "rgb(0, 240, 255)";
   descSpan.style.display = "block";
   descSpan.style.lineHeight = "1";
-  document.getElementById("main_div").prepend(descSpan);
+  // document.getElementById("main_div").prepend(descSpan);
 
   document
     .getElementById("main_div")
