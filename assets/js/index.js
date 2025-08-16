@@ -7,7 +7,7 @@ templatetopnav.innerHTML = `
   <div class="dropdown-content">
     <a href="/more/Proxies.html" class="first">Proxies</a>
     <a href="/more/discord.html" class="dis">Discord</a>
-    <a href="/more/Game_help.html" class="vm">Game Help</a>
+    <a href="/more/game_help.html" class="vm">Game Help</a>
     <a href="/more/takedown.html" class="vm">DMCA</a>
     <a href="/more/blank.html" class="gr last">about:blank</a>
   </div>
@@ -42,7 +42,7 @@ templatetopnav.innerHTML = `
       <a href="/more/Proxies.html">Proxies</a>
       <a href="/more/Virtual_Machines.html" class="vm">Virtual Machines</a>
       <a href="/more/discord.html" class="dis">Discord</a>
-      <a href="/more/Game_help.html" class="gr">Game Help</a>
+      <a href="/more/game_help.html" class="gr">Game Help</a>
     </div>
   </li>
 </ul>
@@ -73,7 +73,7 @@ templatefooter.innerHTML = `
       <div style="display: flex; align-items: center; gap: 12px;">
         <img src="/assets/img/duck.webp" alt="DuckMath" width="40" height="40" style="border-radius: 6px;"/>
         <div>
-          <div style="font-weight: 700; font-size: 1.05rem;">DuckMath.org — Always Unblocked Games</div>
+          <div style="font-weight: 700; font-size: 1.05rem;">DuckMath.org — Unblocked Games For School</div>
           <div style="opacity: 0.9; font-size: 0.95rem;">1,000,000+ active users since 2022</div>
         </div>
       </div>
@@ -92,7 +92,7 @@ templatefooter.innerHTML = `
           <a href="/blog/" style="text-decoration: none; color: inherit; opacity: 0.95;">Blog</a>
           <a href="/more/Proxies.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Proxies & Cloak Mode</a>
           <a href="/more/discord.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Discord (In‑Site)</a>
-          <a href="/more/Game_help.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Help & Requests</a>
+          <a href="/more/game_help.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Help & Requests</a>
           <a href="/more/takedown.html" style="text-decoration: none; color: inherit; opacity: 0.95;">DMCA</a>
         </div>
       </div>

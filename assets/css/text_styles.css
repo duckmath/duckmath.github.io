@@ -140,3 +140,156 @@
   font-family: "Arial", sans-serif;
   margin-inline-start: 0;
 }
+
+/* Game Help Page Specific Styles */
+.help-content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.help-description {
+  font-size: 1.3rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.help-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.help-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.help-item:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.discord-link-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.discord-link {
+  display: inline-block;
+  background-color: #5865f2;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(88, 101, 242, 0.3);
+}
+
+.discord-link:hover {
+  background-color: #4752c4;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(88, 101, 242, 0.4);
+  color: #ffffff;
+}
+
+.discord-link:visited {
+  color: #ffffff;
+}
+
+/* Discord Server Button for discord.html page */
+.discord-server-button {
+  display: inline-block;
+  background-color: #5865f2;
+  color: #ffffff !important;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(88, 101, 242, 0.4);
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.discord-server-button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.discord-server-button:hover:before {
+  left: 100%;
+}
+
+.discord-server-button:hover {
+  background-color: #4752c4;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(88, 101, 242, 0.5);
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.discord-server-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(88, 101, 242, 0.4);
+}
+
+.discord-server-button:visited {
+  color: #ffffff !important;
+}
+
+@media only screen and (max-width: 720px) {
+  .help-content {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .help-description {
+    font-size: 1.1rem;
+  }
+
+  .help-item {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .discord-link {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .discord-server-button {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    margin: 1rem 0;
+  }
+}
