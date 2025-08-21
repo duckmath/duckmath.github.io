@@ -94,7 +94,7 @@
                         Continue Anyway
                     </button>
                 </div>
-                <hr> If your not looking to join, a good l1nk to try out is quackprep.org
+                <hr> If your not looking to join, a good l1nk to try out is pastexams.org
                 
                 <p style="
                     font-size: 0.9rem;
