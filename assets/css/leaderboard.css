@@ -5,15 +5,19 @@ body {
   background-color: #1f2028;
 }
 
+/* Remove huge padding-bottom set inline on this page */
+body.body {
+  padding-bottom: 0 !important;
+}
+
 .main {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   width: 80%;
-  height: 80%;
+  min-height: 60vh;
+  margin: 10rem auto 3rem;
+  transform: none;
 }
 
 .leaderboard-title {
@@ -44,10 +48,8 @@ body {
 }
 
 .score-card:hover {
-  box-shadow:
-    rgba(255, 0, 0, 0.1) 0px 1px 0px,
-    rgba(255, 0, 0, 0.1) 0px 8px 24px,
-    rgba(255, 0, 0, 0.1) 0px 16px 48px;
+  box-shadow: rgba(255, 0, 0, 0.1) 0px 1px 0px,
+    rgba(255, 0, 0, 0.1) 0px 8px 24px, rgba(255, 0, 0, 0.1) 0px 16px 48px;
 }
 
 .game-icon {

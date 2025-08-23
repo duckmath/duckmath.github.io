@@ -4,40 +4,483 @@
     <link rel="dns-prefetch" href="https://universal.wgplayer.com" />
     <script src="/assets/js/add.js"></script>
 
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       property="og:image"
       content="https://duckmath.org/assets/img/duck.webp"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="title" content="404" />
-    <meta name="description" content="This page is for errors you may have" />
+    <meta name="title" content="404 - Page Lost in the Duck Dimension" />
+    <meta
+      name="description"
+      content="Oops! This page wandered off into the duck dimension. Let's get you back on track!"
+    />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="language" content="English" />
-    <title>404</title>
+    <title>404 Page Not Found — DuckMath</title>
     <link rel="stylesheet" href="/assets/css/text_styles.css" />
+    <link rel="stylesheet" href="/assets/css/topnav.css" />
     <link rel="stylesheet" href="/assets/css/main.css" />
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/index.js" type="text/javascript" defer></script>
     <link rel="icon" type="image/x-icon" href="/assets/img/duck.webp" />
     <link rel="mask-icon" type="" href="/assets/img/duck.webp" color="#111" />
     <noscript
       >Your browser doesn't have JavaScript enabled. Please enable JavaScript or
       switch to a browser that supports it.</noscript
     >
-    <!-- <script src="firebase/main_firebase.js" type="module" defer></script> -->
+
+    <style>
+      /* Override body to use existing DuckMath styling */
+      body {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 1.7;
+        color: #fff;
+        overflow-x: hidden;
+        letter-spacing: 0.2px;
+        text-rendering: optimizeLegibility !important;
+        -webkit-font-smoothing: antialiased !important;
+        scroll-behavior: smooth;
+        margin: 0;
+        position: relative;
+        min-height: 100vh;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(0deg);
+          opacity: 0.6;
+        }
+        50% {
+          transform: translateY(-15px) rotate(180deg);
+          opacity: 0.9;
+        }
+      }
+
+      /* Compact main container */
+      .error-container {
+        margin-top: -10rem !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+        padding: 1rem;
+        padding-top: 120px; /* Space for navbar */
+        position: relative;
+        margin-top: 0; /* Remove negative margin */
+      }
+
+      /* Smaller 404 glitch text */
+      .error-code {
+        font-size: clamp(4rem, 12vw, 8rem); /* Reduced from 12rem */
+        font-weight: 900;
+        margin: 0;
+        position: relative;
+        color: var(--input-border);
+        text-shadow: 0 0 15px #ff3b3b, 0 0 25px #ff3b3b;
+        animation: glitch 2s ease-in-out infinite alternate;
+      }
+
+      @keyframes glitch {
+        0% {
+          text-shadow: 0 0 15px #ff3b3b, 0 0 25px #ff3b3b;
+          transform: skew(0deg);
+        }
+        20% {
+          text-shadow: -2px 0 #ff3b3b, 2px 0 #fff;
+          transform: skew(-1deg);
+        }
+        40% {
+          text-shadow: 2px 0 #ff3b3b, -2px 0 #fff;
+          transform: skew(0.5deg);
+        }
+        60% {
+          text-shadow: 0 0 15px #fff, 0 0 25px #fff;
+          transform: skew(-0.5deg);
+        }
+        80% {
+          text-shadow: -1px 0 #ff3b3b, 1px 0 #fff;
+          transform: skew(0.3deg);
+        }
+        100% {
+          text-shadow: 0 0 15px #ff3b3b, 0 0 25px #ff3b3b;
+          transform: skew(0deg);
+        }
+      }
+
+      /* Smaller duck animation */
+      .duck-container {
+        position: relative;
+        margin: 1rem 0; /* Reduced margin */
+      }
+
+      .floating-duck {
+        width: 80px; /* Reduced from 120px */
+        height: 80px;
+        background: url("/assets/img/duck.webp") center/contain no-repeat;
+        animation: bounce 2.5s ease-in-out infinite;
+        filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(-3deg);
+        }
+        50% {
+          transform: translateY(-20px) rotate(3deg); /* Reduced bounce */
+        }
+      }
+
+      /* Compact error messages */
+      .error-message {
+        font-size: clamp(1.2rem, 3vw, 1.8rem); /* Reduced size */
+        margin: 1rem 0; /* Reduced margins */
+        max-width: 500px;
+        line-height: 1.3;
+        animation: fadeInUp 1s ease-out 0.3s both;
+      }
+
+      .error-submessage {
+        font-size: clamp(0.9rem, 2vw, 1.1rem); /* Reduced size */
+        margin: 0.5rem 0 1.5rem; /* Reduced margins */
+        opacity: 0.9;
+        max-width: 400px;
+        animation: fadeInUp 1s ease-out 0.6s both;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px); /* Reduced movement */
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Compact action buttons */
+      .action-buttons {
+        display: flex;
+        gap: 1rem; /* Reduced gap */
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1.5rem; /* Reduced margin */
+        animation: fadeInUp 1s ease-out 0.9s both;
+      }
+
+      .epic-button {
+        padding: 0.7rem 1.5rem; /* Reduced padding */
+        border: none;
+        border-radius: 10px; /* Smaller radius */
+        font-size: 0.95rem; /* Smaller font */
+        font-weight: 600;
+        text-decoration: none;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        background-color: #fff; /* White background for better readability */
+        color: #ff3b3b; /* Red text */
+        border: 2px solid #ff3b3b;
+      }
+
+      .epic-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
+      .epic-button:hover::before {
+        left: 100%;
+      }
+
+      .epic-button:hover {
+        transform: translateY(-2px); /* Reduced movement */
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        background-color: #ff3b3b; /* Red background on hover */
+        color: #fff; /* White text on hover */
+      }
+
+      .epic-button:active {
+        transform: translateY(0px);
+      }
+
+      /* Smaller magic portal */
+      .magic-portal {
+        position: absolute;
+        width: 150px; /* Reduced size */
+        height: 150px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 59, 59, 0.2) 0%,
+          transparent 70%
+        );
+        animation: pulse 3s ease-in-out infinite;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0; /* Behind everything but above background */
+        pointer-events: none; /* Don't block clicks */
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: translate(-50%, -50%) scale(1);
+          opacity: 0.4;
+        }
+        50% {
+          transform: translate(-50%, -50%) scale(1.1); /* Reduced scale */
+          opacity: 0.6;
+        }
+      }
+
+      /* Compact mobile design */
+      @media (max-width: 768px) {
+        .error-container {
+          padding: 0.5rem;
+          padding-top: 100px; /* Space for mobile navbar */
+        }
+
+        .action-buttons {
+          flex-direction: column;
+          align-items: center;
+          gap: 0.8rem;
+        }
+
+        .epic-button {
+          width: 200px; /* Smaller on mobile */
+          padding: 0.6rem 1.2rem;
+        }
+
+        .floating-duck {
+          width: 60px; /* Smaller duck on mobile */
+          height: 60px;
+        }
+      }
+
+      /* Compact hidden duck game */
+      .hidden-game {
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+        z-index: 1000;
+      }
+
+      .game-duck {
+        width: 35px; /* Smaller game duck */
+        height: 35px;
+        background: url("/assets/img/duck.webp") center/contain no-repeat;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        opacity: 0.6;
+      }
+
+      .game-duck:hover {
+        transform: scale(1.1) rotate(10deg); /* Reduced effect */
+        opacity: 1;
+      }
+
+      .score-display {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 0.4rem 0.8rem; /* Smaller padding */
+        border-radius: 15px;
+        font-weight: bold;
+        font-size: 0.85rem; /* Smaller font */
+        display: none;
+      }
+
+      /* Removed click effect to avoid navbar interference */
+
+      /* Compact layout adjustments */
+      .error-code,
+      .error-message,
+      .error-submessage {
+        margin-bottom: 0.8rem; /* Tighter spacing */
+      }
+    </style>
   </head>
   <body>
     <!-- where auto would go -->
 
-    <div class="title_text">
-      404 Error
-      <div class="title_text_description">
-        This page does not exist.<br />
-        If you believe you shouldn't have gotten this error, contact us, or go
-        back to the main page below.
+    <!-- Compact particle background -->
+    <div
+      id="particles"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+      "
+    ></div>
+
+    <!-- Smaller magic portal effect -->
+    <div class="magic-portal"></div>
+
+    <div class="error-container">
+      <h1 class="error-code">404</h1>
+
+      <div class="duck-container">
+        <div class="floating-duck"></div>
       </div>
-      <a class="button" href="/index.html">Home Page</a>
+
+      <div class="error-message">
+        Oops! This page wandered off into the duck dimension! 🦆
+      </div>
+
+      <div class="error-submessage">
+        Don't worry though, our ducks are expert navigators.<br />
+        Let's get you back to the fun stuff!
+      </div>
+
+      <div class="action-buttons">
+        <a href="/" class="epic-button">🎮 Play Games</a>
+        <a href="/leaderboard.html" class="epic-button">🏆 Leaderboard</a>
+        <a href="/more/discord.html" class="epic-button">💬 Discord</a>
+        <button onclick="searchRandomGame()" class="epic-button">
+          🎲 Random Game
+        </button>
+      </div>
     </div>
-    <!--<div class = "bottom_text">Copyright © 2022-2023 Duck Math - All Rights Reserved.</div>-->
+
+    <!-- Compact hidden duck clicking game -->
+    <div class="hidden-game">
+      <div class="game-duck" onclick="duckClick(this)"></div>
+    </div>
+    <div class="score-display" id="scoreDisplay">
+      Ducks: <span id="duckScore">0</span>
+    </div>
+
+    <script>
+      // Create fewer, smaller particles for compact design
+      function createParticles() {
+        const particleContainer = document.getElementById("particles");
+        for (let i = 0; i < 30; i++) {
+          // Reduced from 50
+          const particle = document.createElement("div");
+          particle.className = "particle";
+          particle.style.left = Math.random() * 100 + "%";
+          particle.style.top = Math.random() * 100 + "%";
+          particle.style.width = Math.random() * 6 + 3 + "px"; // Smaller particles
+          particle.style.height = particle.style.width;
+          particle.style.animationDelay = Math.random() * 4 + "s";
+          particle.style.animationDuration = Math.random() * 3 + 3 + "s";
+          particleContainer.appendChild(particle);
+        }
+      }
+
+      // Random game redirect
+      function searchRandomGame() {
+        const games = [
+          "slope",
+          "run-3",
+          "cookie-clicker",
+          "minecraft-classic",
+          "happy-wheels",
+          "geometry-dash",
+          "2048",
+          "flappy-bird",
+          "among-us",
+        ];
+        const randomGame = games[Math.floor(Math.random() * games.length)];
+        window.location.href = "/g4m3s/?title=" + randomGame;
+      }
+
+      // Duck clicking game
+      let duckScore = 0;
+
+      function duckClick(duck) {
+        duckScore++;
+        document.getElementById("duckScore").textContent = duckScore;
+        document.getElementById("scoreDisplay").style.display = "block";
+
+        // Smaller duck animation
+        duck.style.transform =
+          "scale(1.3) rotate(" + Math.random() * 360 + "deg)";
+        setTimeout(() => {
+          duck.style.transform = "";
+        }, 250); // Faster animation
+
+        // Special effects at milestones
+        if (duckScore === 10) {
+          alert("🦆 Duck Master! You found the secret duck game!");
+        } else if (duckScore === 25) {
+          alert("🌟 Duck Legend! The ducks are impressed!");
+        } else if (duckScore === 50) {
+          alert("👑 Duck Emperor! You are now ruler of all ducks!");
+          // Unlock special effect
+          document.body.style.animation = "rainbow 2s ease-in-out infinite";
+        }
+      }
+
+      // Click effects removed to prevent navbar interference
+
+      // Konami code easter egg
+      let konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+      let konamiIndex = 0;
+
+      document.addEventListener("keydown", function (e) {
+        if (e.keyCode === konamiCode[konamiIndex]) {
+          konamiIndex++;
+          if (konamiIndex === konamiCode.length) {
+            konamiIndex = 0;
+            // Activate super duck mode
+            document.querySelector(".floating-duck").style.animation =
+              "bounce 0.1s ease-in-out infinite";
+            alert("🎉 SUPER DUCK MODE ACTIVATED! 🦆💨");
+            setTimeout(() => {
+              document.querySelector(".floating-duck").style.animation =
+                "bounce 2.5s ease-in-out infinite";
+            }, 3000); // Shorter duration
+          }
+        } else {
+          konamiIndex = 0;
+        }
+      });
+
+      // Initialize
+      document.addEventListener("DOMContentLoaded", function () {
+        // Add rainbow animation for high scorers
+        const rainbowCSS = `
+          @keyframes rainbow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+          }
+        `;
+        const style = document.createElement("style");
+        style.textContent = rainbowCSS;
+        document.head.appendChild(style);
+      });
+
+      // Prevent context menu for a more game-like feel
+      document.addEventListener("contextmenu", (e) => e.preventDefault());
+    </script>
   </body>
 </html>

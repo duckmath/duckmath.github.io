@@ -48,6 +48,27 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// Apply URL search query to games list pages
+document.addEventListener("DOMContentLoaded", function () {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get("q");
+    const input = document.getElementById("query");
+    if (q && input) {
+      input.value = q;
+      if (typeof showall === "function") {
+        showall();
+      }
+      if (typeof searchbar1 === "function") {
+        searchbar1();
+      }
+      input.focus();
+    }
+  } catch (e) {
+    // no-op
+  }
+});
+
 document.addEventListener("click", function (event) {
   if (event.target.classList.contains("sorter")) {
     const topnav = document.getElementById("topnav");
@@ -138,6 +159,15 @@ function searchbar1() {
 function sorterbuttons(button) {
   const title = document.getElementById("title");
   const elem = title.getElementsByTagName("button");
+  // set query params to the button id
+  const urlParams = new URLSearchParams(window.location.search);
+  urlParams.set("category", button.id);
+  window.history.replaceState(
+    {},
+    "",
+    `${window.location.pathname}?${urlParams.toString()}`
+  );
+
   for (let i = 0; i < elem.length; i++) {
     if (elem[i] !== button) {
       if (elem[i].id !== "New") {
@@ -271,11 +301,31 @@ function home() {
 // set banner of site
 document.addEventListener("DOMContentLoaded", function () {
   const headerSpan = document.getElementById("duckmath-header");
-  let TLD = window.location.hostname.split(".")[0];
-  TLD = TLD[0].toUpperCase() + TLD.slice(1);
-  const ending = window.location.hostname.split(".")[1];
-  headerSpan.firstChild.textContent = TLD;
-  headerSpan.children[0].textContent = "." + ending;
+  if (headerSpan) {
+    let TLD = window.location.hostname.split(".")[0];
+    TLD = TLD[0].toUpperCase() + TLD.slice(1);
+    const ending = window.location.hostname.split(".")[1];
+    headerSpan.firstChild.textContent = TLD;
+    headerSpan.children[0].textContent = "." + ending;
+  }
+  // Do not overwrite per-page titles if already set
   const title = document.querySelector("title");
-  title.textContent = TLD;
+  if (title && (!title.dataset.lock || title.dataset.lock !== "true")) {
+    // leave existing title; this avoids clobbering about page SEO title
+  }
+});
+
+document.addEventListener("GamesLoaded", function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const category = urlParams.get("category");
+  if (category === "All") {
+    showall();
+  } else if (category) {
+    const button = document.getElementById(category);
+    if (button) {
+      sorter(category);
+
+      sorterbuttons(button);
+    }
+  }
 });

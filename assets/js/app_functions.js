@@ -39,7 +39,7 @@ const REQUERY_TIME = 2; // in days
 async function get_all_apps() {
   const date_last_queryed = JSON.parse(localStorage.getItem("dlq"));
   const local_apps = JSON.parse(localStorage.getItem(APP_VER));
-  console.log((new Date().getTime() - date_last_queryed) / 1000 / 60 / 60 / 24);
+  // console.log((new Date().getTime() - date_last_queryed) / 1000 / 60 / 60 / 24);
 
   const onLocalHost = false; // window.location.includes("localhost");
   if (
@@ -83,11 +83,13 @@ function remove_all_children(element) {
  */
 async function list_all_apps(element) {
   const query = await get_all_apps();
+  if (!Array.isArray(query)) {
+    return;
+  }
   remove_all_children(element);
-  query.sort((a, b) => (a.is_featured === true ? -1 : 0));
   for (let i = 0; i < query.length; i++) {
     /**
-     * <a id="Retro Bowl" class="Sports 2D" href="g4m3s/retro_bowl.html"
+     * <a id="Retro Bowl" class="Sports 2D" href="games/retro_bowl.html"
           ><img
             onmouseover="viewFig(this)"
             onmouseout="hideFig(this)"
@@ -136,22 +138,84 @@ async function list_all_apps(element) {
 async function get_app_by_title(title) {
   const apps = await get_all_apps();
 
-  if (!apps) {
-    console.error("Error fetching app:", error);
-    window.alert(
-      "Error fetching exact app. Please try again later. If the problem persists, please contact support."
-    );
+  if (!Array.isArray(apps)) {
+    console.error("Error fetching apps list");
     return null;
   }
-  const app = apps.find((app) => app.title === title);
+  const app = apps.find(
+    (app) => app.title.toLowerCase() === title.toLowerCase()
+  );
   if (!app) {
     console.error("App not found:", title);
-    window.alert("App not found. Trying going back to home page.");
-    window.location.href = "/g404.html";
     return null;
   }
 
   return app;
+}
+
+function renderGameNotFound(message) {
+  try {
+    const reason =
+      message ||
+      "We couldn't find that game. It may have been moved or removed.";
+    const pagePrefix = window.location.hostname.split(".")[0];
+    try {
+      window.document.title = `Game Not Found - ${pagePrefix}`;
+    } catch (_) {}
+
+    const titleEl = document.getElementById("game-title");
+    if (titleEl) {
+      titleEl.textContent = "Game not found";
+    }
+
+    const iframeWrap = document.querySelector(".game-iframe-container");
+    if (iframeWrap) {
+      iframeWrap.innerHTML =
+        '<div style="padding:24px; text-align:center; min-height:200px; display:flex; align-items:center; justify-content:center;">' +
+        `<div>` +
+        `<div style="font-size:1.25rem; font-weight:600; margin-bottom:8px;">Game not found</div>` +
+        `<div style="opacity:0.9; margin-bottom:12px;">${reason}</div>` +
+        `<a href="/" style="color:#ff6b6b; text-decoration:none;">\u2190 Back to games</a>` +
+        `</div>` +
+        `</div>`;
+    }
+
+    const descTarget = document.getElementById("game-description");
+    if (descTarget) {
+      descTarget.textContent = "";
+    }
+
+    const relatedWrap = document.getElementById("related-games");
+    if (relatedWrap) {
+      try {
+        get_all_apps()
+          .then((all) => {
+            if (!Array.isArray(all)) return;
+            remove_all_children(relatedWrap);
+            const picks = all.slice(0, 3);
+            for (const rel of picks) {
+              const a = document.createElement("a");
+              a.href = `/g4m3s/?title=${rel.title}`;
+              const img = document.createElement("img");
+              img.src = rel.icon;
+              img.alt = rel.title;
+              img.loading = "lazy";
+              img.style.width = "120px";
+              img.style.height = "120px";
+
+              a.appendChild(img);
+              relatedWrap.appendChild(a);
+            }
+          })
+          .catch(() => {});
+      } catch (_) {}
+    }
+  } catch (e) {
+    // As a last resort, fall back to 404 page
+    try {
+      window.location.href = "/g404.html";
+    } catch (_) {}
+  }
 }
 
 async function hydrateAppPage() {
@@ -160,49 +224,122 @@ async function hydrateAppPage() {
 
   if (!appTitle) {
     console.error("No app title provided in the URL.");
+    renderGameNotFound("No game specified in the URL.");
     return;
   }
 
   const appData = await get_app_by_title(appTitle);
 
   if (!appData) {
-    console.error("Class not found:", appTitle);
-    window.alert("Class not found. Trying going back to home page.");
-    window.location.href = "/g404.html";
+    console.error("Game not found:", appTitle);
+    renderGameNotFound(
+      `We couldn't find "${appTitle.replaceAll(
+        "-",
+        " "
+      )}". It may have been moved or renamed.`
+    );
     return;
   }
-  // window.document.title =
-  //   appTitle.replaceAll("-", " ") +
-  //   ` - ${window.location.hostname.split(".")[0]}`;
+  window.document.title =
+    appTitle.replaceAll("-", " ") +
+    ` - ${window.location.hostname.split(".")[0]}`;
 
   // Populate the page with app data
-  // Create span for description with inline CSS
-  const descSpan = document.createElement("span");
-  descSpan.textContent = appData.desc;
-  descSpan.style.fontSize = "0.85rem";
-  descSpan.style.color = "rgb(0, 240, 255)";
-  descSpan.style.display = "block";
-  descSpan.style.lineHeight = "1";
-  // document.getElementById("main_div").prepend(descSpan);
+  // Render markdown description safely under the game
+  try {
+    const descTarget = document.getElementById("game-description");
+    if (descTarget && appData.desc) {
+      const rawHtml =
+        typeof window !== "undefined" && window.marked && window.marked.parse
+          ? window.marked.parse(appData.desc)
+          : appData.desc;
+      const safeHtml =
+        typeof window !== "undefined" &&
+        window.DOMPurify &&
+        window.DOMPurify.sanitize
+          ? window.DOMPurify.sanitize(rawHtml)
+          : rawHtml;
+      descTarget.innerHTML = safeHtml;
+    }
+  } catch (e) {
+    console.warn(
+      "Failed to render markdown description; falling back to text.",
+      e
+    );
+    const descTarget = document.getElementById("game-description");
+    if (descTarget && appData.desc) {
+      descTarget.innerText = appData.desc;
+    }
+  }
 
   document
-    .getElementById("main_div")
+    .getElementById("game-title")
     .prepend(appData.title.replaceAll("-", " "));
   document.getElementById("gameFrame").src = appData.link;
+
+  // Populate minimal related games (3 items) after fullscreen button
+  try {
+    const allApps = await get_all_apps();
+    const relatedWrap = document.getElementById("related-games");
+    if (relatedWrap && Array.isArray(allApps)) {
+      remove_all_children(relatedWrap);
+      const currentCats = new Set(
+        Array.isArray(appData.categories)
+          ? appData.categories
+          : typeof appData.categories === "string"
+          ? appData.categories.split(" ")
+          : []
+      );
+      const scored = allApps
+        .filter((a) => a.title !== appData.title)
+        .map((a) => {
+          const aCats = Array.isArray(a.categories)
+            ? a.categories
+            : typeof a.categories === "string"
+            ? a.categories.split(" ")
+            : [];
+          const overlap = aCats.some((c) => currentCats.has(c));
+          return { app: a, score: overlap ? 1 : 0 };
+        })
+        .filter((x) => x.score > 0)
+        .slice(0, 6);
+      const finalList =
+        scored.length > 0 ? scored.map((x) => x.app) : allApps.slice(0, 3);
+
+      for (const rel of finalList) {
+        const a = document.createElement("a");
+        a.href = `/g4m3s/?title=${rel.title}`;
+        const img = document.createElement("img");
+        img.src = rel.icon;
+        img.alt = rel.title;
+        img.loading = "lazy";
+        img.style.width = "120px";
+        img.style.height = "120px";
+        img.style.objectFit = "cover";
+        img.style.borderRadius = "10px";
+        a.appendChild(img);
+        relatedWrap.appendChild(a);
+      }
+    }
+  } catch (e) {
+    console.warn("Unable to populate related games", e);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   const appListElement = document.getElementById("icon_image");
   if (appListElement) {
-    list_all_apps(appListElement);
+    list_all_apps(appListElement).then(() => {
+      document.dispatchEvent(new Event("GamesLoaded"));
+    });
   }
+
   if (
     window.location.pathname.includes("g4m3s") &&
     window.location.search.includes("title")
   ) {
     hydrateAppPage();
   } else if (window.location.pathname.includes("g4m3s")) {
-    alert("No app title provided in the URL.");
-    window.location.href = "/g404.html";
+    renderGameNotFound("No game specified in the URL.");
   }
 });
