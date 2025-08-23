@@ -73,12 +73,12 @@ templatefooter.innerHTML = `
       <div style="display: flex; align-items: center; gap: 12px;">
         <img src="/assets/img/duck.webp" alt="DuckMath" width="40" height="40" style="border-radius: 6px;"/>
         <div>
-          <div style="font-weight: 700; font-size: 1.05rem;">DuckMath.org — Unblocked Games For School</div>
+          <a href="/" style="font-weight: 700; font-size: 1.05rem; text-decoration: none; color: inherit;">DuckMath.org — Unblocked Games For School</a>
           <div style="opacity: 0.9; font-size: 0.95rem;">1,000,000+ active users since 2022</div>
         </div>
       </div>
       <div style="max-width: 680px; opacity: 0.9; font-size: 0.95rem;">
-        DuckMath.org hosts 250+ browser games, updates daily, and features leaderboards, coins, a seasonal battlepass, cloaking tools, and multiple proxy integrations so you can play from school or work networks.
+        DuckMath.org hosts 250+ browser games, updates daily, and features leaderboards, coins, a seasonal battlepass, cloaking tools, and multiple proxy integrations so you can play from the school chromebook.
       </div>
     </div>
 
@@ -91,6 +91,9 @@ templatefooter.innerHTML = `
           <a href="/" style="text-decoration: none; color: inherit; opacity: 0.95;">Games</a>
           <a href="/blog/" style="text-decoration: none; color: inherit; opacity: 0.95;">Blog</a>
           <a href="/more/Proxies.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Proxies & Cloak Mode</a>
+          <a href="/more/tab-cloak.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Tab Cloak</a>
+          <a href="/more/cache.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Item Shop</a>
+          <a href="/more/streak.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Streak</a>
           <a href="/more/discord.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Discord (In‑Site)</a>
           <a href="/more/game_help.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Help & Requests</a>
           <a href="/more/takedown.html" style="text-decoration: none; color: inherit; opacity: 0.95;">DMCA</a>
@@ -107,8 +110,8 @@ templatefooter.innerHTML = `
         </div>
       </div>
       <div>
-        <div style="font-weight: 600; margin-bottom: 8px;">Security & Privacy</div>
-        <div style="opacity: 0.9; font-size: 0.95rem;">Minimal PII with Supabase Auth. Leaderboard uploads are scanned and reviewed. Proxies are third‑party—use responsibly and follow local rules.</div>
+        <div style="font-weight: 600; margin-bottom: 8px;">Our Manifesto</div>
+        <div style="opacity: 0.9; font-size: 0.95rem;">Gaming is a fundamental right. We believe everyone deserves access to quality entertainment, regardless of network restrictions. We build bridges, not walls. We foster community, creativity, and fair competition. We stand for accessible gaming, player privacy, and the freedom to play.</div>
       </div>
     </div>
 
