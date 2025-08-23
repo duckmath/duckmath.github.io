@@ -275,6 +275,18 @@ async function hydrateAppPage() {
   document
     .getElementById("game-title")
     .prepend(appData.title.replaceAll("-", " "));
+
+  // Add small text under title about .top_message property
+  if (appData?.top_message) {
+    const titleElement = document.getElementById("game-title");
+    const infoText = document.createElement("div");
+    infoText.style.fontSize = ".6rem";
+    infoText.style.color = "#666";
+    infoText.style.marginTop = ".5rem";
+    infoText.textContent = appData?.top_message;
+    titleElement.appendChild(infoText);
+  }
+
   document.getElementById("gameFrame").src = appData.link;
 
   // Populate minimal related games (3 items) after fullscreen button
