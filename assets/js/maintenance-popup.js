@@ -93,6 +93,14 @@
                         Continue Anyway
                     </button>
                 </div>
+
+                <p style="
+                    font-size: 0.9rem;
+                    margin-top: 1.5rem;
+                    margin-bottom: 0;
+                ">
+                    If you dont want to join our D1sc0rd community, you can continue on the l1nk (duck.quackprep.com)
+                </p>
                 
                 <p style="
                     font-size: 0.9rem;
