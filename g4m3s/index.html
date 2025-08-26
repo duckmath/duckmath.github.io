@@ -33,21 +33,24 @@
 
       /* Main container */
       .main-container {
-        max-width: 1600px;
+        max-width: 1200px;
         margin: 0 auto;
         padding: 0 20px;
-        display: grid;
-        grid-template-columns: 200px 1fr 200px;
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas:
-          "top-banner top-banner top-banner"
-          "left-ad game-card right-ad"
-          "description description description"
-          "related related related";
-        column-gap: 12px;
-        row-gap: 24px;
-        align-items: start;
-        grid-auto-flow: row dense;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+      }
+
+      /* Game + Ads Row */
+      .game-ads-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        justify-content: center;
+        width: 100%;
+        max-width: 1160px; /* 180 + 20 + 800 + 20 + 180 */
+        flex-wrap: wrap;
       }
 
       /* Card base styles */
@@ -69,12 +72,9 @@
 
       /* Game card - main focus */
       .game-card {
-        grid-area: game-card;
         text-align: center;
-        min-width: 0; /* Allow shrinking */
         overflow-x: auto; /* Ensure game never gets clipped; allow scroll */
-        width: max-content; /* shrink to match iframe container */
-        justify-self: center; /* center within grid */
+        flex: 0 0 auto; /* Don't grow or shrink */
         min-width: 600px !important; /* do not shrink below this */
         max-width: 800px !important; /* do not grow above this */
       }
@@ -119,25 +119,19 @@
       }
 
       .left-ad {
-        grid-area: left-ad;
-        width: 180px !important; /* Force fixed width */
+        flex: 0 0 180px; /* Don't grow/shrink, fixed 180px */
         height: 600px !important; /* Force fixed height */
-        justify-self: end;
       }
 
       .right-ad {
-        grid-area: right-ad;
-        width: 180px !important; /* Force fixed width */
+        flex: 0 0 180px; /* Don't grow/shrink, fixed 180px */
         height: 600px !important; /* Force fixed height */
-        justify-self: start;
       }
 
       /* Top horizontal banner - FIXED SIZE */
       .top-ad {
-        grid-area: top-banner;
         width: 600px !important; /* Force fixed width */
         height: 120px !important; /* Force fixed height */
-        justify-self: center;
       }
 
       .top-ad .ad-card {
@@ -235,9 +229,9 @@
 
       /* Game description */
       .description-section {
-        grid-area: description;
         padding: 24px 32px;
-        min-width: 0; /* Allow shrinking */
+        width: 100%;
+        max-width: 1160px;
       }
 
       .description-title {
@@ -318,9 +312,9 @@
 
       /* Related games section */
       .related-section {
-        grid-area: related;
         padding: 24px 32px;
-        min-width: 0; /* Allow shrinking */
+        width: 100%;
+        max-width: 1160px;
       }
 
       .related-title {
@@ -355,25 +349,23 @@
 
       /* Responsive adjustments */
       /* When screen can't fit both vertical ads alongside the game */
-      @media (max-width: 1200px) {
+      @media (max-width: 1020px) {
         .main-container {
-          grid-template-columns: 1fr 1fr;
-          grid-template-areas:
-            "top-banner top-banner"
-            "game-card game-card"
-            "left-ad right-ad"
-            "description description"
-            "related related";
-          gap: 20px;
           max-width: 100%;
           padding: 0 10px;
         }
 
-        /* Ensure game card can shrink but never smaller than iframe */
+        .game-ads-row {
+          justify-content: center;
+        }
+
+        /* Game takes full width, then ads wrap below */
         .game-card {
+          flex: 1 1 100%;
           min-width: 0;
           max-width: 100%;
           overflow-x: auto;
+          order: 0;
         }
 
         .game-iframe-container {
@@ -381,10 +373,13 @@
         }
 
         .left-ad {
-          grid-column: 1;
+          flex: 0 0 180px;
+          order: 1;
         }
+
         .right-ad {
-          grid-column: 2;
+          flex: 0 0 180px;
+          order: 2;
         }
       }
 
@@ -392,15 +387,7 @@
       @media (max-width: 840px) {
         .main-container {
           padding: 0 5px;
-          grid-template-columns: 160px 160px;
-          grid-template-areas:
-            "top-banner top-banner"
-            "game-card game-card"
-            "left-ad right-ad"
-            "description description"
-            "related related";
           gap: 10px;
-          justify-content: center;
         }
 
         .game-card {
@@ -414,16 +401,8 @@
 
         .left-ad,
         .right-ad {
-          width: 160px !important;
+          flex: 0 0 160px;
           height: 600px !important;
-          justify-self: center;
-        }
-
-        .left-ad {
-          grid-column: 1;
-        }
-        .right-ad {
-          grid-column: 2;
         }
 
         .left-ad .ad-card,
@@ -442,13 +421,12 @@
       /* Stack ads vertically on very small screens */
       @media (max-width: 400px) {
         .main-container {
-          grid-template-columns: 140px 140px;
           gap: 8px;
         }
 
         .left-ad,
         .right-ad {
-          width: 140px !important;
+          flex: 0 0 140px;
           height: 600px !important;
         }
 
@@ -462,13 +440,6 @@
         .right-ad ins.adsbygoogle {
           width: 140px !important;
           height: 600px !important;
-        }
-
-        .left-ad {
-          grid-column: 1;
-        }
-        .right-ad {
-          grid-column: 2;
         }
       }
 
@@ -549,72 +520,75 @@
         </div>
       </div>
 
-      <!-- Main Game Card -->
-      <div class="card game-card">
-        <h1 id="game-title" class="game-title"></h1>
-
-        <div class="game-iframe-container">
-          <iframe
-            class="gameloc"
-            id="gameFrame"
-            allowfullscreen=""
-            allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad;
-             keyboard-map *; xr-spatial-tracking; clipboard-write"
-            name="gameFrame"
-            scrolling="no"
-            sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock
-            allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin
-            allow-downloads"
-            src="/loading.html"
-            title="Game"
-          ></iframe>
+      <!-- Game + Ads Row -->
+      <div class="game-ads-row">
+        <!-- Left Ad -->
+        <div class="ad-container left-ad">
+          <div class="card ad-card">
+            <script
+              async
+              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8362959866002557"
+              crossorigin="anonymous"
+            ></script>
+            <ins
+              class="adsbygoogle"
+              style="display: inline-block; width: 180px; height: 600px"
+              data-ad-client="ca-pub-8362959866002557"
+              data-ad-slot="8999498983"
+              data-ad-format="auto"
+              data-full-width-responsive="true"
+            ></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div>
         </div>
-        <button class="fullscreen-button" onclick="openFullscreen();">
-          🎮 Enter Fullscreen
-        </button>
-      </div>
 
-      <!-- Left Ad -->
-      <div class="ad-container left-ad">
-        <div class="card ad-card">
-          <script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8362959866002557"
-            crossorigin="anonymous"
-          ></script>
-          <ins
-            class="adsbygoogle"
-            style="display: inline-block; width: 180px; height: 600px"
-            data-ad-client="ca-pub-8362959866002557"
-            data-ad-slot="8999498983"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          ></ins>
-          <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
+        <!-- Main Game Card -->
+        <div class="card game-card">
+          <h1 id="game-title" class="game-title"></h1>
+
+          <div class="game-iframe-container">
+            <iframe
+              class="gameloc"
+              id="gameFrame"
+              allowfullscreen=""
+              allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad;
+               keyboard-map *; xr-spatial-tracking; clipboard-write"
+              name="gameFrame"
+              scrolling="no"
+              sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock
+              allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin
+              allow-downloads"
+              src="/loading.html"
+              title="Game"
+            ></iframe>
+          </div>
+          <button class="fullscreen-button" onclick="openFullscreen();">
+            🎮 Enter Fullscreen
+          </button>
         </div>
-      </div>
 
-      <!-- Right Ad -->
-      <div class="ad-container right-ad">
-        <div class="card ad-card">
-          <script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8362959866002557"
-            crossorigin="anonymous"
-          ></script>
-          <ins
-            class="adsbygoogle"
-            style="display: inline-block; width: 180px; height: 600px"
-            data-ad-client="ca-pub-8362959866002557"
-            data-ad-slot="8999498983"
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          ></ins>
-          <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
+        <!-- Right Ad -->
+        <div class="ad-container right-ad">
+          <div class="card ad-card">
+            <script
+              async
+              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8362959866002557"
+              crossorigin="anonymous"
+            ></script>
+            <ins
+              class="adsbygoogle"
+              style="display: inline-block; width: 180px; height: 600px"
+              data-ad-client="ca-pub-8362959866002557"
+              data-ad-slot="8999498983"
+              data-ad-format="auto"
+              data-full-width-responsive="true"
+            ></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div>
         </div>
       </div>
 
