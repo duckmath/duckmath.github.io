@@ -240,6 +240,18 @@ async function hydrateAppPage() {
     );
     return;
   }
+
+  // remove current canonical and add new one
+  const existingCanonical = document.querySelector('link[rel="canonical"]');
+  if (existingCanonical) {
+    existingCanonical.remove();
+  }
+
+  const canonicalLink = document.createElement("link");
+  canonicalLink.rel = "canonical";
+  canonicalLink.href = `https://duckmath.org/g4m3s/?title=${appData.title}`;
+  document.head.appendChild(canonicalLink);
+
   window.document.title =
     appTitle.replaceAll("-", " ") +
     ` - ${window.location.hostname.split(".")[0]}`;
