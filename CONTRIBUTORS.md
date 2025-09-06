@@ -1,6 +1,5 @@
 # Contributors
 
-- [Maddox Schmidlkofer](https://github.com/maddox05)
 - [Light Andy](https://github.com/LightAndy1)
 - [Aaryan](https://github.com/An-Array)
 - [Sumit Verma](https://github.com/SumitVerma-coder)

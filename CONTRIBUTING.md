@@ -40,8 +40,4 @@ To ensure a smooth contribution process, please follow these guidelines:
 - If you encounter any issues or have suggestions for improvements, please open an issue on the repository.
 - Provide as much detail as possible to help us understand and address the problem.
 
-## Contact
-
-If you have any questions or need further assistance, feel free to reach out to maddox05 at [maddox05](https://github.com/maddox05/).
-
 We appreciate your contributions and look forward to making our unblocked games website even better together!
