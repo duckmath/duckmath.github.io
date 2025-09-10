@@ -298,22 +298,22 @@ function home() {
   window.location.href = "/";
 }
 
-// set banner of site
-document.addEventListener("DOMContentLoaded", function () {
-  const headerSpan = document.getElementById("duckmath-header");
-  if (headerSpan) {
-    let TLD = window.location.hostname.split(".")[0];
-    TLD = TLD[0].toUpperCase() + TLD.slice(1);
-    const ending = window.location.hostname.split(".")[1];
-    headerSpan.firstChild.textContent = TLD;
-    headerSpan.children[0].textContent = "." + ending;
-  }
-  // Do not overwrite per-page titles if already set
-  const title = document.querySelector("title");
-  if (title && (!title.dataset.lock || title.dataset.lock !== "true")) {
-    // leave existing title; this avoids clobbering about page SEO title
-  }
-});
+// // set banner of site
+// document.addEventListener("DOMContentLoaded", function () {
+//   const headerSpan = document.getElementById("duckmath-header");
+//   if (headerSpan) {
+//     let TLD = window.location.hostname.split(".")[0];
+//     TLD = TLD[0].toUpperCase() + TLD.slice(1);
+//     const ending = window.location.hostname.split(".")[1];
+//     headerSpan.firstChild.textContent = TLD;
+//     headerSpan.children[0].textContent = "." + ending;
+//   }
+//   // Do not overwrite per-page titles if already set
+//   const title = document.querySelector("title");
+//   if (title && (!title.dataset.lock || title.dataset.lock !== "true")) {
+//     // leave existing title; this avoids clobbering about page SEO title
+//   }
+// });
 
 document.addEventListener("GamesLoaded", function () {
   const urlParams = new URLSearchParams(window.location.search);

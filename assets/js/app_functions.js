@@ -286,7 +286,7 @@ async function hydrateAppPage() {
 
   document
     .getElementById("game-title")
-    .prepend(appData.title.replaceAll("-", " "));
+    .prepend(appData.title.replaceAll("-", " ") + " Unblocked");
 
   // Add small text under title about .top_message property
   if (appData?.top_message) {
