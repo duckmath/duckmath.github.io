@@ -10,34 +10,43 @@
       body {
         font-family: Arial, sans-serif;
         background: #f4f6f8;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        position: relative;
         min-height: 100vh;
         margin: 0;
+        padding: 1rem;
+        box-sizing: border-box;
       }
 
       .card {
         background: white;
-        width: 350px;
-        padding: 2rem;
-        border-radius: 1.5rem;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: min(90vw, 400px);
+        max-width: 500px;
+        min-width: 280px;
+        padding: clamp(1.5rem, 4vw, 2.5rem);
+        border-radius: clamp(1rem, 2vw, 1.5rem);
         box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
         text-align: center;
+        box-sizing: border-box;
+        z-index: 9999;
+        pointer-events: auto;
       }
 
       .profile-pic {
-        width: 90px;
-        height: 90px;
+        width: clamp(70px, 15vw, 100px);
+        height: clamp(70px, 15vw, 100px);
         border-radius: 50%;
-        margin-bottom: 1rem;
+        margin-bottom: clamp(0.8rem, 2vw, 1.2rem);
         object-fit: cover;
         border: 3px solid #ddd;
       }
 
       h2 {
-        margin: 0 0 1.5rem 0;
-        font-size: 1.5rem;
+        margin: 0 0 clamp(1rem, 3vw, 1.5rem) 0;
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
         color: #222;
       }
 
@@ -46,10 +55,11 @@
         text-decoration: none;
         background: #f1f1f1;
         color: #222;
-        padding: 0.8rem;
-        margin: 0.5rem 0;
-        border-radius: 0.75rem;
+        padding: clamp(0.6rem, 2vw, 1rem);
+        margin: clamp(0.4rem, 1vw, 0.6rem) 0;
+        border-radius: clamp(0.5rem, 1.5vw, 0.75rem);
         font-weight: bold;
+        font-size: clamp(0.9rem, 2.5vw, 1.1rem);
         transition: background 0.2s;
       }
 
@@ -58,22 +68,22 @@
       }
 
       .discord-section {
-        margin-top: 1.5rem;
-        padding: 1rem;
+        margin-top: clamp(1rem, 3vw, 1.8rem);
+        padding: clamp(0.8rem, 2.5vw, 1.2rem);
         background: #f8f9ff;
-        border-radius: 1rem;
+        border-radius: clamp(0.7rem, 2vw, 1rem);
       }
 
       .discord-title {
         font-weight: bold;
-        margin-bottom: 0.5rem;
-        font-size: 1.1rem;
+        margin-bottom: clamp(0.4rem, 1vw, 0.6rem);
+        font-size: clamp(1rem, 2.8vw, 1.2rem);
       }
 
       .discord-description {
-        font-size: 0.9rem;
+        font-size: clamp(0.8rem, 2.2vw, 1rem);
         color: #555;
-        margin-bottom: 0.8rem;
+        margin-bottom: clamp(0.6rem, 1.5vw, 1rem);
       }
 
       .discord-button {
@@ -81,9 +91,10 @@
         text-decoration: none;
         background: #5865f2;
         color: white;
-        padding: 0.7rem 1.2rem;
-        border-radius: 0.75rem;
+        padding: clamp(0.6rem, 1.8vw, 0.8rem) clamp(1rem, 3vw, 1.4rem);
+        border-radius: clamp(0.5rem, 1.5vw, 0.75rem);
         font-weight: bold;
+        font-size: clamp(0.9rem, 2.2vw, 1rem);
         transition: background 0.2s;
       }
 
