@@ -15,6 +15,7 @@
 ## Table of contents
 
 - [About](#about)
+- [Games List](#games-list)
 - [Key Features](#key-features)
   - [Leaderboard & Score Verification](#leaderboard--score-verification)
   - [Authentication (Supabase)](#authentication-supabase)
@@ -38,6 +39,15 @@
 DuckMath.org was built to make high-quality browser games available to everyone — even behind restrictive filters. We combine a large playable catalog with community features (leaderboards, coins, battlepasses) and a small footprint so pages load fast on school and low-end devices.
 
 We update the catalog daily and add new community features regularly — the current site lists \~250+ games across categories like Action, Puzzle, Multiplayer, Retro, and Indie.
+
+## Games List
+---
+
+<!-- GAMES_LIST_START -->
+Coming Soon!
+<!-- GAMES_LIST_END -->
+
+---
 
 ## Key Features
 
