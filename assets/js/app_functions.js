@@ -34,7 +34,7 @@ function create_in_article_ad() {
   adDiv.appendChild(script);
   return adDiv;
 }
-const APP_VER = "apps9";
+const APP_VER = "apps10";
 const REQUERY_TIME = 2; // in days
 async function get_all_apps() {
   const date_last_queryed = JSON.parse(localStorage.getItem("dlq"));
@@ -298,7 +298,7 @@ async function hydrateAppPage() {
     infoText.textContent = appData?.top_message;
     titleElement.appendChild(infoText);
   }
-  const GAMES_PAGE_URL = "https://r2.maddox.page";
+  const GAMES_PAGE_URL = "https://maddox05.github.io/basic-ruffle-player";
   let app_link = appData.link;
   if (window.location.hostname === "duckmath.org") {
     app_link = app_link.replace(GAMES_PAGE_URL, "https://db.duckmath.org");
