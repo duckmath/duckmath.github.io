@@ -3,6 +3,17 @@ const supabaseKey =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhxbGdwcGd1eGhxZWFvbmp6aW52Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzI2MjYwNDQsImV4cCI6MjA0ODIwMjA0NH0.4LuWk4qxp0NRZ5_erEIJq5BHq5qZiSE4zTUFS1ioZw8";
 const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
+function getDescriptionFromMarkdown(markdown) {
+  // markdown will come in like
+  // ## Description
+  // ****
+  // ## Creator
+  // so cut off the first two lines and return the rest
+  let built = markdown.split("## Description")[1];
+  built = built.split("## Creator")[0];
+  return built.replaceAll("\n", "");
+}
+
 function create_in_article_ad() {
   /**
    * <div class="ad">
@@ -255,6 +266,47 @@ async function hydrateAppPage() {
   window.document.title =
     appTitle.replaceAll("-", " ") +
     ` - ${window.location.hostname.split(".")[0]}`;
+
+  // Update meta description using app.desc
+  if (appData.desc) {
+    const existingMetaDesc = document.querySelector('meta[name="description"]');
+    if (existingMetaDesc) {
+      existingMetaDesc.remove();
+    }
+
+    const metaDescMeta = document.createElement("meta");
+    metaDescMeta.setAttribute("name", "description");
+    metaDescMeta.setAttribute(
+      "content",
+      getDescriptionFromMarkdown(appData.desc)
+    );
+    document.head.appendChild(metaDescMeta);
+  }
+
+  // Set image meta tags for social media sharing
+  const existingOgImage = document.querySelector('meta[property="og:image"]');
+  if (existingOgImage) {
+    existingOgImage.remove();
+  }
+
+  const existingTwitterImage = document.querySelector(
+    'meta[name="twitter:image"]'
+  );
+  if (existingTwitterImage) {
+    existingTwitterImage.remove();
+  }
+
+  const ogImageMeta = document.createElement("meta");
+  ogImageMeta.setAttribute("property", "og:image");
+  ogImageMeta.setAttribute("content", appData.icon);
+  ogImageMeta.setAttribute("alt", `${appData.title} unblocked game icon`);
+  document.head.appendChild(ogImageMeta);
+
+  const twitterImageMeta = document.createElement("meta");
+  twitterImageMeta.setAttribute("name", "twitter:image");
+  twitterImageMeta.setAttribute("content", appData.icon);
+  twitterImageMeta.setAttribute("alt", `${appData.title} unblocked game icon`);
+  document.head.appendChild(twitterImageMeta);
 
   // Populate the page with app data
   // Render markdown description safely under the game
