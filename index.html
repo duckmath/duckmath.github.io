@@ -1,607 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="canonical" href="https://duckmath.org/" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script src="/assets/js/add.js"></script>
-    <script src="/assets/js/scrollbar.js"></script>
-
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="title" content="Duck's Unblocked Games" />
+
+    <!-- Primary metadata -->
+    <title>Duck Tutors — Free & Trusted Tutoring</title>
+    <meta name="title" content="Duck Tutors — Free & Trusted Tutoring" />
     <meta
       name="description"
-      content="Find tutors quickly with our new AI Finding tool!"
+      content="Duck Tutors connects students with friendly tutors, study guides and AI-powered learning tools — free and easy to use."
     />
-    <meta
-      name="keywords"
-      content="tutors, school, help"
-    />
-    <meta name="language" content="English" />
+    <meta name="keywords" content="tutors, tutoring, study help, homework, learning" />
+    <meta name="author" content="Duck Tutors" />
     <meta name="robots" content="index, follow" />
-    <meta name="author" content="DuckMath" />
-    <meta name="publisher" content="DuckMath" />
-    <meta name="coverage" content="Worldwide" />
-    <meta name="distribution" content="Global" />
-    <meta name="rating" content="General" />
 
+    <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="DuckMath" />
-    <meta
-      property="og:title"
-      content="Duck - find the right tutors for you."
-    />
+    <meta property="og:site_name" content="Duck Tutors" />
+    <meta property="og:title" content="Duck Tutors — Free & Trusted Tutoring" />
     <meta
       property="og:description"
-      content="Find quick tutors for completely free!"
+      content="Find reliable tutors, join study groups, and access tailored learning resources."
     />
-    <meta property="og:url" content="https://duckmath.org/" />
-    <meta
-      property="og:image"
-      content="https://duckmath.org/assets/img/og-image.png"
-    />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="Duck Tutors - NEW AI TUTOR"
-    />
-    <meta property="og:locale" content="en_US" />
-    <meta property="article:section" content="Tutors" />
-    <meta property="article:tag" content="Steal-A-Brainrot" />
-    <meta property="article:tag" content="Grow-A-Garden" />
-    <meta property="article:tag" content="Slope" />
-    <meta property="article:tag" content="Retro-Bowl-College" />
-    <meta property="article:tag" content="Minecraft" />
-    <meta property="article:tag" content="Deltarune" />
-    <meta property="article:tag" content="Clash-Royale" />
-
+    <meta property="og:url" content="https://ducktutors.example.com/" />
+    <meta property="og:image" content="https://ducktutors.example.com/assets/img/og-image.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@DuckMath" />
-    <meta name="twitter:creator" content="@DuckMath" />
-    <meta
-      name="twitter:title"
-      content="Duck - find the right tutors for you"
-    />
+    <meta name="twitter:title" content="Duck Tutors — Free & Trusted Tutoring" />
     <meta
       name="twitter:description"
-      content="Play 250+ unblocked games including Steal-A-Brainrot, Grow-A-Garden, Slope, Retro-Bowl-College, Minecraft, Deltarune, and Clash-Royale. Best games website for school chromebooks."
+      content="Find reliable tutors, join study groups, and access tailored learning resources."
     />
-    <meta
-      name="twitter:image"
-      content="https://duckmath.org/assets/img/og-image.png"
-    />
-    <meta
-      name="twitter:image:alt"
-      contentDuck - find the right tutors for you"
-    />
+    <meta name="twitter:image" content="https://ducktutors.example.com/assets/img/og-image.png" />
 
-    <title data-lock="true">Duck tutor</title>
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/img/duck.webp" />
+    <link rel="mask-icon" href="/assets/img/duck.webp" color="#111" />
 
+    <!-- Styles (replace with your CSS) -->
     <link rel="stylesheet" href="/assets/css/text_styles.css" />
     <link rel="stylesheet" href="/assets/css/topnav.css" />
     <link rel="stylesheet" href="/assets/css/main.css" />
-    <link rel="stylesheet" href="/assets/css/gabes.css" />
-    <link rel="stylesheet" href="/assets/css/about.css" />
-    <link rel="stylesheet" href="/assets/css/home.css" />
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/app_functions.js" type="text/javascript"></script>
-    <script src="/assets/js/index.js" type="text/javascript" defer></script>
+    <!-- Main JS (defer to avoid blocking) -->
+    <script src="/assets/js/main.js" defer></script>
 
-    <link rel="icon" type="image/x-icon" href="/assets/img/duck.webp" />
-    <link rel="mask-icon" type="" href="/assets/img/duck.webp" color="#111" />
-
+    <!-- Structured data (educational organization & WebSite) -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "DuckTutors",
-        "alternateName": "Ducks tutors",
-        "url": "https://duckmath.org/",
-        "description": "Find tutors for completely free!",
-        "publisher": {
-          "@type": "Organization",
-          "@id": "https://duckmath.org/#organization",
-          "name": "DuckMath",
-          "url": "https://duckmath.org/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://duckmath.org/assets/img/duck.webp",
-            "width": 512,
-            "height": 512
-          },
-          "sameAs": ["https://github.com/duckmath/duckmath.github.io"]
-        },
-        "mainEntity": {
-          "@type": "ItemList",
-          "name": "Popular tutor Games",
-          "itemListElement": [
-            {
-              "@type": "VideoGame",
-              "position": 1,
-              "name": "Steal A Brainrot",
-              "url": "https://duckmath.org/g4m3s/?title=Steal-A-Brainrot",
-              "description": "Popular unblocked roblox game available on DuckMath.",
-              "image": "https://play-lh.googleusercontent.com/iR1JNfTr0W_fDN8zAfuZYPYHdVjI1UzNSVFkbAyXwN8e3jEuKsyu73zqjVdHDxNEfQqLhC78EaPzZPtWNL-X",
-              "genre": "Action",
-              "applicationCategory": "GameApplication",
-              "gamePlatform": "Web Browser",
-              "playMode": "SinglePlayer",
-
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.5",
-                "ratingCount": "180"
-              }
-            },
-            {
-              "@type": "VideoGame",
-              "position": 2,
-              "name": "Grow A Garden",
-              "url": "https://duckmath.org/g4m3s/?title=Grow-A-Garden",
-              "description": "Gardening simulation game unblocked for school.",
-              "image": "https://www.spectator.co.uk/wp-content/uploads/2025/07/5Julygamer.png",
-              "genre": "Simulation",
-              "applicationCategory": "GameApplication",
-              "gamePlatform": "Web Browser",
-              "playMode": "SinglePlayer",
-
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.7",
-                "ratingCount": "250"
-              }
-            },
-            {
-              "@type": "VideoGame",
-              "position": 3,
-              "name": "Slope",
-              "url": "https://duckmath.org/g4m3s/?title=Slope",
-              "description": "Fast-paced 3D running game unblocked.",
-              "image": "https://raw.githubusercontent.com/duckmath/icons/refs/heads/main/slope.webp",
-              "genre": "Arcade",
-              "applicationCategory": "GameApplication",
-              "gamePlatform": "Web Browser",
-              "playMode": "SinglePlayer",
-
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "ratingCount": "1200"
-              }
-            },
-            {
-              "@type": "VideoGame",
-              "position": 4,
-              "name": "Retro Bowl College",
-              "url": "https://duckmath.org/g4m3s/?title=Retro-Bowl-College",
-              "description": "College football management game unblocked.",
-              "image": "https://img.poki-cdn.com/cdn-cgi/image/quality=100,width=314,height=314,fit=cover,f=auto/d98547374c4129bf441b754d495e41aa.png",
-              "genre": "Sports",
-              "applicationCategory": "GameApplication",
-              "gamePlatform": "Web Browser",
-              "playMode": "SinglePlayer",
-
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "ratingCount": "950"
-              }
-            },
-            {
-              "@type": "VideoGame",
-              "position": 5,
-              "name": "Minecraft",
-              "url": "https://duckmath.org/g4m3s/?title=Minecraft",
-              "description": "Block-building sandbox game unblocked for school.",
-              "image": "https://images.icon-icons.com/2699/PNG/512/minecraft_logo_icon_168974.png",
-              "genre": "Sandbox",
-              "applicationCategory": "GameApplication",
-              "gamePlatform": "Web Browser",
-              "playMode": "MultiPlayer",
-
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "ratingCount": "2100"
-              }
-            },
-            {
-              "@type": "VideoGame",
-              "position": 6,
-              "name": "Deltarune",
-              "url": "https://duckmath.org/g4m3s/?title=Deltarune",
-              "description": "RPG adventure game unblocked.",
-              "image": "https://image.api.playstation.com/vulcan/ap/rnd/202504/1011/35bfbfc8cd3fbff2cbdedf2da91412e44161f195824502f8.png",
-              "genre": "RPG",
-              "applicationCategory": "GameApplication",
-              "gamePlatform": "Web Browser",
-              "playMode": "SinglePlayer",
-
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "ratingCount": "750"
-              }
-            },
-            {
-              "@type": "VideoGame",
-              "position": 7,
-              "name": "Clash Royale",
-              "url": "https://duckmath.org/g4m3s/?title=Clash-Royale",
-              "description": "Strategy card battle game unblocked.",
-              "image": "https://play-lh.googleusercontent.com/gnSC6s8-6Tjc4uhvDW7nfrSJxpbhllzYhgX8y374N1LYvWBStn2YhozS9XXaz1T_Pi2q",
-              "genre": "Strategy",
-              "applicationCategory": "GameApplication",
-              "gamePlatform": "Web Browser",
-              "playMode": "MultiPlayer",
-
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.6",
-                "ratingCount": "1500"
-              }
-            }
-          ]
-        }
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Duck Tutors",
+      "url": "https://ducktutors.example.com/",
+      "logo": "https://ducktutors.example.com/assets/img/duck.webp",
+      "sameAs": [
+        "https://github.com/your-org/your-repo"
+      ],
+      "description": "Duck Tutors connects students with tutors and learning tools to improve study outcomes.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "support@ducktutors.example.com",
+        "url": "https://ducktutors.example.com/contact"
       }
+    }
     </script>
+
+    <meta name="theme-color" content="#ffffff" />
   </head>
+
   <body>
-    <div class="title_text_main" id="title">
-      <!--<h1>G4M3S</h1>-->
-      <div class="group">
-        <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
-          <g>
-            <path
-              d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
-            ></path>
-          </g>
-        </svg>
-
-        <input
-          oninput="showall();searchbar1();"
-          onclick="showall();searchbar1();"
-          id="query"
-          class="input"
-          type="search"
-          placeholder="Search..."
-          name="searchbar"
-        />
-      </div>
-      <br />
-
-      <button
-        id="All"
-        class="button2 sorter"
-        onclick="showall();sorterbuttons(this);"
-      >
-        All
-      </button>
-      <button
-        id="Multiplayer"
-        class="button1 sorter"
-        onclick="sorter('Multiplayer');sorterbuttons(this);"
-      >
-        Multiplayer
-      </button>
-      <button
-        id="Flash"
-        class="button1 sorter"
-        onclick="sorter('Flash');sorterbuttons(this);"
-      >
-        Flash
-      </button>
-      <button
-        id="Emulator"
-        class="button1 sorter"
-        onclick="sorter('Emulator');sorterbuttons(this);"
-      >
-        Emulator
-      </button>
-      <button
-        id="Platformer"
-        class="button1 sorter"
-        onclick="sorter('Platformer');sorterbuttons(this);"
-      >
-        Platformer
-      </button>
-      <button
-        id="Puzzle"
-        class="button1 sorter"
-        onclick="sorter('Puzzle');sorterbuttons(this);"
-      >
-        Puzzle
-      </button>
-      <button
-        id="Sports"
-        class="button1 sorter"
-        onclick="sorter('Sports');sorterbuttons(this);"
-      >
-        Sports
-      </button>
-      <button
-        id="Driving"
-        class="button1 sorter"
-        onclick="sorter('Driving');sorterbuttons(this);"
-      >
-        Driving
-      </button>
-      <button
-        id="Fighting"
-        class="button1 sorter"
-        onclick="sorter('Fighting');sorterbuttons(this);"
-      >
-        Fighting
-      </button>
-      <button
-        id="Horror"
-        class="button1 sorter"
-        onclick="sorter('Horror');sorterbuttons(this);"
-      >
-        Horror
-      </button>
-      <button
-        id="2D"
-        class="button1 sorter"
-        onclick="sorter('2D');sorterbuttons(this);"
-      >
-        2D
-      </button>
-      <button
-        id="Other"
-        class="button1 sorter"
-        onclick="sorter('Other');sorterbuttons(this);"
-      >
-        Other
-      </button>
-      <button
-        id="New"
-        class="button3 sorter"
-        onclick="sorter('New');sorterbuttons(this);"
-      >
-        New
-      </button>
-      <!-- wierd click effect -->
-
-      <div class="icon_image" id="icon_image">
-        <iframe
-          src="/circle-loading.html"
-          width="100%"
-          height="800px"
-          frameborder="0"
-          title="Full-width iframe"
-        ></iframe>
-      </div>
-    </div>
     <header class="hero" role="banner">
       <div class="hero-inner">
-        <h1 class="hero-title">Unblocked Games For School</h1>
-        <p class="hero-subtitle">
-          250+ free browser games. Fast. Clean. 20+ Links.
-        </p>
+        <h1 class="hero-title">Duck Tutors</h1>
+        <p class="hero-subtitle">Find trusted tutors, guided lessons, and AI study helpers — free and easy.</p>
 
         <div class="hero-ctas">
-          <a class="btn-primary" href="#">Play now!</a>
-          <a
-            class="btn-tertiary"
-            href="https://github.com/duckmath/duckmath.github.io"
-            target="_blank"
-            rel="noopener"
-            >GitHub</a
-          >
+          <a class="btn-primary" href="/get-started.html">Get Started</a>
+          <a class="btn-tertiary" href="/about.html" rel="noopener">About</a>
         </div>
       </div>
     </header>
 
-    <main id="content" class="home" role="main">
+    <main id="content" role="main" class="home">
       <section class="features" aria-label="Highlights">
         <div class="feature">
-          <h3>Actually Unblocked</h3>
-          <p>
-            Cloaking tools & 20+ links in our discord to bypass restrictive
-            networks responsibly.
-          </p>
+          <h3>Personalized Matches</h3>
+          <p>We match you with tutors who fit your subject needs, schedule and learning style.</p>
         </div>
+
         <div class="feature">
-          <h3>Fast & Reliable</h3>
-          <p>
-            Lightweight pages, instant search, frequent updates, all so duckmath
-            works on your school chromebook.
-          </p>
+          <h3>Study Tools</h3>
+          <p>Flashcards, practice quizzes, and guided lessons to reinforce what you learn with tutors.</p>
         </div>
+
         <div class="feature">
-          <h3>Best Game Selection</h3>
-          <p>
-            Hand‑picked hits like Omori (unblocked), Deltarune, Roblox, and more
-            — curated for performance and reliability.
-          </p>
+          <h3>Community & Safety</h3>
+          <p>Verified tutor profiles, moderated messaging, and optional parental controls.</p>
         </div>
       </section>
 
-      <section class="popular" id="popular" aria-label="Popular games">
-        <h2>Popular Right Now</h2>
-        <div id="popular" class="popular-grid">
-          <a
-            class="card"
-            href="/g4m3s/?title=retro-bowl"
-            aria-label="Search Retro Bowl"
-          >
-            <img
-              src="/assets/img/icons/retro_bowl_icon.webp"
-              alt="Retro Bowl icon"
-              loading="lazy"
-              width="120"
-              height="120"
-            />
-            <span>Retro Bowl</span>
-          </a>
-          <a class="card" href="/g4m3s/?title=slope" aria-label="Search Slope">
-            <img
-              src="/assets/img/icons/slope.webp"
-              alt="Slope game icon"
-              loading="lazy"
-              width="120"
-              height="120"
-            />
-            <span>Slope</span>
-          </a>
-          <a
-            class="card"
-            href="/g4m3s/?title=1v1.lol"
-            aria-label="Search 1v1.lol"
-          >
-            <img
-              src="/assets/img/icons/1v1.webp"
-              alt="1v1.lol icon"
-              loading="lazy"
-              width="120"
-              height="120"
-            />
-            <span>1v1.lol</span>
-          </a>
-          <a
-            class="card"
-            href="/g4m3s/?title=tunnel-rush-2"
-            aria-label="Search Tunnel Rush"
-          >
-            <img
-              src="/assets/img/icons/tunnelrush.webp"
-              alt="Tunnel Rush icon"
-              loading="lazy"
-              width="120"
-              height="120"
-            />
-            <span>Tunnel Rush</span>
-          </a>
-          <a
-            class="card"
-            href="/g4m3s/?title=smash-karts"
-            aria-label="Search Smash Karts"
-          >
-            <img
-              src="/assets/img/icons/smashkarts.webp"
-              alt="Smash Karts icon"
-              loading="lazy"
-              width="120"
-              height="120"
-            />
-            <span>Smash Karts</span>
-          </a>
-          <a
-            class="card"
-            href="/g4m3s/?title=friday-night-funkin"
-            aria-label="Search Friday Night Funkin"
-          >
-            <img
-              src="/assets/img/icons/friday.webp"
-              alt="Friday Night Funkin icon"
-              loading="lazy"
-              width="120"
-              height="120"
-            />
-            <span>FNF</span>
-          </a>
-        </div>
-      </section>
-
-      <section class="seo-copy" aria-label="About DuckMath">
-        <h2>Play Unblocked Games at School and Work</h2>
-        <p>
-          DuckMath is your hub for <strong>unblocked games</strong>: action,
-          puzzle, sports, platformers, and more. Browse
-          <a href="/">250+ games</a>, try our
-          <a href="/more/Proxies.html">proxies & cloak mode</a>, and climb the
-          <a href="/leaderboard.html">leaderboard</a>. We update frequently and
-          prioritize speed, access, and safety.
-        </p>
+      <section class="services" aria-label="Services">
+        <h2>Our Services</h2>
+        <ul>
+          <li>One-on-one tutoring (math, science, languages)</li>
+          <li>Homework help & explanation sessions</li>
+          <li>Exam prep & practice tests</li>
+          <li>AI-powered study plan generator</li>
+        </ul>
       </section>
 
       <section class="faq" aria-label="FAQ">
         <h2>Frequently Asked Questions</h2>
+
         <details>
-          <summary>What are unblocked games?</summary>
-          <p>
-            Games that work through restrictive networks like schools or
-            workplaces, often via proxies or network-friendly hosting.
-          </p>
+          <summary>Is Duck Tutors free?</summary>
+          <p>Basic features like tutor searching and study tools are free. Some premium sessions may be paid — we always disclose pricing up front.</p>
         </details>
+
         <details>
-          <summary>How do I access games if my school blocks them?</summary>
-          <p>
-            Use our <a href="/more/Proxies.html">proxy & cloaking tools</a>. If
-            DuckMath is blocked, join our
-            <a href="/more/discord.html">Discord</a>
-            for mirror links and tips. Always follow your local rules and be
-            responsible.
-          </p>
+          <summary>How are tutors vetted?</summary>
+          <p>All tutors complete a verification process and provide credentials; reviews and ratings are visible on every profile.</p>
         </details>
+
         <details>
-          <summary>Is DuckMath free?</summary>
-          <p>
-            Yes. The site is free to use and supported by minimal, non-intrusive
-            ads.
-          </p>
-        </details>
-        <details>
-          <summary>Is this duckmath.org's Main Site?</summary>
-          <p>
-            Yes! However most of our goodies like leaderboards, accounts,
-            battlepass, coins, and more are on our other sites. Join the discord
-            to get those links!
-          </p>
+          <summary>How do I contact support?</summary>
+          <p>Email us at support@ducktutors.example.com or use the contact form on our site.</p>
         </details>
       </section>
     </main>
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What are unblocked games?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Games that work through restrictive networks like schools or workplaces, often via proxies or network-friendly hosting."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How do I access games if my school blocks them?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Use our proxy and cloaking tools. If DuckMath is blocked, join our Discord for mirror links and tips. Always follow your local rules and be responsible."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is DuckMath free?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. The site is free to use and supported by minimal, non-intrusive ads."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is this duckmath.org's Main Site?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes! However most of our goodies like leaderboards, accounts, battlepass, coins, and more are on our other sites. Join the discord to get those links!"
-            }
-          }
-        ]
-      }
-    </script>
+    <footer role="contentinfo">
+      <div class="footer-inner">
+        <p>&copy; <span id="year"></span> Duck Tutors — All rights reserved.</p>
+        <nav aria-label="Footer">
+          <a href="/privacy.html">Privacy</a> ·
+          <a href="/terms.html">Terms</a> ·
+          <a href="/contact.html">Contact</a>
+        </nav>
+      </div>
+    </footer>
 
-    <noscript
-      >Your browser doesn't have JavaScript enabled. Please enable JavaScript or
-      switch to a browser that supports it.</noscript
-    >
+    <noscript>
+      Please enable JavaScript to use Duck Tutors.
+    </noscript>
+
+    <script>
+      // small helper scripts
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
