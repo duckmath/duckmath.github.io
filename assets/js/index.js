@@ -5,7 +5,7 @@ templatetopnav.innerHTML = `
 <div class="dropdown">
   <a href="/more/index.html" class="topnavbutton">MORE↓</a>
   <div class="dropdown-content">
-    <a href="/more/Proxies.html" class="first">Proxies</a>
+    <a href="/more/apps.html" class="first">Apps</a>
     <a href="/more/discord.html" class="dis">Discord</a>
     <a href="/more/game_help.html" class="vm">Game Help</a>
     <a href="/more/takedown.html" class="vm">DMCA</a>
@@ -39,7 +39,7 @@ templatetopnav.innerHTML = `
   <li>
     <a class="topnavbutton">MORE↓</a>
     <div class="dropdown-content">
-      <a href="/more/Proxies.html">Proxies</a>
+      <a href="/more/apps.html">Apps</a>
       <a href="/more/Virtual_Machines.html" class="vm">Virtual Machines</a>
       <a href="/more/discord.html" class="dis">Discord</a>
       <a href="/more/game_help.html" class="gr">Game Help</a>
@@ -90,7 +90,7 @@ templatefooter.innerHTML = `
           <a href="/leaderboard.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Leaderboard</a>
           <a href="/" style="text-decoration: none; color: inherit; opacity: 0.95;">Games</a>
           <a href="/blog/" style="text-decoration: none; color: inherit; opacity: 0.95;">Blog</a>
-          <a href="/more/Proxies.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Proxies & Cloak Mode</a>
+          <a href="/more/apps.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Apps & Unblockers</a>
           <a href="/more/tab-cloak.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Tab Cloak</a>
           <a href="/more/cache.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Item Shop</a>
           <a href="/more/streak.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Streak</a>
