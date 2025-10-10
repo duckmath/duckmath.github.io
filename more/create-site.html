@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="canonical" href="https://duckmath.org/more/create-site" />
+    <script src="/assets/js/add.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta
+      property="og:image"
+      content="https://duckmath.org/assets/img/duck.webp"
+    />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="title"
+      content="Create Your Own Unblocked Games Site — DuckMath Guide"
+    />
+    <meta
+      name="description"
+      content="Learn how to create your own unblocked games website using DuckMath's open-source code. Step-by-step guide for beginners."
+    />
+    <meta
+      name="keywords"
+      content="unblocked games site, create games website, DuckMath tutorial, open source games, GitHub Pages"
+    />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <link rel="canonical" href="https://duckmath.org/more/create-site.html" />
+    <title>Create Your Own Unblocked Games Site — DuckMath</title>
+    <link rel="stylesheet" href="/assets/css/text_styles.css" />
+    <link rel="stylesheet" href="/assets/css/topnav.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/about.css" />
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/index.js" type="text/javascript" defer></script>
+    <link rel="icon" type="image/x-icon" href="/assets/img/duck.webp" />
+    <link rel="mask-icon" type="" href="/assets/img/duck.webp" color="#111" />
+    <noscript
+      >Your browser doesn't have JavaScript enabled. Please enable JavaScript or
+      switch to a browser that supports it.</noscript
+    >
+
+    <meta property="og:title" content="Create Your Own Unblocked Games Site" />
+    <meta
+      property="og:description"
+      content="Step-by-step guide to creating your own unblocked games website using DuckMath's open-source code."
+    />
+    <meta
+      property="og:url"
+      content="https://duckmath.org/more/create-site.html"
+    />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Create Your Own Unblocked Games Site" />
+    <meta
+      name="twitter:description"
+      content="Learn how to create your own unblocked games website with DuckMath."
+    />
+    <meta
+      name="twitter:image"
+      content="https://duckmath.org/assets/img/duck.webp"
+    />
+
+    <style>
+      .guide-section {
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 2rem;
+        border-radius: 1rem;
+        margin: 2rem 0;
+        color: #333;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      }
+
+      .guide-section h2 {
+        color: #ff0000;
+        margin-top: 0;
+        font-size: 1.8rem;
+      }
+
+      .guide-section h3 {
+        color: #d62828;
+        font-size: 1.3rem;
+        margin-top: 1.5rem;
+      }
+
+      .step-number {
+        display: inline-block;
+        background: linear-gradient(135deg, #ff0000 0%, #d62828 100%);
+        color: white;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 2rem;
+        font-weight: bold;
+        margin-right: 0.5rem;
+      }
+
+      .code-block {
+        background-color: #1e1e1e;
+        color: #d4d4d4;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        overflow-x: auto;
+        font-family: "Courier New", monospace;
+        margin: 1rem 0;
+        border-left: 4px solid #ff0000;
+      }
+
+      .code-block code {
+        color: #d4d4d4;
+      }
+
+      .warning-box {
+        background-color: #fff3cd;
+        border-left: 4px solid #ffc107;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin: 1rem 0;
+        color: #856404;
+      }
+
+      .warning-box a {
+        color: #856404 !important;
+        font-weight: 600;
+        text-decoration: underline !important;
+      }
+
+      .tip-box {
+        background-color: #d1ecf1;
+        border-left: 4px solid #0dcaf0;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin: 1rem 0;
+        color: #055160;
+      }
+
+      .tip-box a {
+        color: #055160 !important;
+        font-weight: 600;
+        text-decoration: underline !important;
+      }
+
+      .success-box {
+        background-color: #d1e7dd;
+        border-left: 4px solid #198754;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin: 1rem 0;
+        color: #0f5132;
+      }
+
+      .success-box a {
+        color: #0f5132 !important;
+        font-weight: 600;
+        text-decoration: underline !important;
+      }
+
+      .guide-section ul {
+        line-height: 1.8;
+      }
+
+      .guide-section ol {
+        line-height: 1.8;
+      }
+
+      .guide-section li {
+        margin-bottom: 0.5rem;
+      }
+
+      .guide-section a {
+        color: #ff0000 !important;
+        text-decoration: underline !important;
+      }
+
+      .guide-section a:hover {
+        color: #d62828 !important;
+      }
+
+      .guide-section a:visited {
+        color: #d62828 !important;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: linear-gradient(135deg, #ff0000 0%, #d62828 100%);
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.25s cubic-bezier(0.05, 0.75, 0.12, 0.97);
+        box-shadow: rgba(255, 0, 0, 0.3) 0px 4px 12px;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: rgba(255, 0, 0, 0.4) 0px 6px 16px;
+        color: white;
+      }
+
+      .resource-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin: 1.5rem 0;
+      }
+
+      .resource-card {
+        background-color: #f8f9fa;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        border: 2px solid #e9ecef;
+        transition: all 0.25s cubic-bezier(0.05, 0.75, 0.12, 0.97);
+      }
+
+      .resource-card:hover {
+        border-color: #ff0000;
+        transform: translateY(-3px);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      }
+
+      .resource-card h4 {
+        color: #ff0000;
+        margin-top: 0;
+      }
+
+      .resource-card a {
+        color: #ff0000 !important;
+        font-weight: 600;
+        text-decoration: underline !important;
+      }
+
+      .resource-card a:hover {
+        color: #d62828 !important;
+      }
+
+      .box.box2 a {
+        color: #ff0000 !important;
+        text-decoration: underline !important;
+      }
+
+      .box.box2 a:hover {
+        color: #d62828 !important;
+      }
+
+      .box.box1 a {
+        color: #ff0000 !important;
+        text-decoration: underline !important;
+      }
+
+      .box.box1 a:hover {
+        color: #d62828 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentBox">
+      <section class="box box1">
+        <h1 class="hero-title">Create Your Own Unblocked Games Site</h1>
+        <p class="hero-subtitle">
+          A complete guide to building your site with DuckMath
+        </p>
+        <p>
+          DuckMath is open source and free to use! This guide will walk you
+          through creating your own unblocked games website using our codebase.
+          No advanced coding skills required.
+        </p>
+      </section>
+
+      <section class="box box3">
+        <div class="guide-section">
+          <h2>📋 What You'll Need</h2>
+          <ul>
+            <li>
+              <strong>GitHub Account</strong> — Free account at
+              <a href="https://github.com" target="_blank" rel="noopener"
+                >github.com</a
+              >
+            </li>
+            <li>
+              <strong>Text Editor</strong> — We recommend
+              <a
+                href="https://code.visualstudio.com/"
+                target="_blank"
+                rel="noopener"
+                >VS Code</a
+              >
+              (free)
+            </li>
+            <li>
+              <strong>Git</strong> — Download from
+              <a href="https://git-scm.com/" target="_blank" rel="noopener"
+                >git-scm.com</a
+              >
+            </li>
+            <li>
+              <strong>Basic HTML/CSS knowledge</strong> — Helpful but not
+              required
+            </li>
+          </ul>
+
+          <div class="tip-box">
+            <strong>💡 New to coding?</strong> Don't worry! This guide is
+            beginner-friendly. We'll walk you through each step.
+          </div>
+        </div>
+
+        <div class="guide-section">
+          <h2>🚀 Step-by-Step Guide</h2>
+
+          <h3><span class="step-number">1</span>Fork the Repository</h3>
+          <p>
+            "Forking" creates your own copy of DuckMath that you can customize.
+          </p>
+          <ol>
+            <li>
+              Go to
+              <a
+                href="https://github.com/duckmath/duckmath.github.io"
+                target="_blank"
+                rel="noopener"
+                >github.com/duckmath/duckmath.github.io</a
+              >
+            </li>
+            <li>Click the <strong>"Fork"</strong> button in the top right</li>
+            <li>
+              Choose your account as the destination (this creates
+              <code>yourusername/duckmath.github.io</code>)
+            </li>
+          </ol>
+
+          <div class="success-box">
+            <strong>✅ Success!</strong> You now have your own copy of the
+            DuckMath codebase.
+          </div>
+
+          <h3><span class="step-number">2</span>Rename Your Repository</h3>
+          <p>Give your site a unique name.</p>
+          <ol>
+            <li>Go to your forked repository on GitHub</li>
+            <li>Click <strong>"Settings"</strong></li>
+            <li>
+              Change the repository name to
+              <code>yourusername.github.io</code> (replace "yourusername" with
+              your actual username)
+            </li>
+            <li>Click <strong>"Rename"</strong></li>
+          </ol>
+
+          <div class="tip-box">
+            <strong>💡 Why this name?</strong> GitHub automatically hosts
+            repositories named <code>username.github.io</code> as websites at
+            that URL!
+          </div>
+
+          <h3><span class="step-number">3</span>Enable GitHub Pages</h3>
+          <p>Make your site live on the internet.</p>
+          <ol>
+            <li>In your repository, go to <strong>"Settings"</strong></li>
+            <li>Scroll down to <strong>"Pages"</strong> in the left sidebar</li>
+            <li>Under "Source", select <strong>"main"</strong> branch</li>
+            <li>Click <strong>"Save"</strong></li>
+            <li>
+              Wait 1-2 minutes, then visit
+              <code>https://yourusername.github.io</code>
+            </li>
+          </ol>
+
+          <div class="success-box">
+            <strong>🎉 Your site is live!</strong> You now have a working
+            unblocked games website.
+          </div>
+
+          <h3><span class="step-number">4</span>Clone to Your Computer</h3>
+          <p>Download the code so you can edit it locally.</p>
+          <div class="code-block">
+            <code
+              >git clone
+              https://github.com/yourusername/yourusername.github.io.git<br />
+              cd yourusername.github.io</code
+            >
+          </div>
+
+          <h3><span class="step-number">5</span>Customize Your Site</h3>
+          <p>Make it your own! Here are the key files to edit:</p>
+
+          <div class="resource-grid">
+            <div class="resource-card">
+              <h4>index.html</h4>
+              <p>
+                Main homepage. Change the title, description, and hero text.
+              </p>
+            </div>
+
+            <div class="resource-card">
+              <h4>about.html</h4>
+              <p>About page. Update with your site's story and mission.</p>
+            </div>
+
+            <div class="resource-card">
+              <h4>assets/css/main.css</h4>
+              <p>
+                Styling. Change colors by editing the
+                <code>--primary-color</code>
+                variable.
+              </p>
+            </div>
+
+            <div class="resource-card">
+              <h4>assets/img/duck.webp</h4>
+              <p>Logo. Replace with your own logo image.</p>
+            </div>
+
+            <div class="resource-card">
+              <h4>README.md</h4>
+              <p>Update with information about your site.</p>
+            </div>
+
+            <div class="resource-card">
+              <h4>assets/js/index.js</h4>
+              <p>Footer content. Update site name, stats, and links.</p>
+            </div>
+          </div>
+
+          <h3><span class="step-number">6</span>Push Your Changes</h3>
+          <p>Upload your customizations to GitHub.</p>
+          <div class="code-block">
+            <code
+              >git add .<br />
+              git commit -m "Customized my site"<br />
+              git push origin main</code
+            >
+          </div>
+
+          <p>
+            Wait 1-2 minutes and your changes will appear at
+            <code>https://yourusername.github.io</code>
+          </p>
+        </div>
+
+        <div class="guide-section">
+          <h2>🎨 Customization Ideas</h2>
+
+          <h3>Change Colors</h3>
+          <p>
+            Edit <code>assets/css/main.css</code> and change the color values:
+          </p>
+          <div class="code-block">
+            <code
+              >:root {<br />
+              &nbsp;&nbsp;--primary-color: #0066ff; /* Change to your color
+              */<br />
+              &nbsp;&nbsp;--accent-color: #00ff00; /* Change accent color */<br />
+              }</code
+            >
+          </div>
+
+          <h3>Change Site Name</h3>
+          <p>Search and replace "DuckMath" with your site name in:</p>
+          <ul>
+            <li><code>index.html</code></li>
+            <li><code>about.html</code></li>
+            <li><code>assets/js/index.js</code></li>
+            <li>All meta tags</li>
+          </ul>
+
+          <h3>Custom Domain</h3>
+          <p>Want a custom domain like <code>mygames.com</code>?</p>
+          <ol>
+            <li>Buy a domain from Namecheap, Google Domains, etc.</li>
+            <li>Add a <code>CNAME</code> file to your repo with your domain</li>
+            <li>
+              Configure DNS settings (
+              <a
+                href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site"
+                target="_blank"
+                rel="noopener"
+                >GitHub guide</a
+              >)
+            </li>
+          </ol>
+        </div>
+
+        <div class="guide-section">
+          <h2>⚠️ Important Notes</h2>
+
+          <div class="warning-box">
+            <strong>⚠️ Copyright</strong><br />
+            While DuckMath's code is open source, game content may have
+            different licenses. Always respect copyright and licensing terms.
+          </div>
+        </div>
+
+        <div class="guide-section">
+          <h2>📚 Additional Resources</h2>
+
+          <div class="resource-grid">
+            <div class="resource-card">
+              <h4>GitHub Pages Docs</h4>
+              <p>
+                <a
+                  href="https://docs.github.com/en/pages"
+                  target="_blank"
+                  rel="noopener"
+                  >Official documentation</a
+                >
+                for hosting on GitHub
+              </p>
+            </div>
+
+            <div class="resource-card">
+              <h4>HTML & CSS Tutorial</h4>
+              <p>
+                <a
+                  href="https://www.w3schools.com/"
+                  target="_blank"
+                  rel="noopener"
+                  >W3Schools</a
+                >
+                — Free web development tutorials
+              </p>
+            </div>
+
+            <div class="resource-card">
+              <h4>Git Tutorial</h4>
+              <p>
+                <a
+                  href="https://git-scm.com/docs/gittutorial"
+                  target="_blank"
+                  rel="noopener"
+                  >Learn Git basics</a
+                >
+                for version control
+              </p>
+            </div>
+
+            <div class="resource-card">
+              <h4>VS Code Tutorial</h4>
+              <p>
+                <a
+                  href="https://code.visualstudio.com/docs"
+                  target="_blank"
+                  rel="noopener"
+                  >Getting started</a
+                >
+                with Visual Studio Code
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="guide-section">
+          <h2>💬 Need Help?</h2>
+          <p>If you get stuck or have questions:</p>
+          <ul>
+            <li>
+              Check the
+              <a
+                href="https://github.com/duckmath/duckmath.github.io"
+                target="_blank"
+                rel="noopener"
+                >DuckMath GitHub repository</a
+              >
+            </li>
+            <li>
+              Read the
+              <a
+                href="https://github.com/duckmath/duckmath.github.io/blob/main/README.md"
+                target="_blank"
+                rel="noopener"
+                >README.md</a
+              >
+              file
+            </li>
+            <li>
+              Join the
+              <a href="/more/discord.html">DuckMath Discord</a> for community
+              support
+            </li>
+            <li>
+              Search for tutorials on YouTube — "How to use GitHub Pages" is a
+              great starting point
+            </li>
+          </ul>
+
+          <div class="tip-box">
+            <strong>💡 Pro Tip:</strong> Start small! Get the basic site working
+            first, then gradually add your own features and customizations.
+          </div>
+        </div>
+
+        <div class="guide-section">
+          <h2>🎉 What's Next?</h2>
+          <p>Now that you have your site, here are some ideas:</p>
+          <ul>
+            <li>🎮 Add your favorite games</li>
+            <li>🎨 Create a unique design and color scheme</li>
+            <li>📱 Share on social media</li>
+            <li>👥 Build a community around your site</li>
+            <li>🔧 Add new features and functionality</li>
+            <li>📊 Track your site stats with Google Analytics</li>
+          </ul>
+
+          <div class="success-box">
+            <strong>🌟 Share Your Creation!</strong><br />
+            Built something cool? We'd love to see it! Share in our Discord
+            community.
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem">
+          <a
+            class="button"
+            href="https://github.com/duckmath/duckmath.github.io"
+            target="_blank"
+            rel="noopener"
+            >View on GitHub</a
+          >
+          <a class="button" href="/">Back to DuckMath</a>
+        </div>
+      </section>
+
+      <aside class="box box2">
+        <div
+          style="
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 1.5rem;
+            border-radius: 1rem;
+          "
+        >
+          <h3 style="color: #ff0000; margin-top: 0">Quick Links</h3>
+          <ul style="color: #333; line-height: 1.8">
+            <li>
+              <a
+                href="https://github.com/duckmath/duckmath.github.io"
+                target="_blank"
+                rel="noopener"
+                >DuckMath on GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://docs.github.com/en/pages"
+                target="_blank"
+                rel="noopener"
+                >GitHub Pages Docs</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://code.visualstudio.com/"
+                target="_blank"
+                rel="noopener"
+                >Download VS Code</a
+              >
+            </li>
+            <li><a href="/more/discord.html">Join Discord</a></li>
+            <li><a href="/about.html">About DuckMath</a></li>
+          </ul>
+        </div>
+
+        <div
+          style="
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-top: 1.5rem;
+          "
+        >
+          <h3 style="color: #ff0000; margin-top: 0">License</h3>
+          <p style="color: #333; line-height: 1.8">
+            DuckMath is open source under the MIT License. You're free to use,
+            modify, and distribute the code. See the
+            <a
+              href="https://github.com/duckmath/duckmath.github.io/blob/main/LICENSE"
+              target="_blank"
+              rel="noopener"
+              >LICENSE file</a
+            >
+            for details.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>

@@ -91,6 +91,7 @@ templatefooter.innerHTML = `
           <a href="/" style="text-decoration: none; color: inherit; opacity: 0.95;">Games</a>
           <a href="/blog/" style="text-decoration: none; color: inherit; opacity: 0.95;">Blog</a>
           <a href="/advertise.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Advertise</a>
+          <a href="/more/create-site.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Create Your Own Site</a>
           <a href="/more/apps.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Apps & Unblockers</a>
           <a href="/more/tab-cloak.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Tab Cloak</a>
           <a href="/more/cache.html" style="text-decoration: none; color: inherit; opacity: 0.95;">Item Shop</a>

@@ -1,12 +1,8 @@
 <img src="https://duckmath.org/assets/img/duck.webp" width="60px"  align="left" />
 
-
 # DuckMath.org — Actually Unblocked Games
 
-
 **1,000,000+ active users since 2022** — DuckMath.org is a fast, lightweight unblocked games platform focused on accessibility, safety, and a social gaming experience for players everywhere.
-
-
 
 > Short description: DuckMath.org hosts 250+ browser games, updates daily, and provides features like leaderboards, an in-site economy (coins), a seasonal battlepass, cloaking tools, and multiple proxy integration options so you can play from a school or work network.
 
@@ -41,6 +37,7 @@ DuckMath.org was built to make high-quality browser games available to everyone 
 We update the catalog daily and add new community features regularly — the current site lists \~250+ games across categories like Action, Puzzle, Multiplayer, Retro, and Indie.
 
 ## Games List
+
 ---
 
 <!-- GAMES_LIST_START -->
@@ -332,7 +329,7 @@ Inspired by popular seasonal systems, DuckMath’s Battlepass runs in seasons (c
 
 ### Games Catalog
 
-A curated library of browser-friendly games (HTML5, WebGL, iframe wrappers for some remote hosts). Popular examples on the site include titles like *Omori Online (unblocked)*, *Deltarune Web*, and Roblox via now\.gg links.
+A curated library of browser-friendly games (HTML5, WebGL, iframe wrappers for some remote hosts). Popular examples on the site include titles like _Omori Online (unblocked)_, _Deltarune Web_, and Roblox via now\.gg links.
 
 - 250+ games sorted by category and popularity
 - Daily updates and featured games carousel
@@ -354,30 +351,34 @@ We embed Discord chat using widgetbot.io so players can join in-site chat withou
 - Optional linking to the full Discord server
 
 ---
+
 <img width="2558" height="1269" alt="Screenshot 2025-08-13 085518" src="https://github.com/user-attachments/assets/c99be6d3-6307-4992-a309-f69e8b053b65" />
 <img width="2531" height="1258" alt="Screenshot 2025-08-13 091023" src="https://github.com/user-attachments/assets/96095388-500a-4a81-be09-b96e7da5d361" />
 
-
 ---
 
-## How To Deploy (Quick)
+## How To Make a Unblocked Games Site (2025)
 
-If you want to fork and host DuckMath locally or publicly, follow these steps:
+You can easily make your own unblocked website in school and get people to use it:
 
-1. Clone the repository:
+1. Copy DuckMath.org Code (Fork the repository):
+
+go to https://github.com/duckmath/duckmath.github.io and click fork
+
+2. Clone the repository so you can make/change the unblocked site
 
 ```bash
 git clone https://github.com/your-username/duckmath.git
 cd duckmath
 ```
 
-2. Run locally for quick testing:
+3. Run the unblocked games site locally for quick testing:
 
 ```bash
 npx serve
-# or, if you prefer python's simple server:
-# python3 -m http.server 8080
 ```
+
+You dont even need to add the games! (they are added automatically!)
 
 3. Deploy to a static host:
 
@@ -385,14 +386,12 @@ npx serve
 - **Cloudflare Pages**: connect GitHub repo and set the build to `npm run build` if you have a build step, or use direct static deploy.
 - **GitHub Pages**: publish the `main` branch or the `gh-pages` folder.
 
-4. Configure DNS or custom domains (if desired), enable HTTPS, and test proxies and auth flows.
-
 ---
 
 ## Recommended Hosting & Tips
 
 - Use an edge/CDN backed host (Vercel, Cloudflare Pages, Netlify) to keep latency low for players in different regions.
-- Enable Brotli/Gzip compression and long cache headers for static assets to improve load times.
+- Make sure you dont say unblocked games or games anywhere in the site, that will make goguardian block it!
 - Use a lightweight serverless function when you need to proxy auth or handle leaderboard submissions.
 
 ## Security & Privacy
@@ -416,10 +415,11 @@ If you want to support the project financially or with hosting, reach out throug
 ---
 
 ## Socials
+
 Contact us on any of these!
 
 - Github [github/duckmath](https://github.com/duckmath/duckmath.github.io)
 - Discord: [The Duck Pond](https://discord.gg/aMUVSARrEy)
-- Tiktok: [rockyf2p](https://www.tiktok.com/@rockyf2p)
+- Tiktok: [duckmath tiktok](https://www.tiktok.com/@duckmath)
 - Youtube [duckmath yt](https://www.youtube.com/@duckmathgames)
 - Instagram [duckmath insta](https://www.instagram.com/duckmath/reels/)
