@@ -13,7 +13,8 @@
 }
 
 body {
-  background-image: url("../img/bg.svg");
+  background-color: #1d2c13;
+  background-image: url("../img/emeralds.svg");
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 15px;

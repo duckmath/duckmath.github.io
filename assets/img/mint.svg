@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Repeatable_diamond_module" x="0" y="0" enable-background="new 0 0 800 800" version="1.1" viewBox="0 0 800 800" xml:space="preserve">
+  <defs/>
+  <style>
+    .st0{clip-path:url(#Bounding_box_1_)}.st1{fill:#3cf7dc}.st2{fill:#17d7d8}.st3{fill:#18e9da}.st4{fill:#15c8d1}.st5{fill:#4dffe1}.st6{fill:#a4ffee}.st7{fill:#17f1d8}.st8{clip-path:url(#Bounding_box_1_);filter:url(#filter-10)}
+  </style>
+  <filter id="filter-10" width="128.5%" height="128.5%" x="-14%" y="-14%" filterUnits="objectBoundingBox">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="9"/>
+  </filter>
+  <filter id="AI_GaussianBlur_4">
+    <feGaussianBlur stdDeviation="4"/>
+  </filter>
+  <g id="Diamonds">
+    <defs>
+      <path id="Bounding_box" d="M0 0h800v800H0z"/>
+    </defs>
+    <clipPath id="Bounding_box_1_">
+      <use overflow="visible" xlink:href="#Bounding_box"/>
+    </clipPath>
+    <g class="st0">
+      <path d="M309 456l-165 2-67 82 43 126 118 50 108-84z" class="st1"/>
+      <path d="M144 457l165-2 38 177-109 85 93-84-8-74-39-89z" class="st2"/>
+      <path d="M235 509l88 50-39-89z" class="st1"/>
+      <path d="M331 633l-87-29-9-95 88 50z" class="st3"/>
+      <path d="M189 650l49 67 93-84-87-29z" class="st4"/>
+      <path d="M144 632l45 18 49 67-118-51z" class="st2"/>
+      <path d="M76 540l20 2 38 45 10 45-24 34z" class="st5"/>
+      <path d="M144 457l22 49-70 36-20-2z" class="st6"/>
+      <path d="M166 506l69 3 49-39-140-13z" class="st5"/>
+      <path d="M96 542l70-36-32 81-37-43" class="st7"/>
+      <path d="M166 506l69 3 9 95-55 46-45-18-10-45z" class="st1"/>
+    </g>
+    <g class="st8">
+      <path d="M551 295l78 58-46 96-81 1 73-6 23-37 14-56z" class="st2"/>
+      <path d="M575 352l23 55 14-56z" class="st1"/>
+      <path d="M575 444l-30-45 30-47 23 55z" class="st3"/>
+      <path d="M503 401l-1 49 73-6-30-45z" class="st4"/>
+      <path d="M488 377l15 24-1 49-38-66z" class="st2"/>
+      <path d="M489 309l9 8 1 35-11 25-24 7z" class="st5"/>
+      <path d="M551 295l-8 30-45-8-9-8z" class="st6"/>
+      <path d="M543 325l32 27 37-1-61-56z" class="st5"/>
+      <path d="M498 317l45 8-44 27-1-34" class="st7"/>
+      <path d="M543 325l32 27-30 47-42 2-15-24 11-25z" class="st1"/>
+    </g>
+    <g class="st8">
+      <path d="M175 35l79 4 11 85-53 37 46-37-2-35-15-43z" class="st2"/>
+      <path d="M217 62l39 27-15-43z" class="st1"/>
+      <path d="M258 124l-40-17-1-45 39 27z" class="st3"/>
+      <path d="M191 127l21 34 46-37-40-17z" class="st4"/>
+      <path d="M170 118l21 9 21 34-55-28z" class="st2"/>
+      <path d="M141 72l9 2 16 22 4 22-13 15z" class="st5"/>
+      <path d="M175 35l9 24-34 15-9-2z" class="st6"/>
+      <path d="M184 59l33 3 24-16-66-11z" class="st5"/>
+      <path d="M150 74l34-15-18 37-16-22" class="st7"/>
+      <path d="M184 59l33 3 1 45-27 20-21-9-4-22z" class="st1"/>
+    </g>
+    <g class="st0">
+      <path d="M506 748l-123 34 22 205 138-121-37-118" class="st3"/>
+      <path d="M506 747l-123 34 31 45z" class="st7"/>
+      <path d="M404 987l10-161-31-45z" class="st4"/>
+      <path d="M414 826l86 30 6-109zM404 987l140-121-44-10z" class="st3"/>
+      <path d="M500 856l-89 21-7 110z" class="st2"/>
+      <path d="M506 747l23 70-26-17z" class="st6"/>
+      <path d="M544 866l-44-10 3-56 26 17z" class="st5"/>
+      <path d="M414 826l19 26-22 25z" class="st7"/>
+      <path d="M500 856l-86-30 19 26z" class="st5"/>
+      <path d="M411 877l22-25 67 4z" class="st3"/>
+    </g>
+    <g clip-path="url(#Bounding_box_1_)" filter="url(#AI_GaussianBlur_4)">
+      <path d="M606 606l46-3-5 19z" class="st7"/>
+      <path d="M669 676l-22-54 5-19z" class="st4"/>
+      <path d="M647 622l-26 21-15-37zM669 676l-62-25 14-8z" class="st3"/>
+      <path d="M621 643l33-3 15 36z" class="st2"/>
+      <path d="M606 606v27l7-9z" class="st6"/>
+      <path d="M607 651l14-8-8-19-7 9z" class="st5"/>
+      <path d="M647 622l-4 11 11 7z" class="st7"/>
+      <path d="M621 643l26-21-4 11z" class="st5"/>
+      <path d="M654 640l-11-7-22 10z" class="st3"/>
+    </g>
+    <g class="st0">
+      <path d="M506-52L383-18l22 204L543 66z" class="st3"/>
+      <path d="M506-53L383-19l31 45z" class="st7"/>
+      <path d="M404 187l10-161-31-45z" class="st4"/>
+      <path d="M414 26l86 30 6-109zM404 187L544 66l-44-10z" class="st3"/>
+      <path d="M500 56l-89 21-7 110z" class="st2"/>
+      <path d="M506-53l23 70-26-17z" class="st6"/>
+      <path d="M544 66l-44-10 3-56 26 17z" class="st5"/>
+      <path d="M414 26l19 26-22 25z" class="st7"/>
+      <path d="M500 56l-86-30 19 26z" class="st5"/>
+      <path d="M411 77l22-25 67 4z" class="st3"/>
+    </g>
+    <g class="st0">
+      <path d="M817 146l-77-29-11 81 17 89 38 52 83 14 35-46 11-48-96-113z" class="st3"/>
+      <path d="M868 355l-85-14 14-27 71 41z" class="st3"/>
+      <path d="M903 308l-35-39v86z" class="st2"/>
+      <path d="M914 259l-46 10 35 39z" class="st3"/>
+      <path d="M797 314l71-45v86z" class="st4"/>
+      <path d="M914 259l-97-115-17 4 68 121z" class="st1"/>
+      <path d="M743 174l57-26 68 121-96-50z" class="st3"/>
+      <path d="M745 287l38 54 14-27-25-95-29-45z" class="st1"/>
+      <path d="M739 115l-11 82 17 90-2-113z" class="st6"/>
+      <path d="M800 148l-57 26-4-59z" class="st1"/>
+      <path d="M817 144l-17 4-61-33z" class="st5"/>
+      <path d="M868 269l-56-1-15 46z" class="st7"/>
+      <path d="M772 219l96 50-56-1z" class="st5"/>
+      <path d="M797 314l-25-95 40 49z" class="st3"/>
+    </g>
+    <g class="st0">
+      <path d="M17 145l-78-29-11 81 18 90 37 53 85 14 35-46 10-49-96-114z" class="st3"/>
+      <path d="M68 355l-85-14 14-27 71 41z" class="st3"/>
+      <path d="M103 308l-35-39v86z" class="st2"/>
+      <path d="M114 259l-46 10 35 39z" class="st3"/>
+      <path d="M-3 314l71-45v86z" class="st4"/>
+      <path d="M114 259L17 144l-17 4 68 121z" class="st1"/>
+      <path d="M-57 174l57-26 68 121-96-50z" class="st3"/>
+      <path d="M-55 287l38 54 14-27-25-95-29-45z" class="st1"/>
+      <path d="M-61 115l-12 82 18 90-2-113z" class="st6"/>
+      <path d="M0 148l-57 26-4-59z" class="st1"/>
+      <path d="M17 144l-17 4-61-33z" class="st5"/>
+      <path d="M68 269l-56-1-15 46z" class="st7"/>
+      <path d="M-28 219l96 50-56-1z" class="st5"/>
+      <path d="M-3 314l-25-95 40 49z" class="st3"/>
+    </g>
+  </g>
+</svg>

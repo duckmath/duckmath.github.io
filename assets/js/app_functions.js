@@ -9,9 +9,9 @@ function getDescriptionFromMarkdown(markdown) {
   // ****
   // ## Creator
   // so cut off the first two lines and return the rest
-  let built = markdown.split("## Description")[1];
-  built = built.split("## Creator")[0];
-  return built.replaceAll("\n", "");
+  let built = markdown?.split("## Description")[1];
+  built = built?.split("## Creator")[0];
+  return built?.replaceAll("\n", "");
 }
 
 function create_in_article_ad() {
