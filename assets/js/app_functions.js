@@ -44,7 +44,7 @@ function create_in_article_ad() {
   adDiv.appendChild(script);
   return adDiv;
 }
-const APP_VER = "apps12";
+const APP_VER = "apps13";
 const REQUERY_TIME = 5; // in days
 async function get_all_apps() {
   const date_last_queryed = JSON.parse(localStorage.getItem("dlq"));

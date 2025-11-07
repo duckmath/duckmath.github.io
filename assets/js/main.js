@@ -161,7 +161,7 @@ function sorterbuttons(button) {
   const elem = title.getElementsByTagName("button");
   // set query params to the button id
   const urlParams = new URLSearchParams(window.location.search);
-  urlParams.set("category", button.id);
+  urlParams.set("category", button.id.toLowerCase());
   window.history.replaceState(
     {},
     "",
@@ -170,7 +170,7 @@ function sorterbuttons(button) {
 
   for (let i = 0; i < elem.length; i++) {
     if (elem[i] !== button) {
-      if (elem[i].id !== "New") {
+      if (elem[i].id !== "new") {
         elem[i].style.backgroundColor = "#fff";
       } else {
         elem[i].style.background =
@@ -179,7 +179,7 @@ function sorterbuttons(button) {
       }
       elem[i].style.color = "#000";
     } else {
-      if (elem[i].id !== "New") {
+      if (elem[i].id !== "new") {
         elem[i].style.backgroundColor = "#ff0000";
       } else {
         elem[i].style.background =
@@ -228,8 +228,8 @@ function show_all_ads() {
 function sorter(category) {
   const icon = document.getElementById("icon_image");
   const elem = icon.getElementsByTagName("a");
+  category = category.toLowerCase();
   hide_all_ads();
-
   for (let i = 0; i < elem.length; i++) {
     if (!elem[i].className.includes(category)) {
       // if the element is not the category
@@ -317,7 +317,7 @@ function home() {
 
 document.addEventListener("GamesLoaded", function () {
   const urlParams = new URLSearchParams(window.location.search);
-  const category = urlParams.get("category");
+  const category = urlParams.get("category")?.toLowerCase();
   if (category === "All") {
     showall();
   } else if (category) {
