@@ -349,11 +349,8 @@ async function hydrateAppPage() {
     infoText.textContent = appData?.top_message;
     titleElement.appendChild(infoText);
   }
-  const GAMES_PAGE_URL = "https://classroomlesson.github.io/basic-ruffle-player";
   let app_link = appData.link;
-  if (window.location.hostname === "duckmath.org") {
-    app_link = app_link.replace(GAMES_PAGE_URL, "https://db.duckmath.org");
-  }
+
   document.getElementById("gameFrame").src = app_link;
 
   // Populate minimal related games (3 items) after fullscreen button
